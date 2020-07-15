@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Site title</title>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Site title">
+    <meta name="description" content="Site description">
+    <meta property="og:title" content="Site title">
+    <meta property="og:description" content="Site description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Site URL">
+    <meta property="og:image" content="LOGO/IMG">
+    <link rel="icon" type="image/png" href="src/img/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/Helvetica/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/remixicon/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="src/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="src/css/milligram.responsive-grid.css">
+    <link rel="stylesheet" type="text/css" href="src/css/inputmask.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/vanilla.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/slick.min.js"></script>
+    <script src="src/js/jquery.inputmask.bundle.js"></script>
+    <script src="src/js/jquery.mCustomScrollbar.js"></script>
+    <script src="src/js/jquery.fancybox.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+  </head>
+  <body>
+    <div class="formPage">
+      <div class="formPage__top">
+        <div class="container"><a class="btn ri-arrow-left-line" href="#" onclick="javascript:history.back(); return false;"></a>
+          <div class="wrapper"><a class="logo" href="/"><img src="src/img/static/logo.svg" alt="logo"></a></div>
+        </div>
+      </div>
+      <div class="formPage__content">
+        <div class="wrapper">
+          <h2 class="title">Быстрая заявка на полис</h2>
+          <ul class="stepline">
+            <li class="check active">
+              <p>1. Ваши контакты</p>
+            </li>
+            <li>
+              <p>2. Отправка формы</p>
+            </li>
+          </ul>
+          <form id="form1">
+            <h6 class="title">Укажите ваши контактные данные</h6>
+            <div class="doublerow">
+              <label>
+                <p class="title">Как вас зовут?</p>
+                <input type="text" placeholder="Фамилия Имя Отчество">
+              </label>
+              <div class="dropdown">
+                <label>
+                  <p class="title">Регион оформления полиса ОМС&nbsp;<span class="red">*</span></p>
+                  <div>
+                    <input type="text" value="п. Котельский, Кингисеппский район, Ленинградская область"><i class="ri-arrow-down-s-fill"></i>
+                  </div>
+                </label>
+                <ul class="addreses">
+                  <li>САНКТ-ПЕТЕРБУРГ Г,БОЛЬШАЯ ЗЕЛЕНИНА УЛ, дом (владение) 29, корпус (строение) Б, квартира (офис) 3Н</li>
+                  <li>САНКТ-ПЕТЕРБУРГ Г,НОВОЧЕРКАССКИЙ ПР-КТ, дом (владение) 47, корпус (строение) 1, квартира (офис) 28/1Н</li>
+                  <li>САНКТ-ПЕТЕРБУРГ Г,МОСКОВСКИЙ ПР-КТ, дом (владение) 183-185, корпус (строение) Б , квартира (офис) 170-Н</li>
+                </ul>
+              </div>
+            </div>
+            <div class="doublerow">
+              <label>
+                <p class="title">Ваш контактный телефон</p>
+                <input type="tel" placeholder="+ 7 (– – –)  – – –  – –  – –">
+              </label>
+              <label>
+                <p class="title">E-mail&nbsp;<span>(на который мы отправим ответ)</span></p>
+                <input type="email" placeholder="info@mail.com">
+              </label>
+            </div>
+            <label class="custom-checkbox">
+              <input type="checkbox" required hidden><i class="check ri-check-fill"></i>
+              <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
+            </label>
+          </form>
+        </div>
+      </div>
+      <div class="formPage__finish">
+        <div class="wrapper">
+          <div>
+            <p class="title">Спасибо за обращение!</p>
+          </div>
+          <div>
+            <p>В течение 30 дней наш специалист пришет ответ</p>
+          </div>
+          <div>
+            <p>на вашу почту&nbsp;<span class="red">ivanov@mail.com.</span></p>
+          </div>
+          <div>
+            <p>Номер вашего обращения&nbsp;-&nbsp;<span class="number">7549</span>&nbsp;<i class="hint ri-question-fill"><span>Можете прикрепить текст жалобы в письменном виде, сканы чеков, ответы медучреждений и т.п</span></i></p>
+          </div><a class="btn btn-transparent" href="/">Перейти на главную</a>
+        </div>
+      </div>
+      <div class="formPage__bottom">
+        <div class="container"><a class="help" href="#">Нужна помощь?</a><a class="btn btn-transparent" href="#">Назад</a><a class="btn btn-red" href="#">Далее</a></div>
+      </div>
+    </div>
+  </body>
+</html>
