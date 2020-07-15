@@ -137,6 +137,9 @@ select:hover {
   max-width: 115.2rem;
   padding: 0;
 }
+.container.inwards {
+  width: 74rem;
+}
 .bb {
   border-bottom: 1px solid #e6e6e6;
 }
@@ -192,7 +195,7 @@ select:hover {
   margin-bottom: 2.4rem;
 }
 .top-container > :first-child {
-  background-color: #313131;
+  background-color: #193c6d;
   padding: 1.2rem 0;
 }
 .top-container > :first-child .row {
@@ -259,7 +262,7 @@ select:hover {
 .top-container > :first-child a img {
   width: 2rem;
   height: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.8rem;
 }
 .top-container > :first-child a:hover p,
 .top-container > :first-child a:hover span {
@@ -410,6 +413,41 @@ select:hover {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+@media screen and (max-width: 1279px) {
+  .top-container {
+    margin-bottom: 2.4rem;
+  }
+  .top-container > :first-child {
+    padding: 1.2rem 0;
+  }
+  .top-container > :first-child .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .top-container > :first-child .row > :first-child {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top-container > :first-child .row > :first-child a {
+    margin: 0 1.6rem 0 0;
+  }
+}
 @media screen and (max-width: 980px) {
   .top-container .header nav.desktop {
     display: none;
@@ -422,12 +460,40 @@ select:hover {
   }
 }
 @media screen and (max-width: 640px) {
+  .top-container > :first-child {
+    padding: 1rem 0;
+  }
+  .top-container > :first-child i {
+    margin-right: 1rem;
+  }
+  .top-container > :first-child p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+  .top-container > :first-child > :first-child > :first-child > :first-child {
+    display: none;
+  }
+  .top-container > :first-child > :first-child > :first-child > :last-child {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
   .top-container .header .row > :last-child {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 2.4rem;
+  }
+  .top-container .header .row > :last-child a {
+    width: 100%;
   }
 }
 .breadcrumbs {
@@ -1792,22 +1858,25 @@ button.btn-gray:hover {
   font-weight: 400;
   line-height: 4.8rem;
 }
-.formPage__finish div {
-  position: relative;
-}
 .formPage__finish p {
+  position: relative;
   color: #313131;
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.8rem;
   display: inline-block;
 }
-.formPage__finish p span {
+.formPage__finish p br {
+  display: none;
+}
+.formPage__finish p span,
+.formPage__finish p a {
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.8rem;
 }
-.formPage__finish p span.number {
+.formPage__finish p span.number,
+.formPage__finish p a.number {
   font-weight: 700;
 }
 .formPage__finish .btn {
@@ -1961,6 +2030,29 @@ button.btn-gray:hover {
   .formPage__bottom {
     padding: 1.2rem 0;
   }
+  .formPage__bottom .container {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .formPage__bottom .btn {
+    width: -webkit-calc(100% / 2 - 1.2rem / 2);
+    width: calc(100% / 2 - 1.2rem / 2);
+  }
+  .formPage__bottom .help {
+    position: relative;
+    left: auto;
+    top: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    font-size: 1.6rem;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
   .formPage__bottom .wrapper {
     padding: 0 1.2rem;
   }
@@ -1971,9 +2063,18 @@ button.btn-gray:hover {
     line-height: 2.8rem;
   }
   .formPage__finish p {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 2.4rem;
+  }
+  .formPage__finish p a {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+  .formPage__finish .btn {
+    width: 100%;
+    margin: 3.2rem 0 3.2rem;
   }
   .formPage form {
     padding: 0;
@@ -3134,6 +3235,31 @@ button.btn-gray:hover {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+.science-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.science-list .doc {
+  width: 48%;
+  margin-right: 4%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.science-list .doc:nth-child(2n) {
+  margin-right: 0;
+}
+.science-list .doc img {
+  width: 100%;
+}
+.science-list .doc .text {
+  font-size: 16px;
+  color: #666;
+}
 .stepsBlock {
   margin-top: 2.8rem;
 }
@@ -3357,6 +3483,48 @@ button.btn-gray:hover {
     font-weight: 400;
     line-height: 4.8rem;
   }
+}
+.tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #666;
+  margin-bottom: 32px;
+}
+.tabs .tab {
+  font-size: 20px;
+  color: #666;
+  padding-bottom: 8px;
+}
+.tabs .tab.active {
+  color: #000;
+  border-bottom: 1px solid #b8181c;
+}
+.tags {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 32px;
+}
+.tags .tag {
+  font-size: 16px;
+  color: #000;
+  border: 1px solid #c4c4c4;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  padding: 6px 16px 4px;
+  margin-right: 12px;
+}
+.tags .tag.active {
+  background: #b8181c;
+  border: 1px solid #b8181c;
+  color: #fff;
 }
 @media screen and (max-width: 640px) {
   h3 {
