@@ -3793,10 +3793,197 @@ button.btn-gray:hover {
 footer {
   background-color: #f5f5f5;
   padding: 7.2rem 0;
+  position: relative;
 }
 footer .top__container {
   padding-bottom: 4rem;
   border-bottom: 0.1rem solid #c4c4c4;
+}
+footer .bottom__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5.8rem;
+}
+footer .bottom__container .container__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 1.6rem;
+  min-width: 25%;
+}
+footer .bottom__container > :first-child {
+  padding-left: 0;
+}
+footer .bottom__container > :last-child {
+  padding-right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+footer .bottom__container > :first-child,
+footer .bottom__container > :last-child {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+}
+footer .bottom__container ul > :last-child {
+  margin-bottom: 0;
+}
+footer .bottom__container li {
+  line-height: 1;
+  margin-bottom: 1.6rem;
+}
+footer .bottom__container p,
+footer .bottom__container a {
+  color: #666;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 2rem;
+}
+footer .bottom__container a:hover {
+  color: #b8181c;
+}
+footer .bottom__container a.gplay,
+footer .bottom__container a.appstore {
+  width: 18rem;
+  height: 5.4rem;
+  -webkit-border-radius: 0.4rem;
+          border-radius: 0.4rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+footer .bottom__container a.gplay {
+  background-image: url("../img/static/gplay.svg");
+}
+footer .bottom__container a.appstore {
+  margin-left: 1.6rem;
+  background-image: url("../img/static/appstore.svg");
+}
+footer .row > :first-child {
+  padding-left: 0;
+}
+footer .row > :last-child {
+  padding-right: 0;
+}
+footer .container {
+  max-width: 112rem;
+}
+footer ul {
+  list-style-type: none;
+  margin: 0;
+}
+footer ul li {
+  margin: 0;
+}
+footer ul ul {
+  font-size: 100%;
+}
+.links__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 75%;
+  grid-template-columns: 25% 75%;
+  margin-top: 4rem;
+}
+.links__container > :first-child {
+  padding-right: 1.6rem;
+}
+.links__container > :last-child {
+  padding-left: 1.6rem;
+}
+.links__container > :last-child > :first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+}
+.links__container > :last-child > :first-child > :first-child {
+  padding-right: 1.6rem;
+}
+.links__container > :last-child > :first-child > :last-child {
+  padding-left: 1.6rem;
+}
+.links__container > :last-child > :first-child > :last-child > :first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-calc(50% - 1.6rem) 3.2rem -webkit-calc(50% - 1.6rem);
+  -ms-grid-columns: calc(50% - 1.6rem) 3.2rem calc(50% - 1.6rem);
+  grid-template-columns: -webkit-calc(50% - 1.6rem) -webkit-calc(50% - 1.6rem);
+  grid-template-columns: calc(50% - 1.6rem) calc(50% - 1.6rem);
+  grid-column-gap: 3.2rem;
+  grid-row-gap: 4rem;
+}
+.links__container .partition li {
+  line-height: 1;
+  margin-bottom: 1.6rem;
+}
+.links__container .partition a {
+  color: #3a3a3a;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.links__container .partition a:hover {
+  color: #b8181c;
+}
+.links__container .partition > :last-child {
+  margin-bottom: 0;
+}
+.links__container .partition > :first-child {
+  margin-bottom: 2.4rem;
+}
+.links__container .partition > :first-child a {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.links__container .partition > :first-child a:hover {
+  color: #b8181c;
+}
+.hot-numbers p {
+  color: #939393;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.hot-numbers a {
+  color: #3a3a3a;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+}
+.hot-numbers a:hover {
+  color: #b8181c;
+}
+.hot-numbers li {
+  margin-bottom: 3.6rem;
+}
+.hot-numbers > :last-child {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 640px) {
   h3 {
