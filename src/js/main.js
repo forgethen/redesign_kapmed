@@ -154,6 +154,16 @@ $(document).ready(function() {
     e.stopPropagation();
   });
 
+
+  $( ".headerMenu li" )
+    .mouseenter(function() {
+      $( this ).find( ".submenu" ).fadeIn();
+    })
+    .mouseleave(function() {
+      $( this ).find( ".submenu" ).fadeOut();
+    });
+
+
 });
 
 //# sourceMappingURL=main.js.map
