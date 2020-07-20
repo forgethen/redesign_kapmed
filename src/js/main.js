@@ -86,8 +86,7 @@ $(document).ready(function() {
   })
 
   $('ul.content li, .FAQ li').click(function() {
-    $('ul.content li, .FAQ li').removeClass('show');
-    $(this).addClass('show');
+    $(this).toggleClass('show');
   })
 
   $('.mapPopUp .list li').click(function() {
@@ -132,9 +131,12 @@ $(document).ready(function() {
       $(this).removeClass('autoHeight');
       e.stopPropagation();
     } else {
-      $('footer .partition').removeClass('autoHeight');
-      $(this).parent('ul').addClass('autoHeight');
+      $(this).parent('ul').toggleClass('autoHeight');
     }
+  })
+
+  $('.burger').on('click', function(e) {
+    $(this).toggleClass('active');
   })
 
   $(document).on('click', function(e) {
