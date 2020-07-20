@@ -85,14 +85,10 @@ $(document).ready(function() {
     $('form .dropdown input').val(thisVal);
   })
 
-
-
   $('ul.content li, .FAQ li').click(function() {
     $('ul.content li, .FAQ li').removeClass('show');
     $(this).addClass('show');
   })
-
-
 
   $('.mapPopUp .list li').click(function() {
     var thisVal = $(this).html();

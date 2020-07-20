@@ -875,6 +875,7 @@ button.btn-gray:hover {
   height: 100%;
   position: relative;
   overflow: inherit;
+  padding-bottom: 2.4rem;
 }
 .content_list ul {
   position: -webkit-sticky;
@@ -3759,7 +3760,7 @@ button.btn-gray:hover {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin-bottom: 0;
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 .weeklyNewsletter__title {
   margin-bottom: 1.6rem;
@@ -3790,14 +3791,42 @@ button.btn-gray:hover {
   line-height: 2.4rem;
   text-transform: none;
 }
+@media screen and (max-width: 96rem) {
+  .weeklyNewsletter {
+    padding-left: 0;
+  }
+}
 footer {
   background-color: #f5f5f5;
-  padding: 7.2rem 1.6rem;
+  padding: 7.2rem 0;
   position: relative;
 }
 footer .top__container {
   padding-bottom: 4rem;
   border-bottom: 0.1rem solid #c4c4c4;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+footer .top__container > :first-child {
+  padding: 0 1.6rem 0 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+footer .top__container > :last-child {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 0 0 1.6rem;
 }
 footer .bottom__container {
   display: -webkit-box;
@@ -3808,22 +3837,48 @@ footer .bottom__container {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 5.8rem;
 }
 footer .bottom__container .container__item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   padding: 0 1.6rem;
   min-width: 25%;
 }
 footer .bottom__container > :first-child {
   padding-left: 0;
+  width: -webkit-calc(100% * 2 / 3);
+  width: calc(100% * 2 / 3);
+}
+footer .bottom__container > :first-child ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+}
+footer .bottom__container > :first-child ul > :nth-child(even) {
+  width: -webkit-calc(100% * 2 / 3 - 3.2rem);
+  width: calc(100% * 2 / 3 - 3.2rem);
+  padding: 0 1.6rem;
+}
+footer .bottom__container > :first-child ul > :nth-child(odd) {
+  width: -webkit-calc(100% * 1 / 3 + 3.2rem);
+  width: calc(100% * 1 / 3 + 3.2rem);
+  padding: 0 1.6rem 0 0;
 }
 footer .bottom__container > :last-child {
   padding-right: 0;
@@ -3839,20 +3894,16 @@ footer .bottom__container > :last-child {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
+  width: -webkit-calc(100% * 1 / 3);
+  width: calc(100% * 1 / 3);
 }
-footer .bottom__container > :first-child,
-footer .bottom__container > :last-child {
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
-}
-footer .bottom__container ul > :last-child {
-  margin-bottom: 0;
+footer .bottom__container ul > :nth-child(1),
+footer .bottom__container ul > :nth-child(2) {
+  margin-top: 0;
 }
 footer .bottom__container li {
   line-height: 1;
-  margin-bottom: 1.6rem;
+  margin-top: 1.6rem;
 }
 footer .bottom__container p,
 footer .bottom__container a {
@@ -3867,13 +3918,21 @@ footer .bottom__container a:hover {
 }
 footer .bottom__container a.gplay,
 footer .bottom__container a.appstore {
-  width: 18rem;
-  height: 5.4rem;
+  max-width: 18rem;
+  width: 100%;
   -webkit-border-radius: 0.4rem;
           border-radius: 0.4rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+footer .bottom__container a.gplay:before,
+footer .bottom__container a.appstore:before {
+  content: '';
+  width: 100%;
+  position: relative;
+  display: block;
+  padding-top: 30%;
 }
 footer .bottom__container a.gplay {
   background-image: url("../img/static/gplay.svg");
@@ -3890,6 +3949,7 @@ footer .row > :last-child {
 }
 footer .container {
   max-width: 115.2rem;
+  padding: 0 1.6rem;
 }
 footer ul {
   list-style-type: none;
@@ -3901,17 +3961,49 @@ footer ul li {
 footer ul ul {
   font-size: 100%;
 }
+@media screen and (max-width: 98rem) {
+  footer .bottom__container {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer .bottom__container > :last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer .bottom__container > :last-child > :first-child {
+    margin-bottom: 1.6rem;
+  }
+  footer .bottom__container > :last-child a.appstore {
+    margin-left: 0;
+  }
+}
 .links__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 25% 75%;
   grid-template-columns: 25% 75%;
   margin-top: 4rem;
+  width: 100%;
 }
 .links__container > :first-child {
   padding-right: 1.6rem;
+  padding-left: 0;
 }
 .links__container > :last-child {
+  padding-right: 0;
   padding-left: 1.6rem;
 }
 .links__container > :last-child > :first-child {
