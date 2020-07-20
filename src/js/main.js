@@ -13,8 +13,7 @@ $(document).ready(function() {
       var hash = $(this).attr("href")
       try {
         let prob = $(hash)
-      }
-      catch {
+      } catch {
         return false
       }
       var target = $(hash)
@@ -85,17 +84,15 @@ $(document).ready(function() {
     $('.dropdown i').removeClass('active')
     $('form .dropdown input').val(thisVal);
   })
-  $(document).mouseup(function(e) {
-    var container = $("form .dropdown ul");
-    if (container.has(e.target).length === 0) {
-      $("form .dropdown ul").fadeOut();
-      $('.dropdown i').removeClass('active');
-    }
-  });
+
+
+
   $('ul.content li, .FAQ li').click(function() {
     $('ul.content li, .FAQ li').removeClass('show');
     $(this).addClass('show');
   })
+
+
 
   $('.mapPopUp .list li').click(function() {
     var thisVal = $(this).html();
@@ -131,6 +128,33 @@ $(document).ready(function() {
     $(this).closest('.openShedule').toggleClass('active');
     $(this).closest('.openShedule').next().toggleClass('show');
   })
+
+  $('footer .partition').find('li:eq(0)').append('<i class="ri-arrow-down-s-line"></i>');
+
+  $('footer .partition').find('li:eq(0)').click(function(e) {
+    if ($(this).hasClass('autoHeight')) {
+      $(this).removeClass('autoHeight');
+      e.stopPropagation();
+    } else {
+      $('footer .partition').removeClass('autoHeight');
+      $(this).parent('ul').addClass('autoHeight');
+    }
+  })
+
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest(".parent_block").length) {
+      $('.toggled_block').hide();
+    }
+    if (!$(e.target).closest(".form .dropdown ul").length) {
+      $("form .dropdown ul").fadeOut();
+      $('.dropdown i').removeClass('active');
+    }
+    if (!$(e.target).closest("footer .partition").length) {
+      $('footer .partition').removeClass('autoHeight');
+    }
+
+    e.stopPropagation();
+  });
 
 });
 
