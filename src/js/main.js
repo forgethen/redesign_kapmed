@@ -119,7 +119,7 @@ $(document).ready(function() {
     theme: "MapListThm",
   });
 
-    $(".headerMenu .submenu").mCustomScrollbar({
+  $(".headerMenu .submenu").mCustomScrollbar({
     theme: "SubmenuScrollThm",
   });
 
@@ -140,53 +140,55 @@ $(document).ready(function() {
   })
 
   $(document).on('click', function(e) {
+
     if (!$(e.target).closest(".parent_block").length) {
       $('.toggled_block').hide();
     }
+
     if (!$(e.target).closest(".form .dropdown ul").length) {
       $("form .dropdown ul").fadeOut();
       $('.dropdown i').removeClass('active');
     }
+
     if (!$(e.target).closest("footer .partition").length) {
       $('footer .partition').removeClass('autoHeight');
     }
-    if($(window).width() >= 1013) {
-      if (!$(e.target).closest(".headerMenu li").length) {
-        $('.headerMenu .submenu').fadeOut();
-        $('.headerMenu li').removeClass('active');
-      }
+
+    if (!$(e.target).closest(".headerMenu li").length) {
+      $('.headerMenu .submenu').fadeOut();
+      $('.headerMenu li').removeClass('active');
     }
+
+    if (!$(e.target).closest(".burger").length) {
+      $('.headerMenu').removeClass('show')
+      $('.burger').removeClass('active')
+    }
+
     e.stopPropagation();
   });
 
   $('.burger :eq(0)').on('click', function(e) {
-    $('.burger').toggleClass('active');
-    $('.headerMenu').fadeIn()
+    $('.burger').addClass('active');
+    $('.headerMenu').addClass('show')
     $('.headerMenu li :eq(0)').click();
     e.stopPropagation()
   })
 
   $('.burger :eq(1)').on('click', function(e) {
-    $('.burger').toggleClass('active');
-    $('.headerMenu').fadeOut();
+    $('.burger').removeClass('active');
+    $('.headerMenu').removeClass('show');
     e.stopPropagation()
   })
 
   $(".headerMenu li").click(function(e) {
+    $('.burger').addClass('active');
+    $('.headerMenu').addClass('show');
     $(".headerMenu li").removeClass('active');
     $(this).toggleClass('active');
     $('.headerMenu .submenu').hide();
     $(this).find('.submenu').fadeIn();
     e.stopPropagation()
   })
-  $(window).resize(function() {
-    if($(window).width() >= 1013) {
-      if($('.burger').hasClass('active')) {
-        $('.burger :eq(0)').click();
-        $('.headerMenu').removeAttr('style');
-      }
-    }
-  });
 
 });
 
