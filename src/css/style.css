@@ -592,6 +592,9 @@ select:hover {
     width: 100%;
   }
 }
+header {
+  border-bottom: 1px solid rgba(147,147,147,0.2);
+}
 .container.fromHeaderMenu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -624,6 +627,7 @@ select:hover {
   list-style-type: none;
   position: relative;
   padding: 2.8rem 0;
+  margin-bottom: 0;
 }
 .headerMenu > :last-child {
   margin-right: 0;
@@ -833,6 +837,7 @@ select:hover {
     border-bottom: none;
     -webkit-box-shadow: none;
             box-shadow: none;
+    padding-top: 0.4rem;
   }
   .headerMenu li .submenu ul {
     -ms-grid-columns: 1fr 1.6rem 1fr;
@@ -943,6 +948,7 @@ select:hover {
     top: 0;
     left: 0;
     width: 100%;
+    padding-top: 0;
   }
   .headerMenu li .submenu ul {
     width: 100%;
