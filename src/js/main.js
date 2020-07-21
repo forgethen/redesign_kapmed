@@ -161,6 +161,7 @@ $(document).ready(function() {
 
     if (!$(e.target).closest(".burger").length) {
       $('.headerMenu').removeClass('show')
+      $('.mobileBottom').removeClass('show')
       $('.burger').removeClass('active')
     }
 
@@ -170,13 +171,17 @@ $(document).ready(function() {
   $('.burger :eq(0)').on('click', function(e) {
     $('.burger').addClass('active');
     $('.headerMenu').addClass('show')
-    $('.headerMenu li :eq(0)').click();
+    $('.mobileBottom').addClass('show')
+    if($(window).width() >= 640) {
+      $('.headerMenu li :eq(0)').click();
+    }
     e.stopPropagation()
   })
 
   $('.burger :eq(1)').on('click', function(e) {
     $('.burger').removeClass('active');
     $('.headerMenu').removeClass('show');
+    $('.mobileBottom').removeClass('show');
     e.stopPropagation()
   })
 
