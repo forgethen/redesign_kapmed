@@ -24,6 +24,7 @@ body {
   background-color: #fff;
   color: #000;
   font-family: "HelveticaRegular", Arial, sans-serif;
+  overflow-x: hidden;
 }
 input,
 textarea {
@@ -711,7 +712,6 @@ header {
 .headerMenu li .submenu:before {
   border-bottom: 1px solid #193c6d;
   content: '';
-  width: 100vw;
   position: absolute;
   height: 100%;
   z-index: -1;
@@ -725,7 +725,6 @@ header {
 }
 .headerMenu li .submenu:after {
   content: '';
-  width: 100vw;
   position: absolute;
   height: 0.8rem;
   z-index: -1;
@@ -775,7 +774,6 @@ header {
   .container.fromHeaderMenu:before {
     border-bottom: 1px solid #193c6d;
     content: '';
-    width: 100vw;
     position: absolute;
     height: 100%;
     z-index: -1;
@@ -789,7 +787,6 @@ header {
   }
   .container.fromHeaderMenu:after {
     content: '';
-    width: 100vw;
     position: absolute;
     height: 0.8rem;
     z-index: -1;
