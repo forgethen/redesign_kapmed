@@ -210,6 +210,14 @@ $(document).ready(function() {
       prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
       nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
       dots: true,
+      responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+        }
+      }
+    ]
     })
 
 
