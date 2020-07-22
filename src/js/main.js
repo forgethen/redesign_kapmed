@@ -195,6 +195,26 @@ $(document).ready(function() {
     e.stopPropagation()
   })
 
+  $('.topSlider .slider').slick({
+      infinite: true,
+      centerMode: true,
+      centerPadding: '0',
+      cssEase: 'ease-in-out',
+      draggable: true,
+      autoplay: false,
+      autoplayspeed: 2500,
+      slidesToShow: 1,
+      slideToScroll: 1,
+      speed: 250,
+      arrows: true,
+      prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
+      nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
+      dots: true,
+    })
+
+
+
+
 });
 
 //# sourceMappingURL=main.js.map
