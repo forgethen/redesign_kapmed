@@ -67,20 +67,25 @@ $(document).ready(function() {
   $("input,textarea").blur(function() {
     $(this).attr("placeholder", $(this).data("placeholder"))
   });
+
   $('input[type="tel"]').inputmask("+7 (999) 999 99 99");
   $('.date input').inputmask("99.99.9999");
+
   $('form .dropdown ul').each(function() {
     var th1 = $(this).find('li:eq(0)').height();
     var th2 = $(this).find('li:eq(1)').height();
-    $('form .dropdown ul').css('max-height', th1 + th2 + 36 + 'px').hide()
+    $('form .dropdown ul').css('max-height', th1 + th2 + 36 + 'px');
+    $('form .dropdown ul').removeClass('show');
   })
+
   $('form .dropdown input').click(function() {
-    $('.dropdown i').addClass('active')
-    $('form .dropdown ul').fadeIn()
+    $('.dropdown i').addClass('active');
+    $('form .dropdown ul').addClass('show');
   })
+
   $('form .dropdown ul li').click(function() {
     var thisVal = $(this).html();
-    $('form .dropdown ul').fadeOut();
+    $('form .dropdown ul').removeClass('show');
     $('.dropdown i').removeClass('active')
     $('form .dropdown input').val(thisVal);
   })
@@ -145,8 +150,8 @@ $(document).ready(function() {
       $('.toggled_block').hide();
     }
 
-    if (!$(e.target).closest(".form .dropdown ul").length) {
-      $("form .dropdown ul").fadeOut();
+    if (!$(e.target).closest("form .dropdown").length) {
+      $("form .dropdown ul").removeClass('show');
       $('.dropdown i').removeClass('active');
     }
 
@@ -172,7 +177,7 @@ $(document).ready(function() {
     $('.burger').addClass('active');
     $('.headerMenu').addClass('show')
     $('.mobileBottom').addClass('show')
-    if($(window).width() >= 640) {
+    if ($(window).width() >= 640) {
       $('.headerMenu li :eq(0)').click();
     }
     e.stopPropagation()
@@ -196,31 +201,32 @@ $(document).ready(function() {
   })
 
   $('.topSlider .slider').slick({
-      infinite: true,
-      centerMode: true,
-      centerPadding: '0',
-      cssEase: 'ease-in-out',
-      draggable: true,
-      autoplay: false,
-      autoplayspeed: 2500,
-      slidesToShow: 1,
-      slideToScroll: 1,
-      speed: 250,
-      arrows: true,
-      prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
-      nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
-      dots: true,
-      responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          arrows: false,
-        }
+    infinite: true,
+    centerMode: true,
+    centerPadding: '0',
+    cssEase: 'ease-in-out',
+    draggable: true,
+    autoplay: false,
+    autoplayspeed: 2500,
+    slidesToShow: 1,
+    slideToScroll: 1,
+    speed: 250,
+    arrows: true,
+    prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
+    nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
+    dots: true,
+    responsive: [{
+      breakpoint: 600,
+      settings: {
+        arrows: false
       }
-    ]
-    })
+    }]
+  })
 
-
+  $(".tabsContainer").mCustomScrollbar({
+    theme: "tabsContainerScrollThm",
+      axis:"x" // vertical and horizontal scrollbar
+  });
 
 
 });

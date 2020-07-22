@@ -50,6 +50,10 @@ h3 {
   line-height: normal;
   margin: 0;
 }
+h3.sectionTitle {
+  margin: 3.2rem 0;
+  padding-top: 0.4rem;
+}
 h4 {
   font-size: 3rem;
   letter-spacing: -0.08rem;
@@ -1923,6 +1927,10 @@ button.btn-gray:hover {
   border: 1px solid #939393;
   background-color: #fff;
   margin-bottom: 0;
+  display: none;
+}
+.formPage .dropdown ul.show {
+  display: block;
 }
 .formPage .dropdown ul > :last-child {
   margin-bottom: 0;
@@ -5045,6 +5053,46 @@ footer ul ul {
     font-size: 2rem;
     line-height: 1;
   }
+}
+.direction_of_activity .tabsContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.direction_of_activity .tabs {
+  width: auto;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.direction_of_activity .tabs .tab {
+  margin-right: 2.74rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  white-space: pre;
+}
+.direction_of_activity .tabs > :last-child {
+  margin-right: 0;
+}
+.mCS-tabsContainerScrollThm > .mCSB_container {
+  margin: 0;
+  margin-bottom: 0;
+  margin-right: 0;
 }
 @media screen and (max-width: 640px) {
   h3 {
