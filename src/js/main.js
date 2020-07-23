@@ -242,11 +242,40 @@ $(document).ready(function() {
     }]
   })
 
-  $(".tabsContainer").mCustomScrollbar({
-    theme: "tabsContainerScrollThm",
-    axis: "x" // vertical and horizontal scrollbar
-  });
+  $('.dnk_slider .slider').slick({
+    infinite: true,
+    centerMode: true,
+    centerPadding: '0',
+    cssEase: 'ease-in-out',
+    draggable: true,
+    autoplay: false,
+    autoplayspeed: 2500,
+    slidesToShow: 1,
+    slideToScroll: 1,
+    speed: 250,
+    arrows: true,
+    prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
+    nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
+    dots: true,
+    responsive: [{
+      breakpoint: 681,
+      settings: {
+        dots: false
+      }
+    }]
+  })
 
+  // $(".tabsContainer").mCustomScrollbar({
+  //   theme: "tabsContainerScrollThm",
+  //   axis: "x" // vertical and horizontal scrollbar
+  // });
+
+  $(".tabs .tab").click(function() {
+    $(this).parents('.tabs').find('.active').removeClass('active');
+    $(this).addClass('active');
+  })
+
+$('.direction_of_activity-list__item span').append('<i class="ri-arrow-right-s-line"></i>');
 
 });
 
