@@ -80,20 +80,25 @@ $(document).ready(function() {
 
   function dropdownClose() {
     $("form .dropdown").each(function() {
-      $(this).parents('.dropdown').removeClass('active');
-      $("form .dropdown ul").removeClass('show');
-      $('.dropdown i').removeClass('active');
+      $(this).removeClass('active');
+      $(this).find('ul').removeClass('show');
+      $(this).find('i').removeClass('active');
     })
   }
 
   $('form .dropdown input').click(function(e) {
     if ($(this).parents('.dropdown').hasClass('active')) {
+      $(this).parents('.dropdown').removeClass('active');
       $(this).parents('.dropdown').find('i').toggleClass('active');
       $(this).parents('.dropdown').find('ul').toggleClass('show');
-    } else {
+      e.stopPropagation()
+    }
+     else {
       dropdownClose();
+      $(this).parents('.dropdown').addClass('active');
       $(this).parents('.dropdown').find('i').toggleClass('active');
       $(this).parents('.dropdown').find('ul').toggleClass('show');
+      e.stopPropagation()
     }
   })
 
