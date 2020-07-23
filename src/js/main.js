@@ -72,22 +72,22 @@ $(document).ready(function() {
   $('.date input').inputmask("99.99.9999");
 
   $('form .dropdown ul').each(function() {
-    var th1 = $(this).find('li:eq(0)').height();
-    var th2 = $(this).find('li:eq(1)').height();
-    $('form .dropdown ul').css('max-height', th1 + th2 + 36 + 'px');
-    $('form .dropdown ul').removeClass('show');
+    var th1 = $(this).parents('.dropdown').find('li:eq(0)').height();
+    var th2 = $(this).parents('.dropdown').find('li:eq(1)').height();
+    $(this).parents('.dropdown').find('ul').css('max-height', th1 + th2 + 36 + 'px');
+    $(this).parents('.dropdown').find('ul').removeClass('show');
   })
 
   $('form .dropdown input').click(function() {
-    $('.dropdown i').addClass('active');
-    $('form .dropdown ul').addClass('show');
+    $(this).parents('.dropdown').find('i').toggleClass('active');
+    $(this).parents('.dropdown').find('ul').toggleClass('show');
   })
 
   $('form .dropdown ul li').click(function() {
     var thisVal = $(this).html();
-    $('form .dropdown ul').removeClass('show');
-    $('.dropdown i').removeClass('active')
-    $('form .dropdown input').val(thisVal);
+    $(this).parents('ul').removeClass('show');
+    $(this).parents('.dropdown').find('i').removeClass('active')
+    $(this).parents('.dropdown').find('input').val(thisVal);
   })
 
   $('ul.content li, .FAQ li').click(function() {
