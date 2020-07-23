@@ -78,13 +78,28 @@ $(document).ready(function() {
     $(this).parents('.dropdown').find('ul').removeClass('show');
   })
 
-  $('form .dropdown input').click(function() {
-    $(this).parents('.dropdown').find('i').toggleClass('active');
-    $(this).parents('.dropdown').find('ul').toggleClass('show');
+  function dropdownClose() {
+    $("form .dropdown").each(function() {
+      $(this).parents('.dropdown').removeClass('active');
+      $("form .dropdown ul").removeClass('show');
+      $('.dropdown i').removeClass('active');
+    })
+  }
+
+  $('form .dropdown input').click(function(e) {
+    if ($(this).parents('.dropdown').hasClass('active')) {
+      $(this).parents('.dropdown').find('i').toggleClass('active');
+      $(this).parents('.dropdown').find('ul').toggleClass('show');
+    } else {
+      dropdownClose();
+      $(this).parents('.dropdown').find('i').toggleClass('active');
+      $(this).parents('.dropdown').find('ul').toggleClass('show');
+    }
   })
 
   $('form .dropdown ul li').click(function() {
     var thisVal = $(this).html();
+    $(this).parents('.dropdown').removeClass('active');
     $(this).parents('ul').removeClass('show');
     $(this).parents('.dropdown').find('i').removeClass('active')
     $(this).parents('.dropdown').find('input').val(thisVal);
@@ -151,8 +166,7 @@ $(document).ready(function() {
     }
 
     if (!$(e.target).closest("form .dropdown").length) {
-      $("form .dropdown ul").removeClass('show');
-      $('.dropdown i').removeClass('active');
+      dropdownClose();
     }
 
     if (!$(e.target).closest("footer .partition").length) {
@@ -225,7 +239,7 @@ $(document).ready(function() {
 
   $(".tabsContainer").mCustomScrollbar({
     theme: "tabsContainerScrollThm",
-      axis:"x" // vertical and horizontal scrollbar
+    axis: "x" // vertical and horizontal scrollbar
   });
 
 
