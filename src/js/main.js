@@ -92,8 +92,7 @@ $(document).ready(function() {
       $(this).parents('.dropdown').find('i').toggleClass('active');
       $(this).parents('.dropdown').find('ul').toggleClass('show');
       e.stopPropagation()
-    }
-     else {
+    } else {
       dropdownClose();
       $(this).parents('.dropdown').addClass('active');
       $(this).parents('.dropdown').find('i').toggleClass('active');
@@ -143,6 +142,18 @@ $(document).ready(function() {
   $(".mapPopUp .mapSection .mapList").mCustomScrollbar({
     theme: "MapListThm",
   });
+
+  $(".mapBlock .mapSection .mapList").mCustomScrollbar({
+    theme: "MapListThm",
+  });
+
+  $(".mapBlock .mapSection .mapList .list__item:lt(3)").show().addClass('show');
+
+$('.mapBlock .seeMore').click(function() {
+  var showed = $(".mapBlock .mapSection .mapList .list__item.show").length;
+  var i = showed;
+  $(".mapBlock .mapSection .mapList .list__item").eq(i).show().addClass('show');
+});
 
   $(".headerMenu .submenu").mCustomScrollbar({
     theme: "SubmenuScrollThm",
@@ -265,6 +276,123 @@ $(document).ready(function() {
     }]
   })
 
+  $('.clientHistorySlider .slider').slick({
+    infinite: true,
+    centerMode: true,
+    centerPadding: '0',
+    cssEase: 'ease-in-out',
+    draggable: true,
+    autoplay: false,
+    autoplayspeed: 2500,
+    slidesToShow: 2,
+    slideToScroll: 1,
+    speed: 250,
+    arrows: false,
+    prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
+    nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
+    dots: false,
+    responsive: [{
+      breakpoint: 681,
+      settings: {
+        slidesToShow: 1,
+      }
+    }]
+  })
+
+  $('.videoSlider .slider').slick({
+    infinite: true,
+    centerMode: true,
+    centerPadding: '0',
+    cssEase: 'ease-in-out',
+    draggable: true,
+    autoplay: false,
+    autoplayspeed: 2500,
+    slidesToShow: 2,
+    slideToScroll: 1,
+    speed: 250,
+    arrows: false,
+    prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
+    nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
+    dots: false,
+    responsive: [{
+      breakpoint: 681,
+      settings: {
+        slidesToShow: 1,
+      }
+    }]
+  })
+
+  $('.literatePatientSchoolSlider .slider').slick({
+    infinite: true,
+    centerMode: true,
+    centerPadding: '0',
+    cssEase: 'ease-in-out',
+    draggable: true,
+    autoplay: false,
+    autoplayspeed: 2500,
+    slidesToShow: 3,
+    slideToScroll: 1,
+    speed: 250,
+    arrows: false,
+    prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
+    nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
+    dots: false,
+    responsive: [{
+      breakpoint: 1013,
+      settings: {
+        slidesToShow: 2,
+      }
+    }, {
+      breakpoint: 681,
+      settings: {
+        slidesToShow: 1,
+      }
+    }]
+  })
+
+  $('.partnersSlider .slider').slick({
+    infinite: true,
+    centerMode: true,
+    centerPadding: '0',
+    cssEase: 'ease-in-out',
+    draggable: true,
+    autoplay: false,
+    autoplayspeed: 2500,
+    slidesToShow: 4,
+    slideToScroll: 1,
+    speed: 250,
+    arrows: false,
+    prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
+    nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
+    dots: false,
+    responsive: [{
+      breakpoint: 1013,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 701,
+      settings: {
+        slidesToShow: 2,
+      }
+    }, {
+      breakpoint: 401,
+      settings: {
+        slidesToShow: 1,
+      }
+    }]
+  })
+
+
+
+  $('.sliderNav .prev').click(function() {
+    $(this).parents('section').find('.slick-slider').slick('slickPrev');
+  });
+
+  $('.sliderNav .next').click(function() {
+    $(this).parents('section').find('.slick-slider').slick('slickNext');
+  });
   // $(".tabsContainer").mCustomScrollbar({
   //   theme: "tabsContainerScrollThm",
   //   axis: "x" // vertical and horizontal scrollbar
@@ -275,7 +403,7 @@ $(document).ready(function() {
     $(this).addClass('active');
   })
 
-$('.direction_of_activity-list__item span').append('<i class="ri-arrow-right-s-line"></i>');
+  $('.direction_of_activity-list__item span').append('<i class="ri-arrow-right-s-line"></i>');
 
 });
 
