@@ -47,16 +47,16 @@ $(document).ready(function() {
   });
 
   $('.custom-select a').click(function() {
-    $('.custom-select a i').addClass('active')
-    $('.custom-select .options').fadeIn();
+    $(this).parents('.custom-select').find('i').addClass('active')
+    $(this).parents('.custom-select').find('.options').fadeIn();
   });
 
   $('.custom-select .options li').click(function() {
     var thisVal = $(this).html();
-    $('.custom-select .options').fadeOut();
-    $('.custom-select .options .red').removeClass('red')
-    $('.custom-select a span').text(thisVal);
-    $('.custom-select a i').removeClass('active')
+    $(this).parents('.custom-select').find('.options').fadeOut();
+    $(this).parents('.custom-select').find('.options .red').removeClass('red')
+    $(this).parents('.custom-select').find('a span').text(thisVal);
+    $(this).parents('.custom-select').find('a i').removeClass('active')
     $(this).addClass('red')
   })
 
@@ -109,7 +109,7 @@ $(document).ready(function() {
     $(this).parents('.dropdown').find('input').val(thisVal);
   })
 
-  $('ul.content li, .FAQ li').click(function() {
+  $('ul.content li, .accordion-menu li').click(function() {
     $(this).toggleClass('show');
   })
 
@@ -404,6 +404,46 @@ $('.mapBlock .seeMore').click(function() {
   })
 
   $('.direction_of_activity-list__item span').append('<i class="ri-arrow-right-s-line"></i>');
+
+  $('.stars').each(function() {
+    if ($(this).hasClass('star-0')) {
+      $(this).append('<i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-10')) {
+      $(this).append('<i class="ri-star-half-fill"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-20')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-30')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-half-fill"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-40')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-50')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i><i class="ri-star-line"></i></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-60')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-70')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-80')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i>')
+    }
+    if ($(this).hasClass('star-90')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>')
+    }
+    if ($(this).hasClass('star-100')) {
+      $(this).append('<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>')
+    }
+  })
+
+  $('.review a').click(function(){
+    $(this).parents('.review').toggleClass('show');
+  })
 
 });
 

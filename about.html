@@ -31,6 +31,7 @@
     <script src="src/js/jquery.fancybox.min.js"></script>
     <script src="src/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="src/js/vue-launcher.js"></script>
   </head>
   <body>
     <div class="allContent">
@@ -193,7 +194,7 @@
                   </div>
                 </div>
               </div>
-              <div id="vue-root">
+              <div class="slider-root" id="vue-root">
                 <section class="page-title smallh2">
                   <h2>Благодарности</h2>
                 </section>
@@ -207,82 +208,52 @@
                   </div>
                 </div>
                 <div class="slider-arrows">
-                  <div class="arrow arrow-left" @click="switchSlide(-1)"><img src="src/img/static/slider-arrow.svg"></div>
-                  <div class="arrow arrow-right" @click="switchSlide(1)"><img src="src/img/static/slider-arrow.svg"></div>
+                  <div class="arrow arrow-left" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><img src="src/img/static/slider-arrow.svg"></div>
+                  <div class="arrow arrow-right" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><img src="src/img/static/slider-arrow-r.svg"></div>
                 </div>
               </div>
               <script>
-                new Vue({
-                  el: '#vue-root',
-                  data() {
-                    return {
-                      thanks: [
-                        {
-                          date: 'г. Санкт-Петербург, 2018',
-                          name: 'Название. Рыбный текст. Небходимо заменить.',
-                          href: '#',
-                          image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
-                        },
-                        {
-                          date: 'г. Санкт-Петербург, 2018',
-                          name: 'Название. Рыбный текст. Небходимо заменить.',
-                          href: '#',
-                          image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
-                        },
-                        {
-                          date: 'г. Санкт-Петербург, 2018',
-                          name: 'Название. Рыбный текст. Небходимо заменить.',
-                          href: '#',
-                          image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
-                        },
-                        {
-                          date: 'г. Санкт-Петербург, 2018',
-                          name: 'Название. Рыбный текст. Небходимо заменить.',
-                          href: '#',
-                          image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
-                        },
-                        {
-                          date: 'г. Санкт-Петербург, 2018',
-                          name: 'Название. Рыбный текст. Небходимо заменить.',
-                          href: '#',
-                          image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
-                        },
-                        {
-                          date: 'г. Санкт-Петербург, 2018',
-                          name: 'Название. Рыбный текст. Небходимо заменить.',
-                          href: '#',
-                          image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
-                        }
-                      ],
-                      width: 232,
-                      active_idx: 0,
-                      content_container: 0
-                    }
+                let data = [
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
                   },
-                  methods: {
-                    getSize() {
-                      let width = this.width * this.thanks.length + 16 * (this.thanks.length - 1)
-                      return width
-                    },
-                    initialization() {
-                      let container = document.querySelector('.container')
-                      let content_container = document.querySelector('.content-container')
-                      let content_inner = container.offsetWidth * .75 + (content_container.offsetWidth - container.offsetWidth) / 2
-                      this.content_container = content_inner - 20
-                    },
-                    getTranslate() {
-                      let x = this.width + 16
-                      x = x * this.active_idx * -1
-                      return x
-                    },
-                    switchSlide(nap) {
-                      this.active_idx += nap
-                    }
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
                   },
-                  mounted() {
-                    this.initialization()
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  },
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  },
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  },
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
                   }
-                })
+                ]
+                let root = '#vue-root'
+                let width = 232
+                vueSliderLauncher(root, data, width)
               </script>
             </div>
           </div>
