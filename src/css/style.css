@@ -4189,7 +4189,7 @@ button.btn-gray:hover {
   color: #fff;
 }
 .slider-root {
-  position: absolute;
+  position: relative !important;
 }
 .slider-wrap {
   overflow: hidden;
@@ -4215,6 +4215,11 @@ button.btn-gray:hover {
   top: -20px;
   left: 650px;
   z-index: 2;
+  width: 300px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .slider-arrows > div {
   display: inline-block;
@@ -6926,6 +6931,11 @@ footer ul ul {
   -webkit-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
+}
+.slick-arrow.locked {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
 }
 .slick-arrow:hover {
   background: #b8181c;

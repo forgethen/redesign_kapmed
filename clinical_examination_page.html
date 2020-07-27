@@ -266,6 +266,9 @@
                                   <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
                                 </label><a class="btn btn-red" ркуа="#">Поставить напоминание</a>
                               </div>
+                              <div class="container">
+                                <h6 class="title">Напоминание установлено!</h6>
+                              </div>
                             </form>
                           </div>
                         </li>
@@ -314,6 +317,9 @@
                                   <input type="checkbox" required hidden><i class="check ri-check-fill"></i>
                                   <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
                                 </label><a class="btn btn-red" ркуа="#">Поставить напоминание</a>
+                              </div>
+                              <div class="container">
+                                <h6 class="title">Напоминание установлено!</h6>
                               </div>
                             </form>
                           </div>
@@ -364,6 +370,9 @@
                                   <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
                                 </label><a class="btn btn-red" ркуа="#">Поставить напоминание</a>
                               </div>
+                              <div class="container">
+                                <h6 class="title">Напоминание установлено!</h6>
+                              </div>
                             </form>
                           </div>
                         </li>
@@ -412,6 +421,9 @@
                                   <input type="checkbox" required hidden><i class="check ri-check-fill"></i>
                                   <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
                                 </label><a class="btn btn-red" ркуа="#">Поставить напоминание</a>
+                              </div>
+                              <div class="container">
+                                <h6 class="title">Напоминание установлено!</h6>
                               </div>
                             </form>
                           </div>
@@ -544,39 +556,80 @@
                   </div>
                 </div>
               </section>
-              <section class="historySavedClients" id="io6">
-                <div class="container">
-                  <div class="sectionTitle">
-                    <div class="sectionTitle__top">
-                      <h3 class="sectionTitle__title">Отзывы о диспансеризации</h3>
-                      <div class="sliderNav">
-                        <div class="prev slick-arrow"><i class="ri-arrow-left-s-line"></i></div>
-                        <div class="next slick-arrow"><i class="ri-arrow-right-s-line"></i></div>
+              <section class="reviewsSection" id="io6">
+                <div class="slider slider-root" id="vue-root">
+                  <div class="container">
+                    <div class="sectionTitle">
+                      <div class="sectionTitle__top">
+                        <h3 class="sectionTitle__title">Отзывы о диспансеризации</h3>
+                        <div class="sliderNav">
+                          <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
+                          <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-wrap" :style="{width: `${content_container}px`}">
+                    <div class="slider-thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                      <div class="slide-thanks review active" v-for="item, idx in thanks" :style="{width: `${width}px`}">
+                        <h5> <span class="name">{{item.name}}</span>,&nbsp;<span class="yars">{{item.year}}</span>&nbsp;лет</h5>
+                        <p class="location">{{item.location}}</p>
+                        <div class="stars" :class="item.class"></div>
+                        <p class="text">{{item.text}}</p><a class="red" href="javascript:;">
+                          <p>Показать отзыв полностью</p>
+                          <p>Свернуть</p></a>
+                        <p class="postDate">{{item.date}}</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="slider">
-                  <div class="review active">
-                    <h5> <span class="name">Иванова Мария</span>,&nbsp;<span class="yars">56</span>&nbsp;лет</h5>
-                    <p class="location">Поликлиника №20, Москва</p>
-                    <div class="stars star-0"></div>
-                    <div class="stars star-10"></div>
-                    <div class="stars star-20"></div>
-                    <div class="stars star-30"></div>
-                    <div class="stars star-40"></div>
-                    <div class="stars star-50"></div>
-                    <div class="stars star-60"></div>
-                    <div class="stars star-70"></div>
-                    <div class="stars star-80"></div>
-                    <div class="stars star-90"></div>
-                    <div class="stars star-100"></div>
-                    <p class="text">Диспансеризация — это медицинский осмотр, направленный на выявление хронических неинфекционных заболеваний, а также риска их развития. Диспансеризация предусматривает осмотр у взрослых и детей до 18 лет.<br>Это медицинский осмотр, направленный на выявление хронических неинфекционных заболеваний, а также риска их развития. Диспансеризация предусматривает осмотр.</p><a class="red" href="javascript:;">
-                      <p>Показать отзыв полностью</p>
-                      <p>Свернуть</p></a>
-                    <p class="postDate">15 мая 2020 г.</p>
-                  </div>
-                </div>
+                <script>
+                  let data = [
+                    {
+                      name: 'Авав',
+                      year: '56',
+                      location: 'dasdas',
+                      class: 'star-60',
+                      text: 'dasdasda',
+                      date: '32.23.23'
+                    },
+                    {
+                      name: 'Авав',
+                      year: '56',
+                      location: 'dasdas',
+                      class: 'star-60',
+                      text: 'dasdasda',
+                      date: '32.23.23'
+                    },
+                    {
+                      name: 'Авав',
+                      year: '56',
+                      location: 'dasdas',
+                      class: 'star-60',
+                      text: 'dasdasda',
+                      date: '32.23.23'
+                    },
+                    {
+                      name: 'Авав',
+                      year: '56',
+                      location: 'dasdas',
+                      class: 'star-60',
+                      text: 'dasdasda',
+                      date: '32.23.23'
+                    },
+                    {
+                      name: 'Авав',
+                      year: '56',
+                      location: 'dasdas',
+                      class: 'star-60',
+                      text: 'dasdasda',
+                      date: '32.23.23'
+                    }
+                  ]
+                  let root = '#vue-root'
+                  let width = 540
+                  vueSliderLauncher(root, data, width)
+                </script>
               </section>
               <section>
                 <div class="container">
