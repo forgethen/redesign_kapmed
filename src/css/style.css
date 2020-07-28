@@ -6538,12 +6538,18 @@ footer ul ul {
   font-size: 2.4rem;
   line-height: 1;
 }
+.reviewContainer {
+  padding: 0.4rem 1rem 1rem 1rem;
+}
+.reviewContainer.active .review {
+  -webkit-box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
+          box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
+}
 .review {
   padding: 4rem;
   -webkit-border-radius: 8px;
           border-radius: 8px;
   background-color: #fff;
-  max-width: 54rem;
 }
 .review.show .text {
   display: inline-block;
@@ -6554,8 +6560,7 @@ footer ul ul {
 .review.show a > :last-child {
   display: inline-block;
 }
-.review:hover,
-.review.active {
+.review:hover {
   -webkit-box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
           box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
 }

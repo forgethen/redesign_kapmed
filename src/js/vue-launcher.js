@@ -34,4 +34,5 @@ const vueSliderLauncher = (root, data, width) => {
     }
   })
 }
+
 //# sourceMappingURL=vue-launcher.js.map

@@ -571,14 +571,16 @@
                   </div>
                   <div class="slider-wrap" :style="{width: `${content_container}px`}">
                     <div class="slider-thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
-                      <div class="slide-thanks review active" v-for="item, idx in thanks" :style="{width: `${width}px`}">
-                        <h5> <span class="name">{{item.name}}</span>,&nbsp;<span class="yars">{{item.year}}</span>&nbsp;лет</h5>
-                        <p class="location">{{item.location}}</p>
-                        <div class="stars" :class="item.class"></div>
-                        <p class="text">{{item.text}}</p><a class="red" href="javascript:;">
-                          <p>Показать отзыв полностью</p>
-                          <p>Свернуть</p></a>
-                        <p class="postDate">{{item.date}}</p>
+                      <div class="slide-thanks active reviewContainer" v-for="item, idx in thanks" :style="{width: `${width}px`}">
+                        <div class="review">
+                          <h5> <span class="name">{{item.name}}</span>,&nbsp;<span class="yars">{{item.year}}</span>&nbsp;лет</h5>
+                          <p class="location">{{item.location}}</p>
+                          <div class="stars" :class="item.class"></div>
+                          <p class="text">{{item.text}}</p><a class="red" href="javascript:;">
+                            <p>Показать отзыв полностью</p>
+                            <p>Свернуть</p></a>
+                          <p class="postDate">{{item.date}}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -586,44 +588,44 @@
                 <script>
                   let data = [
                     {
-                      name: 'Авав',
-                      year: '56',
-                      location: 'dasdas',
+                      name: 'Иванова Мария',
+                      year: '50',
+                      location: 'Поликлиника №20, Москва',
                       class: 'star-60',
-                      text: 'dasdasda',
-                      date: '32.23.23'
+                      text: 'Диспансеризация — это медицинский осмотр, направленный на выявление хронических неинфекционных заболеваний, а также риска их развития. Диспансеризация предусматривает осмотр у взрослых и детей до 18 лет.',
+                      date: '15 мая 2020 г.'
                     },
                     {
-                      name: 'Авав',
-                      year: '56',
-                      location: 'dasdas',
-                      class: 'star-60',
-                      text: 'dasdasda',
-                      date: '32.23.23'
+                      name: 'Иванова Мария',
+                      year: '40',
+                      location: 'Поликлиника №20, Москва',
+                      class: 'star-40',
+                      text: 'Диспансеризация — это медицинский осмотр, направленный на выявление хронических неинфекционных заболеваний, а также риска их развития. Диспансеризация предусматривает осмотр у взрослых и детей до 18 лет.',
+                      date: '15 мая 2022 г.'
                     },
                     {
-                      name: 'Авав',
-                      year: '56',
-                      location: 'dasdas',
+                      name: 'Иванова Мария',
+                      year: '36',
+                      location: 'Поликлиника №20, Москва',
                       class: 'star-60',
-                      text: 'dasdasda',
-                      date: '32.23.23'
+                      text: 'Диспансеризация — это медицинский осмотр, направленный на выявление хронических неинфекционных заболеваний, а также риска их развития. Диспансеризация предусматривает осмотр у взрослых и детей до 18 лет.',
+                      date: '15 мая 2010 г.'
                     },
                     {
-                      name: 'Авав',
-                      year: '56',
-                      location: 'dasdas',
-                      class: 'star-60',
-                      text: 'dasdasda',
-                      date: '32.23.23'
+                      name: 'Иванова Мария',
+                      year: '22',
+                      location: 'Поликлиника №20, Москва',
+                      class: 'star-20',
+                      text: 'Диспансеризация — это медицинский осмотр, направленный на выявление хронических неинфекционных заболеваний, а также риска их развития. Диспансеризация предусматривает осмотр у взрослых и детей до 18 лет.',
+                      date: '15 мая 1920 г.'
                     },
                     {
-                      name: 'Авав',
-                      year: '56',
-                      location: 'dasdas',
-                      class: 'star-60',
-                      text: 'dasdasda',
-                      date: '32.23.23'
+                      name: 'Иванова Мария',
+                      year: '66',
+                      location: 'Поликлиника №20, Москва',
+                      class: 'star-100',
+                      text: 'Диспансеризация — это медицинский осмотр, направленный на выявление хронических неинфекционных заболеваний, а также риска их развития. Диспансеризация предусматривает осмотр у взрослых и детей до 18 лет.',
+                      date: '15 августа 2020 г.'
                     }
                   ]
                   let root = '#vue-root'
