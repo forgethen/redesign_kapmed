@@ -6411,13 +6411,77 @@ footer ul ul {
 .gray-text--space {
   margin-bottom: 32px;
 }
+.book-wrapper {
+  margin-bottom: 207px;
+}
 .presentation-page {
   min-width: 520px;
   min-height: 390px;
   background-color: #c4c4c4;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
 }
 .presentation {
   margin-bottom: 346px;
+}
+.pres-list {
+  margin-bottom: 258px;
+}
+.doc-pres {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.doc-pres__background {
+  min-width: 180px;
+  max-width: 180px;
+  height: 140px;
+  background-color: #c4c4c4;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+}
+.doc-pres__background img {
+  display: block;
+}
+.doc-pres__text {
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 28px;
+}
+.doc-pres__description {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 16px;
+}
+.doc-pres__wrap-bot {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.doc-pres__author {
+  font-size: 14px;
+  line-height: 18px;
+  color: #939393;
+}
+.doc-pres__city {
+  font-size: 14px;
+  line-height: 18px;
+  color: #939393;
 }
 .materials {
   display: -ms-grid;
