@@ -109,8 +109,8 @@ $(document).ready(function() {
     $(this).parents('.dropdown').find('input').val(thisVal);
   })
 
-  $('ul.content li, .accordion-menu li').click(function() {
-    $(this).toggleClass('show');
+  $('ul.content .check, .accordion-menu .check').click(function() {
+    $(this).parents('li').toggleClass('show');
   })
 
   $('.mapPopUp .list li').click(function() {
@@ -149,11 +149,11 @@ $(document).ready(function() {
 
   $(".mapBlock .mapSection .mapList .list__item:lt(3)").show().addClass('show');
 
-$('.mapBlock .seeMore').click(function() {
-  var showed = $(".mapBlock .mapSection .mapList .list__item.show").length;
-  var i = showed;
-  $(".mapBlock .mapSection .mapList .list__item").eq(i).show().addClass('show');
-});
+  $('.mapBlock .seeMore').click(function() {
+    var showed = $(".mapBlock .mapSection .mapList .list__item.show").length;
+    var i = showed;
+    $(".mapBlock .mapSection .mapList .list__item").eq(i).show().addClass('show');
+  });
 
   $(".headerMenu .submenu").mCustomScrollbar({
     theme: "SubmenuScrollThm",
@@ -366,22 +366,23 @@ $('.mapBlock .seeMore').click(function() {
     nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
     dots: false,
     responsive: [{
-      breakpoint: 1013,
-      settings: {
-        slidesToShow: 3,
+        breakpoint: 1013,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 701,
+        settings: {
+          slidesToShow: 2,
+        }
+      }, {
+        breakpoint: 401,
+        settings: {
+          slidesToShow: 1,
+        }
       }
-    },
-    {
-      breakpoint: 701,
-      settings: {
-        slidesToShow: 2,
-      }
-    }, {
-      breakpoint: 401,
-      settings: {
-        slidesToShow: 1,
-      }
-    }]
+    ]
   })
 
 
@@ -405,7 +406,7 @@ $('.mapBlock .seeMore').click(function() {
 
   $('.direction_of_activity-list__item span').append('<i class="ri-arrow-right-s-line"></i>');
 
-  $('.stars').each(function() {
+  $('.stars.static').each(function() {
     if ($(this).hasClass('star-0')) {
       $(this).append('<i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i>')
     }
@@ -441,10 +442,63 @@ $('.mapBlock .seeMore').click(function() {
     }
   })
 
-  $('.review a').click(function(){
+  $('.review a').click(function() {
     $(this).parents('.review').toggleClass('show');
   })
+  /* 1. Visualizing things on Hover - See next part for action on click */
+  $('.stars a').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
 
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('a.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+
+  }).on('mouseout', function(){
+    $(this).parent().children('a.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+
+
+  /* 2. Action to perform on click */
+  $('.stars a').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('a.star');
+    var i = 0;
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+
+    // JUST RESPONSE (Not needed)
+    var ratingValue = parseInt($('.stars a.selected').last().data('value'), 10);
+    var msg = "";
+    if (ratingValue > 3) {
+        msg = "Всё AllRight!";
+        $('.success-box .btn').removeClass('show');
+        $('.success-box .text-message').hide();
+    }
+    else {
+        msg = "Недовольны диспансеризацией? Оставьте жалобу, чтобы мы смогли разобраться в сложившейся ситуцаии и помочь вам.";
+        $('.success-box .btn').addClass('show');
+        $('.success-box .text-message').show();
+    }
+    responseMessage(msg);
+
+  });
+
+  function responseMessage(msg) {
+    $('.success-box').fadeIn(200);
+    $('.success-box .text-message').html(""+msg+"");
+  };
 });
 
 //# sourceMappingURL=main.js.map

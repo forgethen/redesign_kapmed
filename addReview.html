@@ -42,223 +42,64 @@
       </div>
       <div class="formPage__content">
         <div class="wrapper">
-          <h2 class="title">Оформление заявления на полис ОМС</h2>
+          <h2 class="title">Написание отзыва</h2>
           <ul class="stepline">
             <li class="check active">
-              <p>1. Ваши контакты</p>
+              <p>1. Ваш отзыв</p>
             </li>
             <li>
-              <p>2. Заявление</p>
+              <p>2. Медучреждение</p>
             </li>
             <li>
-              <p>3. Ваши данные</p>
+              <p>3. Имя и возраст</p>
             </li>
             <li>
               <p>4. Отправка</p>
             </li>
           </ul>
           <form id="form1">
-            <h6 class="title">Укажите ваши контактные данные</h6>
-            <div class="doublerow">
-              <label>
-                <p class="title">Как вас зовут?</p>
-                <input type="text" placeholder="Фамилия Имя Отчество">
-              </label>
-              <div class="dropdown">
-                <label>
-                  <p class="title">Регион оформления полиса ОМС&nbsp;<span class="red">*</span></p>
-                  <div>
-                    <input type="text" value="п. Котельский, Кингисеппский район, Ленинградская область"><i class="ri-arrow-down-s-fill"></i>
-                  </div>
-                </label>
-                <ul class="addreses show">
-                  <li>САНКТ-ПЕТЕРБУРГ Г,БОЛЬШАЯ ЗЕЛЕНИНА УЛ, дом (владение) 29, корпус (строение) Б, квартира (офис) 3Н</li>
-                  <li>САНКТ-ПЕТЕРБУРГ Г,НОВОЧЕРКАССКИЙ ПР-КТ, дом (владение) 47, корпус (строение) 1, квартира (офис) 28/1Н</li>
-                  <li>САНКТ-ПЕТЕРБУРГ Г,МОСКОВСКИЙ ПР-КТ, дом (владение) 183-185, корпус (строение) Б , квартира (офис) 170-Н</li>
-                </ul>
-              </div>
+            <h6 class="title">Напишите свой отзыв о диспансеризации</h6>
+            <div class="qc">
+              <p class="desc">Напишите свой отзыв о диспансеризации</p>
+              <div class="stars check"><a class="star" href="javascript:;" data-value="1"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="2"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="3"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="4"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="5"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a></div>
+              <div class="success-box"><a class="btn btn-red" href="#">Оставить жалобу</a></div>
             </div>
-            <div class="doublerow">
-              <label>
-                <p class="title">Ваш контактный телефон</p>
-                <input type="tel" placeholder="+ 7 (– – –)  – – –  – –  – –">
-              </label>
-              <label>
-                <p class="title">E-mail&nbsp;<span>(на который мы отправим ответ)</span></p>
-                <input type="email" placeholder="info@mail.com">
-              </label>
-            </div>
-            <label class="custom-checkbox">
-              <input type="checkbox" required hidden><i class="check ri-check-fill"></i>
-              <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
+            <label>
+              <p class="title">Напишите свой отзыв</p>
+              <textarea placeholder="Введите текст"></textarea>
             </label>
           </form>
           <form id="form2">
-            <h6 class="title">На что хотите подать заявление?</h6>
-            <div class="custom-radio">
+            <h6 class="title">Укажите медучреждение, в котором вы прошли диспансеризацию</h6>
+            <div class="doublerow">
               <label>
-                <input type="radio" checked hidden name="selection">
-                <div class="check"></div>
-                <p>Первичное оформление полиса единого образца</p><span>(до этого полиса ОМС не было)</span>
+                <p class="title">Укажите адрес или № поликлиники</p>
+                <input type="text" value="" placeholder="Поликлиника №54">
               </label>
               <label>
-                <input type="radio" hidden name="selection">
-                <div class="check"></div>
-                <p>Замену страховой компании</p><span>(не нравится старая СМО или переехали в другой регион)</span>
-              </label>
-              <label>
-                <input type="radio" hidden name="selection">
-                <div class="check"></div>
-                <p>Выпуск дубликата теущего полиса</p><span>(потеряли полис ОМС или хотите заменить бумажный полис на  электронный)</span>
-              </label>
-              <label>
-                <input type="radio" hidden name="selection">
-                <div class="check"></div>
-                <p>Внесение изменений в текущий полис</p><span>(изменились ФИО или документы, указанные в полисе СМО)</span>
+                <p class="title">Или укажите на карте</p><a class="btn mapOpen" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i></a>
               </label>
             </div>
           </form>
-          <form class="selectOnMap">
-            <h6 class="title">Выберите на карте офис, в котором вы хотите забрать свой полис</h6>
-            <div class="pointOfIssue doublerow">
-              <div>
-                <label>
-                  <input type="text" readonly hidden value="">
-                  <h6>Адрес</h6>
-                </label><a class="red change" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true">Изменить</a>
-              </div>
-              <div>
-                <div class="sheduleBlock fromForm"><i class="ri-time-fill"></i>
-                  <h6 class="status on">Открыто c 08:00 до 19:00</h6>
-                  <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
-                  <ul class="shedule__list">
-                    <li>
-                      <p class="day">Пн</p>
-                      <p class="times">08:00 - 19:30</p>
-                    </li>
-                    <li>
-                      <p class="day">Вт</p>
-                      <p class="times">08:00 - 19:30</p>
-                    </li>
-                    <li>
-                      <p class="day">Ср</p>
-                      <p class="times">08:00 - 19:30</p>
-                    </li>
-                    <li>
-                      <p class="day">Чт</p>
-                      <p class="times">08:00 - 19:30</p>
-                    </li>
-                    <li>
-                      <p class="day">Пт</p>
-                      <p class="times">08:00 - 19:30</p>
-                    </li>
-                    <li>
-                      <p class="day">Сб</p>
-                      <p class="times">—</p>
-                    </li>
-                    <li>
-                      <p class="day">Вс</p>
-                      <p class="times">—</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="phoneBlock fromForm"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div>
-              </div>
-            </div><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true">Открыть карту филиалов</a>
+          <form id="form3">
+            <h6 class="title">Укажите ваше имя и возраст</h6>
+            <div class="name_and_age">
+              <label>
+                <p class="title">Как вас зовут?</p>
+                <input type="text" value="" placeholder="Фамили Имя">
+              </label>
+              <label>
+                <p class="title">Возраст</p>
+                <input type="text" value="" placeholder="00">
+              </label>
+            </div>
           </form>
         </div>
       </div>
       <div class="formPage__finish">
         <div class="wrapper">
-          <p class="title">Заявление отправлено. Что делать дальше?</p>
-          <div class="stepsBlock">
-            <div class="step stepsBlock__item">
-              <div class="info">
-                <h5>1. Дождитесь звонка с подтверждением</h5>
-                <p>Мы свяжемся с вами в ближайшее время</p>
-              </div>
-            </div>
-            <div class="step stepsBlock__item">
-              <div class="info">
-                <h5>2. Возьмите с собой необходимые документы</h5>
-                <ul>
-                  <li>
-                    <p>— Паспорт гражданина РФ</p>
-                  </li>
-                  <li>
-                    <p>— СНИЛС</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="step stepsBlock__item">
-              <div class="info">
-                <h5>3. Обратитесь в наш офис</h5>
-                <p>В офисе вы подпишете заявление и получите временное свидетельство, которое заменит полис, пока он изготавливается (до 45 дней).</p>
-              </div>
-              <div class="pointOfIssue doublerow">
-                <div>
-                  <label>
-                    <input type="text" readonly hidden value="">
-                    <h6>Адрес</h6>
-                  </label><a class="red change" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true">Изменить</a>
-                </div>
-                <div>
-                  <div class="sheduleBlock fromForm"><i class="ri-time-fill"></i>
-                    <h6 class="status on">Открыто c 08:00 до 19:00</h6>
-                    <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
-                    <ul class="shedule__list">
-                      <li>
-                        <p class="day">Пн</p>
-                        <p class="times">08:00 - 19:30</p>
-                      </li>
-                      <li>
-                        <p class="day">Вт</p>
-                        <p class="times">08:00 - 19:30</p>
-                      </li>
-                      <li>
-                        <p class="day">Ср</p>
-                        <p class="times">08:00 - 19:30</p>
-                      </li>
-                      <li>
-                        <p class="day">Чт</p>
-                        <p class="times">08:00 - 19:30</p>
-                      </li>
-                      <li>
-                        <p class="day">Пт</p>
-                        <p class="times">08:00 - 19:30</p>
-                      </li>
-                      <li>
-                        <p class="day">Сб</p>
-                        <p class="times">—</p>
-                      </li>
-                      <li>
-                        <p class="day">Вс</p>
-                        <p class="times">—</p>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="phoneBlock fromForm"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div>
-                </div>
-              </div>
-            </div>
-            <div class="step stepsBlock__item">
-              <div class="info">
-                <h5>2. Возьмите с собой необходимые документы</h5>
-                <ul>
-                  <li>
-                    <p>— Паспорт гражданина РФ</p>
-                  </li>
-                  <li>
-                    <p>— СНИЛС</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <section class="consultBlock">
-            <h6>Есть вопросы? Сообщите нам и мы вам перевозвоним</h6><a class="btn btn-transparent" href="#">Получить консультацию</a>
-          </section>
+          <p class="title">Спасибо за ваш отзыв!</p>
+          <p>Мы опубликуем ваш отзыв после модерации в течение нескольких дней.</p><a class="btn btn-transparent" href="/">Перейти на главную</a>
         </div>
       </div>
       <div class="mapPopUp" id="mapPopUp">

@@ -220,51 +220,58 @@
                         <p>Под диспансеризацию в 2020 году попадают следующие годы рождения: 1981, 1984, 1987, 1990, 1993, 1996, 1999, 2002, а также все граждане старше 40 лет.<br><br>Если вашего возраста нет в списке для диспансеризации и вы не относитесь к льготным категориям, вы можете пройти: профилактическое обследование в поликлинике по месту прикрепления</p>
                       </div>
                       <ul class="accordion-menu">
-                        <li>
-                          <p>Что делать, если моего возраста нет в списке для диспансеризации?<i class="ri-add-fill"></i></p>
+                        <li class="accordion-menu__item">
+                          <p class="check">Что делать, если моего возраста нет в списке для диспансеризации?<i class="ri-add-fill"></i></p>
                           <div class="answer">
                             <form class="medicalExamination">
                               <div class="container">
                                 <h6 class="title">Вы можете пройти профилактический осмотр</h6>
-                                <p class="desc">Если ваш возраст не подходит для прохождения диспансеризации, то вы можете бесплатно пройти профилактический осмотр в центрах, которые отмечены на карте.<br><br>Позвоните в любой центр, отмеченный на карте, чтобы узнать подробности и записаться на осмотр.</p><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i>Открыть карту</a>
+                                <div class="desc">
+                                  <p>Если ваш возраст не подходит для прохождения диспансеризации, то вы можете бесплатно пройти профилактический осмотр в центрах, которые отмечены на карте.</p>
+                                  <p>Позвоните в любой центр, отмеченный на карте, чтобы узнать подробности и записаться на осмотр.</p>
+                                </div><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i><span>Открыть карту</span></a>
                               </div>
                               <div class="container">
                                 <h6 class="title">Или поставить напоминание о прохождении диспансеризации</h6>
-                                <p class="desc">Также, вы можете оставить нам свой email, чтобы мы напомнили о прохождении диспансеризации.</p>
-                                <div class="doublerow">
-                                  <label>
-                                    <p class="title">Ваш email</p>
-                                    <input type="email" placeholder="info@mail.com">
-                                  </label>
-                                  <label>
-                                    <p class="title">Укажите ваше имя</p>
-                                    <input type="text" placeholder="Фамилия Имя">
-                                  </label>
+                                <div class="desc">
+                                  <p>Также, вы можете оставить нам свой email, чтобы мы напомнили о прохождении диспансеризации.</p>
                                 </div>
-                                <div class="doublerow">
-                                  <label class="date">
-                                    <p class="title">Укажите дату вашего рождения</p>
-                                    <div><i class="ri-calendar-2-line"></i>
-                                      <input type="text" value="" placeholder="дд.мм.гггг">
-                                    </div>
-                                  </label>
-                                  <div class="dropdown">
+                                <div class="doublerowContainer">
+                                  <div class="doublerow">
                                     <label>
-                                      <p class="title">Укажите ваш пол</p>
-                                      <div>
-                                        <input type="text" value="Пол"><i class="ri-arrow-down-s-fill"></i>
+                                      <p class="title">Ваш email</p>
+                                      <input type="email" placeholder="info@mail.com">
+                                    </label>
+                                    <label>
+                                      <p class="title">Укажите ваше имя</p>
+                                      <input type="text" placeholder="Фамилия Имя">
+                                    </label>
+                                  </div>
+                                  <div class="doublerow">
+                                    <label class="date">
+                                      <p class="title">Укажите дату вашего рождения</p>
+                                      <div><i class="ri-calendar-2-line"></i>
+                                        <input type="text" value="" placeholder="дд.мм.гггг">
                                       </div>
                                     </label>
-                                    <ul class="addreses show">
-                                      <li>Мужской</li>
-                                      <li>Женский</li>
-                                    </ul>
+                                    <div class="dropdown">
+                                      <label>
+                                        <p class="title">Укажите ваш пол</p>
+                                        <div>
+                                          <input type="text" value="Пол"><i class="ri-arrow-down-s-fill"></i>
+                                        </div>
+                                      </label>
+                                      <ul class="addreses show">
+                                        <li>Мужской</li>
+                                        <li>Женский</li>
+                                      </ul>
+                                    </div>
                                   </div>
                                 </div>
                                 <label class="custom-checkbox">
                                   <input type="checkbox" required hidden><i class="check ri-check-fill"></i>
                                   <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
-                                </label><a class="btn btn-red" ркуа="#">Поставить напоминание</a>
+                                </label><a class="btn btn-red" ркуа="#"><span>Поставить напоминание</span></a>
                               </div>
                               <div class="container">
                                 <h6 class="title">Напоминание установлено!</h6>
@@ -272,51 +279,58 @@
                             </form>
                           </div>
                         </li>
-                        <li>
-                          <p>Где можно пройти диспансеризацию?<i class="ri-add-fill"></i></p>
+                        <li class="accordion-menu__item">
+                          <p class="check">Где можно пройти диспансеризацию?<i class="ri-add-fill"></i></p>
                           <div class="answer">
                             <form class="medicalExamination">
                               <div class="container">
                                 <h6 class="title">Вы можете пройти профилактический осмотр</h6>
-                                <p class="desc">Если ваш возраст не подходит для прохождения диспансеризации, то вы можете бесплатно пройти профилактический осмотр в центрах, которые отмечены на карте.<br><br>Позвоните в любой центр, отмеченный на карте, чтобы узнать подробности и записаться на осмотр.</p><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i>Открыть карту</a>
+                                <div class="desc">
+                                  <p>Если ваш возраст не подходит для прохождения диспансеризации, то вы можете бесплатно пройти профилактический осмотр в центрах, которые отмечены на карте.</p>
+                                  <p>Позвоните в любой центр, отмеченный на карте, чтобы узнать подробности и записаться на осмотр.</p>
+                                </div><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i><span>Открыть карту</span></a>
                               </div>
                               <div class="container">
                                 <h6 class="title">Или поставить напоминание о прохождении диспансеризации</h6>
-                                <p class="desc">Также, вы можете оставить нам свой email, чтобы мы напомнили о прохождении диспансеризации.</p>
-                                <div class="doublerow">
-                                  <label>
-                                    <p class="title">Ваш email</p>
-                                    <input type="email" placeholder="info@mail.com">
-                                  </label>
-                                  <label>
-                                    <p class="title">Укажите ваше имя</p>
-                                    <input type="text" placeholder="Фамилия Имя">
-                                  </label>
+                                <div class="desc">
+                                  <p>Также, вы можете оставить нам свой email, чтобы мы напомнили о прохождении диспансеризации.</p>
                                 </div>
-                                <div class="doublerow">
-                                  <label class="date">
-                                    <p class="title">Укажите дату вашего рождения</p>
-                                    <div><i class="ri-calendar-2-line"></i>
-                                      <input type="text" value="" placeholder="дд.мм.гггг">
-                                    </div>
-                                  </label>
-                                  <div class="dropdown">
+                                <div class="doublerowContainer">
+                                  <div class="doublerow">
                                     <label>
-                                      <p class="title">Укажите ваш пол</p>
-                                      <div>
-                                        <input type="text" value="Пол"><i class="ri-arrow-down-s-fill"></i>
+                                      <p class="title">Ваш email</p>
+                                      <input type="email" placeholder="info@mail.com">
+                                    </label>
+                                    <label>
+                                      <p class="title">Укажите ваше имя</p>
+                                      <input type="text" placeholder="Фамилия Имя">
+                                    </label>
+                                  </div>
+                                  <div class="doublerow">
+                                    <label class="date">
+                                      <p class="title">Укажите дату вашего рождения</p>
+                                      <div><i class="ri-calendar-2-line"></i>
+                                        <input type="text" value="" placeholder="дд.мм.гггг">
                                       </div>
                                     </label>
-                                    <ul class="addreses show">
-                                      <li>Мужской</li>
-                                      <li>Женский</li>
-                                    </ul>
+                                    <div class="dropdown">
+                                      <label>
+                                        <p class="title">Укажите ваш пол</p>
+                                        <div>
+                                          <input type="text" value="Пол"><i class="ri-arrow-down-s-fill"></i>
+                                        </div>
+                                      </label>
+                                      <ul class="addreses show">
+                                        <li>Мужской</li>
+                                        <li>Женский</li>
+                                      </ul>
+                                    </div>
                                   </div>
                                 </div>
                                 <label class="custom-checkbox">
                                   <input type="checkbox" required hidden><i class="check ri-check-fill"></i>
                                   <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
-                                </label><a class="btn btn-red" ркуа="#">Поставить напоминание</a>
+                                </label><a class="btn btn-red" ркуа="#"><span>Поставить напоминание</span></a>
                               </div>
                               <div class="container">
                                 <h6 class="title">Напоминание установлено!</h6>
@@ -324,51 +338,58 @@
                             </form>
                           </div>
                         </li>
-                        <li>
-                          <p>Что такое профилактическое обследование?<i class="ri-add-fill"></i></p>
+                        <li class="accordion-menu__item">
+                          <p class="check">Что такое профилактическое обследование?<i class="ri-add-fill"></i></p>
                           <div class="answer">
                             <form class="medicalExamination">
                               <div class="container">
                                 <h6 class="title">Вы можете пройти профилактический осмотр</h6>
-                                <p class="desc">Если ваш возраст не подходит для прохождения диспансеризации, то вы можете бесплатно пройти профилактический осмотр в центрах, которые отмечены на карте.<br><br>Позвоните в любой центр, отмеченный на карте, чтобы узнать подробности и записаться на осмотр.</p><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i>Открыть карту</a>
+                                <div class="desc">
+                                  <p>Если ваш возраст не подходит для прохождения диспансеризации, то вы можете бесплатно пройти профилактический осмотр в центрах, которые отмечены на карте.</p>
+                                  <p>Позвоните в любой центр, отмеченный на карте, чтобы узнать подробности и записаться на осмотр.</p>
+                                </div><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i><span>Открыть карту</span></a>
                               </div>
                               <div class="container">
                                 <h6 class="title">Или поставить напоминание о прохождении диспансеризации</h6>
-                                <p class="desc">Также, вы можете оставить нам свой email, чтобы мы напомнили о прохождении диспансеризации.</p>
-                                <div class="doublerow">
-                                  <label>
-                                    <p class="title">Ваш email</p>
-                                    <input type="email" placeholder="info@mail.com">
-                                  </label>
-                                  <label>
-                                    <p class="title">Укажите ваше имя</p>
-                                    <input type="text" placeholder="Фамилия Имя">
-                                  </label>
+                                <div class="desc">
+                                  <p>Также, вы можете оставить нам свой email, чтобы мы напомнили о прохождении диспансеризации.</p>
                                 </div>
-                                <div class="doublerow">
-                                  <label class="date">
-                                    <p class="title">Укажите дату вашего рождения</p>
-                                    <div><i class="ri-calendar-2-line"></i>
-                                      <input type="text" value="" placeholder="дд.мм.гггг">
-                                    </div>
-                                  </label>
-                                  <div class="dropdown">
+                                <div class="doublerowContainer">
+                                  <div class="doublerow">
                                     <label>
-                                      <p class="title">Укажите ваш пол</p>
-                                      <div>
-                                        <input type="text" value="Пол"><i class="ri-arrow-down-s-fill"></i>
+                                      <p class="title">Ваш email</p>
+                                      <input type="email" placeholder="info@mail.com">
+                                    </label>
+                                    <label>
+                                      <p class="title">Укажите ваше имя</p>
+                                      <input type="text" placeholder="Фамилия Имя">
+                                    </label>
+                                  </div>
+                                  <div class="doublerow">
+                                    <label class="date">
+                                      <p class="title">Укажите дату вашего рождения</p>
+                                      <div><i class="ri-calendar-2-line"></i>
+                                        <input type="text" value="" placeholder="дд.мм.гггг">
                                       </div>
                                     </label>
-                                    <ul class="addreses show">
-                                      <li>Мужской</li>
-                                      <li>Женский</li>
-                                    </ul>
+                                    <div class="dropdown">
+                                      <label>
+                                        <p class="title">Укажите ваш пол</p>
+                                        <div>
+                                          <input type="text" value="Пол"><i class="ri-arrow-down-s-fill"></i>
+                                        </div>
+                                      </label>
+                                      <ul class="addreses show">
+                                        <li>Мужской</li>
+                                        <li>Женский</li>
+                                      </ul>
+                                    </div>
                                   </div>
                                 </div>
                                 <label class="custom-checkbox">
                                   <input type="checkbox" required hidden><i class="check ri-check-fill"></i>
                                   <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
-                                </label><a class="btn btn-red" ркуа="#">Поставить напоминание</a>
+                                </label><a class="btn btn-red" ркуа="#"><span>Поставить напоминание</span></a>
                               </div>
                               <div class="container">
                                 <h6 class="title">Напоминание установлено!</h6>
@@ -376,51 +397,58 @@
                             </form>
                           </div>
                         </li>
-                        <li>
-                          <p>Кто относится к льготным категориям граждан?<i class="ri-add-fill"></i></p>
+                        <li class="accordion-menu__item">
+                          <p class="check">Кто относится к льготным категориям граждан?<i class="ri-add-fill"></i></p>
                           <div class="answer">
                             <form class="medicalExamination">
                               <div class="container">
                                 <h6 class="title">Вы можете пройти профилактический осмотр</h6>
-                                <p class="desc">Если ваш возраст не подходит для прохождения диспансеризации, то вы можете бесплатно пройти профилактический осмотр в центрах, которые отмечены на карте.<br><br>Позвоните в любой центр, отмеченный на карте, чтобы узнать подробности и записаться на осмотр.</p><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i>Открыть карту</a>
+                                <div class="desc">
+                                  <p>Если ваш возраст не подходит для прохождения диспансеризации, то вы можете бесплатно пройти профилактический осмотр в центрах, которые отмечены на карте.</p>
+                                  <p>Позвоните в любой центр, отмеченный на карте, чтобы узнать подробности и записаться на осмотр.</p>
+                                </div><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i><span>Открыть карту</span></a>
                               </div>
                               <div class="container">
                                 <h6 class="title">Или поставить напоминание о прохождении диспансеризации</h6>
-                                <p class="desc">Также, вы можете оставить нам свой email, чтобы мы напомнили о прохождении диспансеризации.</p>
-                                <div class="doublerow">
-                                  <label>
-                                    <p class="title">Ваш email</p>
-                                    <input type="email" placeholder="info@mail.com">
-                                  </label>
-                                  <label>
-                                    <p class="title">Укажите ваше имя</p>
-                                    <input type="text" placeholder="Фамилия Имя">
-                                  </label>
+                                <div class="desc">
+                                  <p>Также, вы можете оставить нам свой email, чтобы мы напомнили о прохождении диспансеризации.</p>
                                 </div>
-                                <div class="doublerow">
-                                  <label class="date">
-                                    <p class="title">Укажите дату вашего рождения</p>
-                                    <div><i class="ri-calendar-2-line"></i>
-                                      <input type="text" value="" placeholder="дд.мм.гггг">
-                                    </div>
-                                  </label>
-                                  <div class="dropdown">
+                                <div class="doublerowContainer">
+                                  <div class="doublerow">
                                     <label>
-                                      <p class="title">Укажите ваш пол</p>
-                                      <div>
-                                        <input type="text" value="Пол"><i class="ri-arrow-down-s-fill"></i>
+                                      <p class="title">Ваш email</p>
+                                      <input type="email" placeholder="info@mail.com">
+                                    </label>
+                                    <label>
+                                      <p class="title">Укажите ваше имя</p>
+                                      <input type="text" placeholder="Фамилия Имя">
+                                    </label>
+                                  </div>
+                                  <div class="doublerow">
+                                    <label class="date">
+                                      <p class="title">Укажите дату вашего рождения</p>
+                                      <div><i class="ri-calendar-2-line"></i>
+                                        <input type="text" value="" placeholder="дд.мм.гггг">
                                       </div>
                                     </label>
-                                    <ul class="addreses show">
-                                      <li>Мужской</li>
-                                      <li>Женский</li>
-                                    </ul>
+                                    <div class="dropdown">
+                                      <label>
+                                        <p class="title">Укажите ваш пол</p>
+                                        <div>
+                                          <input type="text" value="Пол"><i class="ri-arrow-down-s-fill"></i>
+                                        </div>
+                                      </label>
+                                      <ul class="addreses show">
+                                        <li>Мужской</li>
+                                        <li>Женский</li>
+                                      </ul>
+                                    </div>
                                   </div>
                                 </div>
                                 <label class="custom-checkbox">
                                   <input type="checkbox" required hidden><i class="check ri-check-fill"></i>
                                   <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
-                                </label><a class="btn btn-red" ркуа="#">Поставить напоминание</a>
+                                </label><a class="btn btn-red" ркуа="#"><span>Поставить напоминание</span></a>
                               </div>
                               <div class="container">
                                 <h6 class="title">Напоминание установлено!</h6>
@@ -441,21 +469,78 @@
                       </div>
                       <ul class="accordion-menu">
                         <li>
-                          <p>Где можно получить анкету терапевта?<i class="ri-add-fill"></i></p>
+                          <p class="check">Где можно получить анкету терапевта?<i class="ri-add-fill"></i></p>
                           <div class="answer">
-                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать ... Вы посещали эту страницу несколько раз</p>
+                            <div class="materials v2">
+                              <div class="item">
+                                <p class="desc">Здесь мы рассказываем о том, что такое анкета терапевта и предлагаем ее заполнить и распечатать, чтобы сэкомонить время в поликлинике.</p>
+                                <div class="doc">
+                                  <div class="image"><img src="src/img/static/doc_list.svg" alt="doc_image"></div>
+                                  <div class="content">
+                                    <h6 class="title">Анкета для обследования</h6><a class="link" href="#">Скачать PDF. 0,3 МБ 18.05.2019</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <p class="desc">Здесь мы рассказываем о том, что такое анкета терапевта и предлагаем ее заполнить и распечатать, чтобы сэкомонить время в поликлинике.</p>
+                                <div class="doc">
+                                  <div class="image"><img src="src/img/static/doc_list.svg" alt="doc_image"></div>
+                                  <div class="content">
+                                    <h6 class="title">Анкета для обследования</h6><a class="link" href="#">Скачать PDF. 0,3 МБ 18.05.2019</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </li>
                         <li>
-                          <p>Как получить полис ОМС?<i class="ri-add-fill"></i></p>
+                          <p class="check">Как получить полис ОМС?<i class="ri-add-fill"></i></p>
                           <div class="answer">
-                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать ... Вы посещали эту страницу несколько раз</p>
+                            <div class="materials v2">
+                              <div class="item">
+                                <p class="desc">Здесь мы рассказываем о том, что такое анкета терапевта и предлагаем ее заполнить и распечатать, чтобы сэкомонить время в поликлинике.</p>
+                                <div class="doc">
+                                  <div class="image"><img src="src/img/static/doc_list.svg" alt="doc_image"></div>
+                                  <div class="content">
+                                    <h6 class="title">Анкета для обследования</h6><a class="link" href="#">Скачать PDF. 0,3 МБ 18.05.2019</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <p class="desc">Здесь мы рассказываем о том, что такое анкета терапевта и предлагаем ее заполнить и распечатать, чтобы сэкомонить время в поликлинике.</p>
+                                <div class="doc">
+                                  <div class="image"><img src="src/img/static/doc_list.svg" alt="doc_image"></div>
+                                  <div class="content">
+                                    <h6 class="title">Анкета для обследования</h6><a class="link" href="#">Скачать PDF. 0,3 МБ 18.05.2019</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </li>
                         <li>
-                          <p>Как прикрепиться к поликлинике?<i class="ri-add-fill"></i></p>
+                          <p class="check">Как прикрепиться к поликлинике?<i class="ri-add-fill"></i></p>
                           <div class="answer">
-                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать ... Вы посещали эту страницу несколько раз</p>
+                            <div class="materials v2">
+                              <div class="item">
+                                <p class="desc">Здесь мы рассказываем о том, что такое анкета терапевта и предлагаем ее заполнить и распечатать, чтобы сэкомонить время в поликлинике.</p>
+                                <div class="doc">
+                                  <div class="image"><img src="src/img/static/doc_list.svg" alt="doc_image"></div>
+                                  <div class="content">
+                                    <h6 class="title">Анкета для обследования</h6><a class="link" href="#">Скачать PDF. 0,3 МБ 18.05.2019</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="item">
+                                <p class="desc">Здесь мы рассказываем о том, что такое анкета терапевта и предлагаем ее заполнить и распечатать, чтобы сэкомонить время в поликлинике.</p>
+                                <div class="doc">
+                                  <div class="image"><img src="src/img/static/doc_list.svg" alt="doc_image"></div>
+                                  <div class="content">
+                                    <h6 class="title">Анкета для обследования</h6><a class="link" href="#">Скачать PDF. 0,3 МБ 18.05.2019</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </li>
                       </ul>
@@ -471,33 +556,223 @@
                       </div>
                       <ul class="accordion-menu">
                         <li>
-                          <p>от 18 до 39 лет<i class="ri-add-fill"></i></p>
+                          <p class="check">от 18 до 39 лет<i class="ri-add-fill"></i></p>
                           <div class="answer">
-                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать ... Вы посещали эту страницу несколько раз</p>
+                            <div class="stagesBlock">
+                              <div class="container">
+                                <h6 class="title">Первый этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <h6 class="title">Второй этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <div class="copy-print"><a class="btn btn-copyLink" href="#"><i class="ri-link"></i><span>Скопировать ссылку</span></a><a class="btn btn-printPage" href="#"><i class="ri-printer-line"></i><span>Распечатать</span></a></div>
+                              </div>
+                            </div>
                           </div>
                         </li>
                         <li>
-                          <p>от 40 до 45 лет<i class="ri-add-fill"></i></p>
+                          <p class="check">от 40 до 45 лет<i class="ri-add-fill"></i></p>
                           <div class="answer">
-                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать ... Вы посещали эту страницу несколько раз</p>
+                            <div class="stagesBlock">
+                              <div class="container">
+                                <h6 class="title">Первый этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <h6 class="title">Второй этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <div class="copy-print"><a class="btn btn-copyLink" href="#"><i class="ri-link"></i><span>Скопировать ссылку</span></a><a class="btn btn-printPage" href="#"><i class="ri-printer-line"></i><span>Распечатать</span></a></div>
+                              </div>
+                            </div>
                           </div>
                         </li>
                         <li>
-                          <p>от 46 до 50 лет<i class="ri-add-fill"></i></p>
+                          <p class="check">от 46 до 50 лет<i class="ri-add-fill"></i></p>
                           <div class="answer">
-                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать ... Вы посещали эту страницу несколько раз</p>
+                            <div class="stagesBlock">
+                              <div class="container">
+                                <h6 class="title">Первый этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <h6 class="title">Второй этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <div class="copy-print"><a class="btn btn-copyLink" href="#"><i class="ri-link"></i><span>Скопировать ссылку</span></a><a class="btn btn-printPage" href="#"><i class="ri-printer-line"></i><span>Распечатать</span></a></div>
+                              </div>
+                            </div>
                           </div>
                         </li>
                         <li>
-                          <p>от 51 до 74 лет<i class="ri-add-fill"></i></p>
+                          <p class="check">от 51 до 74 лет<i class="ri-add-fill"></i></p>
                           <div class="answer">
-                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать ... Вы посещали эту страницу несколько раз</p>
+                            <div class="stagesBlock">
+                              <div class="container">
+                                <h6 class="title">Первый этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <h6 class="title">Второй этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <div class="copy-print"><a class="btn btn-copyLink" href="#"><i class="ri-link"></i><span>Скопировать ссылку</span></a><a class="btn btn-printPage" href="#"><i class="ri-printer-line"></i><span>Распечатать</span></a></div>
+                              </div>
+                            </div>
                           </div>
                         </li>
                         <li>
-                          <p>от 75 лет и старше<i class="ri-add-fill"></i></p>
+                          <p class="check">от 75 лет и старше<i class="ri-add-fill"></i></p>
                           <div class="answer">
-                            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать ... Вы посещали эту страницу несколько раз</p>
+                            <div class="stagesBlock">
+                              <div class="container">
+                                <h6 class="title">Первый этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <h6 class="title">Второй этап диспансеризации:</h6>
+                                <ul class="content">
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                  <li class="content__item">
+                                    <p>В своём стремлении улучшить пользовательский опыт мы упускаем, что акционеры крупнейших компаний неоднозначны и будут обнародованы. Но укрепление и развитие внутренней структуры, в своём классическом представлении, допускает внедрение распределения внутренних резервов и ресурсов. В своём стремлении повысить качество жизни, они забывают, что начало повседневной работы по фор</p>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="container">
+                                <div class="copy-print"><a class="btn btn-copyLink" href="#"><i class="ri-link"></i><span>Скопировать ссылку</span></a><a class="btn btn-printPage" href="#"><i class="ri-printer-line"></i><span>Распечатать</span></a></div>
+                              </div>
+                            </div>
                           </div>
                         </li>
                       </ul>
@@ -575,7 +850,7 @@
                         <div class="review">
                           <h5> <span class="name">{{item.name}}</span>,&nbsp;<span class="yars">{{item.year}}</span>&nbsp;лет</h5>
                           <p class="location">{{item.location}}</p>
-                          <div class="stars" :class="item.class"></div>
+                          <div class="stars static" :class="item.class"></div>
                           <p class="text">{{item.text}}</p><a class="red" href="javascript:;">
                             <p>Показать отзыв полностью</p>
                             <p>Свернуть</p></a>
@@ -789,6 +1064,281 @@
           </div>
         </div>
       </footer>
+      <div class="mapPopUp" id="mapPopUp">
+        <div class="container">
+          <section class="page-title">
+            <div class="container custom-select">
+              <h5 class="title">Укажите офис, в котором вы заберете свой полис&nbsp;</h5>
+              <div class="options-block"><a class="red">в Санкт-Петербурге</a><i class="ri-arrow-down-s-line"></i>
+                <ul class="options">
+                  <li class="red">в Санкт-Петербурге</li>
+                  <li>в Москве</li>
+                </ul>
+              </div>
+            </div>
+            <p class="desc">Выберите медицинскую организацию, в которой хотите пройти диспансеризацию.</p>
+          </section>
+          <div class="tags"><a class="tag v2 active" href="javascript:;"><span>Забрать полис ОМС</span></a><a class="tag v2" href="javascript:;"><span>Оформить полис ОМС</span></a><a class="tag v2" href="javascript:;"><span>Помощь</span></a>
+          </div>
+          <div class="mapSection">
+            <div class="list">
+              <div class="mapList">
+                <ul>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="map">
+              <iframe></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
