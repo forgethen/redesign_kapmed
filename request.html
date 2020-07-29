@@ -61,7 +61,7 @@
             <h6 class="title">Укажите ваши контактные данные</h6>
             <div class="doublerow">
               <label>
-                <p class="title">Как вас зовут?</p>
+                <p class="title">Ваше ФИО&nbsp;<span class="red">*</span></p>
                 <input type="text" placeholder="Фамилия Имя Отчество">
               </label>
               <div class="dropdown">
@@ -80,12 +80,30 @@
             </div>
             <div class="doublerow">
               <label>
-                <p class="title">Ваш контактный телефон</p>
+                <p class="title">Ваш контактный телефон&nbsp;<span class="red">*</span></p>
                 <input type="tel" placeholder="+ 7 (– – –)  – – –  – –  – –">
               </label>
               <label>
-                <p class="title">E-mail&nbsp;<span>(на который мы отправим ответ)</span></p>
+                <p class="title">E-mail&nbsp;<span>(на который мы отправим ответ)&nbsp;</span><span class="red">*</span></p>
                 <input type="email" placeholder="info@mail.com">
+              </label>
+            </div>
+            <div class="dropdown">
+              <label>
+                <p class="title">Ваше гражданство&nbsp;<span class="red">*</span></p>
+                <div>
+                  <input type="text" value="Российская Федерация"><i class="ri-arrow-down-s-fill"></i>
+                </div>
+              </label>
+              <ul class="addreses show">
+                <li>Российская Федерация</li>
+                <li>Соединённые Штаты Америки</li>
+                <li>Гражданство Великобритании</li>
+              </ul>
+            </div>
+            <div class="doublerow">
+              <label>
+                <p>Можете выбрать&nbsp;<a class="red-link" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true">офис получения&nbsp;<i class="ri-arrow-right-up-line"></i></a></p>
               </label>
             </div>
             <label class="custom-checkbox">
@@ -94,6 +112,13 @@
             </label>
           </form>
           <form id="form2">
+            <h6 class="title">Вы можете выбрать ближайший пункт выдачи полиса ОМС</h6>
+            <div class="doublerow">
+              <label><a class="btn btn-red pick-up_point" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i><span>Пункты выдачи полисов</span></a></label>
+              <label class="link"><a class="red-link" href="#">Пропустить шаг</a></label>
+            </div>
+          </form>
+          <form id="form3">
             <h6 class="title">На что хотите подать заявление?</h6>
             <div class="custom-radio">
               <label>
@@ -166,6 +191,14 @@
               </div>
             </div><a class="btn btn-red" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true">Открыть карту филиалов</a>
           </form>
+        </div>
+      </div>
+      <div class="formPage__finish">
+        <div class="wrapper">
+          <p>Заявка&nbsp;<span class="number">7549</span>&nbsp;на оформление полиса ОМС принята</p>
+          <div class="msg">
+            <h6 class="title">В ближайшее время с вами свяжеться ваш страховой представитель</h6><a class="btn btn-red" href="/">Перейти на главную</a>
+          </div>
         </div>
       </div>
       <div class="formPage__finish">
