@@ -62,7 +62,9 @@
             <div class="qc">
               <p class="desc">Напишите свой отзыв о диспансеризации</p>
               <div class="stars check"><a class="star" href="javascript:;" data-value="1"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="2"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="3"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="4"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="5"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a></div>
-              <div class="success-box"><a class="btn btn-red" href="#">Оставить жалобу</a></div>
+              <div class="success-box">
+                <p class="text-message"></p><a class="btn btn-red" href="#">Оставить жалобу</a>
+              </div>
             </div>
             <label>
               <p class="title">Напишите свой отзыв</p>
@@ -71,14 +73,16 @@
           </form>
           <form id="form2">
             <h6 class="title">Укажите медучреждение, в котором вы прошли диспансеризацию</h6>
-            <div class="doublerow">
-              <label>
-                <p class="title">Укажите адрес или № поликлиники</p>
-                <input type="text" value="" placeholder="Поликлиника №54">
-              </label>
-              <label>
-                <p class="title">Или укажите на карте</p><a class="btn mapOpen" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i></a>
-              </label>
+            <div class="doublerowContainer">
+              <div class="doublerow">
+                <label>
+                  <p class="title">Укажите адрес или № поликлиники</p>
+                  <input type="text" value="" placeholder="Поликлиника №54">
+                </label>
+                <label>
+                  <p class="title">Или укажите на карте</p><a class="btn mapOpen" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i></a>
+                </label>
+              </div>
             </div>
           </form>
           <form id="form3">
@@ -383,7 +387,7 @@
       <div class="formPage__bottom">
         <div class="container"><a class="help" href="#">Нужна помощь?</a><a class="btn btn-transparent" href="#">Назад</a><a class="btn btn-red" href="#">Отправить заявление</a></div>
       </div>
-      <div class="formPage__bottom">
+      <div class="formPage__bottom v2">
         <div class="wrapper">
           <div class="copy-print"><a class="btn btn-copyLink" href="#"><i class="ri-link"></i><span>Скопировать ссылку</span></a><a class="btn btn-printPage" href="#"><i class="ri-printer-line"></i><span>Распечатать</span></a></div><a class="btn btn-transparent" href="/">Перейти на главную</a>
         </div>

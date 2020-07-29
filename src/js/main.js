@@ -446,28 +446,26 @@ $(document).ready(function() {
     $(this).parents('.review').toggleClass('show');
   })
   /* 1. Visualizing things on Hover - See next part for action on click */
-  $('.stars a').on('mouseover', function(){
+  $('.stars a').on('mouseover', function() {
     var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
 
     // Now highlight all the stars that's not after the current hovered star
-    $(this).parent().children('a.star').each(function(e){
+    $(this).parent().children('a.star').each(function(e) {
       if (e < onStar) {
         $(this).addClass('hover');
-      }
-      else {
+      } else {
         $(this).removeClass('hover');
       }
     });
 
-  }).on('mouseout', function(){
-    $(this).parent().children('a.star').each(function(e){
+  }).on('mouseout', function() {
+    $(this).parent().children('a.star').each(function(e) {
       $(this).removeClass('hover');
     });
   });
 
 
-  /* 2. Action to perform on click */
-  $('.stars a').on('click', function(){
+  $('.stars a').on('click', function() {
     var onStar = parseInt($(this).data('value'), 10); // The star currently selected
     var stars = $(this).parent().children('a.star');
     var i = 0;
@@ -478,18 +476,16 @@ $(document).ready(function() {
       $(stars[i]).addClass('selected');
     }
 
-    // JUST RESPONSE (Not needed)
     var ratingValue = parseInt($('.stars a.selected').last().data('value'), 10);
     var msg = "";
     if (ratingValue > 3) {
-        msg = "Всё AllRight!";
-        $('.success-box .btn').removeClass('show');
-        $('.success-box .text-message').hide();
-    }
-    else {
-        msg = "Недовольны диспансеризацией? Оставьте жалобу, чтобы мы смогли разобраться в сложившейся ситуцаии и помочь вам.";
-        $('.success-box .btn').addClass('show');
-        $('.success-box .text-message').show();
+      msg = "Всё AllRight!";
+      $('.success-box .btn').removeClass('show');
+      $('.success-box .text-message').hide();
+    } else {
+      msg = "Недовольны диспансеризацией? Оставьте жалобу, чтобы мы смогли разобраться в сложившейся ситуцаии и помочь вам.";
+      $('.success-box .btn').addClass('show');
+      $('.success-box .text-message').show();
     }
     responseMessage(msg);
 
@@ -497,8 +493,9 @@ $(document).ready(function() {
 
   function responseMessage(msg) {
     $('.success-box').fadeIn(200);
-    $('.success-box .text-message').html(""+msg+"");
+    $('.success-box .text-message').html("" + msg + "");
   };
+  
 });
 
 //# sourceMappingURL=main.js.map
