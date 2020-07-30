@@ -1467,6 +1467,41 @@ button.btn-gray:hover {
 .copy-print > :last-child {
   margin-right: 0;
 }
+a {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+a.grey-link {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+a.grey-link i {
+  font-size: 1.6rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #939393;
+}
+a.grey-link:hover i {
+  color: #b8181c;
+}
 a.red-link {
   color: #b8181c;
   display: -webkit-inline-box;
@@ -1494,6 +1529,7 @@ a.red-link i {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #b8181c;
 }
 a.red-link:hover {
   text-decoration: underline;
@@ -2116,6 +2152,25 @@ a.red-link:hover {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.formPage .maybeSelectAddress {
+  margin-top: 2.4rem;
+  color: #313131;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
 }
 .formPage .dropdown {
   position: relative;
@@ -6702,16 +6757,14 @@ footer ul ul {
   margin-bottom: 20px;
 }
 .doc-pres__background {
-  min-width: 180px;
-  max-width: 180px;
-  height: 140px;
-  background-color: #c4c4c4;
+  width: 180px;
   -webkit-border-radius: 4px;
           border-radius: 4px;
   margin-right: 16px;
 }
 .doc-pres__background img {
   display: block;
+  width: 100%;
 }
 .doc-pres__text {
   margin-bottom: 16px;
@@ -6751,9 +6804,10 @@ footer ul ul {
   line-height: 18px;
   color: grey01page;
 }
+.presentation-wrap .smi {
+  color: #939393;
+}
 .presentation-page {
-  width: 520px;
-  height: 390px;
   background-color: #c4c4c4;
   margin-bottom: 16px;
   -webkit-border-radius: 8px;
@@ -6965,6 +7019,22 @@ footer ul ul {
 }
 .width100 {
   width: 100%;
+}
+.events-heading {
+  font-size: 32px;
+  line-height: 40px;
+}
+.events-paragraphs {
+  margin-bottom: 32px;
+}
+.events-paragraphs p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #939393;
+}
+.events-paragraphs p:last-child {
+  margin-bottom: 0;
 }
 .stars.static {
   display: -ms-grid;
