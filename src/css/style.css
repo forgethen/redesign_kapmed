@@ -1727,6 +1727,9 @@ a.red-link:hover {
     top: 1.6rem;
   }
 }
+.custom-select > :first-child {
+  position: relative;
+}
 .custom-select .options {
   display: none;
   padding: 3.2rem 2.4rem;
@@ -2827,6 +2830,23 @@ a.red-link:hover {
     top: auto;
     right: auto;
   }
+  .formPage .dropdown {
+    width: 100%;
+  }
+  .formPage .msg {
+    padding: 2rem;
+  }
+  .formPage .msg > :first-child {
+    padding-top: 0;
+    padding-bottom: 1.2rem;
+  }
+  .formPage .msg .btn {
+    margin-top: 2.4rem;
+  }
+  .formPage .maybeSelectAddress a {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
   .formPage .dropzone {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2997,6 +3017,10 @@ a.red-link:hover {
   .formPage form label {
     width: 100%;
     margin-top: 2.4rem;
+  }
+  .formPage form label.link a {
+    font-size: 1.6rem;
+    line-height: 1;
   }
   .formPage form label.date i {
     bottom: auto;
@@ -3247,6 +3271,28 @@ a.red-link:hover {
 .mapPopUp .page-title .container {
   padding: 0 0 2.8rem 0;
 }
+.mapPopUp .swipeTopDown {
+  height: 4rem;
+  width: 100%;
+  display: none;
+  position: relative;
+}
+.mapPopUp .swipeTopDown:before {
+  content: '';
+  display: block;
+  width: 3.2rem;
+  height: 0.4rem;
+  -webkit-border-radius: 1.4rem;
+          border-radius: 1.4rem;
+  position: absolute;
+  top: 0.8rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #c1c1c1;
+  z-index: 1;
+}
 .mapSection {
   display: -ms-grid;
   display: grid;
@@ -3275,6 +3321,7 @@ a.red-link:hover {
 .mapSection .list {
   position: relative;
   border: 1px solid #e6e6e6;
+  background-color: #fff;
   -webkit-border-radius: 0.8rem 0 0 0.8rem;
           border-radius: 0.8rem 0 0 0.8rem;
 }
@@ -3407,6 +3454,9 @@ a.red-link:hover {
 .mapBlock > :last-child {
   display: none;
 }
+.mapBlock .mapSection .list {
+  background-color: #fff;
+}
 .mapBlock .mapSection .list__item:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -3437,7 +3487,159 @@ a.red-link:hover {
 .mCS-MapListThm.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
   background-color: #b8181c;
 }
-@media screen and (max-width: 640px) {
+@media screen and (orientation: portrait) {
+  .mapPopUp {
+    -webkit-border-radius: 1.6rem;
+            border-radius: 1.6rem;
+    bottom: auto;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding-bottom: 7.2rem;
+  }
+  .mapPopUp .mapSection .map:before {
+    padding-top: 100%;
+  }
+}
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+  .mapPopUp {
+    padding: 0 5.2rem 5.2rem;
+  }
+}
+@media screen and (max-width: 800px) and (orientation: portrait) {
+  .mapPopUp {
+    -webkit-border-radius: 1.6rem 1.6rem 0 0;
+            border-radius: 1.6rem 1.6rem 0 0;
+    padding: 5.2rem 0 0;
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: -webkit-calc(100vh - 9.6rem);
+    height: calc(100vh - 9.6rem);
+    max-width: 76.8rem;
+    overflow: hidden;
+    width: 100%;
+  }
+  .mapPopUp .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 100%;
+  }
+  .mapPopUp .CloseFancybox {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 2rem;
+    right: 2rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mapPopUp .CloseFancybox svg {
+    width: 2rem;
+  }
+  .mapPopUp .page-title {
+    padding: 0 2rem;
+    margin-top: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+  }
+  .mapPopUp .page-title .container {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    height: auto;
+  }
+  .mapPopUp .tags {
+    padding: 0 2rem;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .mapPopUp .swipeTopDown {
+    display: block;
+  }
+  .mapPopUp .mapSection {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .mapPopUp .mapSection > :first-child {
+    width: 100%;
+    position: fixed;
+    bottom: -webkit-calc(-100% + 4rem);
+    bottom: calc(-100% + 4rem);
+    z-index: 402;
+    height: -webkit-calc(100vh - 9.6rem);
+    height: calc(100vh - 9.6rem);
+    -webkit-border-radius: 1.6rem 1.6rem 0 0;
+            border-radius: 1.6rem 1.6rem 0 0;
+    -webkit-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  .mapPopUp .mapSection > :first-child.active {
+    bottom: 0;
+  }
+  .mapPopUp .mapSection .mapList {
+    height: -webkit-calc(100% - 4rem);
+    height: calc(100% - 4rem);
+    top: 4rem;
+  }
+  .mapPopUp .mapSection .map {
+    width: 100%;
+    height: 100%;
+  }
+  .mapPopUp .mapSection .map:before {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 640px) and (orientation: portrait) {
   .mapBlock > :nth-child(3) .row .column {
     padding: 0;
   }
@@ -4195,6 +4397,15 @@ a.red-link:hover {
   font-weight: 400;
   line-height: 2.8rem;
 }
+@media screen and (max-width: 640px) {
+  .pointOfIssue > :first-child {
+    width: 100%;
+    margin-bottom: 2.4rem;
+  }
+  .pointOfIssue > :first-child label {
+    margin-bottom: 1.2rem;
+  }
+}
 .gray-text {
   color: #666;
   font-size: 2.4rem;
@@ -4882,6 +5093,14 @@ a.red-link:hover {
   font-weight: 400;
   line-height: 2.4rem;
 }
+@media screen and (max-width: 640px) {
+  .stepsBlock__item {
+    padding: 2rem;
+  }
+  .stepsBlock__item .info > :first-child {
+    margin-bottom: 2rem;
+  }
+}
 .consultBlock {
   width: 100%;
   margin-bottom: 4rem;
@@ -4928,6 +5147,9 @@ a.red-link:hover {
   .consultBlock {
     padding: 2rem;
     margin-bottom: 0;
+  }
+  .consultBlock > :first-child {
+    margin-bottom: 2rem;
   }
   a {
     font-size: 3.2rem;
@@ -7652,6 +7874,7 @@ footer ul ul {
   background-color: #fff;
   margin-bottom: 0;
   display: none;
+  margin-top: 0;
 }
 .medicalExamination .dropdown ul li {
   padding: 0;
