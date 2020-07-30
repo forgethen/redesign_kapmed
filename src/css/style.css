@@ -26,6 +26,10 @@ body {
   font-family: "HelveticaRegular", Arial, sans-serif;
   overflow-x: hidden;
 }
+body.hidden {
+  height: 100vh;
+  overflow-y: hidden;
+}
 input,
 textarea {
   -webkit-appearance: none;
@@ -3276,6 +3280,10 @@ a.red-link:hover {
   width: 100%;
   display: none;
   position: relative;
+  cursor: pointer;
+}
+.mapPopUp .swipeTopDown:hover:before {
+  background-color: #b8181c;
 }
 .mapPopUp .swipeTopDown:before {
   content: '';
@@ -3632,6 +3640,9 @@ a.red-link:hover {
   .mapPopUp .mapSection .map {
     width: 100%;
     height: 100%;
+  }
+  .mapPopUp .mapSection .map iframe {
+    background-size: 50%;
   }
   .mapPopUp .mapSection .map:before {
     width: 100%;
@@ -4245,6 +4256,17 @@ a.red-link:hover {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2rem;
+}
+.phoneBlock.fromPopUp a {
+  line-height: 1;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.phoneBlock.fromPopUp a span {
+  padding-top: 0.4rem;
 }
 .phoneBlock.fromPopUp a:hover span {
   color: #38a648;

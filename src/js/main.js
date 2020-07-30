@@ -127,7 +127,9 @@ $(document).ready(function() {
       class: 'fancybox-button fancybox-close-small CloseFancybox',
       title: 'close'
     }).appendTo('.fancybox-content').attr('data-fancybox-close', '');
+    // $('body').addClass('hidden');
   }
+
 
   $('[data-fancybox]').click(function() {
     $.fancybox.close();
@@ -140,6 +142,10 @@ $(document).ready(function() {
     $('.CloseFancybox').remove();
     setTimeout(closeAdd, 100);
   });
+
+  // $('.CloseFancybox').on('click',function(){
+  //   $('body').removeClass('.hidden');
+  // })
 
   $(".mapPopUp .mapSection .mapList").mCustomScrollbar({
     theme: "MapListThm",
@@ -503,14 +509,14 @@ $(document).ready(function() {
     $('.success-box .text-message').html("" + msg + "");
   };
 
-  $('.swipeTopDown').on('click',function(){
+  $('.swipeTopDown').on('click', function() {
     $(this).parents('.list').toggleClass('active');
   });
 
-  $('.swipeTopDown').on('swipedown',function(){
+  $('.swipeTopDown').on('swipedown', function() {
     $(this).parents('.list').removeClass('active');
   });
-  $('.swipeTopDown').on('swipeup',function(){
+  $('.swipeTopDown').on('swipeup', function() {
     $(this).parents('.list').addClass('active');
   });
 
