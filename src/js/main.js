@@ -73,22 +73,23 @@ $(document).ready(function() {
   $('input[type="tel"]').inputmask("+7 (999) 999 99 99");
   $('.date input').inputmask("99.99.9999");
 
-  $('form .dropdown ul').each(function() {
+  $('.dropdown ul').each(function() {
     var th1 = $(this).parents('.dropdown').find('li:eq(0)').height();
     var th2 = $(this).parents('.dropdown').find('li:eq(1)').height();
     $(this).parents('.dropdown').find('ul').css('max-height', th1 + th2 + 36 + 'px');
     $(this).parents('.dropdown').find('ul').removeClass('show');
   })
+  
 
   function dropdownClose() {
-    $("form .dropdown").each(function() {
+    $(".dropdown").each(function() {
       $(this).removeClass('active');
       $(this).find('ul').removeClass('show');
       $(this).find('i').removeClass('active');
     })
   }
 
-  $('form .dropdown input').click(function(e) {
+  $('.dropdown input').click(function(e) {
     if ($(this).parents('.dropdown').hasClass('active')) {
       $(this).parents('.dropdown').removeClass('active');
       $(this).parents('.dropdown').find('i').toggleClass('active');
@@ -103,7 +104,7 @@ $(document).ready(function() {
     }
   })
 
-  $('form .dropdown ul li').click(function() {
+  $('.dropdown ul li').click(function() {
     var thisVal = $(this).html();
     $(this).parents('.dropdown').removeClass('active');
     $(this).parents('ul').removeClass('show');
@@ -189,7 +190,7 @@ $(document).ready(function() {
       $('.toggled_block').hide();
     }
 
-    if (!$(e.target).closest("form .dropdown").length) {
+    if (!$(e.target).closest(".dropdown").length) {
       dropdownClose();
     }
 
