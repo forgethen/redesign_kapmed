@@ -79,7 +79,7 @@ $(document).ready(function() {
     $(this).parents('.dropdown').find('ul').css('max-height', th1 + th2 + 36 + 'px');
     $(this).parents('.dropdown').find('ul').removeClass('show');
   })
-  
+
 
   function dropdownClose() {
     $(".dropdown").each(function() {
@@ -113,7 +113,7 @@ $(document).ready(function() {
   })
 
   $('ul.content .check, .accordion-menu .check').click(function() {
-    $(this).parents('li').toggleClass('show');
+      $(this).parents('li').toggleClass('show');
   })
 
   $('.mapPopUp .list li').click(function() {
