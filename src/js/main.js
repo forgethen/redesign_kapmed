@@ -113,7 +113,7 @@ $(document).ready(function() {
   })
 
   $('ul.content .check, .accordion-menu .check').click(function() {
-      $(this).parents('li').toggleClass('show');
+    $(this).parents('li').toggleClass('show');
   })
 
   $('.mapPopUp .list li').click(function() {
@@ -131,22 +131,32 @@ $(document).ready(function() {
     // $('body').addClass('hidden');
   }
 
+  const targetElement = document.querySelector('body');
 
   $('[data-fancybox]').click(function() {
     $.fancybox.close();
-    $('form')[0].reset();
-    $('[data-action="clear"]').each(function() {
-      $(this).click();
-    });
-    $(this).attr('data-touch', 'false');
-    $(this).attr('data-modal', 'true');
+    //   // $('form')[0].reset();
+      $('[data-action="clear"]').each(function() {
+        $(this).click();
+      });
+      $(this).attr('data-touch', 'false');
+      $(this).attr('data-modal', 'true');
+
     $('.CloseFancybox').remove();
     setTimeout(closeAdd, 100);
+    setTimeout(function () {
+      $('.CloseFancybox').click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $.fancybox.close();
+        console.log('gogog');
+        bodyScrollLock.enableBodyScroll(targetElement);
+      });
+    }, 100);
+    bodyScrollLock.disableBodyScroll(targetElement);
   });
 
-  // $('.CloseFancybox').on('click',function(){
-  //   $('body').removeClass('.hidden');
-  // })
+
 
   $(".mapPopUp .mapSection .mapList").mCustomScrollbar({
     theme: "MapListThm",
@@ -512,13 +522,6 @@ $(document).ready(function() {
 
   $('.swipeTopDown').on('click', function() {
     $(this).parents('.list').toggleClass('active');
-  });
-
-  $('.swipeTopDown').on('swipedown', function() {
-    $(this).parents('.list').removeClass('active');
-  });
-  $('.swipeTopDown').on('swipeup', function() {
-    $(this).parents('.list').addClass('active');
   });
 
 });
