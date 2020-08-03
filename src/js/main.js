@@ -156,8 +156,6 @@ $(document).ready(function() {
     bodyScrollLock.disableBodyScroll(targetElement);
   });
 
-
-
   $(".mapPopUp .mapSection .mapList").mCustomScrollbar({
     theme: "MapListThm",
   });
