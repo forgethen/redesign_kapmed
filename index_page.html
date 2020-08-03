@@ -30,6 +30,7 @@
     <script src="src/js/jquery.mCustomScrollbar.js"></script>
     <script src="src/js/jquery.fancybox.min.js"></script>
     <script src="src/js/bodyScrollLock.min.js"></script>
+    <script src="src/js/jquery.hideseek.min.js"></script>
     <script src="src/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="src/js/vue-launcher.js"></script>
@@ -41,7 +42,7 @@
           <div>
             <div class="container">
               <div class="row">
-                <div class="column column-66"><a href="#">
+                <div class="column column-66"><a data-fancybox="" data-src="#citySelect" href="javascript:;" data-touch="false" data-modal="true">
                     <div class="image"><img src="src/img/static/plane.svg" alt="plane"></div><span>Санкт-Петербург</span></a><a href="#">
                     <div class="image"><img src="src/img/static/zoom (1).svg" alt="zoom"></div><span>Версия для слабовидящих </span></a><a href="#">
                     <div class="image"><img src="src/img/static/print (1).svg" alt="print"></div><span>Распечатать страницу</span></a></div>
@@ -140,6 +141,101 @@
           </ul>
         </div>
       </header>
+      <div class="citySelect" id="citySelect">
+        <div class="container">
+          <h3 class="citySelect__title">Выберете ваш регион</h3>
+          <div class="citiesBlock">
+            <ul class="cities">
+              <li><a class="ex" href="#">
+                  <p>Город Москва</p></a></li>
+              <li><a href="#">
+                  <p>Липецкая область</p></a></li>
+              <li><a href="#">
+                  <p>Рязанская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Московская область</p></a></li>
+              <li><a href="#">
+                  <p>Ненецкий автономный округ</p></a></li>
+              <li><a href="#">
+                  <p>Саратовская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Город Санкт-Петербург</p></a></li>
+              <li><a href="#">
+                  <p>Нижегородская область</p></a></li>
+              <li><a href="#">
+                  <p>Смоленская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Ленинградская область</p></a></li>
+              <li><a href="#">
+                  <p>Омская область</p></a></li>
+              <li><a href="#">
+                  <p>Тверская область</p></a></li>
+              <li><a href="#">
+                  <p>Алтайский край</p></a></li>
+              <li><a href="#">
+                  <p>Оренбургская область</p></a></li>
+              <li><a href="#">
+                  <p>Тульская область</p></a></li>
+              <li><a href="#">
+                  <p>Архангельская область</p></a></li>
+              <li><a href="#">
+                  <p>Пензенская область</p></a></li>
+              <li><a href="#">
+                  <p>Тюменская область</p></a></li>
+              <li><a href="#">
+                  <p>Владимирская область</p></a></li>
+              <li><a href="#">
+                  <p>Пермский край</p></a></li>
+              <li><a href="#">
+                  <p>Удмуртская республика</p></a></li>
+              <li><a href="#">
+                  <p>Волгоградская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Алтай</p></a></li>
+              <li><a href="#">
+                  <p>Ульяновская область</p></a></li>
+              <li><a href="#">
+                  <p>Еврейская автономная область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Башкортостан</p></a></li>
+              <li><a href="#">
+                  <p>Ханты-Мансийский автономный округ - Югра</p></a></li>
+              <li><a href="#">
+                  <p>Кабардино-Балкарская республика</p></a></li>
+              <li><a href="#">
+                  <p>Республика Бурятия</p></a></li>
+              <li><a href="#">
+                  <p>Ярославская область</p></a></li>
+              <li><a href="#">
+                  <p>Калининградская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Коми</p></a></li>
+              <li><a href="#">
+                  <p>Кировская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Мордовия</p></a></li>
+              <li><a href="#">
+                  <p>Костромская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Саха (Якутия)</p></a></li>
+              <li><a href="#">
+                  <p>Краснодарский край</p></a></li>
+              <li><a href="#">
+                  <p>Республика Северная Осетия - Алания</p></a></li>
+              <li><a href="#">
+                  <p>Курганская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Тыва</p></a></li>
+              <li><a href="#">
+                  <p>Ростовская область</p></a></li>
+            </ul>
+          </div>
+          <form class="search">
+            <input type="search" data-list=".citiesBlock ul" autocomplete="off" placeholder="Введите название региона">
+            <input class="btn btn-red" type="submit" value="Найти">
+          </form>
+        </div>
+      </div>
       <section class="topSlider">
         <div class="container">
           <div class="row">

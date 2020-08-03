@@ -164,6 +164,16 @@ $(document).ready(function() {
     theme: "MapListThm",
   });
 
+  $(".citiesBlock").mCustomScrollbar({
+    theme: "citiesBlockThm",
+  });
+
+$('.search input[type="search"]').hideseek({
+  // highlight: true,
+  nodata: 'Поиск не дал результатов',
+  navigation: true,
+});
+
   $(".mapBlock .mapSection .mapList .list__item:lt(3)").show().addClass('show');
 
   $('.mapBlock .seeMore').click(function() {

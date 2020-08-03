@@ -298,6 +298,12 @@ select:hover {
 .show {
   display: block;
 }
+.fancybox-slide--html {
+  padding: 0;
+}
+.fancybox-content {
+  margin-bottom: 0 !important;
+}
 .top-container > :first-child {
   background-color: #193c6d;
   padding: 1.2rem 0;
@@ -2757,6 +2763,29 @@ a.red-link:hover {
 }
 .formPage__finish .btn {
   margin: 3.2rem auto 3.2rem 0;
+}
+form.search {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2rem 12rem;
+  grid-template-columns: 1fr 12rem;
+  grid-column-gap: 2rem;
+  margin-top: 2.4rem;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  margin-bottom: 0;
+}
+form.search input {
+  margin: 0;
+}
+form.search > :last-child {
+  font-size: 1.6rem;
+  margin: 0;
+  text-transform: none;
+  height: 100%;
+  padding: 0;
 }
 @media screen and (max-width: 980px) {
   .formPage__top .wrapper {
@@ -9877,6 +9906,173 @@ footer ul ul {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+.citySelect {
+  display: none;
+  padding: 6.4rem 12rem 2.4rem;
+  -webkit-border-radius: 1.6rem 1.6rem 0 0;
+          border-radius: 1.6rem 1.6rem 0 0;
+  background-color: #fff;
+  height: -webkit-calc(100vh - 14rem);
+  height: calc(100vh - 14rem);
+  width: -webkit-calc(100vw - 8rem);
+  width: calc(100vw - 8rem);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 136rem;
+}
+.citySelect .CloseFancybox {
+  top: 4rem;
+  right: 4rem;
+  padding: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.citySelect .CloseFancybox:hover {
+  background-color: #fff;
+}
+.citySelect .CloseFancybox:hover path {
+  color: #b8181c;
+}
+.citySelect__title {
+  color: #000;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 4.2rem;
+  margin-top: 3rem;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+}
+.citySelect .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.citySelect .citiesBlock {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: block;
+  overflow: hidden;
+}
+.cities {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+}
+.cities li {
+  width: -webkit-calc(100% / 3);
+  width: calc(100% / 3);
+  padding-right: 3rem;
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.cities li a {
+  width: auto;
+}
+.cities p {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+.cities a.ex p {
+  font-weight: 700;
+}
+.cities a:hover p {
+  color: #b8181c;
+}
+.mCS-citiesBlockThm .mCSB_container {
+  margin-right: 1.6rem;
+}
+.mCS-citiesBlockThm.mCSB_scrollTools_vertical {
+  width: 0.8rem;
+}
+.mCS-citiesBlockThm .mCSB_draggerRail {
+  background-color: #fff;
+}
+.mCS-citiesBlockThm .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #b8181c;
+}
+.mCS-citiesBlockThm.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #b8181c;
+}
+.mCS-citiesBlockThm.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #b8181c;
+}
+@media screen and (max-width: 1279px) {
+  .citySelect {
+    padding: 6.4rem 4rem 2.4rem;
+  }
+  .citySelect__title {
+    color: #313131;
+    font-size: 2.4rem;
+    margin-top: 2rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+  .citySelect .CloseFancybox {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 2rem;
+    right: 2rem;
+  }
+  .cities li {
+    width: -webkit-calc(100% / 2);
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 640px) {
+  .citySelect {
+    height: -webkit-calc(100vh - 4.8rem);
+    height: calc(100vh - 4.8rem);
+    width: 100%;
+    padding: 3.2rem 2rem 2rem;
+  }
+  .cities {
+    padding-left: 2rem;
+  }
+  .cities li {
+    width: 100%;
   }
 }
 .companyNews_and_Events > :last-child {
