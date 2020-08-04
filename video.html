@@ -75,30 +75,76 @@
           </div>
         </div>
       </div>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="javascript:void(0);">Филиалы </a></li>
+          </ul>
+        </div>
+      </div>
       <div class="content-container">
         <div class="container">
           <div class="row">
-            <div class="column column-73 content-page marg-sec01 center-marg rem-page">
-              <div class="breadcrumbs">
-                <div class="container">
-                  <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="javascript:void(0);">Филиалы </a></li>
-                  </ul>
+            <div class="column column-25 column-aside">
+              <nav class="content_list">
+                <ul>
+                  <li><a class="slow active" href="#1">Пресс-центр</a></li>
+                  <li><a class="slow" href="#2">Подписка на новости</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="column column-73">
+              <section class="page-title" id="ancor_about">
+                <h1>Профилактические медицинские осмотры и диспансеризация взрослого населения</h1>
+              </section>
+              <div class="gray-text">Небольшой лид с описанием. Пресс-центр. Новости. СМИ о нас. Яндекс.Дзен. Email Пресс-центра: pr@kapmed.ru. Дальше идет рыбный текст. Необходимо будет написать новый.</div>
+              <div class="videoItem m72"><a class="videoPoster" href="javascript:;" data-fancybox="" data-src="https://mbrm.ru/upload/medialibrary/ff0/ff018b3446ca7ab8b05a9d674e0b5cce.mp4" data-touch="false" data-modal="true"><i class="play ri-play-circle-fill"></i><img class="poster" src="src/img/static/images.png" alt="Видеоролик с описанием"></a>
+                <div class="content">
+                  <h6 class="content__text">Видеоролик с описанием</h6>
                 </div>
               </div>
-              <section class="page-title">
-                <h1 class="first-heading">Питание взрослого населения </h1>
-              </section>
-              <div class="gray-text gray-text--space">Небольшой лид с описанием. Далее идет рыбный текст. И еще один рыбный текст. Необходимо написать новый.</div>
-              <div class="book-wrapper"><img class="book-wrapper__img" src="/src/img/static/material_img.jpg" alt="Изображение пособия"><a class="book-wrapper__link" href="#">PDF, 156 Кб</a>
-                <div class="book-wrapper__actions"></div>
-                <ul class="book-actions">
-                  <li class="book-actions__item"><a class="book-actions__link book-actions__link--download" href="#">Скачать</a></li>
-                  <li class="book-actions__item"><a class="book-actions__link book-actions__link--print" href="#">Распесатать</a></li>
-                  <li class="book-actions__item"><a class="book-actions__link book-actions__link--share" href="#">Поделиться</a></li>
-                </ul>
+              <div class="slider-root" id="vue-root">
+                <section class="page-title smallh2">
+                  <h2>Смотрите</h2>
+                </section>
+                <div class="slider-wrap" :style="{width: `${content_container}px`}">
+                  <div class="slider-thanks videos" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                    <div class="slide-thanks" v-for="item, idx in thanks" :style="{width: `${width}px`}">
+                      <div class="image" :style="{backgroundImage: `url(${item.image})`}"></div>
+                      <div class="name">{{item.name}}</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-arrows">
+                  <div class="arrow arrow-left" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><img src="src/img/static/slider-arrow.svg"></div>
+                  <div class="arrow arrow-right" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><img src="src/img/static/slider-arrow-r.svg"></div>
+                </div>
               </div>
+              <script>
+                let data = [
+                  {
+                    name: 'Видеоролик с описанием',
+                    image: 'src/img/static/no-video.png'
+                  },
+                  {
+                    name: 'Видеоролик с описанием',
+                    image: 'src/img/static/no-video.png'
+                  },
+                  {
+                    name: 'Видеоролик с описанием',
+                    image: 'src/img/static/no-video.png'
+                  },
+                  {
+                    name: 'Видеоролик с описанием',
+                    image: 'src/img/static/no-video.png'
+                  },
+                  
+                ]
+                let root = '#vue-root'
+                let width = 352
+                vueSliderLauncher(root, data, width)
+              </script>
             </div>
           </div>
         </div>

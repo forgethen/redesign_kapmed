@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Site title</title>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Site title">
+    <meta name="description" content="Site description">
+    <meta property="og:title" content="Site title">
+    <meta property="og:description" content="Site description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Site URL">
+    <meta property="og:image" content="LOGO/IMG">
+    <link rel="icon" type="image/png" href="src/img/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/Helvetica/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/remixicon/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="src/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="src/css/milligram.responsive-grid.css">
+    <link rel="stylesheet" type="text/css" href="src/css/inputmask.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/vanilla.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/slick.min.js"></script>
+    <script src="src/js/jquery.inputmask.bundle.js"></script>
+    <script src="src/js/jquery.mCustomScrollbar.js"></script>
+    <script src="src/js/jquery.fancybox.min.js"></script>
+    <script src="src/js/bodyScrollLock.min.js"></script>
+    <script src="src/js/jquery.hideseek.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="src/js/vue-launcher.js"></script>
+  </head>
+  <body>
+    <div class="allContent">
+      <header>
+        <div class="top-container">
+          <div>
+            <div class="container">
+              <div class="row">
+                <div class="column column-66"><a data-fancybox="" data-src="#citySelect" href="javascript:;" data-touch="false" data-modal="true">
+                    <div class="image"><img src="src/img/static/plane.svg" alt="plane"></div><span>Санкт-Петербург</span></a><a href="#">
+                    <div class="image"><img src="src/img/static/zoom (1).svg" alt="zoom"></div><span>Версия для слабовидящих </span></a><a href="#">
+                    <div class="image"><img src="src/img/static/print (1).svg" alt="print"></div><span>Распечатать страницу</span></a></div>
+                <div class="column column-33"><a href="tel:88005506774">
+                    <div class="image"><img src="src/img/static/phone (1).svg" alt="phone"></div>
+                    <p>8&nbsp;800&nbsp;550&nbsp;67&nbsp;74<span>&nbsp;(Круглосуточно)</span></p></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="header">
+            <div class="container">
+              <div class="row row-responsive">
+                <div class="column column-md-25 column-sm-25 column-xs-50"><a class="logo" href="/"><img src="src/img/static/logo.svg" alt="logo"></a></div>
+                <div class="column column-md-70 column-sm-70 column-xs-50">
+                  <nav class="desktop">
+                    <ul>
+                      <li><a href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
+                      <li><a href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
+                      <li><a class="search" href="#"><i class="ri-search-line"></i><span>Поиск</span></a></li>
+                    </ul>
+                  </nav>
+                  <nav class="mobile">
+                    <ul>
+                      <li><a class="search" href="#"><i class="ri-search-line"></i></a></li>
+                      <li><a class="burger" href="#"><i class="ri-menu-line"></i><i class="ri-close-fill"></i></a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="column column-md-25 column-sm-25 column-xs-100"><a class="btn btn-red" href="#">Заявка на полис ОМС</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container fromHeaderMenu">
+          <ul class="headerMenu">
+            <li><a href="javascript:;"><span>Полис ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Заявка на полис ОМС</a></li>
+                  <li><a href="#">Документы для оформления полиса</a></li>
+                  <li><a href="#">Пункты выдачи полисов</a></li>
+                  <li><a href="#">Доставка полиса ОМС</a></li>
+                  <li><a href="#">Виды полисов ОМС</a></li>
+                  <li><a href="#">Юридическим лицам</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="javascript:;"><span>Система ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Что такое Система ОМС</a></li>
+                  <li><a href="#">Дайджест новостей системы ОМС</a></li>
+                  <li><a href="#">Участие компании в развитии системы ОМС</a></li>
+                  <li><a href="#">Виды, качество и условия медицинской помощи</a></li>
+                  <li><a href="#">Что бесплатно по полису ОМС</a></li>
+                  <li><a href="#">Как выбрать страховую компанию ОМС</a></li>
+                  <li><a href="#">Как выбрать медицинскую организацию</a></li>
+                  <li><a href="#">Информация о медицинских организациях</a></li>
+                  <li><a href="#">Информация о Фонде ОМС</a></li>
+                  <li><a href="#">Нормативные документы</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Диспансеризация</span></a></li>
+            <li><a href="javascript:;"><span>Защита прав&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Ваш страховой представитель</a></li>
+                  <li><a href="#">Подать жалобу</a></li>
+                  <li><a href="#">Выявленные нарушения по обращениям застрахованных лиц</a></li>
+                  <li><a href="#">Контакт-центр</a></li>
+                  <li><a href="#">Полезные ресурсы</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Ваш филиал</span></a></li>
+            <li><a href="javascript:;"><span>О компании&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Пресс центр</a></li>
+                  <li><a href="#">Научно практическая деятельность</a></li>
+                  <li><a href="#">Участие компании в развитии системы ОМС</a></li>
+                  <li><a href="#">Проекты компании</a></li>
+                  <li><a href="#">Наша команда</a></li>
+                  <li><a href="#">Раскрытие информации</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Школа пациента</span></a></li>
+          </ul>
+          <ul class="mobileBottom">
+            <li><a href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
+            <li><a href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="citySelect" id="citySelect">
+        <div class="container">
+          <h3 class="citySelect__title">Выберете ваш регион</h3>
+          <div class="citiesBlock">
+            <ul class="cities">
+              <li><a class="ex" href="#">
+                  <p>Город Москва</p></a></li>
+              <li><a href="#">
+                  <p>Липецкая область</p></a></li>
+              <li><a href="#">
+                  <p>Рязанская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Московская область</p></a></li>
+              <li><a href="#">
+                  <p>Ненецкий автономный округ</p></a></li>
+              <li><a href="#">
+                  <p>Саратовская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Город Санкт-Петербург</p></a></li>
+              <li><a href="#">
+                  <p>Нижегородская область</p></a></li>
+              <li><a href="#">
+                  <p>Смоленская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Ленинградская область</p></a></li>
+              <li><a href="#">
+                  <p>Омская область</p></a></li>
+              <li><a href="#">
+                  <p>Тверская область</p></a></li>
+              <li><a href="#">
+                  <p>Алтайский край</p></a></li>
+              <li><a href="#">
+                  <p>Оренбургская область</p></a></li>
+              <li><a href="#">
+                  <p>Тульская область</p></a></li>
+              <li><a href="#">
+                  <p>Архангельская область</p></a></li>
+              <li><a href="#">
+                  <p>Пензенская область</p></a></li>
+              <li><a href="#">
+                  <p>Тюменская область</p></a></li>
+              <li><a href="#">
+                  <p>Владимирская область</p></a></li>
+              <li><a href="#">
+                  <p>Пермский край</p></a></li>
+              <li><a href="#">
+                  <p>Удмуртская республика</p></a></li>
+              <li><a href="#">
+                  <p>Волгоградская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Алтай</p></a></li>
+              <li><a href="#">
+                  <p>Ульяновская область</p></a></li>
+              <li><a href="#">
+                  <p>Еврейская автономная область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Башкортостан</p></a></li>
+              <li><a href="#">
+                  <p>Ханты-Мансийский автономный округ - Югра</p></a></li>
+              <li><a href="#">
+                  <p>Кабардино-Балкарская республика</p></a></li>
+              <li><a href="#">
+                  <p>Республика Бурятия</p></a></li>
+              <li><a href="#">
+                  <p>Ярославская область</p></a></li>
+              <li><a href="#">
+                  <p>Калининградская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Коми</p></a></li>
+              <li><a href="#">
+                  <p>Кировская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Мордовия</p></a></li>
+              <li><a href="#">
+                  <p>Костромская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Саха (Якутия)</p></a></li>
+              <li><a href="#">
+                  <p>Краснодарский край</p></a></li>
+              <li><a href="#">
+                  <p>Республика Северная Осетия - Алания</p></a></li>
+              <li><a href="#">
+                  <p>Курганская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Тыва</p></a></li>
+              <li><a href="#">
+                  <p>Ростовская область</p></a></li>
+            </ul>
+          </div>
+          <form class="search">
+            <input type="search" data-list=".citiesBlock ul" autocomplete="off" placeholder="Введите название региона">
+            <input class="btn btn-red" type="submit" value="Найти">
+          </form>
+        </div>
+      </div>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="javascript:void(0);">Филиалы</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="container">
+          <div class="row row-responsive">
+            <div class="column column-md-25 column-sm-25 column-xs-100">
+              <nav class="content_list">
+                <ul>
+                  <li><a class="slow active" href="#io1">О филиале</a></li>
+                  <li><a class="slow" href="#io2">Контакты и график приема</a></li>
+                  <li><a class="slow" href="#io3">Пункты выдачи полисов</a></li>
+                  <li><a class="slow" href="#io4">Список медорганизаций в системе ОМС</a></li>
+                  <li><a class="slow" href="#io5">Перечень услуг предоставляемых по ОМС </a></li>
+                  <li><a class="slow" href="#io6">Региональные документы</a></li>
+                  <li><a class="slow" href="#io7">Руководство</a></li>
+                  <li><a class="slow" href="#io8">Оставить отзыв о филиале</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="column columnContainer">
+              <section id="io1">
+                <div class="page-title v2">
+                  <div class="container custom-select">
+                    <div>
+                      <h3 class="title">Филиал в&nbsp;<a class="red"><span>Санкт-Петербурге</span><i class="ri-arrow-down-s-line"></i></a></h3>
+                      <div class="options-block">
+                        <ul class="options">
+                          <li class="red">Санкт-Петербурге</li>
+                          <li>Москве</li>
+                          <li>Где-то еще</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabsContainer container">
+                  <div class="tabs"><a class="tab active" href="javascript:;">Оформить полис</a><a class="tab" href="javascript:;">Профилактика</a><a class="tab" href="javascript:;">Школа пациента</a><a class="tab" href="javascript:;">Помощь</a>
+                  </div>
+                </div>
+                <div class="container">
+                  <p class="gray-text v2">Предоставляемые услуги: Выдача полиса ОМС, Выдача электронных полисов ОМС, Прием жалоб и обращений, Прием застрахованных директором, Прием руководителем службы по защите прав</p>
+                </div>
+              </section>
+              <section class="statistics" id="io2">
+                <div class="container">
+                  <h3 class="sectionTitle">Численность застрахованных</h3>
+                  <div class="statisticsContainer">
+                    <div class="statisticsContainer__item red">
+                      <p>По состоянию</p>
+                      <p class="date">01.01.2020<span>&nbsp;г.</span></p>
+                      <div class="countBlock">
+                        <p class="count">773 321</p>
+                        <p>чел.</p>
+                      </div>
+                    </div>
+                    <div class="statisticsContainer__item white">
+                      <p>По состоянию</p>
+                      <p class="date">01.01.2020<span>&nbsp;г.</span></p>
+                      <div class="countBlock">
+                        <p class="count">773 321</p>
+                        <p>чел.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="io3">
+                <div class="container">
+                  <h3 class="sectionTitle">Контакты и график приема ООО&nbsp;«Капитал&nbsp;МС» в&nbsp;Санкт-Петербурге и Ленинградской области</h3>
+                </div>
+                <div class="locationBlock">
+                  <div class="map"></div>
+                  <ul class="information">
+                    <li class="location"><i class="ri-map-pin-2-fill"></i><span class="liTitle">Адрес</span>
+                      <p>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</p>
+                    </li>
+                    <li class="sheduleBlock fromLocation"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Сегодня открыто c 08:00 до 19:30</h6>
+                      <div class="openShedule"><a href="javascript:;"><span class="liTitle">Показать полный режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="phoneBlock formLocation"><i class="ri-phone-fill"></i><span class="liTitle">Контакт центр</span><a href="tel:+78005506774">
+                        <p>+7 (800) 550-67-74</p></a></li>
+                    <li class="phoneBlock formLocation"><i class="ri-phone-fill"></i><span class="liTitle">Горячая линия ОМС</span><a href="tel:+78005506774">
+                        <p>+7 (800) 550-67-74</p></a></li>
+                    <li class="emailBlock fromLocation"><i class="ri-mail-line"></i><span class="liTitle">Email</span><a href="mailto:mail@mail.mail">
+                        <p>smk-info@kapmed.ru</p></a></li>
+                  </ul>
+                </div>
+              </section>
+              <section class="howToGet" id="io4">
+                <div class="container">
+                  <h5>Как добраться?</h5>
+                  <div class="textBlock">
+                    <p>Ст. м. «Спортивная» - пешком 5 мин., троллейбус №1,9, маршрутное такси № 10, 175 до ост. ст.м. «Спортивная» (вход во двор под арку), маршрутное такси №120, 690 до ост. «Ул. Красного Курсанта» до здания «Росевробанк» вход во двор.</p>
+                  </div>
+                  <div class="imageItem">
+                    <div class="image"><img src="src/img/static/demo-big-photo.jpg" alt="demoI"></div>
+                    <div class="content">
+                      <h6 class="content__text">Фотография офиса</h6>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="fromOfficeAddresses">
+                <div class="container"><a class="officeAddresses" href="#"><i class="ri-map-pin-2-fill"></i>
+                    <h6>Получение полисов ОМС</h6>
+                    <p>Адреса офисов</p><i class="ri-arrow-right-s-line"></i></a>
+                  <div class="officeAddresses mobile">
+                    <h6>Получение полисов ОМС</h6><a class="bnt btn-red" href="#">Адреса офисов</a>
+                  </div>
+                </div>
+              </section>
+              <section id="io5">
+                <div class="container">
+                  <h3 class="sectionTitle">Личный прием граждан</h3>
+                  <div class="persons">
+                    <div class="persons__item">
+                      <div class="block">
+                        <p class="position">директор филиала </p>
+                        <p class="fullName">Усачевская Ирина Витасовна</p>
+                      </div>
+                      <div class="block">
+                        <p class="days">Второй четверг</p>
+                        <p class="worktime">с&nbsp;<span class="in">10:00</span>&nbsp;до&nbsp;<span class="to">12:00</span></p>
+                      </div>
+                      <div class="block">
+                        <p class="address">г. Санкт-Петербург, ул. Блохина, д.9, м. «Спортивная», м. «Горьковская». </p><a class="tel" href="tel:+78123256714">
+                          <p>Тел.: +7 (812) 325-67-74;</p></a>
+                      </div>
+                    </div>
+                    <div class="persons__item">
+                      <div class="block">
+                        <p class="position">начальник управления ЗПЗ и ЭКМП </p>
+                        <p class="fullName">Тараскина Земфира Васильевна</p>
+                      </div>
+                      <div class="block">
+                        <p class="days">Первый и третий четверг</p>
+                        <p class="worktime">с&nbsp;<span class="in">10:00</span>&nbsp;до&nbsp;<span class="to">12:00</span></p>
+                      </div>
+                      <div class="block">
+                        <p class="address">г. Санкт-Петербург, ул. Блохина, д.9, м. «Спортивная», м. «Горьковская». </p><a class="tel" href="tel:+78123256714">
+                          <p>Тел.: +7 (812) 325-67-74;</p></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="textBlock">
+                    <p>В соответствии с п. 7, статьи 13 Федерального закона от 02.05.2006 № 59 – ФЗ (ред. от 27.11.2017) «О порядке рассмотрения обращений граждан Российской Федерации». Отдельные категории граждан в случаях, предусмотренных законодательством Российской Федерации, пользуются правом на личный прием в первоочередном порядке.</p>
+                  </div>
+                </div>
+              </section>
+              <section id="io6"></section>
+              <section id="io7"></section>
+              <section id="io8"></section>
+              <section class="hotPhones">
+                <div class="container">
+                  <h3 class="sectionTitle">Телефоны круглосуточных контакт-центов</h3>
+                </div>
+                <div class="activity-wrap advice-wrap">
+                  <div class="activity phones advice-phones">
+                    <div class="img-wrap"><img src="src/img/static/activity-phone.svg"></div>
+                    <div class="phone-title">Федеральный номер</div>
+                    <div class="phone">
+                      <div class="number">8-800-555-35-35</div>
+                      <div class="desc">Звонок бесплатный</div>
+                    </div>
+                  </div>
+                  <div class="activity phones advice-phones">
+                    <div class="img-wrap"><img src="src/img/static/activity-phone.svg"></div>
+                    <div class="phone-title">В Санкт-Петербурге</div>
+                    <div class="phone">
+                      <div class="number">8-800-555-35-35</div>
+                      <div class="desc">Звонок бесплатный</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="thanks">
+                <div class="slider slider-root" id="vue-root">
+                  <div class="container">
+                    <div class="sectionTitle">
+                      <div class="sectionTitle__top">
+                        <h3 class="sectionTitle__title">Благодарности</h3>
+                        <div class="sliderNav">
+                          <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
+                          <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-wrap" :style="{width: `${content_container}px`}">
+                    <div class="slider-thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                      <div class="slide-thanks" v-for="item, idx in thanks" :style="{width: `${width}px`}">
+                        <div class="image" :style="{backgroundImage: `url(${item.image})`}"></div>
+                        <div class="date">{{item.date}}</div>
+                        <div class="name">{{item.name}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="thanks__sliderBottom">
+                    <div class="sliderNav">
+                      <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
+                      <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  let data = [
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    }
+                  ]
+                  let root = '#vue-root'
+                  let width = 232
+                  vueSliderLauncher(root, data, width)
+                </script>
+              </section>
+              <section class="giveFeedbackSection">
+                <div class="sectionTitle">
+                  <h3>Оставить отзыв о филиале</h3>
+                </div>
+                <div class="container">
+                  <div class="giveFeedback withborder">
+                    <h6 class="desc">Здесь Вы можете оставить отзыв о работе вашего филиала</h6><a class="btn btn-red" href="#">Оставить отзыв</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

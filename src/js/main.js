@@ -188,7 +188,7 @@ $('.search input[type="search"]').hideseek({
 
   $('.openShedule a').click(function() {
     $(this).closest('.openShedule').toggleClass('active');
-    $(this).closest('.openShedule').next().toggleClass('show');
+    $(this).parents('.sheduleBlock').find('.shedule__list').toggleClass('show');
   })
 
   $('footer .partition').find('li:eq(0)').append('<i class="ri-arrow-down-s-line"></i>');
@@ -415,7 +415,11 @@ $('.search input[type="search"]').hideseek({
         }
       }
     ]
-  })
+  });
+
+  $(".slider-2").slick({
+    dots: true
+  });
 
 
 
