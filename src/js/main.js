@@ -53,7 +53,7 @@ $(document).ready(function() {
   });
 
   $('.custom-select .options li').click(function() {
-    var thisVal = $(this).html();
+    var thisVal = $(this).text();
     $(this).parents('.custom-select').find('.options').fadeOut();
     $(this).parents('.custom-select').find('.options .red').removeClass('red')
     $(this).parents('.custom-select').find('a span').text(thisVal);
