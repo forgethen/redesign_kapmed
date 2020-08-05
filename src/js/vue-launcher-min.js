@@ -1,0 +1,2 @@
+const vueSliderLauncher=(t,e,i)=>{new Vue({el:t,data:()=>({thanks:e,width:i,active_idx:0,content_container:0}),methods:{getSize(){return this.width*this.thanks.length+16*(this.thanks.length-1)},initialization(){let t=document.querySelector(".container"),e=document.querySelector(".content-container"),i=.75*t.offsetWidth+(e.offsetWidth-t.offsetWidth)/2;this.content_container=i-20},getTranslate(){let t=this.width+16;return t=t*this.active_idx*-1},switchSlide(t){this.active_idx+=t}},mounted(){this.initialization()}})};
+//# sourceMappingURL=vue-launcher-min.js.map
