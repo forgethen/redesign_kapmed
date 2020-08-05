@@ -3114,6 +3114,20 @@ form.search > :last-child {
   list-style-type: none;
   margin-bottom: 0;
 }
+.accordion-menu.v2 li {
+  padding-right: 0;
+}
+.accordion-menu.v2 li > :first-child {
+  padding-right: 3.6rem;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+.accordion-menu.v2 li > :first-child i {
+  right: 0;
+}
+.accordion-menu.v2 li.show .answer {
+  margin-top: 2.4rem;
+}
 .accordion-menu li {
   border-top: 1px solid #e6e6e6;
   margin: 0;
@@ -5330,6 +5344,32 @@ form.search > :last-child {
 .press-wrap .press.withimg .wrap {
   padding: 32px;
 }
+.press-wrap .press.withimg .image {
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  -webkit-border-radius: 0.8rem;
+          border-radius: 0.8rem;
+}
+.press-wrap .press.withimg .image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.press-wrap .press.withimg .image:before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+}
 .press-wrap .press.fullwidth {
   width: 100%;
   display: -webkit-box;
@@ -5381,6 +5421,36 @@ form.search > :last-child {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 72px;
+}
+.pagination.v2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0;
+}
+.pagination.v2 nav {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .pagination div {
   padding: 11px 22px 8px;
@@ -5440,9 +5510,9 @@ form.search > :last-child {
 .dropdown-single i {
   cursor: pointer;
   position: absolute;
-  height: 5.4rem;
-  width: 5.4rem;
-  right: 0.1rem;
+  height: 5.2rem;
+  width: 5.2rem;
+  right: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5457,7 +5527,7 @@ form.search > :last-child {
           justify-content: center;
   font-size: 2rem;
   color: #939393;
-  bottom: 0.1rem;
+  bottom: 0;
 }
 .dropdown-single i.active {
   -webkit-transform: rotate(180deg);
@@ -5930,6 +6000,23 @@ form.search > :last-child {
 }
 .tags > :last-child {
   margin-right: 0;
+}
+.tags.v2 .tag {
+  height: 3.6rem;
+  -webkit-border-radius: 1.8rem;
+          border-radius: 1.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tags .tag {
   line-height: 1;
@@ -7360,8 +7447,24 @@ footer ul ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.wrapper-directors-items.v2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+}
+.wrapper-directors-items.v2 .company-directors__item {
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+.wrapper-directors-items.v2 .wrapper-directors-items__block > :last-child {
+  margin-bottom: 0;
+}
 .company-directors__item {
-  width: 48%;
+  width: 100%;
+  max-width: -webkit-calc(50% - 1.5rem);
+  max-width: calc(50% - 1.5rem);
   padding: 40px;
 }
 .company-directors-wrap {
@@ -8448,6 +8551,15 @@ footer ul ul {
 }
 .events-block-list .second-heading {
   margin-bottom: 32px;
+}
+.newEvents .press-wrap,
+.oldEvents .press-wrap {
+  margin-top: 2rem;
+  margin-bottom: 3.6rem;
+}
+.newEvents .press-wrap > :last-child,
+.oldEvents .press-wrap > :last-child {
+  margin-bottom: 0;
 }
 .events-buttons-wrapper {
   display: -webkit-box;
@@ -11444,6 +11556,100 @@ footer ul ul {
     display: -ms-flexbox;
     display: flex;
   }
+}
+.postDatesFilter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 1.6rem;
+}
+.postDatesFilter > :first-child {
+  margin-right: 2.4rem;
+  padding: 0 2.4rem;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.postDatesFilter label {
+  position: relative;
+  margin-right: 2.4rem;
+  margin-bottom: 1.6rem;
+  cursor: pointer;
+}
+.postDatesFilter label input {
+  cursor: pointer;
+  height: 5.6rem;
+  width: 100%;
+  max-width: 17.6rem;
+  -webkit-border-radius: 0.4rem;
+          border-radius: 0.4rem;
+  border: 0.1rem solid #c4c4c4;
+  background-color: #fff;
+  padding: 0 2.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-bottom: 0;
+}
+.postDatesFilter label i {
+  width: 5.4rem;
+  height: 5.4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #939393;
+  font-size: 2rem;
+  line-height: 1;
+  z-index: 1;
+}
+.postDatesFilter > :last-child {
+  margin-right: 0;
+}
+.videos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3rem;
+  grid-column-gap: 3rem;
+  margin-bottom: 3rem;
+}
+.videos .videoItem {
+  margin-bottom: 0;
+}
+.videos .videoItem .videoPoster {
+  margin-bottom: 1.2rem;
 }
 .companyNews_and_Events > :last-child {
   display: none;
