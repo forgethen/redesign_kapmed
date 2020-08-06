@@ -536,6 +536,8 @@ $('.search input[type="search"]').hideseek({
     $(this).parents('.list').toggleClass('active');
   });
 
+  var tabs = $('#TABS').scrollTabs();
+
 });
 
 //# sourceMappingURL=main.js.map

@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="src/css/inputmask.css">
     <link rel="stylesheet" type="text/css" href="src/css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" type="text/css" href="src/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/scrolltabs.css">
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <script src="src/js/vanilla.js"></script>
     <script src="src/js/jquery.min.js"></script>
@@ -31,6 +32,8 @@
     <script src="src/js/jquery.fancybox.min.js"></script>
     <script src="src/js/bodyScrollLock.min.js"></script>
     <script src="src/js/jquery.hideseek.min.js"></script>
+    <script src="src/js/jquery.mousewheel-min.js"></script>
+    <script src="src/js/jquery.scrolltabs-min.js"></script>
     <script src="src/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="src/js/vue-launcher.js"></script>
@@ -278,7 +281,7 @@
                   </div>
                 </div>
                 <div class="tabsContainer container">
-                  <div class="tabs"><a class="tab active" href="javascript:;">Оформить полис</a><a class="tab" href="javascript:;">Профилактика</a><a class="tab" href="javascript:;">Школа пациента</a><a class="tab" href="javascript:;">Помощь</a>
+                  <div class="tabs" id="TABS"><a class="tab active" href="javascript:;">Оформить полис</a><a class="tab" href="javascript:;">Профилактика</a><a class="tab" href="javascript:;">Школа пациента</a><a class="tab" href="javascript:;">Помощь</a>
                   </div>
                 </div>
                 <div class="container">
@@ -490,12 +493,14 @@
                       <div class="answer">
                         <div class="postDatesFilter">
                           <p>За период:</p>
-                          <label class="date">
-                            <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
-                          </label>
-                          <label class="date">
-                            <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
-                          </label>
+                          <div class="inputs">
+                            <label class="date">
+                              <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                            </label>
+                            <label class="date">
+                              <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                            </label>
+                          </div>
                         </div>
                         <div class="tags v2">
                           <div class="tag active">Все новости</div>
@@ -503,7 +508,7 @@
                         </div>
                         <div class="press-wrap">
                           <div class="press fullwidth">
-                            <div class="img-wrap"><img src="src/img/static/press.png"></div>
+                            <div class="img-wrap"><img src="src/img/static/images.png"></div>
                             <div class="data">
                               <div class="title">«КАПИТАЛ МС» В Санкт-Петербурге ЗАНЯЛ 1 МЕСТО СРЕДИ СТРАХОВЫХ МЕДИЦИНСКИХ ОРГАНИЗАЦИЙ ПО ИТОГАМ 2019 ГОДА</div>
                               <div class="meta">
@@ -513,7 +518,7 @@
                             </div>
                           </div>
                           <div class="press fullwidth">
-                            <div class="img-wrap"><img src="src/img/static/press.png"></div>
+                            <div class="img-wrap"><img src="src/img/static/images.png"></div>
                             <div class="data">
                               <div class="title">«КАПИТАЛ МС» В Санкт-Петербурге ЗАНЯЛ 1 МЕСТО СРЕДИ СТРАХОВЫХ МЕДИЦИНСКИХ ОРГАНИЗАЦИЙ ПО ИТОГАМ 2019 ГОДА</div>
                               <div class="meta">
@@ -523,7 +528,7 @@
                             </div>
                           </div>
                           <div class="press fullwidth">
-                            <div class="img-wrap"><img src="src/img/static/press.png"></div>
+                            <div class="img-wrap"><img src="src/img/static/images.png"></div>
                             <div class="data">
                               <div class="title">«КАПИТАЛ МС» В Санкт-Петербурге ЗАНЯЛ 1 МЕСТО СРЕДИ СТРАХОВЫХ МЕДИЦИНСКИХ ОРГАНИЗАЦИЙ ПО ИТОГАМ 2019 ГОДА</div>
                               <div class="meta">
@@ -533,7 +538,7 @@
                             </div>
                           </div>
                           <div class="press fullwidth">
-                            <div class="img-wrap"><img src="src/img/static/press.png"></div>
+                            <div class="img-wrap"><img src="src/img/static/images.png"></div>
                             <div class="data">
                               <div class="title">«КАПИТАЛ МС» В Санкт-Петербурге ЗАНЯЛ 1 МЕСТО СРЕДИ СТРАХОВЫХ МЕДИЦИНСКИХ ОРГАНИЗАЦИЙ ПО ИТОГАМ 2019 ГОДА</div>
                               <div class="meta">
@@ -561,12 +566,14 @@
                       <div class="answer">
                         <div class="postDatesFilter">
                           <p>За период:</p>
-                          <label class="date">
-                            <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
-                          </label>
-                          <label class="date">
-                            <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
-                          </label>
+                          <div class="inputs">
+                            <label class="date">
+                              <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                            </label>
+                            <label class="date">
+                              <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                            </label>
+                          </div>
                         </div>
                         <div class="tags v2">
                           <div class="tag active">Все новости</div>
@@ -608,7 +615,7 @@
                             </div>
                           </div>
                           <div class="press withimg">
-                            <div class="image"><img src="src/img/static/press.png"></div>
+                            <div class="image"><img src="src/img/static/images.png"></div>
                             <div class="wrap">
                               <div class="title">Президент Капитал LIVE Евгений Гинер продолжает консолидировать страховые</div>
                               <div class="meta">
@@ -618,7 +625,7 @@
                             </div>
                           </div>
                           <div class="press withimg">
-                            <div class="image"><img src="src/img/static/press.png"></div>
+                            <div class="image"><img src="src/img/static/images.png"></div>
                             <div class="wrap">
                               <div class="title">Президент Капитал LIVE Евгений Гинер продолжает консолидировать страховые</div>
                               <div class="meta">
@@ -646,12 +653,14 @@
                       <div class="answer">
                         <div class="postDatesFilter">
                           <p>За период:</p>
-                          <label class="date">
-                            <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
-                          </label>
-                          <label class="date">
-                            <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
-                          </label>
+                          <div class="inputs">
+                            <label class="date">
+                              <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                            </label>
+                            <label class="date">
+                              <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                            </label>
+                          </div>
                         </div>
                         <div class="tags v2">
                           <div class="tag active">Все новости</div>
@@ -707,12 +716,14 @@
                       <div class="answer">
                         <div class="postDatesFilter">
                           <p>За период:</p>
-                          <label class="date">
-                            <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
-                          </label>
-                          <label class="date">
-                            <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
-                          </label>
+                          <div class="inputs">
+                            <label class="date">
+                              <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                            </label>
+                            <label class="date">
+                              <input type="text" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                            </label>
+                          </div>
                         </div>
                         <div class="tags v2">
                           <div class="tag active">Все новости</div>
@@ -722,7 +733,7 @@
                           <h5>Ближайшие</h5>
                           <div class="press-wrap">
                             <div class="press fullwidth">
-                              <div class="img-wrap"><img src="src/img/static/press.png"></div>
+                              <div class="img-wrap"><img src="src/img/static/images.png"></div>
                               <div class="data">
                                 <div class="title">«КАПИТАЛ МС» В Санкт-Петербурге ЗАНЯЛ 1 МЕСТО СРЕДИ СТРАХОВЫХ МЕДИЦИНСКИХ ОРГАНИЗАЦИЙ ПО ИТОГАМ 2019 ГОДА</div>
                                 <div class="meta">
