@@ -536,7 +536,7 @@ $('.search input[type="search"]').hideseek({
     $(this).parents('.list').toggleClass('active');
   });
 
-  var tabs = $('#TABS').scrollTabs();
+  $( "#TABS" ).scrollabletab(); 
 
 });
 
