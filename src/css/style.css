@@ -7930,15 +7930,15 @@ footer ul ul {
   background-repeat: no-repeat;
 }
 .book-actions__link--print:before {
-  background-image: url("/src/img/static/print-b.svg");
+  background-image: url("../img/static/print-b.svg");
   background-size: 20px;
 }
 .book-actions__link--download:before {
-  background-image: url("/src/img/static/download.svg");
+  background-image: url("../img/static/download.svg");
   background-size: 20px;
 }
 .book-actions__link--share:before {
-  background-image: url("/src/img/static/share.svg");
+  background-image: url("../img/static/share.svg");
   background-size: 21px;
 }
 .gray-text--space {
@@ -8997,7 +8997,7 @@ footer ul ul {
   height: 48px;
   top: 0;
   left: 0;
-  background-image: url("/src/img/static/slider-l.svg");
+  background-image: url("../img/static/slider-l.svg");
   background-size: 9px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -9021,7 +9021,7 @@ footer ul ul {
   height: 48px;
   top: 0;
   left: 0;
-  background-image: url("/src/img/static/slider-r.svg");
+  background-image: url("../img/static/slider-r.svg");
   background-size: 9px;
   background-position: center;
   background-repeat: no-repeat;
@@ -12644,6 +12644,47 @@ footer ul ul {
 }
 .Videos .videoItem .videoPoster {
   margin-bottom: 1.2rem;
+}
+.mapOpenBlock {
+  border: 1px solid #e6e6e6;
+  padding: 4rem;
+  -webkit-border-radius: 0.8rem;
+          border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.mapOpenBlock > :first-child {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.mapOpenBlock .desc {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+.mapOpenBlock > :last-child {
+  margin-bottom: 0;
 }
 .companyNews_and_Events > :last-child {
   display: none;
