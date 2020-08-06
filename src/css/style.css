@@ -6081,6 +6081,7 @@ form.search > :last-child {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3rem;
+  list-style-type: none;
   -webkit-box-flex: 0;
   -webkit-flex: none;
       -ms-flex: none;
@@ -6098,8 +6099,17 @@ form.search > :last-child {
 }
 .tabs .tab.active {
   color: #000;
-  border-bottom: 0.1rem solid #b8181c;
   cursor: default;
+  position: relative;
+}
+.tabs .tab.active:before {
+  width: 100%;
+  z-index: 1;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 0.1rem solid #b8181c;
 }
 .tags {
   display: -webkit-box;
@@ -6178,9 +6188,9 @@ form.search > :last-child {
 }
 .tags .tag.active {
   background: #b8181c;
-  border: 0.1rem solid #b8181c;
   color: #fff;
   cursor: default;
+  border: 0.1rem solid #b8181c;
 }
 @media screen and (max-width: 960px) {
   .tabsContainer {
@@ -12620,7 +12630,7 @@ footer ul ul {
 .postDatesFilter > :last-child {
   margin-right: 0;
 }
-.videos {
+.Videos {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 3rem 1fr;
@@ -12629,10 +12639,10 @@ footer ul ul {
   grid-column-gap: 3rem;
   margin-bottom: 3rem;
 }
-.videos .videoItem {
+.Videos .videoItem {
   margin-bottom: 0;
 }
-.videos .videoItem .videoPoster {
+.Videos .videoItem .videoPoster {
   margin-bottom: 1.2rem;
 }
 .companyNews_and_Events > :last-child {
