@@ -1585,6 +1585,21 @@ a.red-link:hover {
   margin-left: 0;
   padding-left: 1.8rem;
 }
+.content__item__bottom {
+  padding: 1.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
 .content_list {
   display: block;
   height: 100%;
@@ -5477,7 +5492,7 @@ form.search > :last-child {
   font-weight: 400;
   line-height: 2.4rem;
   padding: 0 2.2rem;
-  height: 3.2rem;
+  height: 4.8rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5931,6 +5946,57 @@ form.search > :last-child {
 }
 .consultBlock .btn {
   margin: 0 auto 0 0;
+}
+.consults {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3.2rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3.2rem;
+}
+.consults__item {
+  -webkit-border-radius: 0.8rem;
+          border-radius: 0.8rem;
+  border: 0.1rem solid #c4c4c4;
+  background-color: #fff;
+  padding: 3.2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.consults__item > :first-child {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  margin-bottom: 1rem;
+}
+.consults__item .tel {
+  color: #000;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.consults__item span {
+  color: #939393;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  margin-top: 0.6rem;
 }
 @media screen and (max-width: 640px) {
   .consultBlock {
@@ -8528,6 +8594,9 @@ footer ul ul {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.materials.v3 {
+  margin-bottom: 1.6rem;
 }
 .materials.v2 {
   padding: 2rem;
