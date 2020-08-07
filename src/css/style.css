@@ -3128,6 +3128,19 @@ form.search > :last-child {
 .FAQ .title {
   margin-bottom: 4.8rem;
 }
+@media screen and (max-width: 640px) {
+  .FAQ {
+    padding: 0;
+    margin: 2rem auto;
+  }
+  .FAQ .title {
+    margin-bottom: 2.4rem;
+    color: #313131;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+  }
+}
 .accordion-menu {
   list-style-type: none;
   margin-bottom: 0;
@@ -3215,17 +3228,20 @@ form.search > :last-child {
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
-@media screen and (max-width: 640px) {
-  .FAQ {
-    padding: 0;
-    margin: 2rem auto;
+@media screen and (max-width: 960px) {
+  .accordion-menu.v2 li {
+    padding: 2rem 1.6rem 2rem 0;
   }
-  .FAQ .title {
-    margin-bottom: 2.4rem;
-    color: #313131;
-    font-size: 2.4rem;
+  .accordion-menu.v2 li > :first-child {
+    font-size: 1.6rem;
     font-weight: 400;
-    line-height: 3.2rem;
+    line-height: 2.4rem;
+  }
+  .accordion-menu.v2 li > :first-child i {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.4rem;
+    top: 0.2rem;
   }
   .accordion-menu li {
     padding: 2.4rem 3.6rem 2.4rem 0;
@@ -5816,6 +5832,10 @@ form.search > :last-child {
   .gray-text {
     font-size: 24px !important;
     line-height: 32px !important;
+  }
+  .gray-text.v2 {
+    font-size: 2rem;
+    line-height: 2.8rem;
   }
   .cards .card {
     padding: 3rem 2rem;
@@ -12209,6 +12229,55 @@ footer ul ul {
 .hotPhones .advice-phones {
   margin-bottom: 0;
 }
+@media screen and (max-width: 680px) {
+  .hotPhones {
+    padding-top: 6.8rem;
+    position: relative;
+  }
+  .hotPhones .sectionTitle {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+    margin-bottom: 3.6rem;
+  }
+  .hotPhones:before {
+    content: '';
+    height: 1px;
+    background-color: #c4c4c4;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .hotPhones .activity-wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+  .hotPhones .activity-wrap .activity .phone-title {
+    margin-top: 0;
+  }
+  .hotPhones .activity-wrap .activity.phones {
+    height: 100%;
+    padding: 2.4rem;
+  }
+  .hotPhones .activity-wrap .activity.phones .img-wrap {
+    line-height: 1;
+    top: 0;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .hotPhones .activity-wrap .phone {
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+  }
+}
 .statistics .sectionTitle {
   margin-top: 0;
   color: #000;
@@ -12271,6 +12340,23 @@ footer ul ul {
   font-size: 3.2rem;
   font-weight: 400;
   line-height: 2.8rem;
+}
+@media screen and (max-width: 960px) {
+  .statistics .sectionTitle {
+    margin-bottom: 3.6rem;
+  }
+  .statistics .statisticsContainer__item {
+    padding: 2.4rem 3rem 2rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .statistics .statisticsContainer {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .statistics .statisticsContainer > :first-child {
+    margin-bottom: 2rem;
+  }
 }
 .locationBlock {
   display: -ms-grid;
@@ -12367,8 +12453,58 @@ footer ul ul {
   line-height: 2rem;
   margin-bottom: 0.4rem;
 }
+@media screen and (max-width: 960px) {
+  .locationBlock {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .locationBlock .map {
+    margin-bottom: 3rem;
+  }
+  .locationBlock .map:before {
+    background-size: contain;
+    padding-top: 56.25%;
+  }
+  .locationBlock .information li .liTitle {
+    margin-bottom: 0;
+  }
+  .locationBlock .information p {
+    line-height: 2.4rem;
+  }
+}
+.howToGet .sectionTitle {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+}
 .howToGet .textBlock {
   margin: 1.8rem 0 3.2rem;
+}
+@media screen and (max-width: 960px) {
+  .howToGet .sectionTitle {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+  }
+  .howToGet .textBlock {
+    margin: 3rem 0;
+  }
 }
 .imageItem {
   margin-bottom: 3.2rem;
@@ -12507,6 +12643,33 @@ footer ul ul {
 }
 .persons__item > :last-child p {
   text-align: center;
+}
+@media screen and (max-width: 960px) {
+  .persons {
+    margin-bottom: 3rem;
+  }
+  .persons__item {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+  .persons__item .block p.address {
+    text-align: left;
+  }
+  .persons__item .block p.days {
+    text-align: left;
+  }
+  .persons__item .block p.worktime {
+    text-align: left;
+  }
+  .persons__item > :last-child {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 .officeAddresses {
   -webkit-border-radius: 6px;
@@ -14111,6 +14274,41 @@ footer ul ul {
   text-align: center;
   color: #828282;
   text-align: left;
+}
+@media screen and (max-width: 960px) {
+  .locationSection .sectionTitle {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+  }
+}
+.personalReception .sectionTitle {
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 4rem;
+  margin-bottom: 1.4rem;
+}
+@media screen and (max-width: 960px) {
+  .personalReception .sectionTitle {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    margin-bottom: 2.4rem;
+  }
+}
+.learnMore .sectionTitle {
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 4rem;
+  margin-bottom: 1.4rem;
+}
+@media screen and (max-width: 960px) {
+  .learnMore .sectionTitle {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
 }
 @media screen and (max-width: 680px) {
   h3.sectionTitle {
