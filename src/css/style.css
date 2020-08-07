@@ -3146,6 +3146,20 @@ form.search > :last-child {
 .accordion-menu.v2 li.show .answer {
   margin-top: 2.4rem;
 }
+.accordion-menu.v3 li {
+  padding-right: 0;
+}
+.accordion-menu.v3 li > :first-child {
+  padding-right: 3.6rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+.accordion-menu.v3 li > :first-child i {
+  right: 0;
+}
+.accordion-menu.v3 li.show .answer {
+  margin-top: 3rem;
+}
 .accordion-menu li {
   border-top: 1px solid #e6e6e6;
   margin: 0;
@@ -5601,6 +5615,26 @@ form.search > :last-child {
   padding: 40px;
   margin-bottom: 48px;
 }
+.note.v2 {
+  margin: 3.4rem 0;
+}
+.note.v2 .title {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.note.v2 > :last-child {
+  margin-bottom: 0;
+}
 .note p {
   margin-bottom: 16px;
   line-height: 24px;
@@ -5608,6 +5642,23 @@ form.search > :last-child {
 }
 .note .title {
   color: #000;
+}
+.note .title .ri-information-fill {
+  color: #939393;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .materials-wr {
   display: -webkit-box;
@@ -12754,6 +12805,194 @@ footer ul ul {
 }
 .mapOpenBlock > :last-child {
   margin-bottom: 0;
+}
+.clinicalExaminationBlock {
+  padding: 4rem;
+  -webkit-border-radius: 0.6rem;
+          border-radius: 0.6rem;
+  background-color: #fff;
+}
+.clinicalExaminationBlock.v2 {
+  background-color: #f5f5f5;
+}
+.clinicalExaminationBlock .title {
+  padding-bottom: 3.2rem;
+  border-bottom: 0.1rem solid #e6e6e6;
+  margin-bottom: 3.2rem;
+}
+.clinicalExaminationBlock .textBlock {
+  margin-bottom: 3.2rem;
+}
+.clinicalExaminationBlock .textBlock p {
+  margin-bottom: 2.4rem;
+}
+.clinicalExaminationBlock .textBlock > :last-child {
+  margin-bottom: 0;
+}
+.clinicalExaminationBlock__bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 3rem;
+}
+.clinicalExaminationBlock__bottom a {
+  margin-right: 3rem;
+}
+.clinicalExaminationBlock__bottom > :last-child {
+  margin-right: 0;
+}
+.insuranceRepresentativeBlock {
+  padding: 4rem;
+  -webkit-border-radius: 0.6rem;
+          border-radius: 0.6rem;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+}
+.insuranceRepresentativeBlock.v2 {
+  background-color: #f5f5f5;
+}
+.insuranceRepresentativeBlock .title {
+  padding-bottom: 3.2rem;
+  border-bottom: 0.1rem solid #e6e6e6;
+  margin-bottom: 3.2rem;
+}
+.insuranceRepresentativeBlock .textBlock {
+  margin-bottom: 3.2rem;
+}
+.insuranceRepresentativeBlock .textBlock p {
+  margin-bottom: 2.4rem;
+}
+.insuranceRepresentativeBlock .textBlock > :last-child {
+  margin-bottom: 0;
+}
+.insuranceRepresentativeBlock__bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 3rem;
+}
+.insuranceRepresentativeBlock__bottom a {
+  margin-right: 3rem;
+}
+.insuranceRepresentativeBlock__bottom > :last-child {
+  margin-right: 0;
+}
+.representativeContacts > :last-child {
+  margin-bottom: 0;
+}
+.representativeContacts .info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+.representativeContacts .info__block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 3rem 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 1.4rem;
+  border-bottom: 0.1rem dashed #c4c4c4;
+  padding: 3rem 0;
+}
+.representativeContacts .info__block.v2 {
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+.representativeContacts .info__block__item {
+  padding-left: 3.2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.representativeContacts .info__block__item > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #939393;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+.representativeContacts .info__block__item .title {
+  color: #666;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.representativeContacts .info__block__item p,
+.representativeContacts .info__block__item a {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.representativeContacts .info__block__item a:hover {
+  text-decoration: underline;
+  color: #b8181c;
+}
+.representativeContacts .info > :last-child {
+  border-bottom: none;
 }
 .companyNews_and_Events > :last-child {
   display: none;
