@@ -11581,13 +11581,16 @@ footer ul ul {
   padding: 40px;
   margin-bottom: 40px;
 }
+.show-points span {
+  font-size: inherit;
+}
 .show-points a {
   display: block;
   max-width: 366px;
   padding: 18px 21px 18px;
   font-size: 16px;
   line-height: 16px;
-  font-weight: normal;
+  font-weight: 300;
   background-color: #b8181c;
   color: #fff;
   -webkit-border-radius: 8px;
@@ -11816,6 +11819,186 @@ footer ul ul {
 }
 .size-block {
   color: #939393;
+}
+@media screen and (max-width: 980px) {
+  .no-mob {
+    display: none !important;
+  }
+  .row .column.column-md-60.column-sm-75.column-xs-100 {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .activity-wrap .activity {
+    width: 100%;
+  }
+  .content__item {
+    padding-left: 20px;
+  }
+  .content-container .column-73 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .activity-wrap .activity.fullwidth.docs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 24px;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .activity-wrap .activity.fullwidth.docs .img-wrap {
+    margin-bottom: 16px;
+  }
+  .selects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .selects > div {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .press-wrap .press .metadata {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .column-aside {
+    display: none !important;
+  }
+  .wrapper-directors-items {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .company-directors__item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .company-directors__item:last-child {
+    margin-bottom: 0;
+  }
+  .mobile-hide-text {
+    display: none;
+  }
+  .activity-wrap .activity.activity-item {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    padding: 24px;
+  }
+  .activity-wrap .activity.activity-item:last-child {
+    margin-bottom: 0;
+  }
+  .activity-wrap .activity.activity-item .img-wrap {
+    text-align: left !important;
+    margin-bottom: 29px;
+  }
+  .company-directors {
+    margin-bottom: 48px;
+  }
+  .company-directors__item {
+    padding: 24px;
+  }
+  .filials {
+    margin-bottom: 48px;
+  }
+  .marg-sec01 {
+    margin-bottom: 72px !important;
+  }
+  .gratitude .page-title {
+    margin-bottom: 30px;
+  }
+  .gratitude .gratitude-title {
+    font-size: 28px !important;
+    line-height: 38px !important;
+  }
+  .gratitude .gratitude-title-2 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  .gratitude .gray-text {
+    margin-bottom: 64px;
+  }
+  .gratitude .second-heading {
+    margin-bottom: 32px;
+  }
+  .gratitude .gratitude-parag-wrap {
+    margin-bottom: 64px;
+  }
+  .gratitude .word-hide {
+    display: none;
+  }
+  .gratitude .cap-word {
+    text-transform: capitalize;
+  }
+  .gratitude .show-points {
+    padding: 24px;
+  }
+  .gratitude .ready-polis {
+    margin-bottom: 16px;
+  }
+  .gratitude .big-img {
+    margin-bottom: 64px;
+  }
+  .gratitude .double-img {
+    grid-row-gap: 20px;
+  }
+  .gratitude .double-img__small {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+  }
+  .gratitude .double-img__big {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -webkit-border-radius: 8px;
+            border-radius: 8px;
+  }
+  .gratitude .two-versions {
+    margin-bottom: 64px;
+  }
+  .gratitude .activity-wrap--grat {
+    margin-bottom: 64px;
+  }
+  .gratitude .recover-text-02 {
+    margin-bottom: 64px;
+  }
+  .gratitude .grat-bottom-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gratitude .img-wrap-grat2 {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .team-section .second-heading {
+    padding-bottom: 0 !important;
+    margin-bottom: 32px;
+  }
+  .gratitude .page-title {
+    margin-bottom: 30px;
+  }
 }
 .medicalExamination {
   position: relative;
