@@ -3159,6 +3159,14 @@ form.search > :last-child {
 .accordion-menu.v2 li.show .answer {
   margin-top: 2.4rem;
 }
+.accordion-menu.v2 .agent a,
+.accordion-menu.v2 .agent p,
+.accordion-menu.v2 .agent b {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
 .accordion-menu.v3 li {
   padding-right: 0;
 }
@@ -3229,8 +3237,100 @@ form.search > :last-child {
   transition: 0.25s ease-in-out;
 }
 @media screen and (max-width: 960px) {
+  .accordion-menu.v2 .company-directors {
+    margin-bottom: 0;
+  }
+  .accordion-menu.v2 .press-wrap .press {
+    padding: 2.4rem;
+  }
+  .accordion-menu.v2 .press-wrap .press > :last-child {
+    margin-bottom: 0;
+  }
+  .accordion-menu.v2 .press-wrap .press.withtag .tag {
+    margin-bottom: 1rem;
+  }
+  .accordion-menu.v2 .press-wrap .press.withtag .title {
+    margin-bottom: 3.2rem;
+  }
+  .accordion-menu.v2 .press-wrap .press.withimg {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .accordion-menu.v2 .press-wrap .press.withimg .wrap {
+    padding: 0 0 1.4rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .accordion-menu.v2 .press-wrap .press.withimg .title {
+    margin: 0;
+  }
+  .accordion-menu.v2 .press-wrap .press.noimg .data {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .accordion-menu.v2 .press-wrap .press.noimg .title {
+    margin-bottom: 0;
+  }
+  .accordion-menu.v2 .press-wrap .press.fullwidth {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .accordion-menu.v2 .press-wrap .press.fullwidth .img-wrap {
+    margin-bottom: 0;
+  }
+  .accordion-menu.v2 .press-wrap .press.fullwidth .data {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   .accordion-menu.v2 li {
-    padding: 2rem 1.6rem 2rem 0;
+    padding: 2rem 0;
   }
   .accordion-menu.v2 li > :first-child {
     font-size: 1.6rem;
@@ -3242,6 +3342,9 @@ form.search > :last-child {
     height: 2.4rem;
     font-size: 1.4rem;
     top: 0.2rem;
+  }
+  .accordion-menu.v2 .agent {
+    display: block;
   }
   .accordion-menu li {
     padding: 2.4rem 3.6rem 2.4rem 0;
@@ -5386,6 +5489,9 @@ form.search > :last-child {
 .press-wrap .press .metadata > div:last-child:after {
   display: none;
 }
+.press-wrap .press > :last-child {
+  margin-bottom: 0;
+}
 .press-wrap .press.withimg {
   padding: 0;
 }
@@ -5418,6 +5524,9 @@ form.search > :last-child {
   width: 100%;
   padding-top: 56.25%;
 }
+.press-wrap .press.withtag > :last-child {
+  margin-bottom: 0;
+}
 .press-wrap .press.fullwidth {
   width: 100%;
   display: -webkit-box;
@@ -5433,7 +5542,8 @@ form.search > :last-child {
   overflow: hidden;
 }
 .press-wrap .press.fullwidth .img-wrap:before {
-  height: 100%;
+  height: auto;
+  padding-top: 56.26%;
   content: '';
   position: relative;
   display: block;
@@ -5456,6 +5566,23 @@ form.search > :last-child {
 .press-wrap .press.fullwidth .data {
   width: -webkit-calc(100% - 196px);
   width: calc(100% - 196px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .press-wrap .press.noimg {
   width: 100%;
@@ -5778,6 +5905,9 @@ form.search > :last-child {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
+  .note.v2 {
+    padding: 2.4rem;
+  }
   .activity-wrap .activity {
     width: 100%;
   }
@@ -5817,10 +5947,17 @@ form.search > :last-child {
     width: 100%;
     margin-bottom: 16px;
   }
+  .press-wrap .press {
+    margin-bottom: 2rem;
+  }
   .press-wrap .press .metadata {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+  }
+  .press-wrap .press.fullwidth .img-wrap:before {
+    height: auto;
+    padding-top: 56.26%;
   }
   h2 {
     font-size: 24px !important;
@@ -5909,6 +6046,44 @@ form.search > :last-child {
     display: block;
   }
   .press-wrap .press {
+    width: 100%;
+  }
+  .pagination.v2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 6.4rem;
+  }
+  .pagination.v2 nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .pagination.v2 nav a {
+    display: none;
+  }
+  .pagination.v2 nav > :first-child,
+  .pagination.v2 nav > :last-child,
+  .pagination.v2 nav .active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .pagination.v2 .btn {
     width: 100%;
   }
 }
@@ -6068,6 +6243,14 @@ form.search > :last-child {
   font-weight: 400;
   line-height: 2.8rem;
   margin-top: 0.6rem;
+}
+@media screen and (max-width: 980px) {
+  .consults {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+    margin-bottom: 6.8rem;
+  }
 }
 @media screen and (max-width: 640px) {
   .consultBlock {
@@ -7952,6 +8135,14 @@ footer ul ul {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
+  .wrapper-directors-items.v2 {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+  .wrapper-directors-items.v2 .company-directors__item {
+    margin-bottom: 2rem;
+  }
   .company-directors__item {
     width: 100%;
     margin-bottom: 20px;
@@ -8830,6 +9021,12 @@ footer ul ul {
   .materials.v2 .doc .content .link {
     font-size: 1.4rem;
     line-height: 2rem;
+  }
+  .materials.v3 .doc {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2.4rem;
+    padding: 2.4rem;
   }
 }
 .events-block-list .second-heading {
@@ -13350,6 +13547,49 @@ footer ul ul {
 .postDatesFilter > :last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 980px) {
+  .postDatesFilter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .postDatesFilter > :first-child {
+    margin-bottom: 2rem;
+  }
+  .postDatesFilter .inputs {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+  .postDatesFilter .inputs:before {
+    content: none;
+  }
+  .postDatesFilter .inputs label {
+    width: 100%;
+    margin: 0;
+  }
+  .postDatesFilter .inputs label input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .Videos {
   display: -ms-grid;
   display: grid;
@@ -13364,6 +13604,14 @@ footer ul ul {
 }
 .Videos .videoItem .videoPoster {
   margin-bottom: 1.2rem;
+}
+@media screen and (max-width: 980px) {
+  .Videos {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
+  }
 }
 .mapOpenBlock {
   border: 1px solid #e6e6e6;
@@ -13405,6 +13653,16 @@ footer ul ul {
 }
 .mapOpenBlock > :last-child {
   margin-bottom: 0;
+}
+@media screen and (max-width: 980px) {
+  .mapOpenBlock {
+    padding: 2.4rem;
+    margin-bottom: 6.4rem;
+  }
+  .mapOpenBlock > :first-child {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 .clinicalExaminationBlock {
   padding: 4rem;
@@ -13450,6 +13708,30 @@ footer ul ul {
 .clinicalExaminationBlock__bottom > :last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 980px) {
+  .clinicalExaminationBlock {
+    padding: 2.4rem;
+  }
+  .clinicalExaminationBlock__bottom {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .clinicalExaminationBlock__bottom a {
+    margin-bottom: 2rem;
+  }
+  .clinicalExaminationBlock__bottom > :last-child {
+    margin-bottom: 0;
+  }
+}
 .insuranceRepresentativeBlock {
   padding: 4rem;
   -webkit-border-radius: 0.6rem;
@@ -13494,6 +13776,19 @@ footer ul ul {
 }
 .insuranceRepresentativeBlock__bottom > :last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 980px) {
+  .insuranceRepresentativeBlock {
+    padding: 2.4rem;
+  }
+}
+.representativeContacts .agent a,
+.representativeContacts .agent p,
+.representativeContacts .agent b {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 .representativeContacts > :last-child {
   margin-bottom: 0;
@@ -13593,6 +13888,42 @@ footer ul ul {
 }
 .representativeContacts .info > :last-child {
   border-bottom: none;
+}
+.representativeContacts .last div a,
+.representativeContacts .last div b {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.representativeContacts .last div a,
+.representativeContacts .last div p {
+  display: inline-block;
+}
+@media screen and (max-width: 980px) {
+  .representativeContacts .agent {
+    a: , p, b;
+  }
+  .representativeContacts .info__block {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .representativeContacts .info__block.v2 {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .representativeContacts .last div a,
+  .representativeContacts .last div b {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .representativeContacts .last div a,
+  .representativeContacts .last div p {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
 }
 .companyNews_and_Events > :last-child {
   display: none;
