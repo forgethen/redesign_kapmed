@@ -80,6 +80,10 @@ $(document).ready(function() {
     $(this).parents('.dropdown').find('ul').removeClass('show');
   })
 
+  $('.doc .see').click(function() {
+    $(this).toggleClass('active');
+    $(this).parents('.doc').find('.answer').toggleClass('show');
+  })
 
   function dropdownClose() {
     $(".dropdown").each(function() {
