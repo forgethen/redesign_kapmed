@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Site title</title>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Site title">
+    <meta name="description" content="Site description">
+    <meta property="og:title" content="Site title">
+    <meta property="og:description" content="Site description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Site URL">
+    <meta property="og:image" content="LOGO/IMG">
+    <link rel="icon" type="image/png" href="src/img/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/Helvetica/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/remixicon/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="src/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="src/css/milligram.responsive-grid.css">
+    <link rel="stylesheet" type="text/css" href="src/css/inputmask.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/vanilla.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/slick.min.js"></script>
+    <script src="src/js/jquery.inputmask.bundle.js"></script>
+    <script src="src/js/jquery.mCustomScrollbar.js"></script>
+    <script src="src/js/jquery.fancybox.min.js"></script>
+    <script src="src/js/bodyScrollLock.min.js"></script>
+    <script src="src/js/jquery.hideseek.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="src/js/vue-launcher.js"></script>
+  </head>
+  <body>
+    <div class="allContent">
+      <header>
+        <div class="top-container">
+          <div>
+            <div class="container">
+              <div class="row">
+                <div class="column column-66"><a data-fancybox="" data-src="#citySelect" href="javascript:;" data-touch="false" data-modal="true">
+                    <div class="image"><img src="src/img/static/plane.svg" alt="plane"></div><span>Санкт-Петербург</span></a><a href="#">
+                    <div class="image"><img src="src/img/static/zoom (1).svg" alt="zoom"></div><span>Версия для слабовидящих </span></a><a href="#">
+                    <div class="image"><img src="src/img/static/print (1).svg" alt="print"></div><span>Распечатать страницу</span></a></div>
+                <div class="column column-33"><a href="tel:88005506774">
+                    <div class="image"><img src="src/img/static/phone (1).svg" alt="phone"></div>
+                    <p>8&nbsp;800&nbsp;550&nbsp;67&nbsp;74<span>&nbsp;(Круглосуточно)</span></p></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="header">
+            <div class="container">
+              <div class="row row-responsive">
+                <div class="column column-md-25 column-sm-25 column-xs-50"><a class="logo" href="/"><img src="src/img/static/logo.svg" alt="logo"></a></div>
+                <div class="column column-md-70 column-sm-70 column-xs-50">
+                  <nav class="desktop">
+                    <ul>
+                      <li><a href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
+                      <li><a href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
+                      <li><a class="search" href="#"><i class="ri-search-line"></i><span>Поиск</span></a></li>
+                    </ul>
+                  </nav>
+                  <nav class="mobile">
+                    <ul>
+                      <li><a class="search" href="#"><i class="ri-search-line"></i></a></li>
+                      <li><a class="burger" href="#"><i class="ri-menu-line"></i><i class="ri-close-fill"></i></a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="column column-md-25 column-sm-25 column-xs-100"><a class="btn btn-red" href="#">Заявка на полис ОМС</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container fromHeaderMenu">
+          <ul class="headerMenu">
+            <li><a href="javascript:;"><span>Полис ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Заявка на полис ОМС</a></li>
+                  <li><a href="#">Документы для оформления полиса</a></li>
+                  <li><a href="#">Пункты выдачи полисов</a></li>
+                  <li><a href="#">Доставка полиса ОМС</a></li>
+                  <li><a href="#">Виды полисов ОМС</a></li>
+                  <li><a href="#">Юридическим лицам</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="javascript:;"><span>Система ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Что такое Система ОМС</a></li>
+                  <li><a href="#">Дайджест новостей системы ОМС</a></li>
+                  <li><a href="#">Участие компании в развитии системы ОМС</a></li>
+                  <li><a href="#">Виды, качество и условия медицинской помощи</a></li>
+                  <li><a href="#">Что бесплатно по полису ОМС</a></li>
+                  <li><a href="#">Как выбрать страховую компанию ОМС</a></li>
+                  <li><a href="#">Как выбрать медицинскую организацию</a></li>
+                  <li><a href="#">Информация о медицинских организациях</a></li>
+                  <li><a href="#">Информация о Фонде ОМС</a></li>
+                  <li><a href="#">Нормативные документы</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Диспансеризация</span></a></li>
+            <li><a href="javascript:;"><span>Защита прав&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Ваш страховой представитель</a></li>
+                  <li><a href="#">Подать жалобу</a></li>
+                  <li><a href="#">Выявленные нарушения по обращениям застрахованных лиц</a></li>
+                  <li><a href="#">Контакт-центр</a></li>
+                  <li><a href="#">Полезные ресурсы</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Ваш филиал</span></a></li>
+            <li><a href="javascript:;"><span>О компании&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Пресс центр</a></li>
+                  <li><a href="#">Научно практическая деятельность</a></li>
+                  <li><a href="#">Участие компании в развитии системы ОМС</a></li>
+                  <li><a href="#">Проекты компании</a></li>
+                  <li><a href="#">Наша команда</a></li>
+                  <li><a href="#">Раскрытие информации</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Школа пациента</span></a></li>
+          </ul>
+          <ul class="mobileBottom">
+            <li><a href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
+            <li><a href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="citySelect" id="citySelect">
+        <div class="container">
+          <h3 class="citySelect__title">Выберете ваш регион</h3>
+          <div class="citiesBlock">
+            <ul class="cities">
+              <li><a class="ex" href="#">
+                  <p>Город Москва</p></a></li>
+              <li><a href="#">
+                  <p>Липецкая область</p></a></li>
+              <li><a href="#">
+                  <p>Рязанская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Московская область</p></a></li>
+              <li><a href="#">
+                  <p>Ненецкий автономный округ</p></a></li>
+              <li><a href="#">
+                  <p>Саратовская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Город Санкт-Петербург</p></a></li>
+              <li><a href="#">
+                  <p>Нижегородская область</p></a></li>
+              <li><a href="#">
+                  <p>Смоленская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Ленинградская область</p></a></li>
+              <li><a href="#">
+                  <p>Омская область</p></a></li>
+              <li><a href="#">
+                  <p>Тверская область</p></a></li>
+              <li><a href="#">
+                  <p>Алтайский край</p></a></li>
+              <li><a href="#">
+                  <p>Оренбургская область</p></a></li>
+              <li><a href="#">
+                  <p>Тульская область</p></a></li>
+              <li><a href="#">
+                  <p>Архангельская область</p></a></li>
+              <li><a href="#">
+                  <p>Пензенская область</p></a></li>
+              <li><a href="#">
+                  <p>Тюменская область</p></a></li>
+              <li><a href="#">
+                  <p>Владимирская область</p></a></li>
+              <li><a href="#">
+                  <p>Пермский край</p></a></li>
+              <li><a href="#">
+                  <p>Удмуртская республика</p></a></li>
+              <li><a href="#">
+                  <p>Волгоградская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Алтай</p></a></li>
+              <li><a href="#">
+                  <p>Ульяновская область</p></a></li>
+              <li><a href="#">
+                  <p>Еврейская автономная область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Башкортостан</p></a></li>
+              <li><a href="#">
+                  <p>Ханты-Мансийский автономный округ - Югра</p></a></li>
+              <li><a href="#">
+                  <p>Кабардино-Балкарская республика</p></a></li>
+              <li><a href="#">
+                  <p>Республика Бурятия</p></a></li>
+              <li><a href="#">
+                  <p>Ярославская область</p></a></li>
+              <li><a href="#">
+                  <p>Калининградская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Коми</p></a></li>
+              <li><a href="#">
+                  <p>Кировская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Мордовия</p></a></li>
+              <li><a href="#">
+                  <p>Костромская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Саха (Якутия)</p></a></li>
+              <li><a href="#">
+                  <p>Краснодарский край</p></a></li>
+              <li><a href="#">
+                  <p>Республика Северная Осетия - Алания</p></a></li>
+              <li><a href="#">
+                  <p>Курганская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Тыва</p></a></li>
+              <li><a href="#">
+                  <p>Ростовская область</p></a></li>
+            </ul>
+          </div>
+          <form class="search">
+            <input type="search" data-list=".citiesBlock ul" autocomplete="off" placeholder="Введите название региона">
+            <input class="btn btn-red" type="submit" value="Найти">
+          </form>
+        </div>
+      </div>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="javascript:void(0);">Страховые представители</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="container">
+          <div class="row row-responsive">
+            <div class="column column-md-25 column-sm-25 column-xs-100">
+              <nav class="content_list">
+                <ul>
+                  <li><a class="slow active" href="#io1">О филиале</a></li>
+                  <li><a class="slow" href="#io2">Контакты и график приема</a></li>
+                  <li><a class="slow" href="#io3">Пункты выдачи полисов</a></li>
+                  <li><a class="slow" href="#io4">Список медорганизаций в системе ОМС</a></li>
+                  <li><a class="slow" href="#io5">Перечень услуг предоставляемых по ОМС </a></li>
+                  <li><a class="slow" href="#io6">Региональные документы</a></li>
+                  <li><a class="slow" href="#io7">Руководство</a></li>
+                  <li><a class="slow" href="#io8">Оставить отзыв о филиале</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="column column-md-75 column-sm-75 column-xs-100">
+              <section id="io1">
+                <div class="page-title v2">
+                  <h1>Доставка полиса ОМС</h1>
+                </div>
+              </section>
+              <div class="tabsContainer container">
+                <div class="tabs" id="TABS"><a class="tab active" href="javascript:;">Федеральные документы</a><a class="tab" href="javascript:;">Региональные документы</a>
+                </div>
+              </div>
+              <section id="io2">
+                <div class="container">
+                  <h3 class="sectionTitle">Полис на дом</h3>
+                </div>
+                <div class="container">
+                  <div class="gray-text v3">Для удобства оформления полиса маломобильным гражданам ООО&nbsp;«Капитал&nbsp;МС» предоставляет услугу по оформлению полиса ОМС на дому.</div>
+                </div>
+              </section>
+              <section id="io3">
+                <div class="container">
+                  <div class="forService toHome">
+                    <h5 class="title">Чтобы воспользоваться данной услугой, вам необходимо:</h5>
+                    <div class="content">
+                      <p>1. Заполнить форму заявки, нажав на кнопку “Заявка на доставку полиса” ниже;</p>
+                      <p>2. Дождаться звонка сотрудника Компании для согласования удобной даты и времени его визита к вам;</p>
+                      <p>3. Подготовить к приезду сотрудника ООО «Капитал МС» все документы, необходимые для оформления полиса ОМС.</p>
+                    </div>
+                    <div class="forService__bottom"><a class="btn btn-red" href="#">Заявка на доставку полиса</a></div>
+                  </div>
+                </div>
+              </section>
+              <section id="io4">
+                <div class="container">
+                  <h3 class="sectionTitle">Полис в офис</h3>
+                </div>
+                <div class="gray-text v3">Для работающего населения  ООО «Капитал МС» предлагает бесплатную услугу «Полис в офис». Услуга «Полис в офис» – это возможность оформить полис ОМС единого образца для себя и коллег прямо на рабочем месте. </div>
+              </section>
+              <div class="note v2">
+                <p class="title"><i class="ri-information-fill"></i>&nbsp;Обратите внимание:</p>
+                <p>Доставка полисов ОМС осуществляется бесплатно и возможна при единовременном оформлении от 5 полисов (для себя, коллег, родственников, друзей).</p>
+              </div>
+              <section id="io4">
+                <div class="container">
+                  <div class="forService toOffice">
+                    <h5 class="title">Чтобы воспользоваться данной услугой, вам необходимо:</h5>
+                    <ul class="content">
+                      <li class="content__item">
+                        <p>внесут данные ваших документов в регистр застрахованных лиц; </p>
+                      </li>
+                      <li class="content__item">
+                        <p>выдадут временное свидетельство, подтверждающее оформление полиса ОМС единого образца; </p>
+                      </li>
+                      <li class="content__item">
+                        <p>проконсультируют по всем вопросам сферы ОМС;</p>
+                      </li>
+                      <li class="content__item">
+                        <p>обеспечат памятками и другими информационными материалами о системе ОМС;</p>
+                      </li>
+                      <li class="content__item">
+                        <p>уведомят о готовности вашего полиса; </p>
+                      </li>
+                      <li class="content__item">
+                        <p>доставят готовые полисы ОМС прямо в офис. </p>
+                      </li>
+                    </ul>
+                    <div class="forService__bottom"><a class="btn btn-red" href="#">Заявка на доставку полиса</a></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
