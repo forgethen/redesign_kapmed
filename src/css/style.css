@@ -5376,6 +5376,9 @@ form.search > :last-child {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
+.cards.docList .accordion-menu li .answer .content li > :last-child {
+  margin-bottom: 0;
+}
 .cards.docList .accordion-menu li .answer .content li:before {
   content: '';
   display: block;
