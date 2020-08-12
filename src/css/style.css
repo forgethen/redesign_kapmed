@@ -2787,6 +2787,22 @@ a.red-link:hover {
   background-color: #fff;
   margin-top: 3.2rem;
 }
+.formPage .msg.v2 {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.formPage .msg.v2 p {
+  margin-top: 2.4rem;
+}
+.formPage .msg.v2 .btn {
+  margin: 3.2rem auto 0 0;
+}
 .formPage .msg .title {
   padding-bottom: 3.2rem;
   border-bottom: 1px solid #e6e6e6;
