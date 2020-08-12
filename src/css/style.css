@@ -2797,6 +2797,10 @@ a.red-link:hover {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+.formPage .msg.v2 .title {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
 .formPage .msg.v2 p {
   margin-top: 2.4rem;
 }
