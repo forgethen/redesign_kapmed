@@ -2518,7 +2518,7 @@ a.red-link:hover {
   color: #939393;
   bottom: 0.1rem;
 }
-.formPage form label.date span {
+.formPage form label.date .hint {
   color: #666;
   font-size: 1.4rem;
   font-weight: 400;
@@ -2588,6 +2588,9 @@ a.red-link:hover {
 .formPage form label textarea {
   resize: none;
   height: 10.8rem;
+}
+.formPage form label.textarea {
+  line-height: 0;
 }
 .formPage form .info {
   color: #666;
@@ -2792,7 +2795,7 @@ a.red-link:hover {
   padding: 0 1.6rem;
 }
 .formPage .msg {
-  padding: 4rem;
+  padding: 3.2rem;
   -webkit-border-radius: 0.8rem;
           border-radius: 0.8rem;
   border: 1px solid #e6e6e6;
@@ -2834,6 +2837,7 @@ a.red-link:hover {
 }
 .formPage .msg .title {
   padding-bottom: 3.2rem;
+  padding-top: 0;
   border-bottom: 1px solid #e6e6e6;
   text-align: center;
   text-align: left;
@@ -2890,6 +2894,12 @@ a.red-link:hover {
 }
 .formPage__finish .btn {
   margin: 3.2rem auto 3.2rem 0;
+}
+.formPage__finish.v2 {
+  margin-bottom: 3.2rem;
+}
+.formPage__finish.v2 .title {
+  padding: 0;
 }
 form > :last-child {
   margin-bottom: 0;
@@ -10083,6 +10093,36 @@ footer ul ul {
 .qc {
   margin-top: 3.2rem;
 }
+.qc.v2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.qc.v2 .stars {
+  position: relative;
+  top: -0.6rem;
+}
+.qc.v2 .stars.check {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.4rem 0 2.4rem 0 2.4rem 0 2.4rem 0 2.4rem;
+  grid-template-columns: repeat(5, 2.4rem);
+  grid-column-gap: 0;
+  margin: 0;
+}
+.qc.v2 .stars.check a {
+  height: inherit;
+}
+.qc.v2 .stars.check a i {
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 2.4rem;
+}
 .success-box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10231,6 +10271,9 @@ footer ul ul {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
+}
+.addReview.v2 .textarea {
+  margin-top: 0;
 }
 @media screen and (max-width: 680px) {
   .reviewsSection .sectionTitle .sliderNav,
@@ -13580,6 +13623,9 @@ footer ul ul {
 .medicalExamination .container label textarea {
   resize: none;
   height: 10.8rem;
+}
+.medicalExamination .container label.textarea {
+  line-height: 0;
 }
 .medicalExamination .container .custom-checkbox {
   margin-bottom: 2.4rem;

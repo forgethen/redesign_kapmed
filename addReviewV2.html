@@ -44,68 +44,75 @@
       </div>
       <div class="formPage__content">
         <div class="wrapper">
-          <h2 class="title">Написание отзыва</h2>
-          <ul class="stepline">
-            <li class="checked active">
-              <p>1. Ваш отзыв</p>
-            </li>
-            <li>
-              <p>2. Медучреждение</p>
-            </li>
-            <li>
-              <p>3. Имя и возраст</p>
-            </li>
-            <li>
-              <p>4. Отправка</p>
-            </li>
-          </ul>
-          <form id="form1">
-            <h6 class="title">Напишите свой отзыв о диспансеризации</h6>
-            <div class="qc">
-              <p class="desc">Напишите свой отзыв о диспансеризации</p>
-              <div class="stars check"><a class="star" href="javascript:;" data-value="1"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="2"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="3"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="4"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="5"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a></div>
-              <div class="success-box">
-                <p class="text-message"></p><a class="btn btn-red" href="#">Оставить жалобу</a>
+          <h2 class="title">Оставить отзыв</h2>
+          <div class="note v2">
+            <p class="title"><i class="ri-information-fill"></i>&nbsp;Обратите внимание:</p>
+            <p>Если Вы считаете, что были нарушены Ваши права на получение бесплтаной и качественной медицинской помощи ОМС - выберите форму&nbsp;<a class="red" href="#">Заявить о нарушении прав</a></p>
+          </div>
+          <form class="addReview v2" id="form1">
+            <h6 class="title">Укажите ваши контактные данные</h6>
+            <div class="doublerow">
+              <label>
+                <p class="title">Ваше ФИО&nbsp;<span class="red">*</span></p>
+                <input type="text" placeholder="Фамилия Имя Отчество">
+              </label>
+              <div class="dropdown">
+                <label>
+                  <p class="title">Город&nbsp;<span class="red">*</span></p>
+                  <div>
+                    <input type="text" value="СПБ"><i class="ri-arrow-down-s-fill">                 </i>
+                  </div>
+                </label>
+                <ul class="addreses show">
+                  <li>СПБ</li>
+                  <li>МСК</li>
+                  <li>Челяба</li>
+                </ul>
+              </div>
+            </div>
+            <div class="doublerow">
+              <label class="date">
+                <p class="title">Дата рождения&nbsp;<span class="red">*</span></p>
+                <div>
+                  <input type="text" value="" placeholder="дд.мм.гггг"><i class="ri-calendar-2-line"></i>
+                </div>
+              </label>
+              <label>
+                <p class="title">Email</p>
+                <input type="email" placeholder="info@mail.com">
+              </label>
+            </div>
+            <div class="doublerow">
+              <label>
+                <p class="title">Текст отзыва&nbsp;<span class="red">*</span></p>
+              </label>
+              <div class="qc v2">
+                <p class="desc">Оценка&nbsp;<span class="red">*&nbsp;</span></p>
+                <div class="stars check"><a class="star" href="javascript:;" data-value="1"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="2"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="3"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="4"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a><a class="star" href="javascript:;" data-value="5"><i class="ri-star-line"></i><i class="ri-star-fill"></i></a></div>
               </div>
             </div>
             <label class="textarea">
-              <p class="title">Напишите свой отзыв</p>
-              <textarea placeholder="Введите текст"></textarea>
+              <textarea placeholder="Введите текст">     </textarea>
             </label>
-          </form>
-          <form id="form2">
-            <h6 class="title">Укажите медучреждение, в котором вы прошли диспансеризацию</h6>
-            <div class="doublerowContainer">
-              <div class="doublerow">
-                <label>
-                  <p class="title">Укажите адрес или № поликлиники</p>
-                  <input type="text" value="" placeholder="Поликлиника №54">
-                </label>
-                <label>
-                  <p class="title">Или укажите на карте</p><a class="btn mapOpen" data-fancybox="" data-src="#mapPopUp" href="javascript:;" data-touch="false" data-modal="true"><i class="ri-map-2-line"></i></a>
-                </label>
-              </div>
-            </div>
-          </form>
-          <form id="form3">
-            <h6 class="title">Укажите ваше имя и возраст</h6>
-            <div class="name_and_age">
-              <label>
-                <p class="title">Как вас зовут?</p>
-                <input type="text" value="" placeholder="Фамили Имя">
-              </label>
-              <label>
-                <p class="title">Возраст</p>
-                <input type="text" value="" placeholder="00">
-              </label>
-            </div>
+            <label class="custom-checkbox">
+              <input type="checkbox" required hidden><i class="checked ri-check-fill"></i>
+              <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
+            </label>
           </form>
         </div>
       </div>
       <div class="formPage__finish">
         <div class="wrapper">
           <p class="title">Спасибо за ваш отзыв!</p>
-          <p>Мы опубликуем ваш отзыв после модерации в течение нескольких дней.</p><a class="btn btn-transparent" href="/">Перейти на главную</a>
+          <p>В ближайшее время модератор проверит ваш отзыв, и мы опубликуем его на нашем сайте</p><a class="btn btn-transparent" href="/">Перейти на главную</a>
+        </div>
+      </div>
+      <div class="formPage__finish v2">
+        <div class="wrapper">
+          <p class="title">Спасибо за ваш отзыв!</p>
+          <div class="msg">
+            <h6 class="title">В ближайшее время модератор проверит ваш отзыв, и мы опубликуем его на нашем сайте</h6><a class="btn btn-red" href="/">Перейти на главную</a>
+          </div>
         </div>
       </div>
       <div class="mapPopUp" id="mapPopUp">
