@@ -2750,6 +2750,9 @@ a.red-link:hover {
   padding: 1.6rem 0;
   border-top: 1px solid rgba(147,147,147,0.2);
 }
+.formPage__bottom .close {
+  margin: 0 0 0 auto;
+}
 .formPage__bottom .help {
   position: absolute;
   left: 50%;
@@ -16376,6 +16379,64 @@ footer ul ul {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-top: 2rem;
+}
+.detailedReview__content {
+  padding: 4rem;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: #fff;
+  border: 0.1rem solid #e7e7e7;
+}
+.detailedReview > :first-child,
+.detailedReview > :first-child span {
+  color: #313131;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+}
+.detailedReview .location {
+  color: #939393;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1.6rem;
+}
+.detailedReview .text {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  position: relative;
+  margin-bottom: 3.2rem;
+  position: relative;
+}
+.detailedReview a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+.detailedReview a p {
+  color: #b8181c;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.detailedReview a:hover {
+  text-decoration: underline;
+}
+.detailedReview a > :last-child {
+  display: none;
+}
+.detailedReview .postDate {
+  color: #939393;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 .FilterSearch {
   display: -ms-grid;
