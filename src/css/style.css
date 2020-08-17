@@ -168,6 +168,10 @@ select:hover {
   font-size: inherit;
   line-height: inherit;
 }
+.sectionTitle a i {
+  font-size: 3.2rem;
+  line-height: inherit;
+}
 .sectionTitle__top {
   display: -webkit-box;
   display: -webkit-flex;
