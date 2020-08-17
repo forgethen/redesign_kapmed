@@ -1400,6 +1400,23 @@ button.btn.mapOpen:after {
   content: 'Открыть карту медучреждений';
   position: relative;
 }
+a.btn.btn-filter i,
+input[type="button"].btn.btn-filter i,
+input[type="submit"].btn.btn-filter i,
+button.btn.btn-filter i {
+  margin-right: 0;
+}
+a.btn.btn-filter.active,
+input[type="button"].btn.btn-filter.active,
+input[type="submit"].btn.btn-filter.active,
+button.btn.btn-filter.active {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+          box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  opacity: 1;
+  background-color: #b8181c;
+  border: 1px solid #b8181c;
+  color: #fff;
+}
 a.btn-transparent,
 input[type="button"].btn-transparent,
 input[type="submit"].btn-transparent,
@@ -16314,6 +16331,17 @@ footer ul ul {
           justify-content: flex-start;
   margin-top: 2rem;
 }
+.FilterSearch {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2.4rem 12rem;
+  grid-template-columns: 1fr 12rem;
+  grid-column-gap: 2.4rem;
+}
+.FilterSearch input[type="search"] {
+  margin-bottom: 0;
+  height: 100%;
+}
 .infoAboutMedicalOrganizations .sectionTitle {
   margin-top: 0;
   margin-bottom: 3.6rem;
@@ -16332,8 +16360,21 @@ footer ul ul {
   grid-column-gap: 3.2rem;
   margin-bottom: 2.8rem;
 }
+.dropDownFilter.v2 {
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.dropDownFilter.v2.show {
+  margin-bottom: 2.8rem;
+  height: auto;
+  overflow: visible;
+}
 .dropDownFilter .dropdown {
   position: relative;
+}
+.dropDownFilter .dropdown__el {
+  margin-bottom: 0;
 }
 .dropDownFilter .dropdown label > :first-child {
   font-weight: 400;

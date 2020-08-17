@@ -540,6 +540,10 @@ $('.search input[type="search"]').hideseek({
     $(this).parents('.list').toggleClass('active');
   });
 
+$('.FilterSearch .btn-filter').click(function() {
+  $(this).toggleClass('active');
+  $('.dropDownFilter.v2').toggleClass('show');
+})
 
 });
 
