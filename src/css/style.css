@@ -10563,6 +10563,20 @@ footer ul ul {
 .answer-item:last-child {
   margin-bottom: 0;
 }
+.answer-item__top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
 .ans-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10576,8 +10590,8 @@ footer ul ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 153px;
-  padding: 6px 12px;
+  padding: 0 12px;
+  height: 3.6rem;
   margin-bottom: 30px;
   border: 1px solid #c4c4c4;
   -webkit-border-radius: 20px;
@@ -11058,7 +11072,7 @@ footer ul ul {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   background-repeat: no-repeat;
-  background-image: url("/src/img/static/prev.svg");
+  background-image: url("../img/static/prev.svg");
   background-size: 20px;
 }
 .ad-top-img-wrapper {
@@ -11614,7 +11628,7 @@ footer ul ul {
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
-  background-image: url("/src/img/static/search-icon.svg");
+  background-image: url("../img/static/search-icon.svg");
   background-repeat: no-repeat;
   background-position: 26px center;
 }
@@ -11698,7 +11712,7 @@ footer ul ul {
   margin-bottom: 12px;
   font-size: 16px;
   line-height: 24px;
-  background-image: url("/src/img/static/i-icon.svg");
+  background-image: url("../img/static/i-icon.svg");
   background-repeat: no-repeat;
 }
 .patient-school__important p {
@@ -11834,7 +11848,7 @@ footer ul ul {
   height: 78px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background-image: url("/src/img/static/school-p-01.jpg");
+  background-image: url("../img/static/school-p-01.jpg");
   background-position: top center;
 }
 .content-wrap {
@@ -11936,11 +11950,25 @@ footer ul ul {
   padding-left: 18px;
   color: #3a3a3a;
 }
+.point-items > :last-child {
+  margin-bottom: 0;
+}
+.point-items a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3a3a3a;
+}
+.point-items a:hover {
+  color: #b8181c;
+  text-decoration: underline;
+}
+.point-items a:hover:before {
+  opacity: 1;
+}
 .point-items__item {
   position: relative;
   margin: 0;
   padding: 0;
-  text-decoration: underline;
   margin-bottom: 12px;
 }
 .point-items__item:before {
@@ -11953,6 +11981,7 @@ footer ul ul {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background-color: #b8181c;
+  opacity: 0.3;
 }
 .show-more-btn {
   display: none;
