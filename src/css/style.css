@@ -489,12 +489,13 @@ select:hover {
           justify-content: flex-end;
 }
 .top-container .header nav.mobile ul li {
+  height: 4rem;
   margin: 0;
 }
 .top-container .header nav.mobile .burger {
-  font-size: 1.6rem;
-  width: 2.4rem;
-  height: 2.4rem;
+  font-size: 3.2rem;
+  width: 4rem;
+  height: 4rem;
   margin: 0 0 0 2rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -513,9 +514,9 @@ select:hover {
   color: #193c6d;
 }
 .top-container .header nav.mobile .search {
-  font-size: 1.6rem;
-  width: 2.4rem;
-  height: 2.4rem;
+  font-size: 3.2rem;
+  width: 4rem;
+  height: 4rem;
   margin: 0 0 0 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -10503,6 +10504,20 @@ footer ul ul {
     margin-bottom: 6.8rem;
   }
 }
+.advice__bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .advice-p {
   margin-bottom: 12px;
   font-size: 24px;
@@ -10711,6 +10726,8 @@ footer ul ul {
 .advice-4 .link-in-text {
   color: #b8181c;
   text-decoration: underline;
+  font-size: inherit;
+  line-height: inherit;
 }
 .team-section .desc {
   margin-top: 32px;
@@ -10963,6 +10980,10 @@ footer ul ul {
   margin-bottom: 24px;
 }
 @media screen and (max-width: 680px) {
+  .advice-4 section {
+    margin-bottom: 0.4rem;
+    padding-bottom: 3.2rem;
+  }
   .team-section .second-heading {
     padding-bottom: 0 !important;
     margin-bottom: 32px;
