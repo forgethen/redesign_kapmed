@@ -5930,6 +5930,7 @@ form.search > :last-child {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 14px;
+  width: 100%;
 }
 .press-wrap .press .meta .date {
   color: #939393;
