@@ -6000,6 +6000,10 @@ form.search > :last-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 24px;
 }
 .press-wrap .press.fullwidth .img-wrap {
@@ -6010,7 +6014,7 @@ form.search > :last-child {
 }
 .press-wrap .press.fullwidth .img-wrap:before {
   height: auto;
-  padding-top: 56.26%;
+  padding-top: 68.18%;
   content: '';
   position: relative;
   display: block;
@@ -8351,7 +8355,7 @@ footer ul ul {
   padding: 6px 12px;
   font-size: 16px;
   line-height: 24px;
-  background-color: #b8181c;
+  background-color: #fff;
   text-transform: none;
   border: none;
   font-weight: normal;
@@ -8359,7 +8363,17 @@ footer ul ul {
   -webkit-border-radius: 20px;
           border-radius: 20px;
   cursor: pointer;
+  color: #3a3a3a;
+  border: 1px solid #3a3a3a;
+}
+.custom-button.active {
   color: #fff;
+  background-color: #b8181c;
+  border: 1px solid #b8181c;
+}
+.custom-button.active:hover {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px rgba(184,24,28,0.5);
+          box-shadow: 0px 0px 0.5rem 0px rgba(184,24,28,0.5);
 }
 .custom-button:hover {
   -webkit-box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
@@ -9928,18 +9942,6 @@ footer ul ul {
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
 }
-.slider-2 .slick-prev:after {
-  position: absolute;
-  content: "";
-  width: 48px;
-  height: 48px;
-  top: 0;
-  left: 0;
-  background-image: url("../img/static/slider-l.svg");
-  background-size: 9px;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
 .slider-2 .slick-next {
   position: relative;
   position: absolute;
@@ -9951,18 +9953,6 @@ footer ul ul {
   -webkit-transform: translateY(-30px);
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
-}
-.slider-2 .slick-next:after {
-  position: absolute;
-  content: "";
-  width: 48px;
-  height: 48px;
-  top: 0;
-  left: 0;
-  background-image: url("../img/static/slider-r.svg");
-  background-size: 9px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-2 .descript-p {
   margin-top: 12px;

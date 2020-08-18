@@ -140,15 +140,15 @@ $(document).ready(function() {
   $('[data-fancybox]').click(function() {
     $.fancybox.close();
     //   // $('form')[0].reset();
-      $('[data-action="clear"]').each(function() {
-        $(this).click();
-      });
-      $(this).attr('data-touch', 'false');
-      $(this).attr('data-modal', 'true');
+    $('[data-action="clear"]').each(function() {
+      $(this).click();
+    });
+    $(this).attr('data-touch', 'false');
+    $(this).attr('data-modal', 'true');
 
     $('.CloseFancybox').remove();
     setTimeout(closeAdd, 100);
-    setTimeout(function () {
+    setTimeout(function() {
       $('.CloseFancybox').click(function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -172,11 +172,11 @@ $(document).ready(function() {
     theme: "citiesBlockThm",
   });
 
-$('.search input[type="search"]').hideseek({
-  // highlight: true,
-  nodata: 'Поиск не дал результатов',
-  navigation: true,
-});
+  $('.search input[type="search"]').hideseek({
+    // highlight: true,
+    nodata: 'Поиск не дал результатов',
+    navigation: true,
+  });
 
   $(".mapBlock .mapSection .mapList .list__item:lt(3)").show().addClass('show');
 
@@ -422,10 +422,14 @@ $('.search input[type="search"]').hideseek({
   });
 
   $(".slider-2").slick({
-    dots: true
+    dots: true,
+    prevArrow: '<div class="slick-prev prev"><i class="ri-arrow-left-s-line"></i></div>',
+    nextArrow: '<div class="slick-next next"><i class="ri-arrow-right-s-line"></i></div>',
   });
 
-
+  $('.custom-button').click(function() {
+    $(this).toggleClass('active');
+  })
 
   $('.sliderNav .prev').click(function() {
     $(this).parents('section').find('.slick-slider').slick('slickPrev');
@@ -540,10 +544,10 @@ $('.search input[type="search"]').hideseek({
     $(this).parents('.list').toggleClass('active');
   });
 
-$('.FilterSearch .btn-filter').click(function() {
-  $(this).toggleClass('active');
-  $('.dropDownFilter.v2').toggleClass('show');
-})
+  $('.FilterSearch .btn-filter').click(function() {
+    $(this).toggleClass('active');
+    $('.dropDownFilter.v2').toggleClass('show');
+  })
 
 });
 
