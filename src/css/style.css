@@ -2368,6 +2368,17 @@ a.red-link:hover {
           align-items: flex-end;
   width: 100%;
 }
+.formPage .maybeSelectAddress i {
+  height: auto;
+  width: auto;
+  font-size: inherit;
+  line-height: inherit;
+}
+.formPage .maybeSelectAddress a,
+.formPage .maybeSelectAddress span {
+  font-size: inherit;
+  line-height: inherit;
+}
 .formPage .dropdown {
   position: relative;
 }
@@ -2450,6 +2461,7 @@ a.red-link:hover {
   margin-bottom: 3.2rem;
 }
 .formPage .custom-checkbox.v2 p {
+  padding-top: 0;
   color: #000;
 }
 .formPage .custom-checkbox .checked {
@@ -2606,6 +2618,7 @@ a.red-link:hover {
   left: calc(100% + 1.2rem);
   bottom: 1.6rem;
   width: 100%;
+  height: auto;
 }
 .formPage form label .custom-checkbox {
   margin-bottom: 3.2rem;
@@ -6991,8 +7004,13 @@ form.search > :last-child {
 .tags .tag.active {
   background: #b8181c;
   color: #fff;
-  cursor: default;
   border: 0.1rem solid #b8181c;
+  cursor: pointer;
+  position: relative;
+}
+.tags .tag.active:hover {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px rgba(184,24,28,0.5);
+          box-shadow: 0px 0px 0.5rem 0px rgba(184,24,28,0.5);
 }
 @media screen and (max-width: 960px) {
   .tabsContainer {
@@ -8382,9 +8400,6 @@ footer ul ul {
 .content-container .center-marg {
   margin: 0 auto;
 }
-.content-container .marg-sec01 {
-  margin-bottom: 258px;
-}
 .link-in-txt {
   font-size: 24px;
   line-height: 32px;
@@ -8669,9 +8684,6 @@ footer ul ul {
   .filials {
     margin-bottom: 48px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
 }
 @media screen and (max-width: 680px) {
   .team-section .second-heading {
@@ -8702,6 +8714,8 @@ footer ul ul {
 .book-wrapper__img {
   display: block;
   margin-bottom: 11px;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
 }
 .book-wrapper__link {
   display: block;
@@ -8846,9 +8860,6 @@ footer ul ul {
     text-align: left !important;
     margin-bottom: 29px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
   .book-wrapper {
     max-width: auto !important;
   }
@@ -8948,9 +8959,6 @@ footer ul ul {
   .activity-wrap .activity.activity-item .img-wrap {
     text-align: left !important;
     margin-bottom: 29px;
-  }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
   }
   .book-wrapper {
     max-width: auto !important;
@@ -9152,9 +9160,6 @@ footer ul ul {
   .filials {
     margin-bottom: 48px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
   .tabs-no-m {
     margin-bottom: 3rem !important;
   }
@@ -9295,9 +9300,6 @@ footer ul ul {
   .activity-wrap .activity.activity-item .img-wrap {
     text-align: left !important;
     margin-bottom: 29px;
-  }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
   }
   .book-wrapper {
     max-width: auto !important;
@@ -9821,9 +9823,6 @@ footer ul ul {
   .filials {
     margin-bottom: 48px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
   .events-page-wrapper .dropdown-mob {
     width: 100% !important;
   }
@@ -10063,9 +10062,6 @@ footer ul ul {
   }
   .filials {
     margin-bottom: 48px;
-  }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
   }
   .events_page-block .link-in-txt {
     color: #b8181c;
@@ -10869,9 +10865,6 @@ footer ul ul {
   .filials {
     margin-bottom: 48px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
   .events-page-wrapper .dropdown-mob {
     width: 100% !important;
   }
@@ -11175,9 +11168,6 @@ footer ul ul {
   .filials {
     margin-bottom: 48px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
   .events-page-wrapper .dropdown-mob {
     width: 100% !important;
   }
@@ -11355,9 +11345,6 @@ footer ul ul {
   }
   .filials {
     margin-bottom: 48px;
-  }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
   }
   .events_page-block .link-in-txt {
     color: #b8181c;
@@ -11567,9 +11554,6 @@ footer ul ul {
   }
   .filials {
     margin-bottom: 48px;
-  }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
   }
   .press-dzen .first-heading {
     font-size: 32px;
@@ -12096,9 +12080,6 @@ footer ul ul {
   .filials {
     margin-bottom: 48px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
   .press-dzen .first-heading {
     font-size: 32px;
     line-height: 40px;
@@ -12289,6 +12270,9 @@ footer ul ul {
   width: 100%;
   margin-right: 16px;
 }
+.m-m-img img {
+  width: 100%;
+}
 .m-m-par {
   margin-bottom: 12px;
   font-size: 20px;
@@ -12417,9 +12401,6 @@ footer ul ul {
   }
   .filials {
     margin-bottom: 48px;
-  }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
   }
   .m-m-img {
     max-width: 40%;
@@ -12803,9 +12784,6 @@ footer ul ul {
   .filials {
     margin-bottom: 48px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
   .gratitude .page-title {
     margin-bottom: 30px;
   }
@@ -13018,9 +12996,6 @@ footer ul ul {
   .filials {
     margin-bottom: 48px;
   }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
-  }
   .gratitude .page-title {
     margin-bottom: 30px;
   }
@@ -13123,10 +13098,11 @@ footer ul ul {
   margin-right: 52px;
 }
 .thanks-01-wrapper {
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 232px 32px 232px 32px 232px;
-  grid-template-columns: repeat(3, 232px);
+  -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
   margin-bottom: 34px;
 }
@@ -13261,9 +13237,6 @@ footer ul ul {
   }
   .filials {
     margin-bottom: 48px;
-  }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
   }
   .gratitude .page-title {
     margin-bottom: 30px;
@@ -13463,9 +13436,6 @@ footer ul ul {
   }
   .filials {
     margin-bottom: 48px;
-  }
-  .marg-sec01 {
-    margin-bottom: 72px !important;
   }
   .gratitude .page-title {
     margin-bottom: 30px;
