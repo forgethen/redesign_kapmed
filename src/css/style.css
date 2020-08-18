@@ -6281,7 +6281,8 @@ form.search > :last-child {
   margin-bottom: 32px;
 }
 .materials-wr > div {
-  width: 325px;
+  width: -webkit-calc(50% - 1.6rem);
+  width: calc(50% - 1.6rem);
   position: relative;
 }
 .materials-wr > div img {
