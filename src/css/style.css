@@ -104,6 +104,7 @@ span.red {
 }
 a {
   color: #000;
+  cursor: pointer;
 }
 a.red {
   color: #b8181c;
