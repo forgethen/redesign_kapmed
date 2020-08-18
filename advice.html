@@ -106,7 +106,7 @@
                 <p class="advice-p">Есть вопрос по получению медицинской помощи? Хотите узнать о том что гарантировано системой ОМС?</p>
                 <p class="advice-p">Бесплатные, оперативные и исчерпывающие ответы на ваши вопросы о получении медпомощи. Выберите тему из списка или задайте вопрос в свободной форме.</p>
               </div>
-              <div class="ad-1" id="questions">
+              <div class="advice-1" id="questions">
                 <section class="team-section">
                   <h2 class="second-heading">Вопросы, на которые мы уже ответили</h2>
                 </section>
@@ -180,17 +180,17 @@
                 </div>
                 <div class="border-color ans-button">Показать больше</div>
               </div>
-              <div class="ad-2" id="expert">
-                <div class="formPage noHeight ad-2-form">
+              <div class="advice-2" id="expert">
+                <div class="formPage noHeight advice-2-form">
                   <form>
-                    <h2 class="title second-heading"> Задайте вопрос эксперту</h2><a class="ad2__link" href="#">Посмотреть все советы наших экспертов</a>
+                    <h2 class="title second-heading"> Задайте вопрос эксперту</h2><a class="advice2__link" href="#">Посмотреть все советы наших экспертов</a>
                     <div class="doublerow">
                       <label>
                         <p class="title">Как вас зовут</p>
                         <input type="text" placeholder="Имя">
                       </label>
                       <label>
-                        <p class="title">E-mail&nbsp;<span class="ad-2__explanation">(на который мы отправим ответ)</span></p>
+                        <p class="title">E-mail&nbsp;<span class="advice-2__explanation">(на который мы отправим ответ)</span></p>
                         <input type="email" placeholder="info@mail.com">
                       </label>
                     </div>
@@ -218,11 +218,84 @@
                     <label class="custom-checkbox">
                       <input type="checkbox" required hidden><i class="checked icofont-check"></i>
                       <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
-                    </label><a class="btn btn-red ad-2-btn" href="#">Задать вопрос</a>
+                    </label><a class="btn btn-red advice-2-btn" href="#">Задать вопрос</a>
                   </form>
                 </div>
               </div>
-              <div class="ad-4" id="advice-phone">
+              <div class="advice-3" id="our-experts">
+                <div class="slider-root" id="vue-root">
+                  <section class="page-title smallh2 team-section">
+                    <h2> Наши эксперты</h2>
+                  </section>
+                  <div class="slider-wrap" :style="{width: `${content_container}px`}">
+                    <div class="slider-thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                      <div class="slide-thanks slider-doctors border-color" v-for="item, idx in thanks" :style="{width: `${width}px`}">
+                        <div class="image" :style="{backgroundImage: `url(${item.image})`}"></div>
+                        <div class="name">{{item.name}}</div>
+                        <div class="work">{{item.work}}</div>
+                        <div class="inf">{{item.inf}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-arrows">
+                    <div class="arrow arrow-left" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><img src="src/img/static/slider-arrow.svg"></div>
+                    <div class="arrow arrow-right" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><img src="src/img/static/slider-arrow-r.svg"></div>
+                  </div>
+                </div>
+                <script>
+                  let data = [
+                    {
+                      work: 'Врач-иммунолог',
+                      name: 'Третьякова Елена Николаевна',
+                      href: '#',
+                      inf: 'Небольшой лид с описанием основных компетенций врача. Далее идет рыбный текст. Необходимо заменить.',
+                      image: 'src/img/static/slide-doc-01.jpg'
+                    },
+                    {
+                      work: 'Врач-иммунолог',
+                      name: 'Третьякова Елена Николаевна',
+                      href: '#',
+                      inf: 'Небольшой лид с описанием основных компетенций врача. Далее идет рыбный текст. Необходимо заменить.',
+                      image: 'src/img/static/slide-doc-01.jpg'
+                    },
+                    {
+                      work: 'Врач-иммунолог',
+                      name: 'Третьякова Елена Николаевна',
+                      href: '#',
+                      inf: 'Небольшой лид с описанием основных компетенций врача. Далее идет рыбный текст. Необходимо заменить.',
+                      image: 'src/img/static/slide-doc-01.jpg'
+                    },
+                    {
+                      work: 'Врач-иммунолог',
+                      name: 'Третьякова Елена Николаевна',
+                      href: '#',
+                      inf: 'Небольшой лид с описанием основных компетенций врача. Далее идет рыбный текст. Необходимо заменить.',
+                      image: 'src/img/static/slide-doc-01.jpg'
+                    },
+                    {
+                      work: 'Врач-иммунолог',
+                      name: 'Третьякова Елена Николаевна',
+                      href: '#',
+                      inf: 'Небольшой лид с описанием основных компетенций врача. Далее идет рыбный текст. Необходимо заменить.',
+                      image: 'src/img/static/slide-doc-01.jpg'
+                    },
+                    {
+                      work: 'Врач-иммунолог',
+                      name: 'Третьякова Елена Николаевна',
+                      href: '#',
+                      inf: 'Небольшой лид с описанием основных компетенций врача. Далее идет рыбный текст. Необходимо заменить.',
+                      image: 'src/img/static/slide-doc-01.jpg'
+                    }
+                  ]
+                  let root = '#vue-root'
+                  let width = 352
+                  vueSliderLauncher(root, data, width)
+                  
+                  
+                  
+                </script>
+              </div>
+              <div class="advice-4" id="advice-phone">
                 <section class="team-section">
                   <h2 class="second-heading">Телефоны круглосуточных контакт-центов</h2>
                   <p class="desc">Если у вас есть жалоба или вопрос требует скорейшего разрешения, рекомендуем <a class="link-in-text" href="#">оформить жалобу</a> или позвонить по бесплатному номеру горячей линии.</p>
