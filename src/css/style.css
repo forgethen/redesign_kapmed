@@ -5894,6 +5894,7 @@ form.search > :last-child {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 .press-wrap .press {
   width: -webkit-calc(50% - 16px);
