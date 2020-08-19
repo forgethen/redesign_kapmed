@@ -256,6 +256,16 @@ $(document).ready(function() {
     e.stopPropagation()
   })
 
+  // $(".headerMenu li").hover(function(e) {
+  //   $('.burger').addClass('active');
+  //   $('.headerMenu').addClass('show');
+  //   $(".headerMenu li").removeClass('active');
+  //   $(this).toggleClass('active');
+  //   $('.headerMenu .submenu').hide();
+  //   $(this).find('.submenu').fadeIn();
+  //   e.stopPropagation()
+  // })
+
   $(".headerMenu li").click(function(e) {
     $('.burger').addClass('active');
     $('.headerMenu').addClass('show');

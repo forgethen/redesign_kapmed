@@ -1,2 +1,2 @@
-const openActivityHandler=t=>{t.forEach(t=>{t.onclick=(()=>{t.closest(".block").classList.toggle("opened")})})},payload=()=>{const t=document.querySelectorAll(".activity-action");t.length&&openActivityHandler(t)};document.addEventListener("DOMContentLoaded",payload);
+const openActivityHandler=e=>{e.forEach(e=>{e.onclick=(()=>{e.closest(".block").classList.toggle("opened")})})},switchSearch=()=>{document.querySelector("body").classList.toggle("with-search")},payload=()=>{const e=document.querySelectorAll(".activity-action");e.length&&openActivityHandler(e)};document.addEventListener("DOMContentLoaded",payload);
 //# sourceMappingURL=vanilla-min.js.map

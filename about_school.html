@@ -60,7 +60,7 @@
                   <ul>
                     <li><a href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
                     <li><a href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
-                    <li><a class="search" href="#"><i class="ri-search-line"></i><span>Поиск</span></a></li>
+                    <li><a class="search" href="#" onclick="switchSearch()"><i class="ri-search-line"></i><span>Поиск</span></a></li>
                   </ul>
                 </nav>
                 <nav class="mobile">
@@ -71,6 +71,82 @@
                 </nav>
               </div>
               <div class="column column-md-25 column-sm-25 column-xs-100"><a class="btn btn-red" href="#">Заявка на полис ОМС</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="search-wrapper">
+          <div class="cross" onclick="switchSearch()">&times;</div>
+          <div class="container">
+            <div class="row">
+              <div class="column column-25 no-mob">
+                <div class="menu">
+                  <div class="item active">Все результаты</div>
+                  <div class="item">Страховые продукты</div>
+                  <div class="item">Новости и события</div>
+                </div>
+              </div>
+              <div class="column column-md-75 column-sm-75 column-xs-100">
+                <p class="title">Результаты поиска</p>
+                <div class="input-wrap">
+                  <input id="search_inpuut" type="text" placeholder="Поиск">
+                </div>
+                <div class="total">
+                  <p>По запросу "Инвестиции" найдено 3678 ответов</p>
+                </div>
+                <div class="results">
+                  <div class="result">
+                    <div class="top">Test</div>
+                    <div class="name">Te<b>st</b></div>
+                    <div class="description">Test ba<b>ck</b>ground</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                  <div class="result">
+                    <div class="top">Документы</div>
+                    <div class="name">Инвестиционное страхование жизни</div>
+                    <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                  </div>
+                </div>
+                <div class="pagination"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -110,68 +186,68 @@
               </section>
               <div class="gray-text">Небольшой лид с описанием. Образовательный курс. Материал блога. Полезные ресурсы. Совет эксперта. Дальше идет рыбный текст. Необходимо будет написать новый.</div>
               <div class="activity-wrap">
-                <div class="activity margin-left" id="1">
+                <div class="activity margin-left with-btn" id="1">
                   <div class="img-wrap"><img src="src/img/static/s1.svg"></div>
                   <div class="title">COVID-19</div>
                   <ul class="links">
                     <li><a href="#">Где будут лечить</a></li>
                     <li><a href="#">Как пройти тестирование</a></li>
                     <li><a href="#">Нововведения в ОМС</a></li>
-                  </ul>
+                  </ul><a class="more-button" href="#">Подробнее</a>
                 </div>
-                <div class="activity margin-left" id="2">
+                <div class="activity margin-left with-btn" id="2">
                   <div class="img-wrap"><img src="src/img/static/s2.svg"></div>
                   <div class="title">Бесплатное лечение по ОМС </div>
                   <ul class="links">
                     <li><a href="#">Онкология</a></li>
                     <li><a href="#">Для будущих мам</a></li>
                     <li><a href="#">Высокотехнологичная помощь</a></li>
-                  </ul>
+                  </ul><a class="more-button" href="#">Подробнее</a>
                 </div>
-                <div class="activity margin-left" id="3">
+                <div class="activity margin-left with-btn" id="3">
                   <div class="img-wrap"><img src="src/img/static/s3.svg"></div>
                   <div class="title">Полис ОМС</div>
                   <ul class="links">
                     <li><a href="#">Восстановить полис ОМС при потере</a></li>
                     <li><a href="#">Виды полиса ОМС и срок действия</a></li>
                     <li><a href="#">Как узнать номер полиса</a></li>
-                  </ul>
+                  </ul><a class="more-button" href="#">Подробнее</a>
                 </div>
-                <div class="activity margin-left" id="4">
+                <div class="activity margin-left with-btn" id="4">
                   <div class="img-wrap"><img src="src/img/static/s4.svg"></div>
                   <div class="title">Профилактика</div>
                   <ul class="links">
                     <li><a href="#">Диспансеризация</a></li>
                     <li><a href="#">Профосмотры</a></li>
                     <li><a href="#">Детские осмотры</a></li>
-                  </ul>
+                  </ul><a class="more-button" href="#">Подробнее</a>
                 </div>
-                <div class="activity margin-left" id="5">
+                <div class="activity margin-left with-btn" id="5">
                   <div class="img-wrap"><img src="src/img/static/s5.svg"></div>
                   <div class="title">Защита прав пациента</div>
                   <ul class="links">
                     <li><a href="#">Права пациента</a></li>
                     <li><a href="#">Как пожаловаться на врача?</a></li>
                     <li><a href="#">Кейсы работы с застрахованными</a></li>
-                  </ul>
+                  </ul><a class="more-button" href="#">Подробнее</a>
                 </div>
-                <div class="activity margin-left" id="6">
+                <div class="activity margin-left with-btn" id="6">
                   <div class="img-wrap"><img src="src/img/static/s6.svg"></div>
                   <div class="title">Система ОМС</div>
                   <ul class="links">
                     <li><a href="#">Участники системы ОМС</a></li>
                     <li><a href="#">Виды помощи ОМС</a></li>
                     <li><a href="#">О модернизации системы ОМС</a></li>
-                  </ul>
+                  </ul><a class="more-button" href="#">Подробнее</a>
                 </div>
-                <div class="activity margin-left" id="7">
+                <div class="activity margin-left with-btn" id="7">
                   <div class="img-wrap"><img src="src/img/static/s7.svg"></div>
                   <div class="title">Организационные основы</div>
                   <ul class="links">
                     <li><a href="#">Как выбрать врача</a></li>
                     <li><a href="#">Как выбрать поликлинику</a></li>
                     <li><a href="#">Как поменять страховую организацию</a></li>
-                  </ul>
+                  </ul><a class="more-button" href="#">Подробнее</a>
                 </div>
               </div>
               <div class="cards">

@@ -7,6 +7,11 @@ const openActivityHandler = (list) => {
   })
 }
 
+const switchSearch = () => {
+  let body = document.querySelector('body')
+  body.classList.toggle('with-search')
+}
+
 const payload = () => {
   const action_buttons = document.querySelectorAll('.activity-action')
   if (action_buttons.length) openActivityHandler(action_buttons)
