@@ -23,7 +23,7 @@
 body {
   background-color: #fff;
   color: #000;
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "HelveticaRegular", Arial, sans-serif;
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
@@ -792,7 +792,7 @@ header {
   margin-right: 0;
 }
 .headerMenu li {
-  margin-right: 3.2rem;
+  margin-right: 3.6rem;
   margin-bottom: 0;
   padding: 0.4rem 0;
 }
@@ -3733,8 +3733,6 @@ form.search > :last-child {
   grid-template-columns: 38.4rem 1fr;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  -webkit-border-radius: 0.8rem;
-          border-radius: 0.8rem;
 }
 .mapSection > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -3753,10 +3751,7 @@ form.search > :last-child {
 }
 .mapSection .list {
   position: relative;
-  border: 1px solid #e6e6e6;
   background-color: #fff;
-  -webkit-border-radius: 0.8rem 0 0 0.8rem;
-          border-radius: 0.8rem 0 0 0.8rem;
 }
 .mapSection .list ul {
   list-style-type: none;
@@ -3855,10 +3850,9 @@ form.search > :last-child {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 1px solid #e6e6e6;
   position: relative;
-  -webkit-border-radius: 0 0.8rem 0.8rem 0;
-          border-radius: 0 0.8rem 0.8rem 0;
+  -webkit-border-radius: 0.8rem;
+          border-radius: 0.8rem;
 }
 .mapSection .map:before {
   background: url("../img/static/mapImg.png");
@@ -3884,17 +3878,35 @@ form.search > :last-child {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.mapBlock .mapContent {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 1;
+  width: -webkit-calc(100% + 2px);
+  width: calc(100% + 2px);
+  height: -webkit-calc(100% + 2px);
+  height: calc(100% + 2px);
+  -webkit-border-radius: 0.8rem;
+          border-radius: 0.8rem;
+  overflow: hidden;
+}
 .mapBlock > :last-child {
   display: none;
+}
+.mapBlock .mapSection {
+  -webkit-border-radius: 0.8rem;
+          border-radius: 0.8rem;
+  border: 1px solid #e6e6e6;
 }
 .mapBlock .mapSection .list {
   background-color: #fff;
 }
-.mapBlock .mapSection .list__item:hover {
+.mapBlock .mapSection .list__item:hove {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.mapBlock .mapSection .list__item:hover > :first-child {
+.mapBlock .mapSection .list__item:hove > :first-child {
   color: #b8181c;
 }
 .mapBlock .mapSection .map:before {
@@ -3913,14 +3925,14 @@ form.search > :last-child {
   line-height: inherit;
 }
 .mCS-MapListThm .mCSB_container {
-  margin-right: 0.8rem;
-  border-right: 1px solid #e6e6e6;
+  margin-right: 0;
 }
 .mCS-MapListThm.mCSB_scrollTools_vertical {
+  right: 4px;
   width: 0.8rem;
 }
 .mCS-MapListThm .mCSB_draggerRail {
-  background-color: #fff;
+  background-color: transparent;
 }
 .mCS-MapListThm .mCSB_dragger .mCSB_dragger_bar {
   background-color: #b8181c;
@@ -7063,7 +7075,7 @@ form.search > :last-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 0.1rem solid #666;
+  border-bottom: 1px solid #c4c4c4;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -7105,7 +7117,7 @@ form.search > :last-child {
   position: absolute;
   bottom: 0;
   left: 0;
-  border-bottom: 0.1rem solid #b8181c;
+  border-bottom: 2px solid #b8181c;
 }
 .tabs > :last-child {
   margin-right: 0;
@@ -8245,9 +8257,13 @@ footer ul ul {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/static/dnk.png");
 }
 .dnk_slider .dnk_slider_block .image img {
-  width: 100%;
+  display: none;
 }
 .dnk_slider .slider__container {
   position: relative;
@@ -8259,6 +8275,9 @@ footer ul ul {
 }
 .dnk_slider .slider__container .slide {
   padding: 4.4rem 8.4rem 4.4rem 7.6rem;
+  -webkit-border-radius: 1.6rem;
+          border-radius: 1.6rem;
+  background-color: #fff;
 }
 .dnk_slider .slider__container .slide .content__title {
   font-size: 3.2rem;
@@ -8313,7 +8332,6 @@ footer ul ul {
   line-height: 2.4rem;
 }
 .dnk_slider .slider__container .slick-list {
-  background-color: #fff;
   display: block;
   height: 100%;
   width: 100%;
@@ -15511,6 +15529,7 @@ footer ul ul {
 }
 .companyNewsAndEventItem {
   background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
   -webkit-border-radius: 0.8rem;
           border-radius: 0.8rem;
   display: -webkit-box;
@@ -15631,6 +15650,7 @@ footer ul ul {
   -webkit-border-radius: 1.6rem;
           border-radius: 1.6rem;
   padding: 0.6rem 1.2rem 0.2rem;
+  margin: 0;
 }
 .companyNewsAndEventItem .content .tags .tag span {
   font-size: 1.6rem;
@@ -16404,6 +16424,18 @@ footer ul ul {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 4rem;
+}
+.feedbackBlock .feedbackNumber {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 8rem;
 }
 .feedbackBlock > :nth-child(2) .row > :first-child > :first-child {
   margin-bottom: 3.2rem;
@@ -16415,6 +16447,7 @@ footer ul ul {
   }
   .feedbackBlock .feedbackNumber {
     padding: 3.2rem 2.4rem;
+    padding-left: 2.4rem;
   }
   .feedbackBlock .feedbackForm {
     padding: 0 3.2rem;
