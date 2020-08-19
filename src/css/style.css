@@ -15392,6 +15392,13 @@ footer ul ul {
           justify-content: flex-start;
   width: 100%;
 }
+.representativeContacts .info.v2 .info__block {
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 0.1rem dashed #c4c4c4;
+  margin-bottom: 3rem;
+  width: 100%;
+}
 .representativeContacts .info__block {
   display: -ms-grid;
   display: grid;
@@ -15401,11 +15408,6 @@ footer ul ul {
   grid-row-gap: 1.4rem;
   border-bottom: 0.1rem dashed #c4c4c4;
   padding: 3rem 0;
-}
-.representativeContacts .info__block.v2 {
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
 }
 .representativeContacts .info__block__item {
   padding-left: 3.2rem;
