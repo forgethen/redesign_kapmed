@@ -164,8 +164,20 @@ $(document).ready(function() {
     theme: "MapListThm",
   });
 
-  $(".mapBlock .mapSection .mapList").mCustomScrollbar({
-    theme: "MapListThm",
+  function fromResize() {
+    $(".mapBlock .mapSection .mapList").each(function() {
+      if ($(window).width() >= 640) {
+        $(this).mCustomScrollbar({
+          theme: "MapListThm",
+        });
+      } else {
+        $(this).mCustomScrollbar('destroy');
+      }
+    })
+  }
+
+  $(window).resize(function() {
+    fromResize();
   });
 
   $(".citiesBlock").mCustomScrollbar({
@@ -182,8 +194,14 @@ $(document).ready(function() {
 
   $('.mapBlock .seeMore').click(function() {
     var showed = $(".mapBlock .mapSection .mapList .list__item.show").length;
+    var allShowed = $(".mapBlock .mapSection .mapList .list__item").length;
     var i = showed;
     $(".mapBlock .mapSection .mapList .list__item").eq(i).show().addClass('show');
+    if (showed == allShowed) {
+      $(this).removeClass('btn--default');
+      $(this).attr('href', '#');
+      $(this).text('Просмотреть все пункты выдачи');
+    }
   });
 
   $(".headerMenu .submenu").mCustomScrollbar({
