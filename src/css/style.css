@@ -1423,7 +1423,14 @@ button.btn-default:hover {
           box-shadow: 0px 0px 0.5rem 0px #b8181c;
   opacity: 1;
   background-color: #b8181c;
+  color: #fff;
   border: 1px solid #b8181c;
+}
+a.btn-default:active,
+input[type="button"].btn-default:active,
+input[type="submit"].btn-default:active,
+button.btn-default:active {
+  opacity: 0.75;
   color: #fff;
 }
 a.btn-red,
@@ -1441,6 +1448,12 @@ button.btn-red:hover {
   -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
           box-shadow: 0px 0px 0.5rem 0px #b8181c;
   opacity: 1;
+}
+a.btn-red:active,
+input[type="button"].btn-red:active,
+input[type="submit"].btn-red:active,
+button.btn-red:active {
+  opacity: 0.75;
 }
 a.btn-copyLink > :first-child,
 input[type="button"].btn-copyLink > :first-child,
@@ -1572,6 +1585,12 @@ button.btn-gray-v2 {
   border: 1px solid rgba(147,147,147,0.4);
   background-color: #f5f5f5;
 }
+a.btn-gray:active,
+input[type="button"].btn-gray:active,
+input[type="submit"].btn-gray:active,
+button.btn-gray:active {
+  opacity: 0.75;
+}
 a.btn-gray:hover,
 input[type="button"].btn-gray:hover,
 input[type="submit"].btn-gray:hover,
@@ -1597,6 +1616,9 @@ button.btn-gray:hover {
 .copy-print .btn {
   margin-right: 1.2rem;
   background-color: #fff;
+}
+.copy-print .btn:active {
+  opacity: 0.75;
 }
 .copy-print .btn:hover {
   -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
@@ -1646,6 +1668,9 @@ a.grey-link i {
           justify-content: center;
   color: #939393;
 }
+a.grey-link:active {
+  opacity: 0.75;
+}
 a.grey-link:hover i {
   color: #b8181c;
 }
@@ -1677,6 +1702,9 @@ a.red-link i {
       -ms-flex-pack: center;
           justify-content: center;
   color: #b8181c;
+}
+a.red-link:active {
+  opacity: 0.75;
 }
 a.red-link:hover {
   text-decoration: underline;
@@ -15981,9 +16009,11 @@ footer ul ul {
   pointer-events: none;
 }
 .slick-arrow:hover {
-  background: #b8181c;
   -webkit-box-shadow: 0 0.1rem 0.4rem #b8181c;
           box-shadow: 0 0.1rem 0.4rem #b8181c;
+}
+.slick-arrow:active {
+  background: #b8181c;
   color: #fff;
 }
 .slick-arrow i {
@@ -16037,6 +16067,10 @@ footer ul ul {
   -webkit-box-shadow: 0 0.1rem 0.4rem #c1c1c1;
           box-shadow: 0 0.1rem 0.4rem #c1c1c1;
 }
+.slick-dots li:active {
+  background: #b8181c;
+  color: #fff;
+}
 .slick-dots li button {
   position: absolute;
   top: 0;
@@ -16052,6 +16086,9 @@ footer ul ul {
 .slick-dots li.slick-active:hover {
   -webkit-box-shadow: 0 0.1rem 0.4rem #b8181c;
           box-shadow: 0 0.1rem 0.4rem #b8181c;
+}
+.slick-dots li.slick-active:active {
+  opacity: 0.75;
 }
 .videoSlider {
   display: -webkit-box;

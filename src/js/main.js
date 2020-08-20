@@ -465,7 +465,7 @@ $(document).ready(function() {
     nextArrow: '<div class="slick-next next"><i class="ri-arrow-right-s-line"></i></div>',
   });
 
-  $('.custom-button, .tag').click(function() {
+  $('.custom-button, a.tag').click(function() {
     $(this).toggleClass('active');
   })
 
