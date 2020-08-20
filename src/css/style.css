@@ -138,6 +138,9 @@ a:hover {
   opacity: 0.8;
   color: #b8181c;
 }
+a i {
+  text-decoration: none;
+}
 section {
   margin-bottom: 0.4rem;
   padding-bottom: 3.2rem;
