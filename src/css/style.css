@@ -15804,9 +15804,6 @@ footer ul ul {
     display: inline-flex;
   }
 }
-.companyNews_and_Events > :last-child {
-  display: none;
-}
 .companyNewsAndEventItem {
   background-color: #f5f5f5;
   border: 1px solid #f5f5f5;
@@ -15829,6 +15826,7 @@ footer ul ul {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 3.2rem;
 }
 .companyNewsAndEventItem:hover {
   -webkit-box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
