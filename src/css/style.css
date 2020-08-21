@@ -8723,9 +8723,11 @@ footer ul ul {
   }
   .dnk_slider .slider__container .slick-list {
     background: #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
     -webkit-border-radius: 1.6rem;
             border-radius: 1.6rem;
-    padding-bottom: 48.13vw !important;
+    padding-bottom: 47.81vw !important;
+    padding-bottom: 153px !important;
     position: relative;
     background-image: url("../img/static/dnk_h.png");
     background-position: bottom;
@@ -8733,7 +8735,7 @@ footer ul ul {
     background-repeat: no-repeat;
   }
   .dnk_slider .slider__container .slick-slide {
-    padding: 3.2rem 2.4rem 2rem;
+    padding: 3.2rem 2.4rem 1.2rem;
     background: #f5f5f5;
   }
 }
