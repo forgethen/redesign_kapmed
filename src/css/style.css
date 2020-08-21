@@ -2019,6 +2019,13 @@ a.red-link:hover {
 .custom-select > :first-child {
   position: relative;
 }
+.custom-select .options-block.show {
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.07);
+          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.07);
+}
 .custom-select.v2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2036,16 +2043,14 @@ a.red-link:hover {
 .custom-select.v2 .options-block {
   right: -2.4rem;
 }
+.custom-select.v2 .options-block.show {
+  padding: 3.2rem 2.4rem 3.2rem 2.4rem;
+}
 .custom-select .options {
   display: none;
-  padding: 3.2rem 2.4rem;
   list-style-type: none;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.07);
-          box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.07);
   margin: 0;
+  padding-right: 2rem;
 }
 .custom-select .options-block {
   position: absolute;
@@ -2090,6 +2095,26 @@ a.red-link:hover {
 .regionSelect .custom-select i {
   position: absolute;
   line-height: inherit;
+}
+.mCS-CustomSelectOptionsThm .mCSB_container {
+  margin-right: 0;
+}
+.mCS-CustomSelectOptionsThm.mCSB_scrollTools_vertical {
+  right: 0;
+  width: 0.8rem;
+}
+.mCS-CustomSelectOptionsThm .mCSB_draggerRail {
+  background-color: transparent;
+}
+.mCS-CustomSelectOptionsThm .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #b8181c;
+}
+.mCS-CustomSelectOptionsThm.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #b8181c;
+}
+.mCS-CustomSelectOptionsThm.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #b8181c;
 }
 @media screen and (max-width: 640px) {
   .custom-select .options {

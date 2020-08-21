@@ -48,13 +48,13 @@ $(document).ready(function() {
 
   $('.custom-select a').click(function() {
     $(this).parents('.custom-select').find('i').addClass('active')
-    $(this).parents('.custom-select').find('.options').fadeIn();
+    $(this).parents('.custom-select').find('.options').show();
     $(this).parents('.custom-select').find('.options-block').addClass('show');
   });
 
   $('.custom-select .options li').click(function() {
     var thisVal = $(this).text();
-    $(this).parents('.custom-select').find('.options').fadeOut();
+    $(this).parents('.custom-select').find('.options').hide();
     $(this).parents('.custom-select').find('.options .red').removeClass('red')
     $(this).parents('.custom-select').find('a span').text(thisVal);
     $(this).parents('.custom-select').find('a i').removeClass('active')
@@ -180,6 +180,20 @@ $(document).ready(function() {
 
   $(window).resize(function() {
     fromResize();
+  });
+
+
+  $('.custom-select .options-block').each(function() {
+    $(this).addClass('show');
+    $('.custom-select .options-block .options').show();
+    var th1 = $('.custom-select .options-block .options').find('li:eq(0)').height();
+    $(this).css('max-height', th1 * 7 + 10 * 7 + 64 + 'px');
+    $(this).removeClass('show');
+    $('.custom-select .options-block .options').hide();
+  })
+
+  $(".custom-select .options-block").mCustomScrollbar({
+    theme: "CustomSelectOptionsThm",
   });
 
   $(".citiesBlock").mCustomScrollbar({
