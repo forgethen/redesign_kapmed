@@ -254,6 +254,11 @@ $(document).ready(function() {
       $('.burger').removeClass('active')
     }
 
+    if (!$(e.target).closest(".fixbtn .open").length) {
+      $('.fixbtn').removeClass('active');
+      $('body').removeClass("widgetOpened");
+    }
+
     e.stopPropagation();
   });
 
@@ -586,6 +591,16 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     $('.dropDownFilter.v2').toggleClass('show');
   })
+
+  $('.fixbtn .open').click(function() {
+    $(this).parents('.fixbtn').addClass('active');
+    $('body').addClass("widgetOpened");
+  });
+
+  $('.fixbtn .close').click(function() {
+    $(this).parents('.fixbtn').removeClass('active');
+    $('body').removeClass("widgetOpened");
+  });
 
 });
 
