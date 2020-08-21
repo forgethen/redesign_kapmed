@@ -176,6 +176,8 @@ $(document).ready(function() {
     })
   }
 
+  fromResize();
+
   $(window).resize(function() {
     fromResize();
   });
@@ -601,6 +603,16 @@ $(document).ready(function() {
     $(this).parents('.fixbtn').removeClass('active');
     $('body').removeClass("widgetOpened");
   });
+
+  $('.custom-checkbox').click(function() {
+    $(this).find('input[type=checkbox]').each(function() {
+      if ($('input[type=checkbox]').is(':checked')) {
+        $(this).attr('checked', 'checked');
+      } else {
+        $(this).removeAttr('checked');
+      }
+    })
+  })
 
 });
 
