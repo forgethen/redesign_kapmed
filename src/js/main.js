@@ -2,25 +2,25 @@
 
 $(document).ready(function() {
 
-  var menu_selector = ".content_list ul"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
   var footer = $('#footer').outerHeight();
+
   $(".content_list ul:first-child").addClass("active");
 
   function onScroll() {
-    var scroll_top = $(document).scrollTop();
-    if ($(menu_selector + " a").length <= 1) {
+    if ($(".content_list ul a").length <= 1) {
       return false;
     } else {
-      $(menu_selector + " a").each(function() {
+      $(".content_list ul a").each(function() {
         var hash = $(this).attr("href");
-        try {
-          let prob = $(hash);
-        } catch {
-          return false;
-        }
+        // try {
+        //   let prob = $(hash);
+        // } catch(err) {
+        //   console.log(err);
+        //   return false;
+        // }
         var target = $(hash)
-        if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
-          $(menu_selector + " a.active").removeClass("active");
+        if (target.position().top <= $(document).scrollTop() && target.position().top + target.outerHeight() > $(document).scrollTop()) {
+          $(".content_list ul a.active").removeClass("active");
           $(this).addClass("active");
         }
         // if else() {
@@ -38,7 +38,7 @@ $(document).ready(function() {
 
   $(".content_list ul a").click(function() {
     $(document).off("scroll");
-    $(menu_selector + " .active").removeClass("active");
+    $(".content_list ul .active").removeClass("active");
     $(this).addClass("active");
     var hash = $(this).attr("href");
     var target = $(hash);
