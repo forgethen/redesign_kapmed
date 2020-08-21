@@ -3854,6 +3854,10 @@ form.search > :last-child {
   border-top: 1px solid #e6e6e6;
   border-left: 1px solid #e6e6e6;
 }
+.mapPopUp .mapSection .map {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
 .mapPopUp .swipeTopDown {
   height: 4rem;
   width: 100%;
