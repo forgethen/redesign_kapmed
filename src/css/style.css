@@ -5739,6 +5739,16 @@ form.search > :last-child {
 .slider-wrap {
   overflow: hidden;
 }
+.with {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.with:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+          box-shadow: 0px 0px 0.5rem 0px #b8181c;
+}
 .slider-thanks {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
@@ -6870,6 +6880,12 @@ form.search > :last-child {
   }
   .activity-wrap .activity.resource .img-wrap {
     margin-bottom: 2rem;
+  }
+  .activity-wrap .activity.with-btn {
+    height: 530px;
+  }
+  .activity-wrap.withborder {
+    padding: 0 10px;
   }
   .science-list .doc {
     width: 100%;
