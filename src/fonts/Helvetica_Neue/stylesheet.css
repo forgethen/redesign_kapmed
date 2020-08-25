@@ -1,0 +1,8 @@
+/* Код для подключения шрифта в /css/stylename.css */
+
+	@font-face {
+			font-family: "HelveticaRegular";
+			src: url("../Helvetica_Neue/HelveticaNeue.ttc");
+			font-style: normal;
+			font-weight: normal;
+	}

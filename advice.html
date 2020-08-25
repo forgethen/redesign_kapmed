@@ -436,8 +436,8 @@
                         <input type="text" placeholder="Имя">
                       </label>
                       <label>
-                        <p class="title">E-mail&nbsp;<span class="advice-2__explanation">(на который мы отправим ответ)</span></p>
-                        <input type="email" placeholder="info@mail.com">
+                        <p class="title">E-mail&nbsp;<span class="advice-2__explanation"> </span></p>
+                        <input type="email" placeholder="на который мы отправим ответ">
                       </label>
                     </div>
                     <div class="row">
@@ -483,9 +483,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider-arrows">
-                    <div class="arrow arrow-left" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><img src="src/img/static/slider-arrow.svg"></div>
-                    <div class="arrow arrow-right" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><img src="src/img/static/slider-arrow-r.svg"></div>
+                  <div class="slider-arrows-pos">
+                    <div class="sliderNav">
+                      <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
+                      <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
                   </div>
                 </div>
                 <script>
@@ -547,7 +549,7 @@
                   <p class="desc">Если у вас есть жалоба или вопрос требует скорейшего разрешения, рекомендуем <a class="link-in-text" href="#">оформить жалобу</a> или позвонить по бесплатному номеру горячей линии.</p>
                 </section>
                 <div class="activity-wrap advice-wrap">
-                  <div class="activity phones advice-phones">
+                  <div class="activity phones advice-phones"><a href="tel:88005553535"></a>
                     <div class="img-wrap"><img src="src/img/static/activity-phone.svg"></div>
                     <div class="phone-title">Федеральный номер</div>
                     <div class="phone">
@@ -555,7 +557,7 @@
                       <div class="desc">Звонок бесплатный</div>
                     </div>
                   </div>
-                  <div class="activity phones advice-phones">
+                  <div class="activity phones advice-phones"><a href="tel:88005553535"></a>
                     <div class="img-wrap"><img src="src/img/static/activity-phone.svg"></div>
                     <div class="phone-title">В Санкт-Петербурге</div>
                     <div class="phone">

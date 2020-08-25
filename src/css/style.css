@@ -74,7 +74,7 @@ textarea[hidden] {
   display: none;
 }
 h1 {
-  font-size: 4.8rem;
+  font-size: 4rem;
   line-height: normal;
   margin: 0;
 }
@@ -5555,6 +5555,10 @@ form.search > :last-child {
   font-size: 16px;
   color: #828282;
 }
+.activity-wrap .activity.withpdng {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .activity-wrap .activity.fullwidth {
   width: 100%;
   -webkit-box-orient: horizontal;
@@ -5706,7 +5710,7 @@ form.search > :last-child {
   margin-bottom: 32px;
 }
 .smallh2 h2 {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
 }
 .subtitle {
   font-size: 20px;
@@ -6213,6 +6217,15 @@ form.search > :last-child {
   -webkit-border-radius: 8px;
           border-radius: 8px;
   margin-bottom: 32px;
+  position: relative;
+}
+.press-wrap .press .detailslink {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .press-wrap .press .tag {
   font-size: 16px;
@@ -9227,7 +9240,7 @@ footer ul ul {
   margin-bottom: 0;
 }
 .page-title h1 {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 60px;
 }
 .page-title__date {
@@ -10274,6 +10287,9 @@ footer ul ul {
   .no-mob {
     display: none !important;
   }
+  .events-heading {
+    margin-bottom: 20px;
+  }
   .row .column.column-md-60.column-sm-75.column-xs-100 {
     width: 100%;
     max-width: 100%;
@@ -11280,7 +11296,7 @@ footer ul ul {
 }
 .team-section .desc {
   margin-top: 32px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 28px;
   color: #3a3a3a;
 }
