@@ -57,7 +57,6 @@ body.fancybox-active {
 }
 body .allContent {
   overflow-x: hidden;
-  padding-top: 24.8rem;
 }
 body .allContent,
 body .formPage {
@@ -839,9 +838,7 @@ header {
   border-bottom: 1px solid rgba(147,147,147,0.2);
   margin-bottom: 1.2rem;
   width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
+  position: relative;
   background-color: #fff;
   z-index: 2;
 }
@@ -17735,11 +17732,6 @@ footer ul ul {
     width: 4rem;
     height: 3.2rem;
     background-size: 2.4rem 2.4rem;
-  }
-}
-@media screen and (max-width: 1080px) {
-  body .allContent {
-    padding-top: 17.8rem;
   }
 }
 @media screen and (max-width: 760px) {
