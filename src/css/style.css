@@ -305,6 +305,9 @@ select:hover {
 .page-title {
   margin-bottom: 4.8rem;
 }
+.page-title a:hover i {
+  text-decoration: none;
+}
 .textBlock p {
   line-height: 2.4rem;
 }
@@ -7415,6 +7418,7 @@ form.search > :last-child {
   color: #666;
   padding-bottom: 2rem;
   cursor: pointer;
+  white-space: pre;
 }
 .tabs .tab:hover {
   color: #b8181c;
