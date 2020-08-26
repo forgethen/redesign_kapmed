@@ -6678,6 +6678,7 @@ form.search > :last-child {
 .morelink {
   padding-left: 20px;
   color: #b8181c;
+  cursor: pointer;
 }
 .minlead {
   border: 1px solid #c4c4c4;
@@ -6716,6 +6717,18 @@ form.search > :last-child {
   background: #b8181c;
   -webkit-border-radius: 4px;
           border-radius: 4px;
+}
+.default-red:hover {
+  color: #fff;
+}
+.show_more .show_more_false {
+  display: none;
+}
+.show_more.show_true .show_more_false {
+  display: block;
+}
+.show_more.show_true .morelink {
+  display: none;
 }
 .search-wrapper {
   position: fixed;
@@ -8908,11 +8921,11 @@ footer ul ul {
           border-radius: 1rem;
 }
 .first-heading {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 60px;
 }
 .second-heading {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 40px;
 }
 .third-heading {
@@ -9335,11 +9348,11 @@ footer ul ul {
   margin-bottom: 32px;
 }
 .m-page .first-heading {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 40px;
 }
 .rem-page .first-heading {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 40px;
 }
 @media screen and (max-width: 980px) {
@@ -9780,7 +9793,7 @@ footer ul ul {
           border-radius: 8px;
 }
 .pres-page .page-title h1 {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 40px;
 }
 @media screen and (max-width: 980px) {
@@ -11502,7 +11515,7 @@ footer ul ul {
     -webkit-order: -4;
         -ms-flex-order: -4;
             order: -4;
-    padding: 6px 0;
+    padding: 0px 6;
     font-size: 16px;
     line-height: 24px;
   }
@@ -11576,7 +11589,7 @@ footer ul ul {
 }
 .advice-page .second-heading {
   margin-bottom: 32px;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 40px;
 }
 .advice-page .advice-page__head-text {
@@ -12253,7 +12266,7 @@ footer ul ul {
 .patient-school__important {
   padding: 40px 32px;
   margin-bottom: 72px;
-  background-color: #fffbef;
+  background-color: #ffefbe;
   -webkit-border-radius: 8px;
           border-radius: 8px;
   border: 1px solid #f2dd9b;
@@ -12475,6 +12488,7 @@ footer ul ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 192px;
 }
 .school-collections__list .second-heading {
   margin-bottom: 20px;
@@ -12488,10 +12502,10 @@ footer ul ul {
   width: 47.8%;
   margin-bottom: 32px;
 }
-.school-collections__item:last-child {
+.school-collections__item:nth-child(3) {
   margin-bottom: 0;
 }
-.school-collections__item:nth-child(3) {
+.school-collections__item:nth-child(4) {
   margin-bottom: 0;
 }
 .point-items {
@@ -12536,6 +12550,62 @@ footer ul ul {
 }
 .show-more-btn {
   display: none;
+}
+.p-s-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 24px;
+  cursor: pointer;
+  -webkit-transition: 0.25s linear;
+  -o-transition: 0.25s linear;
+  transition: 0.25s linear;
+}
+.p-s-link:hover {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
+          box-shadow: 0px 0px 0.5rem 0px #b8181c;
+  background-color: #b8181c;
+  border-color: #b8181c;
+  -webkit-transition: 0.25s linear;
+  -o-transition: 0.25s linear;
+  transition: 0.25s linear;
+}
+.p-s-link:hover .p-s-link__text {
+  color: #fff;
+  -webkit-transition: 0.25s linear;
+  -o-transition: 0.25s linear;
+  transition: 0.25s linear;
+}
+.p-s-link:hover .p-s-link__svg {
+  -webkit-transition: 0.35s linear;
+  -o-transition: 0.35s linear;
+  transition: 0.35s linear;
+}
+.p-s-link:hover .p-s-link__svg path {
+  fill: #fff;
+  -webkit-transition: 0.35s linear;
+  -o-transition: 0.35s linear;
+  transition: 0.35s linear;
+}
+.p-s-link__text {
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-transition: 0.25s linear;
+  -o-transition: 0.25s linear;
+  transition: 0.25s linear;
+}
+.p-s-link__svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  -webkit-transition: 0.55s linear;
+  -o-transition: 0.55s linear;
+  transition: 0.55s linear;
 }
 @media screen and (max-width: 980px) {
   .no-mob {
@@ -12762,6 +12832,7 @@ footer ul ul {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 83px;
   }
   .school-collections__item {
     width: 100%;

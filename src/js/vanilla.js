@@ -12,6 +12,10 @@ const switchSearch = () => {
   body.classList.toggle('with-search')
 }
 
+const switchshowMore = (elm) => {
+  elm.closest('.show_more').classList.toggle('show_true')
+}
+
 const payload = () => {
   const action_buttons = document.querySelectorAll('.activity-action')
   if (action_buttons.length) openActivityHandler(action_buttons)
