@@ -305,9 +305,6 @@ select:hover {
 .page-title {
   margin-bottom: 4.8rem;
 }
-.page-title a:hover i {
-  text-decoration: none;
-}
 .textBlock p {
   line-height: 2.4rem;
 }
@@ -2231,7 +2228,12 @@ a.red-link:hover {
 }
 .page-title a:hover {
   opacity: 0.8;
+}
+.page-title a:hover span {
   text-decoration: underline;
+}
+.page-title a:hover i {
+  text-decoration: none;
 }
 .page-title a i {
   color: #b8181c;
