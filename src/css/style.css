@@ -210,6 +210,9 @@ select:hover {
 .container.inwards {
   width: 74rem;
 }
+.title a:hover i {
+  text-decoration: none;
+}
 .sectionTitle {
   margin: 3.2rem 0;
   width: 100%;
@@ -271,6 +274,9 @@ select:hover {
 .sectionTitle h5,
 .sectionTitle h6 {
   padding-top: 0.4rem;
+}
+.sectionTitle:hover i {
+  text-decoration: none;
 }
 .sliderNav {
   -webkit-box-flex: 0;
