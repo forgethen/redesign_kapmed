@@ -7,6 +7,10 @@ const openActivityHandler = (list) => {
   })
 }
 
+const openSupportLevel = (elm) => {
+  elm.closest('.support-level').classList.toggle('closed')
+}
+
 const switchSearch = () => {
   let body = document.querySelector('body')
   body.classList.toggle('with-search')

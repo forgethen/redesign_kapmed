@@ -6739,6 +6739,9 @@ form.search > :last-child {
   color: #3a3a3a;
   margin-bottom: 32px;
 }
+.tabs-with-margin {
+  margin: 10px 0 50px 0;
+}
 .more-button {
   font-size: 16px;
   border: 1px solid #c4c4c4;
@@ -6755,6 +6758,105 @@ form.search > :last-child {
 }
 .more-button:hover {
   opacity: 0.8;
+}
+.support-level {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+.support-level .img-place img {
+  width: 44px;
+}
+.support-level .data-place {
+  width: -webkit-calc(100% - 100px);
+  width: calc(100% - 100px);
+}
+.support-level .data-place .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.support-level .data-place .info {
+  font-size: 16px;
+  color: #939393;
+  margin-bottom: 30px;
+}
+.support-level .data-place p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 400px) {
+  .support-level .img-place {
+    display: none;
+  }
+  .support-level .data-place {
+    width: 100%;
+  }
+}
+.support-level .open-more {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.support-level .open-more:after {
+  content: "Скрыть список обязанностей";
+  color: #939393;
+  border-bottom: 1px dashed;
+}
+.support-level .more-info {
+  display: block;
+}
+.support-level.closed .open-more {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.support-level.closed .open-more:after {
+  content: "Открыть список обязанностей";
+  color: #939393;
+  border-bottom: 1px dashed;
+}
+.support-level.closed .more-info {
+  display: none;
+}
+.more-info .checked {
+  position: relative;
+}
+.more-info .checked:before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 12px;
+  background-image: url("../img/static/checked.svg");
+  left: -30px;
+  top: 2px;
+}
+.page-title .gotocity {
+  color: #b8181c;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+}
+.page-title .gotocity i {
+  font-size: 34px;
+}
+.page-title .gotocity span {
+  font-size: 40px;
+}
+.content-place p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
 .default-red {
   color: #fff;
@@ -12387,8 +12489,31 @@ footer ul ul {
 .help-article .book-actions__item {
   margin-right: 12px;
 }
+.help-article .mark-block__icon {
+  cursor: pointer;
+}
 .help-article .cool {
   margin-right: 12px;
+}
+.help-article .cool.cool-click svg path {
+  fill: #38a648;
+}
+.help-article .cool:hover {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #939393;
+          box-shadow: 0px 0px 0.5rem 0px #939393;
+}
+.help-article .cool:hover svg path {
+  fill: #38a648;
+}
+.help-article .bad.bad-click svg path {
+  fill: #b8181c;
+}
+.help-article .bad:hover {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px #939393;
+          box-shadow: 0px 0px 0.5rem 0px #939393;
+}
+.help-article .bad:hover svg path {
+  fill: #b8181c;
 }
 .help-article .wrapper-answers {
   display: -webkit-box;
@@ -12455,6 +12580,11 @@ footer ul ul {
   font-size: 16px;
   line-height: 24px;
   padding: 0;
+}
+.list-parts__item:hover a {
+  color: #b8181c;
+}
+.list-parts__item a {
   color: #666;
 }
 .list-parts__item:last-child {
@@ -12894,6 +13024,7 @@ footer ul ul {
   }
   .help-article {
     border: none;
+    padding: 0;
   }
   .help-article h3 {
     font-size: 20px;
@@ -12955,6 +13086,7 @@ footer ul ul {
   }
   .patient-school__important {
     margin-bottom: 48px;
+    padding: 20px;
   }
   .content-wrap {
     -webkit-box-orient: vertical;
@@ -12973,10 +13105,55 @@ footer ul ul {
         -ms-flex: 0 0 100% !important;
             flex: 0 0 100% !important;
   }
+  .expert-mind {
+    padding: 20px;
+  }
+  .p-school-block {
+    padding: 20px;
+  }
+  .school-collections__item {
+    padding: 20px;
+  }
+  .list-parts {
+    padding-left: 20px;
+  }
+  .patient-school .book-actions__item {
+    max-width: 178px;
+    margin-bottom: 0;
+  }
+  .patient-school .book-actions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .patient-school .second-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .patient-school .dzen-block .dzen-block__button {
+    max-width: 221px;
+  }
+  .patient-school .sign-btn {
+    max-width: 221px;
+  }
+  .patient-school .show-more-btn {
+    max-width: 221px;
+  }
 }
-@media screen and (max-width: 805px) {
-  .list-parts__item:last-child:before {
-    display: none;
+@media screen and (max-width: 768px) {
+  .patient-school .book-actions__item {
+    max-width: 100%;
+  }
+  .patient-school .dzen-block .dzen-block__button {
+    max-width: 100%;
+  }
+  .patient-school .sign-btn {
+    max-width: 100%;
+  }
+  .patient-school .show-more-btn {
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 680px) {
@@ -12985,12 +13162,35 @@ footer ul ul {
     margin-bottom: 32px;
   }
 }
+@media screen and (max-width: 645px) {
+  .list-parts {
+    padding-left: 0;
+  }
+  .list-parts__item:nth-child(2) {
+    width: 50%;
+  }
+  .list-parts__item:nth-child(3):before {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .list-parts__item a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 @media screen and (max-width: 639px) {
   .list-parts__item:last-child:before {
     display: block;
   }
-  .list-parts__item:nth-child(3):before {
-    display: none;
+  .list-parts__item:nth-child(2) {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 382px) {
+  .list-parts__item:nth-child(2) {
+    width: auto;
+    margin-right: 0;
   }
 }
 .change-span-top {
@@ -13301,6 +13501,7 @@ footer ul ul {
   border: 1px solid #f2dd9b;
   -webkit-border-radius: 8px;
           border-radius: 8px;
+  margin-bottom: 60px;
 }
 .att-heading {
   display: -webkit-box;
