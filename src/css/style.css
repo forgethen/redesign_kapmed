@@ -7433,6 +7433,10 @@ form.search > :last-child {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.tabsFromIndex .tabs {
+  margin-right: 0;
+  margin-left: 0;
+}
 .tabs {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -11614,28 +11618,35 @@ footer ul ul {
   .advice-1 .ans-name {
     margin-bottom: 4px;
   }
-}
-.advice-2 .formPage form .title {
-  border-bottom: none !important;
-}
-.advice-2 .advice2__link {
-  padding-bottom: 32px;
-  display: block;
-  border-bottom: 1px solid #e6e6e6;
-}
-.advice-2 .advice2__link .advice-2-btn {
-  width: 100%;
-}
-.advice-2 .advice-4 .link-in-text {
-  font-size: 20px;
-  line-height: 28px;
-}
-.advice-2 .advice .second-heading {
-  font-size: 24px;
-  line-height: 32px;
-}
-.advice-2 .team-section {
-  margin-bottom: 24px;
+  .advice-2 .formPage form .title {
+    border-bottom: none !important;
+  }
+  .advice-2 .advice2__link {
+    padding-bottom: 32px;
+    display: block;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .advice-2 .advice2__link .advice-2-btn {
+    width: 100%;
+  }
+  .advice-2 .advice-4 .link-in-text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .advice-2 .advice .second-heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .advice-2 .team-section {
+    margin-bottom: 24px;
+  }
+  .row.row-responsive .column-md-75.advice {
+    max-width: 100% !important;
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 0 100% !important;
+        -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
+  }
 }
 @media screen and (max-width: 680px) {
   .advice-4 section {
@@ -12676,6 +12687,31 @@ footer ul ul {
   -o-transition: 0.55s linear;
   transition: 0.55s linear;
 }
+.p-school-block .formPage.noHeight {
+  margin-bottom: 0;
+}
+.p-school-block .formPage form {
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+}
+.p-school-block .formPage .doublerow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.p-school-block .formPage .doublerow label {
+  margin-top: 0;
+  margin-right: 12px;
+}
+.p-school-block .formPage .doublerow .dzen-block__button {
+  height: 5.6rem;
+}
 @media screen and (max-width: 980px) {
   .no-mob {
     display: none !important;
@@ -12929,6 +12965,13 @@ footer ul ul {
   }
   .img-mind-wrap {
     margin-bottom: 12px;
+  }
+  .row .column.column-75.patient-school {
+    max-width: 100% !important;
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 0 100% !important;
+        -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
   }
 }
 @media screen and (max-width: 805px) {
