@@ -221,9 +221,19 @@ select:hover {
   font-size: inherit;
   line-height: inherit;
 }
+.sectionTitle a span {
+  font-size: inherit;
+  line-height: inherit;
+}
 .sectionTitle a i {
   font-size: 2.8rem;
   line-height: inherit;
+}
+.sectionTitle a:hover span {
+  text-decoration: underline;
+}
+.sectionTitle a:hover i {
+  text-decoration: none;
 }
 .sectionTitle__top {
   display: -webkit-box;
@@ -274,12 +284,6 @@ select:hover {
 .sectionTitle h5,
 .sectionTitle h6 {
   padding-top: 0.4rem;
-}
-.sectionTitle:hover span {
-  text-decoration: underline;
-}
-.sectionTitle:hover i {
-  text-decoration: none;
 }
 .sliderNav {
   -webkit-box-flex: 0;
@@ -17718,6 +17722,7 @@ footer ul ul {
 }
 .orgList .title {
   margin-bottom: 0.8rem;
+  line-height: 3rem;
 }
 .orgList .license {
   color: #666;
@@ -17802,9 +17807,10 @@ footer ul ul {
   font-weight: 400;
   line-height: 2rem;
   margin-bottom: 0.4rem;
-  padding-top: 0.2rem;
+  padding-top: 0.4rem;
 }
 .orgList__item .sheduleBlock .status {
+  padding-top: 0.4rem;
   margin-bottom: 0.4rem;
 }
 .orgList__item .blocks {
