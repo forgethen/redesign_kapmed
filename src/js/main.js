@@ -200,6 +200,20 @@ $(document).ready(function() {
     theme: "CustomSelectOptionsThm",
   });
 
+  $('.dropdown ul').each(function() {
+    $(this).addClass('active');
+    $('.dropdown ul').addClass('show')
+    var th1 = $('.dropdown ul').find('li:eq(0)').height();
+    var th2 = $('.dropdown ul').find('li:eq(1)').height();
+    $(this).css('max-height', th1 + th2 + 'px');
+    $(this).removeClass('active');
+    $('.dropdown ul').removeClass('show');
+  })
+
+  $(".dropdown ul").mCustomScrollbar({
+    theme: "DropdownThm",
+  });
+
   $(".citiesBlock").mCustomScrollbar({
     theme: "citiesBlockThm",
   });
