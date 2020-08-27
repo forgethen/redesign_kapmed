@@ -7535,6 +7535,9 @@ form.search > :last-child {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.tabsFromIndex {
+  padding: 0 1.6rem;
+}
 .tabsFromIndex .tabs {
   margin-right: 0;
   margin-left: 0;
