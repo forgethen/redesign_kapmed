@@ -142,42 +142,47 @@ $(document).ready(function() {
     $(this).addClass("select");
   });
 
-  function closeAdd() {
-    $("<button>", {
-      html:
-        '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path fill="#939393" d="M7.004 5.59l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95L.64 11.954l4.95-4.95-4.95-4.95L2.054.64z"/></svg>',
-      class: "fancybox-button fancybox-close-small CloseFancybox",
-      title: "close",
-    })
-      .appendTo(".fancybox-content")
-      .attr("data-fancybox-close", "");
-    // $('body').addClass('hidden');
-  }
+  // function closeAdd() {
+  //   $("<button>", {
+  //     html:
+  //       '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path fill="#939393" d="M7.004 5.59l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95L.64 11.954l4.95-4.95-4.95-4.95L2.054.64z"/></svg>',
+  //     class: "fancybox-button fancybox-close-small CloseFancybox",
+  //     title: "close",
+  //   })
+  //     .appendTo(".fancybox-content")
+  //     .attr("data-fancybox-close", "");
+  //   // $('body').addClass('hidden');
+  // }
 
-  const targetElement = document.querySelector("body");
-
-  $("[data-fancybox]").click(function () {
-    $.fancybox.close();
-    //   // $('form')[0].reset();
-    $('[data-action="clear"]').each(function () {
-      $(this).click();
-    });
-    $(this).attr("data-touch", "false");
-    $(this).attr("data-modal", "true");
-
-    $(".CloseFancybox").remove();
-    setTimeout(closeAdd, 100);
-    setTimeout(function () {
-      $(".CloseFancybox").click(function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $.fancybox.close();
-        console.log("gogog");
-        bodyScrollLock.enableBodyScroll(targetElement);
-      });
-    }, 100);
-    bodyScrollLock.disableBodyScroll(targetElement);
-  });
+  // const targetElement = document.querySelector("body");
+  //
+  // $("[data-fancybox]").click(function () {
+  //
+  //   $.fancybox.close();
+  //   //   // $('form')[0].reset();
+  //   $('[data-action="clear"]').each(function () {
+  //     $(this).click();
+  //   });
+  //
+  //   $(this).attr("data-touch", "false");
+  //   // $(this).attr("data-modal", "true");
+  //
+  //   $(".CloseFancybox").remove();
+  //
+  //   // setTimeout(closeAdd, 100);
+  //
+  //   setTimeout(function () {
+  //     $(".CloseFancybox").click(function (e) {
+  //       e.preventDefault();
+  //       e.stopPropagation();
+  //       $.fancybox.close();
+  //       console.log("gogog");
+  //       bodyScrollLock.enableBodyScroll(targetElement);
+  //     });
+  //   }, 100);
+  //
+  //   bodyScrollLock.disableBodyScroll(targetElement);
+  // });
 
   $(".mapPopUp .mapSection .mapList").mCustomScrollbar({
     theme: "MapListThm",
