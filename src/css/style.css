@@ -5705,6 +5705,10 @@ form.search > :last-child {
 }
 .activity-wrap .activity.fullwidth .text {
   text-align: left;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .activity-wrap .activity.fullwidth .text .title {
   margin-bottom: 12px;
