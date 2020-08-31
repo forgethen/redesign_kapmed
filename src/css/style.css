@@ -18935,6 +18935,24 @@ footer ul ul {
   margin-top: 2.4rem;
   margin-bottom: 0;
 }
+@media screen and (max-width: 640px) {
+  .sharePopUp {
+    padding: 2.4rem;
+  }
+  .sharePopUp input[type="submit"] {
+    width: 100%;
+  }
+  .sharePopUp input[type="text"] {
+    height: 4.8rem;
+  }
+  .sharePopUp ul {
+    padding: 1rem 0;
+  }
+  .sharePopUp ul li {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
 .fancybox-close-small {
   -webkit-border-radius: 50%;
           border-radius: 50%;
