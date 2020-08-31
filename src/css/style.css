@@ -1169,7 +1169,7 @@ header {
 }
 @media screen and (max-width: 1080px) {
   header {
-    margin-bottom: 3.2rem;
+    margin-bottom: 0;
   }
   .container.fromHeaderMenu:before {
     border-bottom: 1px solid #c4c4c4;
@@ -5673,9 +5673,12 @@ form.search > :last-child {
 }
 .otkaz .title {
   font-size: 20px;
+  line-height: 2.8rem;
+  margin-bottom: 0.4rem;
 }
 .otkaz .desc {
   font-size: 14px;
+  line-height: 18px;
   color: #939393;
 }
 .activity-wrap {
@@ -6013,6 +6016,9 @@ form.search > :last-child {
 }
 .smallh2 {
   margin-bottom: 32px;
+}
+.smallh2 br {
+  display: none;
 }
 .smallh2 h2 {
   font-size: 3.6rem;
@@ -7295,6 +7301,12 @@ form.search > :last-child {
     top: 0px;
     left: 0px;
   }
+  .otkaz {
+    margin-bottom: 3rem;
+  }
+  .otkaz .title {
+    margin-bottom: 0.8rem;
+  }
   .no-mob {
     display: none !important;
   }
@@ -7314,6 +7326,9 @@ form.search > :last-child {
   .note.v2 {
     padding: 2.4rem;
   }
+  .activity-wrap.v3 {
+    margin-top: 3.2rem;
+  }
   .activity-wrap .activity {
     width: 100%;
   }
@@ -7326,6 +7341,29 @@ form.search > :last-child {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+  .withmrg.v2 {
+    margin-bottom: 1.2rem;
+    padding-bottom: 0;
+  }
+  .withmrg.v2 p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .withmrg.v3 {
+    margin-bottom: 3.2rem;
+  }
+  .withmrg.v4 {
+    padding-top: 2rem;
+  }
+  .smallh2.v2 {
+    margin-bottom: 3rem;
+  }
+  .smallh2 br {
+    display: block;
+  }
+  .smallh2 h2 {
+    line-height: 3.2rem;
   }
   .mrg {
     margin-bottom: 30px;
@@ -7358,6 +7396,52 @@ form.search > :last-child {
   .selects > div {
     width: 100%;
     margin-bottom: 16px;
+  }
+  .expert {
+    -webkit-border-radius: 8px;
+            border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 4.2rem;
+  }
+  .expert .title {
+    font-size: 24px;
+    line-height: 3.2rem;
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 16px;
+    margin-bottom: 26px;
+  }
+  .expert .text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .expert .aq {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  .expert .aq img {
+    margin-right: 12px;
+  }
+  .expert .aq .title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  .expert .aq .name {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+  .expert .aq .desc {
+    font-size: 16px;
+    line-height: 24px;
+    color: #939393;
   }
   .press-wrap.presentation-wrap .press.fullwidth {
     display: -webkit-box;
@@ -7414,6 +7498,26 @@ form.search > :last-child {
     font-size: 32px !important;
     line-height: 40px !important;
   }
+  .page-title.v2 {
+    margin-bottom: 3rem;
+  }
+  .page-title.v2 h1 {
+    font-size: 28px !important;
+    line-height: 38px !important;
+  }
+  .page-title.v3 {
+    margin-bottom: 2.4rem;
+  }
+  .page-title.v3 h1 {
+    font-size: 28px !important;
+    line-height: 38px !important;
+  }
+  .page-title.v4 {
+    margin-bottom: 1.6rem;
+  }
+  .page-title.v4 h2 {
+    line-height: 3.2rem;
+  }
   .gray-text {
     font-size: 24px !important;
     line-height: 32px !important;
@@ -7424,6 +7528,15 @@ form.search > :last-child {
   }
   .gray-text.v3 {
     margin-bottom: 0;
+  }
+  .gray-text.v4 {
+    font-size: 2rem !important;
+    line-height: 2.8rem !important;
+  }
+  .gray-text.v5 {
+    margin-bottom: 3.2rem;
+    font-size: 2rem !important;
+    line-height: 2.8rem !important;
   }
   .cards .card {
     padding: 3rem 2rem;
@@ -7585,6 +7698,14 @@ form.search > :last-child {
   }
   .showmemore {
     width: 100%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .slider-wrap {
+    width: 100% !important;
+  }
+  .slider-arrows-pos.v2 {
+    margin-top: 2rem;
   }
 }
 .stepsBlock {
@@ -8887,6 +9008,11 @@ footer ul ul {
 }
 .topSlider .prev {
   left: 0;
+}
+@media screen and (max-width: 1080px) {
+  .topSlider {
+    margin-top: 3.2rem;
+  }
 }
 @media screen and (max-width: 960px) {
   .topSlider .slider {
