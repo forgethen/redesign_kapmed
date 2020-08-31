@@ -7402,6 +7402,26 @@ form.search > :last-child {
     width: 100%;
   }
 }
+@media screen and (max-width: 680px) {
+  .activity-wrap.fromCardtree {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    margin-bottom: 2.4rem;
+  }
+  .activity-wrap .activity.cardtree:nth-child(1) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .activity-wrap .activity.cardtree:nth-child(2),
+  .activity-wrap .activity.cardtree:nth-child(3) {
+    display: none;
+  }
+  .showmemore {
+    width: 100%;
+  }
+}
 .stepsBlock {
   margin-top: 2.8rem;
 }
@@ -18653,9 +18673,19 @@ footer ul ul {
   }
 }
 @media screen and (max-width: 640px) {
+  .gray-text {
+    margin-bottom: 6.4rem;
+  }
+  section.section-v2 {
+    padding-bottom: 2.4rem;
+  }
   h3 {
     font-size: 2.4rem;
     font-weight: 400;
+    line-height: 3.2rem;
+  }
+  h3.sectionTitle {
+    font-size: 2.4rem;
     line-height: 3.2rem;
   }
   h4 {
