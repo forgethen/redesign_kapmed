@@ -430,9 +430,6 @@ select:hover {
   top: 0;
   z-index: 9999999;
   opacity: 0;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
   background: #fff;
   z-index: 1;
 }
