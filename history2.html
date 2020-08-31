@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Site title</title>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Site title">
+    <meta name="description" content="Site description">
+    <meta property="og:title" content="Site title">
+    <meta property="og:description" content="Site description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Site URL">
+    <meta property="og:image" content="LOGO/IMG">
+    <link rel="icon" type="image/png" href="src/img/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/Helvetica/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/remixicon/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="src/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="src/css/milligram.responsive-grid.css">
+    <link rel="stylesheet" type="text/css" href="src/css/inputmask.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/vanilla.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/slick.min.js"></script>
+    <script src="src/js/jquery.inputmask.bundle.js"></script>
+    <script src="src/js/jquery.mCustomScrollbar.js"></script>
+    <script src="src/js/jquery.fancybox.min.js"></script>
+    <script src="src/js/bodyScrollLock.min.js"></script>
+    <script src="src/js/jquery.hideseek.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="src/js/vue-launcher.js"></script>
+  </head>
+  <body>
+    <div class="allContent">
+      <header>
+        <div class="top-container">
+          <div>
+            <div class="container">
+              <div class="row">
+                <div class="column column-66"><a data-fancybox="" data-src="#citySelect" href="javascript:;" data-touch="false">
+                    <div class="image"><img src="src/img/static/plane.svg" alt="plane"></div><span>Санкт-Петербург</span></a><a href="#">
+                    <div class="image"><img src="src/img/static/zoom (1).svg" alt="zoom"></div><span>Версия для слабовидящих </span></a><a href="#">
+                    <div class="image"><img src="src/img/static/print (1).svg" alt="print"></div><span>Распечатать страницу</span></a></div>
+                <div class="column column-33"><a href="tel:88005506774">
+                    <div class="image"><img src="src/img/static/phone (1).svg" alt="phone"></div>
+                    <p>8&nbsp;800&nbsp;550&nbsp;67&nbsp;74<span>&nbsp;(Круглосуточно)</span></p></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="header">
+            <div class="container">
+              <div class="row row-responsive">
+                <div class="column column-md-25 column-sm-25 column-xs-50"><a class="logo" href="/"><img src="src/img/static/logo.png" alt="logo"></a></div>
+                <div class="column column-md-70 column-sm-70 column-xs-50">
+                  <nav class="desktop">
+                    <ul>
+                      <li><a href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
+                      <li><a href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
+                      <li><a class="search" href="#" onclick="switchSearch()"><i class="ri-search-line"></i><span>Поиск</span></a></li>
+                    </ul>
+                  </nav>
+                  <nav class="mobile">
+                    <ul>
+                      <li><a class="search" href="#"><i class="ri-search-line"></i></a></li>
+                      <li><a class="burger" href="#"><i class="ri-menu-line"></i><i class="ri-close-fill"></i></a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="column column-md-25 column-sm-25 column-xs-100"><a class="btn btn-red" href="#">Заявка на полис ОМС</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="search-wrapper">
+            <div class="cross" onclick="switchSearch()">&times;</div>
+            <div class="container">
+              <div class="row">
+                <div class="column column-25 no-mob">
+                  <div class="menu">
+                    <div class="item active">Все результаты</div>
+                    <div class="item">Страховые продукты</div>
+                    <div class="item">Новости и события</div>
+                  </div>
+                </div>
+                <div class="column column-md-75 column-sm-75 column-xs-100">
+                  <p class="title">Результаты поиска</p>
+                  <div class="input-wrap">
+                    <input id="search_inpuut" type="text" placeholder="Поиск">
+                  </div>
+                  <div class="total">
+                    <p>По запросу "Инвестиции" найдено 3678 ответов</p>
+                  </div>
+                  <div class="results">
+                    <div class="result">
+                      <div class="top">Test</div>
+                      <div class="name">Te<b>st</b></div>
+                      <div class="description">Test ba<b>ck</b>ground</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                  </div>
+                  <div class="pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container fromHeaderMenu">
+          <ul class="headerMenu">
+            <li><a href="javascript:;"><span>Полис ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Заявка на полис ОМС</a></li>
+                  <li><a href="#">Документы для оформления полиса</a></li>
+                  <li><a href="#">Пункты выдачи полисов</a></li>
+                  <li><a href="#">Доставка полиса ОМС</a></li>
+                  <li><a href="#">Виды полисов ОМС</a></li>
+                  <li><a href="#">Юридическим лицам</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="javascript:;"><span>Система ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Что такое Система ОМС</a></li>
+                  <li><a href="#">Дайджест новостей системы ОМС</a></li>
+                  <li><a href="#">Участие компании в развитии системы ОМС</a></li>
+                  <li><a href="#">Виды, качество и условия медицинской помощи</a></li>
+                  <li><a href="#">Что бесплатно по полису ОМС</a></li>
+                  <li><a href="#">Как выбрать страховую компанию ОМС</a></li>
+                  <li><a href="#">Как выбрать медицинскую организацию</a></li>
+                  <li><a href="#">Информация о медицинских организациях</a></li>
+                  <li><a href="#">Информация о Фонде ОМС</a></li>
+                  <li><a href="#">Нормативные документы</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Диспансеризация</span></a></li>
+            <li><a href="javascript:;"><span>Защита прав&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Ваш страховой представитель</a></li>
+                  <li><a href="#">Подать жалобу</a></li>
+                  <li><a href="#">Выявленные нарушения по обращениям застрахованных лиц</a></li>
+                  <li><a href="#">Контакт-центр</a></li>
+                  <li><a href="#">Полезные ресурсы</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="javascript:;"><span>О компании&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Пресс центр</a></li>
+                  <li><a href="#">Научно практическая деятельность</a></li>
+                  <li><a href="#">Участие компании в развитии системы ОМС</a></li>
+                  <li><a href="#">Проекты компании</a></li>
+                  <li><a href="#">Наша команда</a></li>
+                  <li><a href="#">Раскрытие информации</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#"><span>Школа пациента</span></a></li>
+          </ul>
+          <ul class="mobileBottom">
+            <li><a href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
+            <li><a href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="citySelect" id="citySelect">
+        <div class="container">
+          <h3 class="citySelect__title">Выберете ваш регион</h3>
+          <div class="citiesBlock">
+            <ul class="cities">
+              <li><a class="ex" href="#">
+                  <p>Город Москва</p></a></li>
+              <li><a href="#">
+                  <p>Липецкая область</p></a></li>
+              <li><a href="#">
+                  <p>Рязанская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Московская область</p></a></li>
+              <li><a href="#">
+                  <p>Ненецкий автономный округ</p></a></li>
+              <li><a href="#">
+                  <p>Саратовская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Город Санкт-Петербург</p></a></li>
+              <li><a href="#">
+                  <p>Нижегородская область</p></a></li>
+              <li><a href="#">
+                  <p>Смоленская область</p></a></li>
+              <li><a class="ex" href="#">
+                  <p>Ленинградская область</p></a></li>
+              <li><a href="#">
+                  <p>Омская область</p></a></li>
+              <li><a href="#">
+                  <p>Тверская область</p></a></li>
+              <li><a href="#">
+                  <p>Алтайский край</p></a></li>
+              <li><a href="#">
+                  <p>Оренбургская область</p></a></li>
+              <li><a href="#">
+                  <p>Тульская область</p></a></li>
+              <li><a href="#">
+                  <p>Архангельская область</p></a></li>
+              <li><a href="#">
+                  <p>Пензенская область</p></a></li>
+              <li><a href="#">
+                  <p>Тюменская область</p></a></li>
+              <li><a href="#">
+                  <p>Владимирская область</p></a></li>
+              <li><a href="#">
+                  <p>Пермский край</p></a></li>
+              <li><a href="#">
+                  <p>Удмуртская республика</p></a></li>
+              <li><a href="#">
+                  <p>Волгоградская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Алтай</p></a></li>
+              <li><a href="#">
+                  <p>Ульяновская область</p></a></li>
+              <li><a href="#">
+                  <p>Еврейская автономная область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Башкортостан</p></a></li>
+              <li><a href="#">
+                  <p>Ханты-Мансийский автономный округ - Югра</p></a></li>
+              <li><a href="#">
+                  <p>Кабардино-Балкарская республика</p></a></li>
+              <li><a href="#">
+                  <p>Республика Бурятия</p></a></li>
+              <li><a href="#">
+                  <p>Ярославская область</p></a></li>
+              <li><a href="#">
+                  <p>Калининградская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Коми</p></a></li>
+              <li><a href="#">
+                  <p>Кировская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Мордовия</p></a></li>
+              <li><a href="#">
+                  <p>Костромская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Саха (Якутия)</p></a></li>
+              <li><a href="#">
+                  <p>Краснодарский край</p></a></li>
+              <li><a href="#">
+                  <p>Республика Северная Осетия - Алания</p></a></li>
+              <li><a href="#">
+                  <p>Курганская область</p></a></li>
+              <li><a href="#">
+                  <p>Республика Тыва</p></a></li>
+              <li><a href="#">
+                  <p>Ростовская область</p></a></li>
+            </ul>
+          </div>
+          <form class="search">
+            <input type="search" data-list=".citiesBlock ul" autocomplete="off" placeholder="Введите название региона">
+            <input class="btn btn-red" type="submit" value="Найти">
+          </form>
+        </div>
+      </div>
+      <div class="fixbtn">
+        <div class="links"><a href="#"><span>Подать жалобу</span></a><a href="#"><span>Заказать звонок</span></a><a href="#"><span>Задать вопрос</span></a></div><i class="close"></i>
+        <div class="open"></div>
+      </div>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="javascript:void(0);">Филиалы </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="container">
+          <div class="row row-responsive">
+            <div class="column column-25">
+              <nav class="content_list">
+                <ul>
+                  <li><a class="slow active" href="#1">Пресс-центр</a></li>
+                  <li><a class="slow" href="#2">Подписка на новости</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="column column-md-75 column-sm-75 column-xs-100">
+              <section class="page-title">
+                <h1>Как мне возместили стоимость хрусталика и сделали операцию бесплатно</h1>
+              </section>
+              <div class="otkaz">
+                <div class="title">Отказ в записи на прием к врачу и направлении на бесплатные анализы</div>
+                <div class="desc">20.02.2020, А. Синичкин, г. Екатеринбург</div>
+              </div>
+              <div class="gray-text">Все получилось, после того как я обратилась в страховую и написала жалобу на взимание личных средств на оплату расходов на приобретение лекарственных средств при стационарном лечении.</div>
+              <section class="page-title">
+                <h2>Подзаголовок 1</h2>
+              </section>
+              <div class="content withmrg">
+                <p>25 февраля 2020 года Территориальный фонд ОМС Санкт-Петербурга провёл итоговое совещание «Обязательное медицинское страхование: итоги и перспективы». В мероприятии принимали участие председатель постоянной комиссии по социальной политике и здравоохранению Законодательного собрания Санкт-Петербурга Елена Киселева, председатель комитета финансов Алексей Корабельников, специальный представитель Губернатора Санкт-Петербурга Маргарита Рудакова, директор НИИ Алмазова академик РАН Евгений Шляхто, ректор ПСПбГМУ академик РАН Сергей Багненко, Комитет по здравоохранению СПб, руководители страховых медицинских организаций и главные врачи медицинских учреждений города, начальники районных отделов здравоохранения.</p>
+              </div>
+              <div class="slider-root withmrg" id="vue-root">
+                <section class="page-title smallh2">
+                  <h2>Документы вертикальные</h2>
+                </section>
+                <div class="slider-wrap" :style="{width: `${content_container}px`}">
+                  <div class="slider-thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                    <div class="slide-thanks" v-for="item, idx in thanks" :style="{width: `${width}px`}"><a href="https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg" data-fancybox="">
+                        <div class="image" :style="{backgroundImage: `url(${item.image})`}"></div>
+                        <div class="date">Фотография с описанием</div></a></div>
+                  </div>
+                </div>
+                <div class="slider-arrows-pos">
+                  <div class="sliderNav">
+                    <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
+                    <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                  </div>
+                </div>
+              </div>
+              <section class="page-title">
+                <h2>Подзаголовок 1.5</h2>
+              </section>
+              <div class="content withmrg">
+                <p>25 февраля 2020 года Территориальный фонд ОМС Санкт-Петербурга провёл итоговое совещание «Обязательное медицинское страхование: итоги и перспективы». В мероприятии принимали участие председатель постоянной комиссии по социальной политике и здравоохранению Законодательного собрания Санкт-Петербурга Елена Киселева, председатель комитета финансов Алексей Корабельников, специальный представитель Губернатора Санкт-Петербурга Маргарита Рудакова, директор НИИ Алмазова академик РАН Евгений Шляхто, ректор ПСПбГМУ академик РАН Сергей Багненко, Комитет по здравоохранению СПб, руководители страховых медицинских организаций и главные врачи медицинских учреждений города, начальники районных отделов здравоохранения.</p>
+              </div>
+              <div class="slider-root withmrg" id="vue-root2">
+                <section class="page-title smallh2">
+                  <h2>Документы горизонтальные</h2>
+                </section>
+                <div class="slider-wrap" :style="{width: `${content_container}px`}">
+                  <div class="slider-thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                    <div class="slide-thanks" v-for="item, idx in thanks" :style="{width: `${width}px`}"><a href="https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg" data-fancybox="">
+                        <div class="image horiz" :style="{backgroundImage: `url(${item.image})`}"></div>
+                        <div class="date">Фотография с описанием</div></a></div>
+                  </div>
+                </div>
+                <div class="slider-arrows-pos">
+                  <div class="sliderNav">
+                    <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
+                    <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                let data = [
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  },
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  },
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  },
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  },
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  },
+                  {
+                    date: 'г. Санкт-Петербург, 2018',
+                    name: 'Название. Рыбный текст. Небходимо заменить.',
+                    href: '#',
+                    image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                  }
+                ]
+                let root = '#vue-root'
+                let root2 = '#vue-root2'
+                let width = 232
+                vueSliderLauncher(root, data, width)
+                vueSliderLauncher(root2, data, width)
+                
+                
+                
+              </script>
+              <div class="expert">
+                <div class="title">Мнение эксперта</div>
+                <div class="aq">
+                  <div class="img-place"><img src="src/img/static/face.png"></div>
+                  <div class="data">
+                    <div class="name">Третьякова Елена Николаевна </div>
+                    <div class="desc">Врач-офтальмолог</div>
+                  </div>
+                </div>
+                <div class="text">«Авторский коллектив ООО «Капитал МС» в лице кандидата психологических наук, доцента В.А. Чулковой, кандидата психологических наук, доцента Е.В. Пестеряевой подготовил пособие для страховых представителей системы обязательного медицинского страхования(ОМС)».</div>
+              </div>
+              <section class="page-title">
+                <h2>Подзаголовок 1.7</h2>
+              </section>
+              <div class="content withmrg">
+                <p>25 февраля 2020 года Территориальный фонд ОМС Санкт-Петербурга провёл итоговое совещание «Обязательное медицинское страхование: итоги и перспективы». В мероприятии принимали участие председатель постоянной комиссии по социальной политике и здравоохранению Законодательного собрания Санкт-Петербурга Елена Киселева, председатель комитета финансов Алексей Корабельников, специальный представитель Губернатора Санкт-Петербурга Маргарита Рудакова, директор НИИ Алмазова академик РАН Евгений Шляхто, ректор ПСПбГМУ академик РАН Сергей Багненко, Комитет по здравоохранению СПб, руководители страховых медицинских организаций и главные врачи медицинских учреждений города, начальники районных отделов здравоохранения.</p>
+              </div>
+              <section class="page-title">
+                <h2>Документы еденичный</h2>
+              </section>
+              <div class="singledoc"><a href="https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg" data-fancybox=""><img src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg">
+                  <p>Фото с описанием</p></a></div>
+              <section class="noteSection">
+                <div class="note v2">
+                  <p class="title"><i class="ri-information-fill"></i>&nbsp;Важно запомнить</p>
+                  <p>Были подведены итоги деятельности всех страховых медицинских организаций в 2019 году. Диплом за 1 место по результатам работы традиционно был вручен филиалу «Капитал МС» в городе Санкт-Петербург и Ленинградской области.</p>
+                </div>
+              </section>
+              <div class="help-article">
+                <div class="mark-block">
+                  <h3> Помогла ли вам статья?</h3>
+                  <div class="wrapper-answers">
+                    <div class="mark-block__icon cool border-color">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6 8.00039H20C20.5304 8.00039 21.0391 8.21111 21.4142 8.58618C21.7893 8.96125 22 9.46996 22 10.0004V12.1044C22.0003 12.3658 21.9493 12.6246 21.85 12.8664L18.755 20.3814C18.6795 20.5646 18.5513 20.7213 18.3866 20.8315C18.2219 20.9417 18.0282 21.0005 17.83 21.0004H1C0.734784 21.0004 0.48043 20.895 0.292893 20.7075C0.105357 20.52 0 20.2656 0 20.0004V10.0004C0 9.73518 0.105357 9.48082 0.292893 9.29329C0.48043 9.10575 0.734784 9.00039 1 9.00039H4.482C4.6421 9.00043 4.79986 8.96203 4.94203 8.88843C5.0842 8.81482 5.20662 8.70815 5.299 8.57739L10.752 0.850392C10.8209 0.752705 10.9226 0.682953 11.0385 0.653782C11.1545 0.624612 11.277 0.637955 11.384 0.691392L13.198 1.59839C13.7085 1.85355 14.1163 2.27571 14.3537 2.79471C14.5911 3.31371 14.6438 3.89831 14.503 4.45139L13.6 8.00039ZM6 10.5884V19.0004H17.16L20 12.1044V10.0004H13.6C13.2954 10.0003 12.9948 9.93073 12.7212 9.79685C12.4476 9.66297 12.2082 9.46836 12.0213 9.22788C11.8343 8.98739 11.7048 8.70739 11.6425 8.40922C11.5803 8.11105 11.5869 7.80259 11.662 7.50739L12.565 3.95939C12.5933 3.84872 12.5828 3.73171 12.5353 3.62782C12.4878 3.52393 12.4062 3.43944 12.304 3.38839L11.643 3.05839L6.933 9.73039C6.683 10.0844 6.363 10.3744 6 10.5884ZM4 11.0004H2V19.0004H4V11.0004Z" fill="#939393"></path>
+                      </svg><span class="mob-mark">Да</span>
+                    </div>
+                    <div class="mark-block__icon bad border-color">
+                      <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.4 13H2C1.46957 13 0.96086 12.7893 0.585788 12.4142C0.210715 12.0391 1.0643e-06 11.5304 1.0643e-06 11V8.896C-0.000268556 8.63464 0.050692 8.37576 0.150001 8.134L3.246 0.62C3.32128 0.436753 3.4493 0.279995 3.6138 0.169612C3.77831 0.0592292 3.97189 0.00019547 4.17 0H21C21.2652 0 21.5196 0.105357 21.7071 0.292893C21.8946 0.48043 22 0.734784 22 1V11C22 11.2652 21.8946 11.5196 21.7071 11.7071C21.5196 11.8946 21.2652 12 21 12H17.518C17.3579 12 17.2001 12.0384 17.058 12.112C16.9158 12.1856 16.7934 12.2922 16.701 12.423L11.248 20.149C11.1791 20.2467 11.0774 20.3164 10.9615 20.3456C10.8455 20.3748 10.723 20.3614 10.616 20.308L8.802 19.4C8.2915 19.1448 7.88367 18.7227 7.64627 18.2037C7.40887 17.6847 7.3562 17.1001 7.497 16.547L8.4 13ZM16 10.412V2H4.84L2 8.896V11H8.4C8.7046 11 9.00517 11.0697 9.27877 11.2035C9.55237 11.3374 9.79178 11.532 9.97873 11.7725C10.1657 12.013 10.2952 12.293 10.3575 12.5912C10.4197 12.8893 10.4131 13.1978 10.338 13.493L9.435 17.041C9.40674 17.1517 9.41722 17.2687 9.46471 17.3726C9.51219 17.4765 9.59382 17.561 9.696 17.612L10.357 17.942L15.067 11.27C15.317 10.916 15.637 10.626 16 10.412ZM18 10H20V2H18V10Z" fill="#939393"></path>
+                      </svg><span class="mob-mark">Нет</span>
+                    </div>
+                  </div>
+                  <div class="info-mount">48 людям помогла</div>
+                </div>
+                <p class="help-article__article-head">Если эта статья была вам полезна — поделитесь ею с друзьями, чтобы больше людей научилось заботиться о своем здоровье.</p>
+                <ul class="book-actions">
+                  <li class="book-actions__item">
+                    <div class="p-s-link">
+                      <svg class="p-s-link__svg" width="20" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 17H1C0.734784 17 0.48043 16.8946 0.292893 16.7071C0.105357 16.5196 0 16.2652 0 16V6C0 5.73478 0.105357 5.48043 0.292893 5.29289C0.48043 5.10536 0.734784 5 1 5H4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H15C15.2652 0 15.5196 0.105357 15.7071 0.292893C15.8946 0.48043 16 0.734784 16 1V5H19C19.2652 5 19.5196 5.10536 19.7071 5.29289C19.8946 5.48043 20 5.73478 20 6V16C20 16.2652 19.8946 16.5196 19.7071 16.7071C19.5196 16.8946 19.2652 17 19 17H16V19C16 19.2652 15.8946 19.5196 15.7071 19.7071C15.5196 19.8946 15.2652 20 15 20H5C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V17ZM4 15V14C4 13.7348 4.10536 13.4804 4.29289 13.2929C4.48043 13.1054 4.73478 13 5 13H15C15.2652 13 15.5196 13.1054 15.7071 13.2929C15.8946 13.4804 16 13.7348 16 14V15H18V7H2V15H4ZM6 2V5H14V2H6ZM6 15V18H14V15H6ZM3 8H6V10H3V8Z" fill="#939393"></path>
+                      </svg><span class="p-s-link__text">Распечатать</span>
+                    </div>
+                  </li>
+                  <li class="book-actions__item">
+                    <div class="p-s-link">
+                      <svg class="p-s-link__svg" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 12.25H8.5C6.8596 12.2494 5.25023 12.6971 3.84588 13.5449C2.44152 14.3927 1.2956 15.6082 0.532001 17.06C0.510538 16.7905 0.499863 16.5203 0.500001 16.25C0.500001 10.727 4.977 6.25 10.5 6.25V0.75L21 9.25L10.5 17.75V12.25ZM8.5 10.25H12.5V13.558L17.821 9.25L12.5 4.942V8.25H10.5C9.35025 8.24871 8.21379 8.49582 7.16839 8.97442C6.12299 9.45302 5.19332 10.1518 4.443 11.023C5.73432 10.5112 7.11097 10.2489 8.5 10.25Z" fill="#939393"></path>
+                      </svg><span class="p-s-link__text">Поделиться</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="advice-2" id="expert">
+                <div class="formPage noHeight advice-2-form">
+                  <form>
+                    <h2 class="title second-heading"> Обратная связь</h2>
+                    <div class="form-text">«Авторский коллектив ООО «Капитал МС» в лице кандидата психологических наук, доцента В.А. Чулковой, кандидата психологических наук, доцента Е.В. <span>8 800 555 55 55 </span>Пестеряевой подготовил <span>8 800-555-55-55 </span>пособие для страховых представителей системы обязательного медицинского страхования(ОМС)».</div>
+                    <div class="doublerow">
+                      <label>
+                        <p class="title">Ваш контактный телефон</p>
+                        <input type="tel" placeholder="+7 (___) ___ __ __">
+                      </label>
+                      <label>
+                        <p class="title">E-mail&nbsp;<span class="advice-2__explanation"> </span></p>
+                        <input type="email" placeholder="на который мы отправим ответ">
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="fullwidth">
+                        <label class="textarea">
+                          <p class="title">Текст письма</p>
+                          <textarea placeholder="Вопрос / комментарий / пожелание"></textarea>
+                        </label>
+                      </div>
+                    </div>
+                    <label class="custom-checkbox">
+                      <input type="checkbox" required hidden><i class="checked icofont-check"></i>
+                      <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
+                    </label><a class="btn btn-red advice-2-btn" href="#">Задать вопрос</a>
+                  </form>
+                </div>
+              </div>
+              <section class="page-title">
+                <h2>Защитите свои права и сохраните здоровье!</h2>
+              </section>
+              <div class="cards">
+                <div class="card">
+                  <div class="desc">Если у вас возникли проблемы с получением своевременной и качественной медицинской помощи — единственный верный путь — обратиться к страховому представителю! В любой непонятной ситуации, звоните страховому представителю — своевременное обращение может спасти вас не только от неправомерных финансовых расходов при получении медицинской помощи, но и может спасти вашу жизнь!</div><a class="standart-button with" href="#">Узнать подробнее</a>
+                </div>
+              </div>
+              <div class="flex-btn withmrg"><a class="btn btn-transparent back" href="#">Назад</a></div>
+              <section class="page-title">
+                <h2>Другие истории застрахованных</h2>
+              </section>
+              <div class="content__item">
+                <div class="title">Подзаголовок</div>
+                <ul class="content v2">
+                  <li class="content__item"><a class="withoutpseudo" href="#">Почему я получаю СМС (e-mail, звонок) о профосмотре (диспансеризации) от страховой компании?</a></li>
+                  <li class="content__item"><a class="withoutpseudo" href="#">Кто подлежит профосмотрам (диспансеризации)?</a></li>
+                  <li class="content__item"><a class="withoutpseudo" href="#">Если я не пойду на профосмотр (диспансеризацию) – будут ли какие-нибудь последствия для меня?</a></li>
+                  <li class="content__item"><a class="withoutpseudo" href="#">Почему я получаю СМС (e-mail, звонок) о профосмотре (диспансеризации) от страховой компании?</a></li>
+                  <li class="content__item"><a class="withoutpseudo" href="#">Кто подлежит профосмотрам (диспансеризации)?</a></li>
+                  <li class="content__item"><a class="withoutpseudo" href="#">Если я не пойду на профосмотр (диспансеризацию) – будут ли какие-нибудь последствия для меня?</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

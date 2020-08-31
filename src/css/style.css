@@ -5594,6 +5594,16 @@ form.search > :last-child {
 .selects > div {
   width: 30%;
 }
+.otkaz {
+  margin-bottom: 32px;
+}
+.otkaz .title {
+  font-size: 20px;
+}
+.otkaz .desc {
+  font-size: 14px;
+  color: #939393;
+}
 .activity-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5838,6 +5848,54 @@ form.search > :last-child {
   display: -ms-flexbox;
   display: flex;
 }
+.activity-wrap .block {
+  padding: 32px 0;
+  border-bottom: 1px solid #c4c4c4;
+  width: 100%;
+}
+.activity-wrap .block:first-child {
+  border-top: 1px solid #c4c4c4;
+}
+.activity-wrap .block .title-block {
+  font-size: 20px;
+  position: relative;
+  padding-right: 50px;
+}
+.activity-wrap .block .activity:last-child {
+  margin-bottom: 0;
+}
+.activity-wrap .block .cross {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.activity-wrap .block .action-wrap {
+  display: none;
+}
+.activity-wrap .block.opened .title-block {
+  margin-bottom: 32px;
+}
+.activity-wrap .block.opened .action-wrap {
+  display: block;
+}
+.activity-wrap .block.opened .cross {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.activity-wrap.withborder {
+  border: 1px solid #c4c4c4;
+  padding: 1rem 4rem;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+}
+.activity-wrap.withborder .block:first-child {
+  border-top: none;
+}
+.activity-wrap.withborder .block:last-child {
+  border-bottom: none;
+}
 .showmemore {
   width: 280px;
   cursor: pointer;
@@ -5856,54 +5914,6 @@ form.search > :last-child {
 }
 .showmemore.showoff {
   display: none;
-}
-.showmemore .block {
-  padding: 32px 0;
-  border-bottom: 1px solid #c4c4c4;
-  width: 100%;
-}
-.showmemore .block:first-child {
-  border-top: 1px solid #c4c4c4;
-}
-.showmemore .block .title-block {
-  font-size: 20px;
-  position: relative;
-  padding-right: 50px;
-}
-.showmemore .block .activity:last-child {
-  margin-bottom: 0;
-}
-.showmemore .block .cross {
-  position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-}
-.showmemore .block .action-wrap {
-  display: none;
-}
-.showmemore .block.opened .title-block {
-  margin-bottom: 32px;
-}
-.showmemore .block.opened .action-wrap {
-  display: block;
-}
-.showmemore .block.opened .cross {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.showmemore.withborder {
-  border: 1px solid #c4c4c4;
-  padding: 1rem 4rem;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-}
-.showmemore.withborder .block:first-child {
-  border-top: none;
-}
-.showmemore.withborder .block:last-child {
-  border-bottom: none;
 }
 .fullwidth {
   width: 100%;
@@ -5974,6 +5984,18 @@ form.search > :last-child {
   height: initial;
   margin-bottom: 4rem;
 }
+.form-text {
+  font-size: 20px;
+  line-height: 28px;
+  padding: 30px 0;
+}
+.form-text span {
+  font-size: 20px;
+  color: #b8181c;
+}
+.withoutpseudo:before {
+  display: none !important;
+}
 .slider-thanks {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5999,6 +6021,9 @@ form.search > :last-child {
   -webkit-border-radius: 8px;
           border-radius: 8px;
 }
+.slider-thanks .image.horiz {
+  height: 159px;
+}
 .redbutton {
   font-size: 16px;
   background: #b8181c;
@@ -6011,6 +6036,53 @@ form.search > :last-child {
 }
 .redbutton:hover {
   color: #fff;
+}
+.flex-btn a {
+  width: 122px;
+  display: inline-block;
+}
+.singledoc p {
+  font-size: 14px;
+  color: #939393;
+}
+.expert {
+  border: 1px solid #c4c4c4;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+.expert .title {
+  font-size: 32px;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 16px;
+  margin-bottom: 26px;
+}
+.expert .text {
+  font-size: 20px;
+  line-height: 28px;
+}
+.expert .aq {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+.expert .aq img {
+  margin-right: 16px;
+}
+.expert .aq .title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.expert .aq .desc {
+  font-size: 16px;
+  color: #939393;
 }
 .slider-root {
   position: relative !important;
