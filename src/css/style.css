@@ -116,6 +116,9 @@ h3 {
 h3.title br {
   display: none;
 }
+h3.sectionTitle {
+  line-height: 4rem;
+}
 h4 {
   font-size: 3rem;
   letter-spacing: -0.08rem;
@@ -188,6 +191,7 @@ section {
 }
 section.section-v2 {
   margin-bottom: 0;
+  padding-bottom: 2.2rem;
 }
 input[type='color']:focus,
 input[type='date']:focus,
