@@ -7288,7 +7288,9 @@ form.search > :last-child {
   visibility: visible;
 }
 @media screen and (max-width: 980px) {
-  .slider-root.only-content,
+  .slider-root.only-content {
+    overflow-x: inherit;
+  }
   .slider-root .slider-arrows-pos {
     top: 0px;
     left: 0px;
@@ -18790,6 +18792,158 @@ footer ul ul {
     height: 3.2rem;
     background-size: 2.4rem 2.4rem;
   }
+}
+.sharePopUp {
+  position: fixed;
+  background-color: #fff;
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 2.4rem 4.2rem 3.5rem;
+  max-width: 40rem;
+  width: 90%;
+}
+.sharePopUp ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0;
+  margin-bottom: 0;
+}
+.sharePopUp ul > :nth-child(1) {
+  background-color: #4c75a3;
+}
+.sharePopUp ul > :nth-child(1):hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #4c75a3;
+          box-shadow: 0px 0px 5px 0px #4c75a3;
+}
+.sharePopUp ul > :nth-child(2) {
+  background-color: #3b5998;
+}
+.sharePopUp ul > :nth-child(2):hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #3b5998;
+          box-shadow: 0px 0px 5px 0px #3b5998;
+}
+.sharePopUp ul > :nth-child(3) {
+  background-color: #ed812b;
+}
+.sharePopUp ul > :nth-child(3):hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #ed812b;
+          box-shadow: 0px 0px 5px 0px #ed812b;
+}
+.sharePopUp ul > :nth-child(4) {
+  background-color: #168de2;
+  background-image: url("../img/static/mailru.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+}
+.sharePopUp ul > :nth-child(4):hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #168de2;
+          box-shadow: 0px 0px 5px 0px #168de2;
+}
+.sharePopUp ul > :nth-child(5) {
+  background-color: #00acee;
+}
+.sharePopUp ul > :nth-child(5):hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #00acee;
+          box-shadow: 0px 0px 5px 0px #00acee;
+}
+.sharePopUp ul > :nth-child(6) {
+  background-color: #d62976;
+}
+.sharePopUp ul > :nth-child(6):hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #d62976;
+          box-shadow: 0px 0px 5px 0px #d62976;
+}
+.sharePopUp ul li {
+  width: 4rem;
+  height: 4rem;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sharePopUp ul li a {
+  line-height: 1;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+.sharePopUp ul li a:hover {
+  opacity: 1;
+}
+.sharePopUp label {
+  margin-bottom: 0;
+}
+.sharePopUp label span {
+  color: #939393;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.sharePopUp input[type="text"] {
+  margin-bottom: 0;
+  height: 5.6rem;
+  -webkit-border-radius: 0.4rem;
+          border-radius: 0.4rem;
+  border: 1px solid #939393;
+  color: #939393;
+  font-size: 1.63rem;
+  line-height: 2rem;
+  letter-spacing: 12;
+}
+.sharePopUp input[type="submit"] {
+  text-transform: none;
+  margin-top: 2.4rem;
+  margin-bottom: 0;
+}
+.fancybox-close-small {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.fancybox-close-small:hover {
+  background-color: transparent;
+}
+.fancybox-close-small:hover svg path {
+  fill: #b8181c;
 }
 @media screen and (max-width: 760px) {
   .row .column {

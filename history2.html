@@ -35,7 +35,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="src/js/vue-launcher.js"></script>
   </head>
-  <body>
+  <body data-preloader="">
     <div class="allContent">
       <header>
         <div class="top-container">
@@ -493,13 +493,10 @@
                       </svg><span class="p-s-link__text">Распечатать</span>
                     </div>
                   </li>
-                  <li class="book-actions__item">
-                    <div class="p-s-link">
+                  <li class="book-actions__item"><a class="p-s-link" data-fancybox="" data-src="#sharePopUp" href="javascript:;" data-touch="false">
                       <svg class="p-s-link__svg" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.5 12.25H8.5C6.8596 12.2494 5.25023 12.6971 3.84588 13.5449C2.44152 14.3927 1.2956 15.6082 0.532001 17.06C0.510538 16.7905 0.499863 16.5203 0.500001 16.25C0.500001 10.727 4.977 6.25 10.5 6.25V0.75L21 9.25L10.5 17.75V12.25ZM8.5 10.25H12.5V13.558L17.821 9.25L12.5 4.942V8.25H10.5C9.35025 8.24871 8.21379 8.49582 7.16839 8.97442C6.12299 9.45302 5.19332 10.1518 4.443 11.023C5.73432 10.5112 7.11097 10.2489 8.5 10.25Z" fill="#939393"></path>
-                      </svg><span class="p-s-link__text">Поделиться</span>
-                    </div>
-                  </li>
+                      </svg><span class="p-s-link__text">Поделиться</span></a></li>
                 </ul>
               </div>
               <div class="advice-2" id="expert">
@@ -557,6 +554,23 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="sharePopUp" id="sharePopUp">
+        <div class="container">
+          <h3 class="title">Поделиться</h3>
+          <ul class="links">
+            <li><a class="icofont-vk"></a></li>
+            <li><a class="icofont-facebook"></a></li>
+            <li><a class="icofont-odnoklassniki"></a></li>
+            <li><a class="mailru"></a></li>
+            <li><a class="icofont-twitter"></a></li>
+            <li><a class="icofont-instagram"></a></li>
+          </ul>
+          <label><span>Ссылка на статью</span>
+            <input type="text" readonly value="www.kapmed.ru/SCYRFNV~586">
+          </label>
+          <input class="btn btn-red" type="submit" value="Копировать ссылку">
         </div>
       </div>
     </div>
