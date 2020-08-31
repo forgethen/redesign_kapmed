@@ -11,6 +11,11 @@ const openSupportLevel = (elm) => {
   elm.closest('.support-level').classList.toggle('closed')
 }
 
+const showMeMore = (elm) => {
+  // this.classList.toggle('showoff')
+  elm.closest('.activity-wrap').classList.toggle('opened')
+}
+
 const switchSearch = () => {
   let body = document.querySelector('body')
   body.classList.toggle('with-search')

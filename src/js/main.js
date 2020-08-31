@@ -1,6 +1,8 @@
-'use strict';
+/** @format */
 
-$(document).ready(function() {
+"use strict";
+
+$(document).ready(function () {
   var footer = $("#footer").outerHeight();
 
   $(".content_list ul:first-child").addClass("active");
@@ -221,15 +223,15 @@ $(document).ready(function() {
     theme: "CustomSelectOptionsThm",
   });
 
-  $('.dropdown ul').each(function() {
-    $(this).addClass('active');
-    $('.dropdown ul').addClass('show')
-    var th1 = $('.dropdown ul').find('li:eq(0)').height();
-    var th2 = $('.dropdown ul').find('li:eq(1)').height();
-    $(this).css('max-height', th1 + th2 + 'px');
-    $(this).removeClass('active');
-    $('.dropdown ul').removeClass('show');
-  })
+  $(".dropdown ul").each(function () {
+    $(this).addClass("active");
+    $(".dropdown ul").addClass("show");
+    var th1 = $(".dropdown ul").find("li:eq(0)").height();
+    var th2 = $(".dropdown ul").find("li:eq(1)").height();
+    $(this).css("max-height", th1 + th2 + "px");
+    $(this).removeClass("active");
+    $(".dropdown ul").removeClass("show");
+  });
 
   $(".dropdown ul").mCustomScrollbar({
     theme: "DropdownThm",
@@ -721,12 +723,14 @@ $(document).ready(function() {
   });
 
   // события по нажатию на .mark-block__icon на странице patient-school
-  $(".cool").on("click", function(){
+  $(".cool").on("click", function () {
     $(this).toggleClass("cool-click");
+    $(".bad").removeClass("bad-click");
   });
 
   $(".bad").on("click", function () {
     $(this).toggleClass("bad-click");
+    $(".cool").removeClass("cool-click");
   });
 });
 
