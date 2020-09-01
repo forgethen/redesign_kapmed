@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Site title</title>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Site title">
+    <meta name="description" content="Site description">
+    <meta property="og:title" content="Site title">
+    <meta property="og:description" content="Site description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Site URL">
+    <meta property="og:image" content="LOGO/IMG">
+    <link rel="icon" type="image/png" href="src/img/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/Helvetica/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/remixicon/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="src/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="src/css/milligram.responsive-grid.css">
+    <link rel="stylesheet" type="text/css" href="src/css/inputmask.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/vanilla.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/slick.min.js"></script>
+    <script src="src/js/jquery.inputmask.bundle.js"></script>
+    <script src="src/js/jquery.mCustomScrollbar.js"></script>
+    <script src="src/js/jquery.fancybox.min.js"></script>
+    <script src="src/js/bodyScrollLock.min.js"></script>
+    <script src="src/js/jquery.hideseek.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="src/js/vue-launcher.js"></script>
+  </head>
+  <body data-preloader="">
+    <div class="formPage">
+      <div class="formPage__top">
+        <div class="container"><a class="btn ri-arrow-left-line" href="#" onclick="javascript:history.back(); return false;"></a>
+          <div class="wrapper"><a class="logo" href="/"><img src="src/img/static/logo.svg" alt="logo"></a></div>
+        </div>
+      </div>
+      <div class="formPage__content">
+        <div class="wrapper">
+          <h2 class="title">Оформление заявления на полис ОМС</h2>
+          <div class="description v2">
+            <p>Заполните форму ниже, если у вас возник вопрос справочно-консультационного характера. Также вы можете самостоятельно обратиться в круглосуточный контакт-центр по телефону:&nbsp;<a class="red" href="tel:8 800 100 81 02">8&nbsp;800&nbsp;100&nbsp;81&nbsp;02</a>&nbsp;(Звонок по России бесплатный)</p>
+          </div>
+          <div class="note v2">
+            <p class="title"><i class="ri-information-fill"></i>&nbsp;Обратите внимание:</p>
+            <p>Если Вы считаете, что были нарушены Ваши права на получение бесплатной и качественной медицинской помощи по системе ОМС — выберите форму Заявить о нарушении прав&nbsp;<a class="red" href="#">Заявить о нарушении прав</a></p>
+          </div>
+          <form id="form1">
+            <h6 class="title">Укажите ваши контактные данные</h6>
+            <div class="doublerow">
+              <label>
+                <p class="title">Ваше ФИО&nbsp;<span class="red">*</span></p>
+                <input type="text" placeholder="Фамилия Имя Отчество">
+              </label>
+              <div class="dropdown">
+                <label>
+                  <p class="title">Регион проживания&nbsp;<span class="red">*</span></p>
+                  <div>
+                    <input type="text" value="п. Котельский, Кингисеппский район, Ленинградская область" readonly><i class="ri-arrow-down-s-fill"></i>
+                  </div>
+                </label>
+                <ul class="addreses show">
+                  <li>САНКТ-ПЕТЕРБУРГ Г,БОЛЬШАЯ ЗЕЛЕНИНА УЛ, дом (владение) 29, корпус (строение) Б, квартира (офис) 3Н</li>
+                  <li>САНКТ-ПЕТЕРБУРГ Г,НОВОЧЕРКАССКИЙ ПР-КТ, дом (владение) 47, корпус (строение) 1, квартира (офис) 28/1Н</li>
+                  <li>САНКТ-ПЕТЕРБУРГ Г,МОСКОВСКИЙ ПР-КТ, дом (владение) 183-185, корпус (строение) Б , квартира (офис) 170-Н</li>
+                </ul>
+              </div>
+            </div>
+            <div class="doublerow">
+              <label>
+                <p class="title">Ваш контактный телефон&nbsp;<span class="red">*</span></p>
+                <input type="tel" placeholder="+ 7 (– – –)  – – –  – –  – –">
+              </label>
+              <label>
+                <p class="title">E-mail&nbsp;<span class="red">*</span></p>
+                <input type="email" placeholder="info@mail.com">
+              </label>
+            </div>
+            <label class="testarea">
+              <p class="title">Ваш вопрос&nbsp;<span class="red">*</span></p>
+              <textarea class="v2" placeholder="Опишите суть вашего вопроса"></textarea>
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" required hidden><i class="checked ri-check-fill"></i>
+              <p>Я даю согласие на обработку своих&nbsp;<a href="#">персональных данных</a>&nbsp;в соответствии со статьей 9 Федерального закона от 27 июля 2006 г. N 152-ФЗ «О персональных данных»</p>
+            </label>
+          </form>
+        </div>
+      </div>
+      <div class="formPage__finish">
+        <div class="wrapper">
+          <p>Заявка&nbsp;<span class="number">7549</span>&nbsp;на оформление полиса ОМС принята</p>
+          <div class="msg">
+            <h6 class="title">В ближайшее время с вами свяжеться ваш страховой представитель</h6><a class="btn btn-red" href="/">Перейти на главную</a>
+          </div>
+        </div>
+      </div>
+      <div class="mapPopUp" id="mapPopUp">
+        <div class="container">
+          <section class="page-title">
+            <div class="container custom-select">
+              <h5 class="title">Укажите офис, в котором вы заберете свой полис&nbsp;<a class="red">в Санкт-Петербурге</a></h5>
+            </div>
+            <p class="desc">Выберите медицинскую организацию, в которой хотите пройти диспансеризацию.</p>
+          </section>
+          <div class="tags"><a class="tag v2 active" href="javascript:;"><span>Забрать полис ОМС</span></a><a class="tag v2" href="javascript:;"><span>Оформить полис ОМС</span></a><a class="tag v2" href="javascript:;"><span>Помощь</span></a>
+          </div>
+          <div class="mapSection">
+            <div class="list">
+              <div class="swipeTopDown"></div>
+              <div class="mapList">
+                <ul>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afc115595a68e0606ed953d5c1df60429f07443dcd20c032897a862f2a5062278&amp;amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="formPage__bottom">
+        <div class="container"><a class="help" href="#">Нужна помощь?</a><a class="btn btn-transparent back" href="#">Назад</a><a class="btn btn-red" href="#">Отправить</a></div>
+      </div>
+    </div>
+  </body>
+</html>

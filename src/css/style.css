@@ -2521,6 +2521,17 @@ a.red-link:hover {
   background-color: #fffbef;
   padding: 1.6rem 2rem;
 }
+.formPage .description.v2 {
+  border: none;
+  background-color: transparent;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  margin: 1.2rem 0;
+  padding: 0;
+}
+.formPage .description.v2 > :last-child {
+  margin-bottom: 0;
+}
 .formPage .description p {
   color: #000;
   font-size: 1.6rem;
@@ -3008,6 +3019,9 @@ a.red-link:hover {
   resize: none;
   height: 10.8rem;
   padding: 0.8rem 1.6rem;
+}
+.formPage form label textarea.v2 {
+  height: 16.8rem;
 }
 .formPage form label.textarea {
   line-height: 0;
