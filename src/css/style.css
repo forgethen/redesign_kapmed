@@ -7313,6 +7313,42 @@ form.search > :last-child {
   transition: 0.4s;
   visibility: hidden;
 }
+.search-wrapper .search-input {
+  position: relative;
+}
+.search-wrapper .search-input .button-search {
+  height: 64px;
+  background: #b8181c;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-border-radius: 0px 4px 4px 0;
+          border-radius: 0px 4px 4px 0;
+}
+.search-wrapper .search-input .button-search span {
+  font-size: 16px;
+}
+.search-wrapper .search-input .button-search span.arr {
+  font-size: 26px;
+  margin-top: -5px;
+}
+.search-wrapper .search-input .button-search:hover {
+  background: #910009;
+}
 .search-wrapper .title {
   font-size: 48px;
   margin-bottom: 40px;
@@ -7370,6 +7406,19 @@ form.search > :last-child {
 @media screen and (max-width: 980px) {
   .search-wrapper .title {
     font-size: 30px;
+  }
+  .search-wrapper .cross {
+    top: 0px;
+    right: 10px;
+  }
+  .search-wrapper .search-input .button-search {
+    padding: 0 16px;
+  }
+  .search-wrapper .search-input .button-search span {
+    display: none;
+  }
+  .search-wrapper .search-input .button-search span.arr {
+    display: block;
   }
 }
 .with-search {
