@@ -273,9 +273,16 @@ $(document).ready(function () {
     $(this).parents(".sheduleBlock").find(".shedule__list").toggleClass("show");
   });
 
-  $("footer .partition")
-    .find("li:eq(0)")
-    .append('<i class="ri-arrow-down-s-line"></i>');
+  $("footer .partition").each(function() {
+    var i = $(this).find('li').length;
+    if (i > 1) {
+      $(this).find("li:eq(0)").append('<i class="ri-arrow-down-s-line"></i>');
+    } else {
+      return false;
+    }
+  })
+
+
 
   $("footer .partition")
     .find("li:eq(0)")
