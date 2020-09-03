@@ -177,6 +177,7 @@ span.red {
 }
 a {
   color: #000;
+  letter-spacing: 0;
   cursor: pointer;
 }
 a.red {
@@ -519,6 +520,63 @@ select:hover {
           animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+@media screen and (max-width: 840px) {
+  .preloader:after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background: #c4c4c4;
+    top: -webkit-calc(50% + 80px);
+    top: calc(50% + 80px);
+    z-index: 9;
+    left: -webkit-calc(50% - 100px);
+    left: calc(50% - 100px);
+  }
+  .preloader:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background: #193c6d;
+    top: -webkit-calc(50% + 80px);
+    top: calc(50% + 80px);
+    z-index: 10;
+    left: -webkit-calc(50% - 100px);
+    left: calc(50% - 100px);
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-name: pl-load;
+            animation-name: pl-load;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .preloader .name {
+    display: none;
+  }
+  .preloader .red,
+  .preloader .blue {
+    -webkit-animation: none;
+            animation: none;
+    opacity: 1;
+    left: -webkit-calc(50% - 20px);
+    left: calc(50% - 20px);
+  }
+  .preloader .red {
+    -webkit-transform: translate(-30%);
+        -ms-transform: translate(-30%);
+            transform: translate(-30%);
+    margin-top: -30px;
+  }
+  .preloader .blue {
+    -webkit-transform: translate(30%);
+        -ms-transform: translate(30%);
+            transform: translate(30%);
+    margin-top: -30px;
+  }
 }
 .top-container > :first-child {
   background-color: #193c6d;
@@ -6280,7 +6338,6 @@ form.search > :last-child {
   position: relative !important;
 }
 .slider-root.withmrg.v3 {
-  padding-top: 0;
   margin-bottom: 4rem;
 }
 .slider-root.only-content {
@@ -19522,6 +19579,22 @@ footer ul ul {
   }
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes pl-load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
+  }
+}
+@keyframes pl-load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
   }
 }
 
