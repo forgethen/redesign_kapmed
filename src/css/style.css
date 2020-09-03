@@ -300,7 +300,7 @@ select:hover {
 .mCSB_scrollTools .mCSB_draggerRail {
   background-color: transparent;
 }
-.mCSB_scrollTools .mCSB_dragger {
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: #b8181c;
 }
 .container {
@@ -4320,33 +4320,28 @@ form.search > :last-child {
   height: 4rem;
   padding: 0 1.6rem;
 }
-.mapSection .list__item:hover {
-  -webkit-box-shadow: inset 0px 0px 5px 0px #000;
-          box-shadow: inset 0px 0px 5px 0px #000;
+.mapSection .list.select {
+  border: 1px solid #b8181c;
 }
-.mapSection .list__item.select {
-  -webkit-box-shadow: inset 0px 0px 5px 0px #b8181c;
-          box-shadow: inset 0px 0px 5px 0px #b8181c;
-}
-.mapSection .list__item.select .btn {
+.mapSection .list.select .btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-.mapSection .list__item .location {
+.mapSection .list .location {
   padding-left: 3.2rem;
   position: relative;
   margin-bottom: 1.2rem;
 }
-.mapSection .list__item .location h6 {
+.mapSection .list .location h6 {
   color: #000;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
-.mapSection .list__item .location > :first-child {
+.mapSection .list .location > :first-child {
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -4368,13 +4363,13 @@ form.search > :last-child {
   color: #939393;
   opacity: 0.6;
 }
-.mapSection .list.v2__item > :first-child {
+.mapSection.v2__item > :first-child {
   font-size: 12rem;
   line-height: 2.8rem;
   color: #3a3a3a;
   margin-bottom: 1.6rem;
 }
-.mapSection .map {
+.map {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
@@ -4383,7 +4378,7 @@ form.search > :last-child {
   -webkit-border-radius: 0.8rem;
           border-radius: 0.8rem;
 }
-.mapSection .map:before {
+.map:before {
   background: url("../img/static/mapImg.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -4394,8 +4389,8 @@ form.search > :last-child {
   width: 100%;
   padding-top: 75%;
 }
-.mapSection .map iframe,
-.mapSection .map .map__custom {
+.map iframe,
+.map .map__custom {
   position: absolute;
   top: 50%;
   left: 50%;
