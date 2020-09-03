@@ -311,11 +311,11 @@ $(document).ready(function () {
     //   $('.headerMenu li').removeClass('active');
     // }
 
-    if (!$(e.target).closest(".burger").length) {
-      $(".headerMenu").removeClass("show");
-      $(".mobileBottom").removeClass("show");
-      $(".burger").removeClass("active");
-    }
+    // if (!$(e.target).closest(".burger").length) {
+    //   $(".headerMenu").removeClass("show");
+    //   $(".mobileBottom").removeClass("show");
+    //   $(".burger").removeClass("active");
+    // }
 
     if (!$(e.target).closest(".fixbtn .open").length) {
       $(".fixbtn").removeClass("active");
@@ -329,6 +329,7 @@ $(document).ready(function () {
     $(this).toggleClass("active");
     $(".headerMenu").toggleClass("show");
     $(".mobileBottom").toggleClass("show");
+    // $("body").toggleClass("menuOpened");
     // if ($(window).width() >= 640) {
     //   $('.headerMenu li :eq(0)').click();
     // }

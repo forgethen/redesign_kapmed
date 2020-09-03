@@ -22,6 +22,9 @@ body.widgetOpened:before {
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
+body.menuOpened {
+  overflow-y: hidden;
+}
 body:before {
   content: '';
   position: fixed;
@@ -216,6 +219,12 @@ span {
 }
 span.red {
   color: #b8181c;
+}
+span.published {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 1.2rem;
+  color: #666;
 }
 a {
   color: #000;
@@ -8244,7 +8253,7 @@ form.search > :last-child {
   .consultBlock > :first-child {
     margin-bottom: 2rem;
   }
-  a {
+  .consultBlock a {
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 4.8rem;
