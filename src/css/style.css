@@ -297,6 +297,12 @@ select:hover {
   -webkit-box-shadow: 0px 0px 0.5rem 0px #939393;
           box-shadow: 0px 0px 0.5rem 0px #939393;
 }
+.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+.mCSB_scrollTools .mCSB_dragger {
+  background-color: #b8181c;
+}
 .container {
   max-width: 115.2rem;
   padding: 0;
@@ -2935,6 +2941,7 @@ a.red-link:hover {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3.2rem;
+  cursor: pointer;
 }
 .formPage .custom-checkbox.v2 p {
   padding-top: 0;
@@ -3145,7 +3152,7 @@ a.red-link:hover {
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
-  padding: 0 1.6rem;
+  padding: 1.6rem;
   -webkit-border-radius: 0.4rem;
           border-radius: 0.4rem;
   border: 1px solid #939393;
@@ -6931,6 +6938,9 @@ form.search > :last-child {
 .press-wrap .press.fullwidth.v2 {
   padding: 3.2rem;
 }
+.press-wrap .press.fullwidth.press-gone .width100 > :last-child {
+  margin-bottom: 0;
+}
 .press-wrap .press.fullwidth .img-wrap {
   margin-right: 20px;
   width: 176px;
@@ -6979,6 +6989,9 @@ form.search > :last-child {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.press-wrap .press.fullwidth .meta {
+  margin-top: 12px;
 }
 .press-wrap .press.noimg {
   width: 100%;
@@ -7059,6 +7072,11 @@ form.search > :last-child {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+}
+.pagination a.disabled {
+  color: #939393;
+  cursor: default;
+  pointer-events: none;
 }
 .pagination a.active {
   background: #f5f5f5;
@@ -7790,6 +7808,26 @@ form.search > :last-child {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
+  .press-wrap .press.fullwidth.events-press .img-wrap {
+    margin-bottom: 0;
+    -webkit-box-ordinal-group: -1;
+    -webkit-order: -2;
+        -ms-flex-order: -2;
+            order: -2;
+  }
+  .press-wrap .press.fullwidth.events-press .meta {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .press-wrap .press.fullwidth.press-gone .width100 > :last-child {
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+  .press-wrap .press.fullwidth.press-gone .width100 > :first-child {
+    margin-bottom: 0;
+  }
   .press-wrap .press.fullwidth .img-wrap:before {
     height: auto;
     padding-top: 56.26%;
@@ -7943,6 +7981,33 @@ form.search > :last-child {
   }
   .press-wrap .press {
     width: 100%;
+  }
+  .pagination {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4.8rem;
+  }
+  .pagination a {
+    display: none;
+  }
+  .pagination > :first-child,
+  .pagination > :last-child,
+  .pagination .active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
   .pagination.v2 {
     -webkit-box-orient: vertical;
@@ -8470,6 +8535,8 @@ form.search > :last-child {
 }
 .tags .tag span {
   text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 .tags .tag:hover {
   -webkit-box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
@@ -10153,6 +10220,7 @@ footer ul ul {
 #write-director .text {
   font-size: 20px;
   line-height: 28px;
+  color: #3a3a3a;
 }
 #write-director p {
   font-size: 16px;
@@ -10296,6 +10364,28 @@ footer ul ul {
   }
 }
 @media screen and (max-width: 680px) {
+  .company-directors__item {
+    max-width: 100%;
+  }
+  .filials {
+    padding: 2.4rem;
+  }
+  #write-director h6 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+  #write-director .text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  #write-director .custom-checkbox {
+    margin: 2.4rem 0;
+  }
+  #write-director .btn {
+    width: 100%;
+  }
   .team-section .second-heading {
     padding-bottom: 0 !important;
     margin-bottom: 32px;
@@ -11538,14 +11628,15 @@ footer ul ul {
   }
 }
 @media screen and (max-width: 680px) {
+  .events-block-list .second-heading {
+    margin-bottom: 2.4rem;
+  }
+  .events-block .gray-text a {
+    font-weight: normal !important;
+  }
   .team-section .second-heading {
     padding-bottom: 0 !important;
     margin-bottom: 32px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .events-block .gray-text a {
-    font-weight: normal !important;
   }
 }
 .events-heading {
@@ -16933,7 +17024,7 @@ footer ul ul {
           border-radius: 0.4rem;
   border: 0.1rem solid #c4c4c4;
   background-color: #fff;
-  padding: 0 2.4rem;
+  padding: 1.6rem 2.4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
