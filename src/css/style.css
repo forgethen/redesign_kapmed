@@ -19315,6 +19315,7 @@ footer ul ul {
   margin-bottom: 0;
 }
 .sharePopUp ul > :nth-child(1) {
+  background-image: url("../img/static/vk-icon.svg");
   background-color: #4c75a3;
 }
 .sharePopUp ul > :nth-child(1):hover {
@@ -19322,6 +19323,7 @@ footer ul ul {
           box-shadow: 0px 0px 5px 0px #4c75a3;
 }
 .sharePopUp ul > :nth-child(2) {
+  background-image: url("../img/static/facebook-icon.svg");
   background-color: #3b5998;
 }
 .sharePopUp ul > :nth-child(2):hover {
@@ -19329,6 +19331,7 @@ footer ul ul {
           box-shadow: 0px 0px 5px 0px #3b5998;
 }
 .sharePopUp ul > :nth-child(3) {
+  background-image: url("../img/static/odnoklassniki-icon.svg");
   background-color: #ed812b;
 }
 .sharePopUp ul > :nth-child(3):hover {
@@ -19338,15 +19341,13 @@ footer ul ul {
 .sharePopUp ul > :nth-child(4) {
   background-color: #168de2;
   background-image: url("../img/static/mailru.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50%;
 }
 .sharePopUp ul > :nth-child(4):hover {
   -webkit-box-shadow: 0px 0px 5px 0px #168de2;
           box-shadow: 0px 0px 5px 0px #168de2;
 }
 .sharePopUp ul > :nth-child(5) {
+  background-image: url("../img/static/twitter-icon.svg");
   background-color: #00acee;
 }
 .sharePopUp ul > :nth-child(5):hover {
@@ -19354,6 +19355,7 @@ footer ul ul {
           box-shadow: 0px 0px 5px 0px #00acee;
 }
 .sharePopUp ul > :nth-child(6) {
+  background-image: url("../img/static/instagram-icon.svg");
   background-color: #d62976;
 }
 .sharePopUp ul > :nth-child(6):hover {
@@ -19377,6 +19379,9 @@ footer ul ul {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 2.4rem 2.4rem;
 }
 .sharePopUp ul li a {
   line-height: 1;
@@ -19396,6 +19401,9 @@ footer ul ul {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
+}
+.sharePopUp ul li a:before {
+  display: none;
 }
 .sharePopUp ul li a:hover {
   opacity: 1;
@@ -19442,6 +19450,9 @@ footer ul ul {
   .sharePopUp ul li {
     width: 3.2rem;
     height: 3.2rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 2rem 2rem;
   }
 }
 .fancybox-close-small {
