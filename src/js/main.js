@@ -546,6 +546,14 @@ $(document).ready(function () {
       '<div class="slick-prev prev"><i class="ri-arrow-left-s-line"></i></div>',
     nextArrow:
       '<div class="slick-next next"><i class="ri-arrow-right-s-line"></i></div>',
+      responsive: [
+        {
+          breakpoint: 981,
+          settings: {
+            dots: false,
+          },
+        },
+      ],
   });
 
   $(".custom-button, a.tag").click(function () {
