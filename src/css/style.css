@@ -458,11 +458,8 @@ select:hover {
   display: flex;
 }
 .play {
-  height: 4.8rem;
-  width: 4.8rem;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  font-size: 6.4rem;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   position: absolute;
   top: 50%;
@@ -482,15 +479,20 @@ select:hover {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #fff;
-  line-height: 1;
   z-index: 1;
-  -webkit-box-shadow: 0 0.4rem 2.4rem rgba(0,0,0,0.56);
-          box-shadow: 0 0.4rem 2.4rem rgba(0,0,0,0.56);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/static/playBTN.svg");
+}
+.play:before {
+  content: none;
 }
 .play:hover {
   color: #b8181c;
-  background-color: #fff;
+}
+.play:active {
+  opacity: 0.8;
 }
 .hide {
   display: none;
@@ -6298,7 +6300,7 @@ form.search > :last-child {
 .slider-slides.videos .image {
   height: 198px;
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   margin-bottom: 8px;
   -webkit-border-radius: 8px;
           border-radius: 8px;
@@ -6310,7 +6312,7 @@ form.search > :last-child {
 .slider-slides.thanks .image {
   height: 334px;
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   margin-bottom: 8px;
   -webkit-border-radius: 8px;
           border-radius: 8px;
@@ -7633,6 +7635,9 @@ form.search > :last-child {
   .slider-root .slider-arrows-pos {
     top: 0px;
     left: 0px;
+  }
+  .slider-root .slider-slides.videos .image {
+    height: 158px;
   }
   .otkaz {
     margin-bottom: 3rem;
@@ -17915,10 +17920,6 @@ footer ul ul {
   overflow: hidden;
   margin-bottom: 1.2rem;
 }
-.videoItem .videoPoster:hover .play {
-  color: #b8181c;
-  background-color: #fff;
-}
 .videoItem .videoPoster:before {
   content: '';
   position: relative;
@@ -17984,6 +17985,14 @@ footer ul ul {
   }
   .videoItem.slick-slide {
     margin: 0 2rem 2.4rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .videoItem .videoPoster {
+    height: 158px;
+  }
+  .videoItem .videoPoster:before {
+    content: none;
   }
 }
 .clientHistorySlider {
