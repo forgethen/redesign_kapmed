@@ -4221,10 +4221,10 @@ form.search > :last-child {
 }
 .mapPopUp .CloseFancybox,
 .mapPopUp button[data-fancybox-close] {
-  top: 4rem;
+  top: 2rem;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  right: 4rem;
+  right: 2rem;
   padding: 0;
   width: 2.4rem;
   height: 2.4rem;
