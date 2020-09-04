@@ -4247,6 +4247,10 @@ form.search > :last-child {
   border-top: 1px solid #e6e6e6;
   border-left: 1px solid #e6e6e6;
 }
+.mapPopUp .mapSection .list__item.select {
+  border: 1px solid #b8181c;
+  border-right: 0;
+}
 .mapPopUp .mapSection .map {
   -webkit-border-radius: 0;
           border-radius: 0;
@@ -4307,12 +4311,6 @@ form.search > :last-child {
 .mapSection .list ul {
   list-style-type: none;
   margin-bottom: 0;
-}
-.mapSection .list ul > :first-child {
-  border-top: 0;
-}
-.mapSection .list ul ul {
-  border: none;
 }
 .mapSection .list > :last-child {
   margin-bottom: 0;
@@ -4455,12 +4453,25 @@ form.search > :last-child {
           border-radius: 0.8rem 0 0 0.8rem;
   overflow: hidden;
 }
-.mapBlock .mapSection .list__item:hove {
+.mapBlock .mapSection .list__item.select {
+  border: 1px solid #b8181c;
+  border-right: 0;
+}
+.mapBlock .mapSection .list__item:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.mapBlock .mapSection .list__item:hove > :first-child {
+.mapBlock .mapSection .list__item:hover > :first-child {
   color: #b8181c;
+}
+.mapBlock .mapSection ul > :first-child {
+  border-top: 0;
+  -webkit-border-radius: 8px 0 0 0;
+          border-radius: 8px 0 0 0;
+}
+.mapBlock .mapSection ul > :last-child {
+  -webkit-border-radius: 0 0 0 8px;
+          border-radius: 0 0 0 8px;
 }
 .mapBlock .mapSection .map {
   border-top: 1px solid #e6e6e6;
@@ -4483,6 +4494,14 @@ form.search > :last-child {
 .mapBlock .sectionTitle i {
   position: absolute;
   line-height: inherit;
+}
+.mapPopUp .mapSection .list ul > :first-child {
+  -webkit-border-radius: none;
+          border-radius: none;
+}
+.mapPopUp .mapSection .list ul > :last-child {
+  -webkit-border-radius: none;
+          border-radius: none;
 }
 .mCS-MapListThm .mCSB_container {
   margin-right: 0;
