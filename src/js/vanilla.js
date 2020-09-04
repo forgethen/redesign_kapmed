@@ -34,7 +34,8 @@ const checkReady = () => {
       body.removeAttribute('data-preloader')
       let preloader = document.querySelector('.preloader')
       setTimeout(() => {
-        preloader.remove()
+        if (preloader !== null)
+          preloader.remove()
       }, 500);
     }
   }, 100);
@@ -58,4 +59,5 @@ const payload = () => {
 }
 
 document.addEventListener("DOMContentLoaded", payload)
+
 //# sourceMappingURL=vanilla.js.map
