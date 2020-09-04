@@ -399,14 +399,14 @@
                         <h3 class="sectionTitle__title">Отзывы о компании</h3>
                         <div class="sliderNav">
                           <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
-                          <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                          <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= slides.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="slider-wrap" :style="{width: `${content_container}px`}">
-                    <div class="slider-thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
-                      <div class="slide-thanks active reviewContainer" v-for="item, idx in thanks" :style="{width: `${width}px`}">
+                    <div class="slider-slides thank" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                      <div class="slide-slides active reviewContainer" v-for="item, idx in slides" :style="{width: `${width}px`}">
                         <div class="review">
                           <h5> <span class="name">{{item.name}}</span>,&nbsp;<span class="yars">{{item.year}}</span>&nbsp;лет</h5>
                           <p class="location">{{item.location}}</p>
@@ -422,7 +422,7 @@
                   <div class="reviewsSection__sliderBottom">
                     <div class="sliderNav">
                       <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
-                      <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                      <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= slides.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
                     </div>
                   </div>
                 </div>

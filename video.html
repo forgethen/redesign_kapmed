@@ -340,52 +340,83 @@
                 <h1>Профилактические медицинские осмотры и диспансеризация взрослого населения</h1>
               </section>
               <div class="gray-text">Небольшой лид с описанием. Пресс-центр. Новости. СМИ о нас. Яндекс.Дзен. Email Пресс-центра: pr@kapmed.ru. Дальше идет рыбный текст. Необходимо будет написать новый.</div>
-              <div class="videoItem m72"><a class="videoPoster" href="javascript:;" data-fancybox="" data-src="https://mbrm.ru/upload/medialibrary/ff0/ff018b3446ca7ab8b05a9d674e0b5cce.mp4" data-touch="false"><i class="play ri-play-circle-fill"></i><img class="poster" src="src/img/static/images.png" alt="Видеоролик с описанием"></a>
+              <div class="videoItem m72"><a class="videoPoster" href="javascript:;" data-fancybox="" data-src="https://www.youtube.com/embed/946rJ5yhxms" data-touch="false"><i class="play ri-play-circle-fill"></i><img class="poster" src="src/img/static/images.png" alt="Видеоролик с описанием"></a>
                 <div class="content">
                   <h6 class="content__text">Видеоролик с описанием</h6>
                 </div>
               </div>
-              <div class="slider-root" id="vue-root">
-                <section class="page-title smallh2">
-                  <h2>Смотрите</h2>
-                </section>
-                <div class="slider-wrap" :style="{width: `${content_container}px`}">
-                  <div class="slider-thanks videos" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
-                    <div class="slide-thanks" v-for="item, idx in thanks" :style="{width: `${width}px`}">
-                      <div class="image" :style="{backgroundImage: `url(${item.image})`}"></div>
-                      <div class="name">{{item.name}}</div>
+              <section class="videos">
+                <div class="slider slider-root" id="vue-root">
+                  <div class="container">
+                    <div class="sectionTitle">
+                      <div class="sectionTitle__top">
+                        <h2>Cмотрите</h2>
+                        <div class="sliderNav">
+                          <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
+                          <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= slides.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-wrap" :style="{width: `${content_container}px`}">
+                    <div class="slider-slides videos" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                      <div class="slide-slides" v-for="item, idx in slides" :style="{width: `${width}px`}"><a href="javascript:;" data-fancybox="" data-src="https://www.youtube.com/embed/946rJ5yhxms" data-touch="false">
+                          <div class="image" :style="{backgroundImage: `url(${item.image})`}"></div>
+                          <div class="name">{{item.name}}</div></a></div>
+                    </div>
+                  </div>
+                  <div class="videos__sliderBottom">
+                    <div class="sliderNav">
+                      <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
+                      <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= slides.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
                     </div>
                   </div>
                 </div>
-                <div class="slider-arrows">
-                  <div class="arrow arrow-left" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><img src="src/img/static/slider-arrow.svg"></div>
-                  <div class="arrow arrow-right" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><img src="src/img/static/slider-arrow-r.svg"></div>
-                </div>
-              </div>
-              <script>
-                let data = [
-                  {
-                    name: 'Видеоролик с описанием',
-                    image: 'src/img/static/no-video.png'
-                  },
-                  {
-                    name: 'Видеоролик с описанием',
-                    image: 'src/img/static/no-video.png'
-                  },
-                  {
-                    name: 'Видеоролик с описанием',
-                    image: 'src/img/static/no-video.png'
-                  },
-                  {
-                    name: 'Видеоролик с описанием',
-                    image: 'src/img/static/no-video.png'
-                  },
+                <script>
+                  let data = [
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'src/img/static/no-video.png'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'src/img/static/no-video.png'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'src/img/static/no-video.png'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'src/img/static/no-video.png'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'src/img/static/no-video.png'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'src/img/static/no-video.png'
+                    }
+                  ]
+                  let root = '#vue-root'
+                  let width = 352
+                  vueSliderLauncher(root, data, width)    
                   
-                ]
-                let root = '#vue-root'
-                let width = 352
-                vueSliderLauncher(root, data, width)
-              </script>
+                </script>
+              </section>
             </div>
           </div>
         </div>

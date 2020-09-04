@@ -873,14 +873,14 @@
                         <h3 class="sectionTitle__title">Благодарности</h3>
                         <div class="sliderNav">
                           <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
-                          <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                          <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= slides.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="slider-wrap" :style="{width: `${content_container}px`}">
-                    <div class="slider-thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
-                      <div class="slide-thanks" v-for="item, idx in thanks" :style="{width: `${width}px`}"><a href="https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg" data-fancybox="">
+                    <div class="slider-slides thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                      <div class="slide-slides" v-for="item, idx in slides" :style="{width: `${width}px`}"><a href="https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg" data-fancybox="">
                           <div class="image" :style="{backgroundImage: `url(${item.image})`}"></div>
                           <div class="date">{{item.date}}</div>
                           <div class="name">{{item.name}}</div></a></div>
@@ -889,7 +889,7 @@
                   <div class="thanks__sliderBottom">
                     <div class="sliderNav">
                       <div class="prev slick-arrow" @click="switchSlide(-1)" :class="{'locked': active_idx &lt; 1}"><i class="ri-arrow-left-s-line"></i></div>
-                      <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= thanks.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
+                      <div class="next slick-arrow" @click="switchSlide(1)" :class="{'locked': active_idx &gt;= slides.length - 1}"><i class="ri-arrow-right-s-line"></i></div>
                     </div>
                   </div>
                 </div>

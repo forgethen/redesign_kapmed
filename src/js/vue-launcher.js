@@ -3,7 +3,7 @@ const vueSliderLauncher = (root, data, width) => {
     el: root,
     data() {
       return {
-        thanks: data,
+        slides: data,
         width: width,
         active_idx: 0,
         content_container: 0
@@ -15,17 +15,17 @@ const vueSliderLauncher = (root, data, width) => {
         let content_container = document.querySelector('.slider-root')
         if (ww < 641) {
           this.width = content_container.offsetWidth
-          let width = this.width * this.thanks.length + 16 * (this.thanks.length - 1)
+          let width = this.width * this.slides.length + 16 * (this.slides.length - 1)
           return width
         }
         else
         {
-          let width = this.width * this.thanks.length + 16 * (this.thanks.length - 1)
+          let width = this.width * this.slides.length + 16 * (this.slides.length - 1)
           return width
         }
       },
       initialization() {
-    
+
         let container = document.querySelector('.container')
         let content_container = document.querySelector('.content-container')
         let content_inner = container.offsetWidth * .75 + (content_container.offsetWidth - container.offsetWidth) / 2

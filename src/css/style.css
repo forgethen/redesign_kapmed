@@ -6143,7 +6143,7 @@ form.search > :last-child {
 }
 .activity-wrap .block .cross {
   position: absolute;
-  right: 0;
+  right: 13px;
   top: 0;
   cursor: pointer;
 }
@@ -6285,7 +6285,7 @@ form.search > :last-child {
 .withoutpseudo:before {
   display: none !important;
 }
-.slider-thanks {
+.slider-slides {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6295,14 +6295,19 @@ form.search > :last-child {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.slider-thanks.videos .image {
+.slider-slides.videos .image {
   height: 198px;
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 8px;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
 }
-.slider-thanks.videos .name {
+.slider-slides.videos .name {
   font-size: 14px;
   color: #666;
 }
-.slider-thanks .image {
+.slider-slides.thanks .image {
   height: 334px;
   background-size: cover;
   background-position: center top;
@@ -6310,8 +6315,11 @@ form.search > :last-child {
   -webkit-border-radius: 8px;
           border-radius: 8px;
 }
-.slider-thanks .image.horiz {
+.slider-slides.thanks .image.horiz {
   height: 159px;
+}
+.slider-slides .slider-doctors .image {
+  height: 104px;
 }
 .redbutton {
   font-size: 16px;
@@ -6414,23 +6422,23 @@ form.search > :last-child {
   -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
           box-shadow: 0px 0px 0.5rem 0px #b8181c;
 }
-.slider-thanks {
+.slider-slides {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-.slider-thanks .date {
+.slider-slides .date {
   font-size: 14px;
   line-height: 18px;
   color: #939393;
   margin-bottom: 8px;
 }
-.slider-thanks .name {
+.slider-slides .name {
   font-size: 20px;
   line-height: 1;
   color: #3a3a3a;
 }
-.slider-thanks a > :last-child {
+.slider-slides a > :last-child {
   margin-bottom: 0;
 }
 .slider-arrows {
@@ -7180,20 +7188,6 @@ form.search > :last-child {
 .note.v2 {
   margin: 3.4rem 0;
 }
-.note.v2 .title {
-  color: #000;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 2.8rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 .note.v2 .title span {
   font-size: inherit;
   line-height: inherit;
@@ -7206,6 +7200,20 @@ form.search > :last-child {
   margin-bottom: 16px;
   line-height: 24px;
   color: #3a3a3a;
+}
+.note p.title {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .note p.v2 {
   color: #000;
@@ -7247,10 +7255,10 @@ form.search > :last-child {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 32px;
 }
 .materials-wr > div,
 .materials-wr > a {
+  margin-bottom: 32px;
   width: -webkit-calc(50% - 1.6rem);
   width: calc(50% - 1.6rem);
   position: relative;
@@ -7648,6 +7656,18 @@ form.search > :last-child {
     left: 0;
     margin-top: 30px;
   }
+  .note {
+    padding: 1.6rem;
+  }
+  .note p {
+    margin-bottom: 1.2rem;
+  }
+  .note p.title {
+    margin-bottom: 1.6rem;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+  }
   .note.v2 {
     padding: 2.4rem;
   }
@@ -7931,6 +7951,9 @@ form.search > :last-child {
   .activity-wrap.withborder {
     padding: 0 10px;
   }
+  .activity-wrap.withborder.v4 {
+    padding: 1.6rem;
+  }
   .science-list .doc {
     width: 100%;
     margin-right: 0 !important;
@@ -8053,6 +8076,11 @@ form.search > :last-child {
   }
 }
 @media screen and (max-width: 680px) {
+  .materials-wr > div,
+  .materials-wr > a {
+    width: 100%;
+    margin-bottom: 2.4rem;
+  }
   .activity-wrap.fromCardtree {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -12008,7 +12036,12 @@ footer ul ul {
 .reviewsSection__sliderBottom,
 .thanks__sliderBottom {
   display: none;
-  padding: 3.2rem 0 6.8rem;
+  padding: 3.2rem 0;
+}
+.videos__sliderBottom {
+  display: none;
+  padding: 3.2rem 0;
+  margin-bottom: 3.2rem;
 }
 .reviewsSection.v2 {
   margin-bottom: 4rem;
@@ -12114,11 +12147,13 @@ footer ul ul {
 }
 @media screen and (max-width: 680px) {
   .reviewsSection .sectionTitle .sliderNav,
-  .thanks .sectionTitle .sliderNav {
+  .thanks .sectionTitle .sliderNav,
+  .videos .sectionTitle .sliderNav {
     display: none;
   }
   .reviewsSection__sliderBottom,
-  .thanks__sliderBottom {
+  .thanks__sliderBottom,
+  .videos__sliderBottom {
     display: block;
   }
   .reviewContainer.active .review {
