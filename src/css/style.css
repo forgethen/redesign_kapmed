@@ -8,7 +8,7 @@
 body {
   background-color: #fff;
   color: #000;
-  font-family: "HelveticaRegular", Arial, sans-serif;
+  font-family: "HelveticaRegular";
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
@@ -56,30 +56,35 @@ body .formPage {
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
+  font-family: "HelveticaRegular";
 }
 ::-moz-placeholder {
   color: #939393;
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
+  font-family: "HelveticaRegular";
 }
 :-ms-input-placeholder {
   color: #939393;
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
+  font-family: "HelveticaRegular";
 }
 ::-ms-input-placeholder {
   color: #939393;
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
+  font-family: "HelveticaRegular";
 }
 ::placeholder {
   color: #939393;
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
+  font-family: "HelveticaRegular";
 }
 @media screen and (min-width: 80rem) {
   .row.row-responsive .column.column-sm-75 {
@@ -88,7 +93,9 @@ body .formPage {
 }
 input,
 textarea {
+  font-family: "HelveticaRegular" !important;
   -webkit-appearance: none;
+  font: 400 1rem "HelveticaRegular";
 }
 input[hidden],
 button[hidden],
@@ -1640,6 +1647,12 @@ header {
   .breadcrumbs .container {
     padding: 0 2rem;
   }
+}
+a,
+input[type="button"],
+input[type="submit"],
+button {
+  font-family: "HelveticaRegular", Arial, sans-serif;
 }
 a[hidden],
 input[type="button"][hidden],
