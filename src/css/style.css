@@ -105,7 +105,6 @@ textarea[hidden] {
 h1 {
   font-size: 4rem;
   line-height: normal;
-  letter-spacing: 0;
   margin: 0;
 }
 h1.title {
@@ -120,7 +119,6 @@ h1.title br {
 h2 {
   font-size: 3.6rem;
   line-height: normal;
-  letter-spacing: 0;
   margin: 0;
 }
 h2.title {
@@ -135,7 +133,6 @@ h2.title br {
 h3 {
   font-size: 3.2rem;
   line-height: normal;
-  letter-spacing: 0;
   margin: 0;
 }
 h3.title {
@@ -152,7 +149,6 @@ h3.sectionTitle {
 }
 h4 {
   font-size: 3rem;
-  letter-spacing: 0;
   line-height: normal;
   margin: 0;
 }
@@ -167,7 +163,6 @@ h4.title br {
 }
 h5 {
   font-size: 2.4rem;
-  letter-spacing: 0;
   line-height: normal;
   margin: 0;
 }
@@ -182,7 +177,6 @@ h5.title br {
 }
 h6 {
   font-size: 2rem;
-  letter-spacing: 0;
   line-height: normal;
   margin: 0;
 }
@@ -198,7 +192,6 @@ h6.title br {
 p {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  letter-spacing: 0;
   margin: 0;
 }
 p.title {
@@ -235,7 +228,6 @@ span.published {
 }
 a {
   color: #000;
-  letter-spacing: 0;
   cursor: pointer;
 }
 a.red {
@@ -249,7 +241,7 @@ a i {
   text-decoration: none;
 }
 section {
-  margin-bottom: 4.8rem;
+  margin-bottom: 4rem;
 }
 section > :last-child {
   margin-bottom: 0;
@@ -274,6 +266,16 @@ section.noteSection .title {
 section.noteSection.v2 {
   padding: 0;
   margin: 3.2rem 0 4rem;
+}
+section.page-title h1 {
+  margin-bottom: 3.2rem;
+}
+section.page-title h2,
+section.page-title h3,
+section.page-title h4,
+section.page-title h5,
+section.page-title h6 {
+  margin-bottom: 2.4rem;
 }
 input[type='color']:focus,
 input[type='date']:focus,
@@ -395,6 +397,14 @@ select:hover {
 }
 .sectionTitle br {
   display: none;
+}
+.sectionTitle h1,
+.sectionTitle h2,
+.sectionTitle h3,
+.sectionTitle h4,
+.sectionTitle h5,
+.sectionTitle h6 {
+  font-weight: 400;
 }
 .sliderNav {
   -webkit-box-flex: 0;
@@ -4809,7 +4819,9 @@ form.search > :last-child {
   line-height: 2rem;
 }
 .sheduleBlock.Static .openShedule a span {
-  padding-top: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
 }
 .sheduleBlock.Static .openShedule a > :last-child {
   width: 2rem;
@@ -4827,7 +4839,7 @@ form.search > :last-child {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1;
   color: #666;
 }
@@ -4969,7 +4981,9 @@ form.search > :last-child {
   line-height: 2rem;
 }
 .sheduleBlock.fromLocation .openShedule a span {
-  padding-top: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
 }
 .sheduleBlock.fromLocation .openShedule a > :last-child {
   width: 2rem;
@@ -4987,7 +5001,7 @@ form.search > :last-child {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1;
   color: #666;
 }
@@ -5118,10 +5132,10 @@ form.search > :last-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   color: #666;
   white-space: pre;
   font-size: 1.4rem;
@@ -5129,7 +5143,9 @@ form.search > :last-child {
   line-height: 2rem;
 }
 .sheduleBlock.fromMapBlock .openShedule a span {
-  padding-top: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
 }
 .sheduleBlock.fromMapBlock .openShedule a > :last-child {
   width: 2rem;
@@ -5146,7 +5162,7 @@ form.search > :last-child {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1;
   color: #666;
 }
@@ -8494,7 +8510,7 @@ form.search > :last-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #c4c4c4;
+  width: auto;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -8505,8 +8521,22 @@ form.search > :last-child {
           align-items: center;
   margin-bottom: 3rem;
   list-style-type: none;
+  position: relative;
   margin-left: 1.6rem;
   margin-right: 1.6rem;
+}
+.tabs:last-child {
+  margin-right: 0;
+}
+.tabs:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #c4c4c4;
 }
 .tabs.v2 .tab.active {
   color: #b8181c;
@@ -8524,8 +8554,10 @@ form.search > :last-child {
 }
 .tabs .tab {
   line-height: 1;
-  margin-right: 4.8rem;
-  font-size: 2rem;
+  height: 4.4rem;
+  margin-right: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
   color: #666;
   padding-bottom: 2rem;
   cursor: pointer;
@@ -8539,7 +8571,7 @@ form.search > :last-child {
   cursor: default;
   position: relative;
 }
-.tabs .tab.active:before {
+.tabs .tab.active:after {
   width: 100%;
   z-index: 1;
   content: '';
@@ -9426,6 +9458,7 @@ footer ul ul {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  font-weight: 400;
   -webkit-box-orient: vertical;
   text-shadow: 4px 4px 2px #f5f5f5;
 }
@@ -9556,7 +9589,6 @@ footer ul ul {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 0.4rem;
 }
 .direction_of_activity .tabs {
   -webkit-box-pack: start;
@@ -9567,9 +9599,25 @@ footer ul ul {
 .direction_of_activity .tabs .tab {
   margin-right: 2.74rem;
   font-size: 1.6rem;
-  line-height: 2.4rem;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   white-space: pre;
-  display: block;
 }
 .direction_of_activity .tabs > :last-child {
   margin-right: 0;
@@ -9579,12 +9627,11 @@ footer ul ul {
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3.2rem 1fr 3.2rem 1fr;
+  -ms-grid-columns: 1fr 1.6rem 1fr 1.6rem 1fr;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 3.2rem;
+  grid-column-gap: 1.6rem;
   grid-row-gap: 3.2rem;
   margin-bottom: 0;
-  margin-top: 3.2rem;
 }
 .direction_of_activity-list__item {
   margin: 0;
@@ -9636,10 +9683,10 @@ footer ul ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -9647,7 +9694,7 @@ footer ul ul {
   color: #000;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 2.4rem;
+  line-height: 1;
   position: relative;
 }
 .direction_of_activity-list__item > :first-child span i {
@@ -9656,19 +9703,25 @@ footer ul ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 2rem;
-  line-height: inherit;
+  line-height: 1;
   position: relative;
   bottom: 0;
   color: #939393;
+  width: 2rem;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  height: 2rem;
 }
 @media screen and (max-width: 1012px) {
   .direction_of_activity-list {

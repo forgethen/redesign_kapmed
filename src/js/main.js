@@ -390,7 +390,7 @@ $(document).ready(function () {
     autoplayspeed: 2500,
     slidesToShow: 1,
     slideToScroll: 1,
-    speed: 250,
+    speed: 875,
     arrows: true,
     prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
     nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
