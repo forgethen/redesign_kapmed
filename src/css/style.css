@@ -8,7 +8,7 @@
 body {
   background-color: #fff;
   color: #000;
-  font-family: "HelveticaRegular";
+  font-family: 'HelveticaNeueCyr';
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
@@ -56,35 +56,35 @@ body .formPage {
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
-  font-family: "HelveticaRegular";
+  font-family: 'HelveticaNeueCyr';
 }
 ::-moz-placeholder {
   color: #939393;
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
-  font-family: "HelveticaRegular";
+  font-family: 'HelveticaNeueCyr';
 }
 :-ms-input-placeholder {
   color: #939393;
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
-  font-family: "HelveticaRegular";
+  font-family: 'HelveticaNeueCyr';
 }
 ::-ms-input-placeholder {
   color: #939393;
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
-  font-family: "HelveticaRegular";
+  font-family: 'HelveticaNeueCyr';
 }
 ::placeholder {
   color: #939393;
   font-size: 1.62rem;
   font-weight: 400;
   line-height: 2.4rem;
-  font-family: "HelveticaRegular";
+  font-family: 'HelveticaNeueCyr';
 }
 @media screen and (min-width: 80rem) {
   .row.row-responsive .column.column-sm-75 {
@@ -93,9 +93,9 @@ body .formPage {
 }
 input,
 textarea {
-  font-family: "HelveticaRegular" !important;
+  font-family: 'HelveticaNeueCyr' !important;
   -webkit-appearance: none;
-  font: 400 1rem "HelveticaRegular";
+  font: 400 1rem 'HelveticaNeueCyr';
 }
 input[hidden],
 button[hidden],
@@ -249,8 +249,7 @@ a i {
   text-decoration: none;
 }
 section {
-  margin-bottom: 0.4rem;
-  padding-bottom: 3.2rem;
+  margin-bottom: 4.8rem;
 }
 section > :last-child {
   margin-bottom: 0;
@@ -396,14 +395,6 @@ select:hover {
 }
 .sectionTitle br {
   display: none;
-}
-.sectionTitle h1,
-.sectionTitle h2,
-.sectionTitle h3,
-.sectionTitle h4,
-.sectionTitle h5,
-.sectionTitle h6 {
-  padding-top: 0.4rem;
 }
 .sliderNav {
   -webkit-box-flex: 0;
@@ -723,7 +714,6 @@ select:hover {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1;
-  padding-top: 0.4rem;
 }
 .top-container > :first-child p span {
   padding-top: 0;
@@ -732,7 +722,6 @@ select:hover {
   color: #fff;
   font-weight: 400;
   font-size: 1.6rem;
-  padding-top: 0.4rem;
 }
 .top-container > :first-child i,
 .top-container > :first-child .image {
@@ -779,6 +768,7 @@ select:hover {
   position: relative;
   margin: auto;
   height: 100%;
+  max-height: 4.8rem;
 }
 .top-container .header nav {
   display: -webkit-box;
@@ -902,22 +892,22 @@ select:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .top-container .header nav ul li a span {
   color: #000;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
-  padding-top: 0.4rem;
 }
 .top-container .header nav ul li a i {
   text-decoration: none;
   width: 2rem;
   height: 2rem;
+  font-size: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1205,8 +1195,8 @@ header {
   opacity: 1;
 }
 .headerMenu li i {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1219,7 +1209,7 @@ header {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   -webkit-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
@@ -1389,7 +1379,6 @@ header {
     border-bottom: none;
     -webkit-box-shadow: none;
             box-shadow: none;
-    padding-top: 0.4rem;
   }
   .headerMenu li .submenu ul {
     -ms-grid-columns: 1fr 1.6rem 1fr;
@@ -1652,7 +1641,7 @@ a,
 input[type="button"],
 input[type="submit"],
 button {
-  font-family: "HelveticaRegular", Arial, sans-serif;
+  font-family: 'HelveticaNeueCyr', Arial, sans-serif;
 }
 a[hidden],
 input[type="button"][hidden],
@@ -1725,7 +1714,6 @@ button.btn span {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
-  padding-top: 0.4rem;
 }
 a.btn-default,
 input[type="button"].btn-default,
@@ -2825,7 +2813,6 @@ a.red-link:hover {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 0.4rem;
 }
 .formPage .dropzone i {
   width: 24px;
@@ -3013,7 +3000,6 @@ a.red-link:hover {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2rem;
-  padding-top: 0.4rem;
   color: #666;
 }
 .formPage .custom-checkbox p a {
@@ -5644,9 +5630,6 @@ form.search > :last-child {
   display: -ms-flexbox;
   display: flex;
 }
-.phoneBlock.fromPopUp a span {
-  padding-top: 0.4rem;
-}
 .phoneBlock.fromPopUp a:hover span {
   color: #38a648;
 }
@@ -5668,7 +5651,6 @@ form.search > :last-child {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
-  padding-top: 0.4rem;
 }
 .phoneBlock.fromForm > :first-child {
   position: absolute;
@@ -7243,7 +7225,6 @@ form.search > :last-child {
 .note.v2 .title span {
   font-size: inherit;
   line-height: inherit;
-  padding-top: 0.4rem;
 }
 .note.v2 > :last-child {
   margin-bottom: 0;
@@ -9602,6 +9583,8 @@ footer ul ul {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 3.2rem;
   grid-row-gap: 3.2rem;
+  margin-bottom: 0;
+  margin-top: 3.2rem;
 }
 .direction_of_activity-list__item {
   margin: 0;
@@ -9665,7 +9648,6 @@ footer ul ul {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
-  padding-top: 0.4rem;
   position: relative;
 }
 .direction_of_activity-list__item > :first-child span i {
@@ -15870,7 +15852,6 @@ footer ul ul {
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 400;
-  padding-top: 0.4rem;
 }
 .medicalExamination .container .doublerowContainer label {
   margin-top: 1.6rem;
@@ -19130,10 +19111,8 @@ footer ul ul {
   font-weight: 400;
   line-height: 2rem;
   margin-bottom: 0.4rem;
-  padding-top: 0.4rem;
 }
 .orgList__item .sheduleBlock .status {
-  padding-top: 0.4rem;
   margin-bottom: 0.4rem;
 }
 .orgList__item .blocks {
