@@ -4507,36 +4507,8 @@ form.search > :last-child {
 .mapBlock .mapSection .map:before {
   padding-top: 93.48%;
 }
-.mapBlock .point {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 .mapBlock .sectionTitle {
   margin-top: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.mapBlock .sectionTitle a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .mapBlock .sectionTitle a,
 .mapBlock .sectionTitle span {
@@ -4544,8 +4516,9 @@ form.search > :last-child {
   position: relative;
 }
 .mapBlock .sectionTitle i {
+  position: absolute;
   font-size: inherit;
-  line-height: 1;
+  line-height: inherit;
 }
 .mapPopUp .mapSection .list ul > :first-child {
   -webkit-border-radius: none;
