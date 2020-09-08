@@ -97,7 +97,7 @@ input,
 textarea {
   font-family: 'HelveticaNeueCyr' !important;
   -webkit-appearance: none;
-  font: 400 1rem 'HelveticaNeueCyr';
+  font: 400 1.62rem 'HelveticaNeueCyr';
 }
 input[hidden],
 button[hidden],
@@ -4504,6 +4504,10 @@ form.search > :last-child {
 .mapPopUp .mapSection .list ul > :last-child {
   -webkit-border-radius: none;
           border-radius: none;
+}
+.infoAboutMedicalOrganizations .mapSection .list__item.select {
+  border: 1px solid #b8181c;
+  border-right: 0;
 }
 .mCS-MapListThm .mCSB_container {
   margin-right: 0;
