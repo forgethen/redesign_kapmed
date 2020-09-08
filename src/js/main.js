@@ -257,9 +257,9 @@ $(document).ready(function() {
       .show()
       .addClass("show");
     if (showed == allShowed) {
-      $(this).removeClass("btn--default");
-      $(this).attr("href", "#");
-      $(this).text("Просмотреть все пункты выдачи");
+      // $(this).removeClass("btn-default");
+      $(this).find('a').attr("href", "#");
+      $(this).find('a').text("Просмотреть все пункты выдачи");
     }
   });
 
