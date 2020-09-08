@@ -2,7 +2,7 @@
 
 "use strict";
 
-$(document).ready(function () {
+$(document).ready(function() {
   var footer = $("#footer").outerHeight();
 
   $(".content_list ul:first-child").addClass("active");
@@ -11,7 +11,7 @@ $(document).ready(function () {
     if ($(".content_list ul a").length <= 1) {
       return false;
     } else {
-      $(".content_list ul a").each(function () {
+      $(".content_list ul a").each(function() {
         var hash = $(this).attr("href");
         // try {
         //   let prob = $(hash);
@@ -39,31 +39,30 @@ $(document).ready(function () {
 
   $(document).on("scroll", onScroll);
 
-  $(".content_list ul a").click(function () {
+  $(".content_list ul a").click(function() {
     $(document).off("scroll");
     $(".content_list ul .active").removeClass("active");
     $(this).addClass("active");
     var hash = $(this).attr("href");
     var target = $(hash);
-    $("html, body").animate(
-      {
+    $("html, body").animate({
         scrollTop: target.offset().top,
       },
       250,
-      function () {
+      function() {
         window.location.hash = hash;
         $(document).on("scroll", onScroll);
       }
     );
   });
 
-  $(".custom-select a").click(function () {
+  $(".custom-select a").click(function() {
     $(this).parents(".custom-select").find("i").addClass("active");
     $(this).parents(".custom-select").find(".options").show();
     $(this).parents(".custom-select").find(".options-block").addClass("show");
   });
 
-  $(".custom-select .options li").click(function () {
+  $(".custom-select .options li").click(function() {
     var thisVal = $(this).text();
     $(this).parents(".custom-select").find(".options").hide();
     $(this).parents(".custom-select").find(".options .red").removeClass("red");
@@ -76,19 +75,19 @@ $(document).ready(function () {
     $(this).addClass("red");
   });
 
-  $("input,textarea").focus(function () {
+  $("input,textarea").focus(function() {
     $(this).data("placeholder", $(this).attr("placeholder")),
       $(this).attr("placeholder", "");
   });
 
-  $("input,textarea").blur(function () {
+  $("input,textarea").blur(function() {
     $(this).attr("placeholder", $(this).data("placeholder"));
   });
 
   $('input[type="tel"]').inputmask("+7 (999) 999 99 99");
   $(".date input").inputmask("99.99.9999");
 
-  $(".dropdown ul").each(function () {
+  $(".dropdown ul").each(function() {
     var th1 = $(this).parents(".dropdown").find("li:eq(0)").height();
     var th2 = $(this).parents(".dropdown").find("li:eq(1)").height();
     $(this)
@@ -98,20 +97,20 @@ $(document).ready(function () {
     $(this).parents(".dropdown").find("ul").removeClass("show");
   });
 
-  $(".doc .see").click(function () {
+  $(".doc .see").click(function() {
     $(this).toggleClass("active");
     $(this).parents(".doc").find(".answer").toggleClass("show");
   });
 
   function dropdownClose() {
-    $(".dropdown").each(function () {
+    $(".dropdown").each(function() {
       $(this).removeClass("active");
       $(this).find("ul").removeClass("show");
       $(this).find("i").removeClass("active");
     });
   }
 
-  $(".dropdown input").click(function (e) {
+  $(".dropdown input").click(function(e) {
     if ($(this).parents(".dropdown").hasClass("active")) {
       $(this).parents(".dropdown").removeClass("active");
       $(this).parents(".dropdown").find("i").toggleClass("active");
@@ -126,7 +125,7 @@ $(document).ready(function () {
     }
   });
 
-  $(".dropdown ul li").click(function () {
+  $(".dropdown ul li").click(function() {
     var thisVal = $(this).html();
     $(this).parents(".dropdown").removeClass("active");
     $(this).parents("ul").removeClass("show");
@@ -134,11 +133,11 @@ $(document).ready(function () {
     $(this).parents(".dropdown").find("input").val(thisVal);
   });
 
-  $("ul.content .check, .accordion-menu .check").click(function () {
+  $("ul.content .check, .accordion-menu .check").click(function() {
     $(this).parents("li").toggleClass("show");
   });
 
-  $(".mapPopUp .list li").click(function () {
+  $(".mapPopUp .list li").click(function() {
     var thisVal = $(this).html();
     $(".mapPopUp .list").find(".select").removeClass("select");
     $(this).addClass("select");
@@ -191,7 +190,7 @@ $(document).ready(function () {
   });
 
   function fromResize() {
-    $(".mapBlock .mapSection .mapList").each(function () {
+    $(".mapBlock .mapSection .mapList").each(function() {
       if ($(window).width() >= 640) {
         $(this).mCustomScrollbar({
           theme: "MapListThm",
@@ -204,11 +203,11 @@ $(document).ready(function () {
 
   fromResize();
 
-  $(window).resize(function () {
+  $(window).resize(function() {
     fromResize();
   });
 
-  $(".custom-select .options-block").each(function () {
+  $(".custom-select .options-block").each(function() {
     $(this).addClass("show");
     $(".custom-select .options-block .options").show();
     var th1 = $(".custom-select .options-block .options")
@@ -223,7 +222,7 @@ $(document).ready(function () {
     theme: "CustomSelectOptionsThm",
   });
 
-  $(".dropdown ul").each(function () {
+  $(".dropdown ul").each(function() {
     $(this).addClass("active");
     $(".dropdown ul").addClass("show");
     var th1 = $(".dropdown ul").find("li:eq(0)").height();
@@ -249,7 +248,7 @@ $(document).ready(function () {
 
   $(".mapBlock .mapSection .mapList .list__item:lt(3)").show().addClass("show");
 
-  $(".mapBlock .seeMore").click(function () {
+  $(".mapBlock .seeMore").click(function() {
     var showed = $(".mapBlock .mapSection .mapList .list__item.show").length;
     var allShowed = $(".mapBlock .mapSection .mapList .list__item").length;
     var i = showed;
@@ -268,7 +267,7 @@ $(document).ready(function () {
     theme: "SubmenuScrollThm",
   });
 
-  $(".openShedule a").click(function () {
+  $(".openShedule a").click(function() {
     $(this).closest(".openShedule").toggleClass("active");
     $(this).parents(".sheduleBlock").find(".shedule__list").toggleClass("show");
   });
@@ -282,20 +281,22 @@ $(document).ready(function () {
     }
   })
 
-
-
-  $("footer .partition")
-    .find("li:eq(0)")
-    .click(function (e) {
-      if ($(this).hasClass("autoHeight")) {
-        $(this).removeClass("autoHeight");
-        e.stopPropagation();
+  $("footer .partition").find("li:eq(0)").click(function(e) {
+    if ($(window).width() <= 980) {
+      if ($(this).parents('ul').hasClass("autoHeight")) {
+        $(this).parents('ul').removeClass("autoHeight");
+        // e.stopPropagation();
       } else {
+        $('footer .partition').removeClass('autoHeight');
         $(this).parent("ul").toggleClass("autoHeight");
       }
-    });
+    } else {
+      $(this).parent("ul").removeClass("autoHeight");
+    }
 
-  $(document).on("click", function (e) {
+  });
+
+  $(document).on("click", function(e) {
     if (!$(e.target).closest(".parent_block").length) {
       $(".toggled_block").hide();
     }
@@ -332,7 +333,7 @@ $(document).ready(function () {
     e.stopPropagation();
   });
 
-  $(".burger").on("click", function (e) {
+  $(".burger").on("click", function(e) {
     $(this).toggleClass("active");
     $(".headerMenu").toggleClass("show");
     $(".mobileBottom").toggleClass("show");
@@ -395,14 +396,12 @@ $(document).ready(function () {
     prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
     nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
     dots: true,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          arrows: false,
-        },
+    responsive: [{
+      breakpoint: 600,
+      settings: {
+        arrows: false,
       },
-    ],
+    }, ],
   });
 
   $(".dnk_slider .slider").slick({
@@ -420,14 +419,12 @@ $(document).ready(function () {
     prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
     nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
     dots: true,
-    responsive: [
-      {
-        breakpoint: 681,
-        settings: {
-          dots: false,
-        },
+    responsive: [{
+      breakpoint: 681,
+      settings: {
+        dots: false,
       },
-    ],
+    }, ],
   });
 
   $(".clientHistorySlider .slider").slick({
@@ -445,14 +442,12 @@ $(document).ready(function () {
     prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
     nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
     dots: false,
-    responsive: [
-      {
-        breakpoint: 681,
-        settings: {
-          slidesToShow: 1,
-        },
+    responsive: [{
+      breakpoint: 681,
+      settings: {
+        slidesToShow: 1,
       },
-    ],
+    }, ],
   });
 
   $(".videoSlider .slider").slick({
@@ -470,14 +465,12 @@ $(document).ready(function () {
     prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
     nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
     dots: false,
-    responsive: [
-      {
-        breakpoint: 681,
-        settings: {
-          slidesToShow: 1,
-        },
+    responsive: [{
+      breakpoint: 681,
+      settings: {
+        slidesToShow: 1,
       },
-    ],
+    }, ],
   });
 
   $(".literatePatientSchoolSlider .slider").slick({
@@ -495,8 +488,7 @@ $(document).ready(function () {
     prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
     nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
     dots: false,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1013,
         settings: {
           slidesToShow: 2,
@@ -526,8 +518,7 @@ $(document).ready(function () {
     prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
     nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
     dots: false,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1013,
         settings: {
           slidesToShow: 3,
@@ -550,29 +541,25 @@ $(document).ready(function () {
 
   $(".slider-2").slick({
     dots: true,
-    prevArrow:
-      '<div class="slick-prev prev"><i class="ri-arrow-left-s-line"></i></div>',
-    nextArrow:
-      '<div class="slick-next next"><i class="ri-arrow-right-s-line"></i></div>',
-      responsive: [
-        {
-          breakpoint: 981,
-          settings: {
-            dots: false,
-          },
-        },
-      ],
+    prevArrow: '<div class="slick-prev prev"><i class="ri-arrow-left-s-line"></i></div>',
+    nextArrow: '<div class="slick-next next"><i class="ri-arrow-right-s-line"></i></div>',
+    responsive: [{
+      breakpoint: 981,
+      settings: {
+        dots: false,
+      },
+    }, ],
   });
 
-  $(".custom-button, a.tag").click(function () {
+  $(".custom-button, a.tag").click(function() {
     $(this).toggleClass("active");
   });
 
-  $(".sliderNav .prev").click(function () {
+  $(".sliderNav .prev").click(function() {
     $(this).parents("section").find(".slick-slider").slick("slickPrev");
   });
 
-  $(".sliderNav .next").click(function () {
+  $(".sliderNav .next").click(function() {
     $(this).parents("section").find(".slick-slider").slick("slickNext");
   });
   // $(".tabsContainer").mCustomScrollbar({
@@ -580,7 +567,7 @@ $(document).ready(function () {
   //   axis: "x" // vertical and horizontal scrollbar
   // });
 
-  $(".tabs .tab").click(function () {
+  $(".tabs .tab").click(function() {
     $(this).parents(".tabs").find(".active").removeClass("active");
     $(this).addClass("active");
   });
@@ -589,7 +576,7 @@ $(document).ready(function () {
     '<i class="ri-arrow-right-s-line"></i>'
   );
 
-  $(".stars.static").each(function () {
+  $(".stars.static").each(function() {
     if ($(this).hasClass("star-0")) {
       $(this).append(
         '<i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i><i class="ri-star-line"></i>'
@@ -647,19 +634,19 @@ $(document).ready(function () {
     }
   });
 
-  $(".review a").click(function () {
+  $(".review a").click(function() {
     $(this).parents(".review").toggleClass("show");
   });
   /* 1. Visualizing things on Hover - See next part for action on click */
   $(".stars a")
-    .on("mouseover", function () {
+    .on("mouseover", function() {
       var onStar = parseInt($(this).data("value"), 10); // The star currently mouse on
 
       // Now highlight all the stars that's not after the current hovered star
       $(this)
         .parent()
         .children("a.star")
-        .each(function (e) {
+        .each(function(e) {
           if (e < onStar) {
             $(this).addClass("hover");
           } else {
@@ -667,16 +654,16 @@ $(document).ready(function () {
           }
         });
     })
-    .on("mouseout", function () {
+    .on("mouseout", function() {
       $(this)
         .parent()
         .children("a.star")
-        .each(function (e) {
+        .each(function(e) {
           $(this).removeClass("hover");
         });
     });
 
-  $(".stars a").on("click", function () {
+  $(".stars a").on("click", function() {
     var onStar = parseInt($(this).data("value"), 10); // The star currently selected
     var stars = $(this).parent().children("a.star");
     var i = 0;
@@ -707,29 +694,29 @@ $(document).ready(function () {
     $(".success-box .text-message").html("" + msg + "");
   }
 
-  $(".swipeTopDown").on("click", function () {
+  $(".swipeTopDown").on("click", function() {
     $(this).parents(".list").toggleClass("active");
   });
 
-  $(".FilterSearch .btn-filter").click(function () {
+  $(".FilterSearch .btn-filter").click(function() {
     $(this).toggleClass("active");
     $(".dropDownFilter.v2").toggleClass("show");
   });
 
-  $(".fixbtn .open").click(function () {
+  $(".fixbtn .open").click(function() {
     $(this).parents(".fixbtn").addClass("active");
     $("body").addClass("widgetOpened");
   });
 
-  $(".fixbtn .close").click(function () {
+  $(".fixbtn .close").click(function() {
     $(this).parents(".fixbtn").removeClass("active");
     $("body").removeClass("widgetOpened");
   });
 
-  $(".custom-checkbox").click(function () {
+  $(".custom-checkbox").click(function() {
     $(this)
       .find("input[type=checkbox]")
-      .each(function () {
+      .each(function() {
         if ($("input[type=checkbox]").is(":checked")) {
           $(this).attr("checked", "checked");
         } else {
@@ -739,12 +726,12 @@ $(document).ready(function () {
   });
 
   // события по нажатию на .mark-block__icon на странице patient-school
-  $(".cool").on("click", function () {
+  $(".cool").on("click", function() {
     $(this).toggleClass("cool-click");
     $(".bad").removeClass("bad-click");
   });
 
-  $(".bad").on("click", function () {
+  $(".bad").on("click", function() {
     $(this).toggleClass("bad-click");
     $(".cool").removeClass("cool-click");
   });
