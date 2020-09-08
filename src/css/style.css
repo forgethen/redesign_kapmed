@@ -785,6 +785,12 @@ select:hover {
   height: 100%;
   max-height: 4.8rem;
 }
+.top-container .header .logo img {
+  max-height: 100%;
+  max-width: auto;
+  width: auto;
+  height: 100%;
+}
 .top-container .header nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2387,15 +2393,31 @@ a.red-link:hover {
 .regionSelect .custom-select {
   position: relative;
 }
+.regionSelect .custom-select > :first-child {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
 .regionSelect .custom-select a {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .regionSelect .custom-select a,
 .regionSelect .custom-select span {
   font-size: inherit;
 }
 .regionSelect .custom-select i {
-  font-size: inherit;
+  font-size: 2rem;
+  height: 2rem;
+  width: 2rem;
   line-height: inherit;
 }
 .mCS-CustomSelectOptionsThm .mCSB_container {
@@ -4485,8 +4507,36 @@ form.search > :last-child {
 .mapBlock .mapSection .map:before {
   padding-top: 93.48%;
 }
+.mapBlock .point {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .mapBlock .sectionTitle {
   margin-top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mapBlock .sectionTitle a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .mapBlock .sectionTitle a,
 .mapBlock .sectionTitle span {
@@ -4494,8 +4544,8 @@ form.search > :last-child {
   position: relative;
 }
 .mapBlock .sectionTitle i {
-  position: absolute;
-  line-height: inherit;
+  font-size: inherit;
+  line-height: 1;
 }
 .mapPopUp .mapSection .list ul > :first-child {
   -webkit-border-radius: none;
