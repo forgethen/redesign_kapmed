@@ -849,7 +849,7 @@ select:hover {
   width: 2.8rem;
   height: 2.8rem;
   margin: 0 0 0 2rem;
-  padding: 0.4rem;
+  padding: 0.2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -872,30 +872,37 @@ select:hover {
   content: '';
   position: relative;
   height: 2px;
-  width: 100%;
+  width: 2.4rem;
   display: block;
   background-color: #3a3a3a;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  left: 0;
 }
 .top-container .header nav.mobile .burger:after {
   content: '';
   position: relative;
   height: 2px;
-  width: 100%;
+  width: 2.4rem;
   display: block;
   background-color: #3a3a3a;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  left: 0;
 }
 .top-container .header nav.mobile .burger i {
+  width: 100%;
   color: #3a3a3a;
   line-height: 1;
+  height: 2px;
+  font-size: 2px;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  position: relative;
+  left: 0;
 }
 .top-container .header nav.mobile .burger i:before {
   content: '';
@@ -905,8 +912,38 @@ select:hover {
   height: 2px;
   background-color: #3a3a3a;
 }
-.top-container .header nav.mobile .burger:hover > :first-child {
-  color: #193c6d;
+.top-container .header nav.mobile .burger.active i {
+  width: 0;
+}
+.top-container .header nav.mobile .burger.active:before {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      -ms-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+.top-container .header nav.mobile .burger.active:after {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+  left: 50%;
+}
+.top-container .header nav.mobile .burger.active:hover i:before {
+  background-color: #b8181c;
+}
+.top-container .header nav.mobile .burger.active:hover:before,
+.top-container .header nav.mobile .burger.active:hover:after {
+  background-color: #b8181c;
+}
+.top-container .header nav.mobile .burger:hover i:before {
+  background-color: #193c6d;
+}
+.top-container .header nav.mobile .burger:hover:before,
+.top-container .header nav.mobile .burger:hover:after {
+  background-color: #193c6d;
 }
 .top-container .header nav.mobile .search {
   width: 2.8rem;
