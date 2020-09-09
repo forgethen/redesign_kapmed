@@ -16455,8 +16455,7 @@ footer ul ul {
   -webkit-border-radius: 1.6rem 1.6rem 0 0;
           border-radius: 1.6rem 1.6rem 0 0;
   background-color: #fff;
-  height: -webkit-calc(100vh - 14rem);
-  height: calc(100vh - 14rem);
+  height: 90vh;
   width: -webkit-calc(100vw - 8rem);
   width: calc(100vw - 8rem);
   position: fixed;
@@ -16562,7 +16561,11 @@ footer ul ul {
 .cities a.ex p {
   font-weight: 700;
 }
+.cities a.ex.red p {
+  color: #b8181c;
+}
 .cities a:hover p {
+  text-decoration: underline;
   color: #b8181c;
 }
 .mCS-citiesBlockThm .mCSB_container {
@@ -17979,10 +17982,11 @@ footer ul ul {
   pointer-events: none;
 }
 .slick-arrow:hover {
-  -webkit-box-shadow: 0 0.1rem 0.4rem #b8181c;
-          box-shadow: 0 0.1rem 0.4rem #b8181c;
+  background: #b8181c;
+  color: #fff;
 }
 .slick-arrow:active {
+  opacity: 0.8;
   background: #b8181c;
   color: #fff;
 }
