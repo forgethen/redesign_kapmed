@@ -689,6 +689,7 @@ select:hover {
 }
 .top-container > :first-child .row > :first-child #app_region a {
   width: 100%;
+  max-width: 100%;
 }
 .top-container > :first-child .row > :first-child > :first-child {
   margin-left: 0;
