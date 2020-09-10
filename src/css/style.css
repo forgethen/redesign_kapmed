@@ -8842,6 +8842,7 @@ form.search > :last-child {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
+  overflow-x: hidden;
 }
 .tabsContainer .tabs {
   margin-bottom: 0;
