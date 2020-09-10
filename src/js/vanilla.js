@@ -12,8 +12,12 @@ const openSupportLevel = (elm) => {
 }
 
 const showMeMore = (elm) => {
-  // this.classList.toggle('showoff')
   elm.closest('.activity-wrap').classList.toggle('opened')
+}
+
+
+const openSitemap = () => {
+  document.querySelector('.sitemap').classList.toggle('hidden')
 }
 
 const switchSearch = () => {

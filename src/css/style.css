@@ -56,35 +56,35 @@ body .formPage {
 ::-webkit-input-placeholder {
   color: #939393;
   font-size: 1.62rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   font-family: 'HelveticaNeueCyr';
 }
 ::-moz-placeholder {
   color: #939393;
   font-size: 1.62rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   font-family: 'HelveticaNeueCyr';
 }
 :-ms-input-placeholder {
   color: #939393;
   font-size: 1.62rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   font-family: 'HelveticaNeueCyr';
 }
 ::-ms-input-placeholder {
   color: #939393;
   font-size: 1.62rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   font-family: 'HelveticaNeueCyr';
 }
 ::placeholder {
   color: #939393;
   font-size: 1.62rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   font-family: 'HelveticaNeueCyr';
 }
@@ -406,7 +406,7 @@ select:hover {
 .sectionTitle h4,
 .sectionTitle h5,
 .sectionTitle h6 {
-  font-weight: 400;
+  font-weight: normal;
 }
 .sliderNav {
   -webkit-box-flex: 0;
@@ -730,7 +730,7 @@ select:hover {
       -ms-flex-align: end;
           align-items: flex-end;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.8rem;
   color: #fff;
 }
@@ -746,7 +746,7 @@ select:hover {
 .top-container > :first-child p {
   display: inline-block;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: normal;
   line-height: 1;
 }
 .top-container > :first-child p span {
@@ -754,7 +754,7 @@ select:hover {
 }
 .top-container > :first-child span {
   color: #fff;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.4rem;
 }
 .top-container > :first-child i,
@@ -1039,7 +1039,7 @@ select:hover {
 .top-container .header nav ul li a span {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .top-container .header nav ul li a i {
@@ -1071,7 +1071,7 @@ select:hover {
 .top-container .header nav .burger {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   width: 2rem;
   height: 2rem;
@@ -1214,7 +1214,7 @@ select:hover {
   }
   .top-container > :first-child p {
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: normal;
     line-height: 2rem;
   }
   .top-container > :first-child a .image img {
@@ -1340,7 +1340,7 @@ header {
 .headerMenu li a span {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .headerMenu li a:hover span {
@@ -1394,7 +1394,6 @@ header {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 100%;
   background-color: #fff;
   top: 6.4rem;
   padding: 2.8rem 0;
@@ -1443,8 +1442,8 @@ header {
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 0.8rem 1fr 0.8rem 1fr 0.8rem 1fr;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: 25.6rem 0.8rem 25.6rem 0.8rem 25.6rem 0.8rem 25.6rem;
+  grid-template-columns: repeat(4, 25.6rem);
   grid-column-gap: 0.8rem;
   grid-row-gap: 2.4rem;
   width: 100%;
@@ -1457,7 +1456,7 @@ header {
 .headerMenu li .submenu ul li a {
   color: #3a3a3a;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .headerMenu li .submenu ul li a:hover {
@@ -1624,9 +1623,9 @@ header {
   }
   .mobileBottom li i {
     margin-right: 0.8rem;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 2rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1640,13 +1639,40 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .mobileBottom li i:before {
+    content: none;
+  }
   .mobileBottom li span {
     font-size: 1.4rem;
     line-height: 1;
     color: #000;
   }
+  .mobileBottom .YourFil i {
+    border: 2px solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/static/UserIcon.svg");
+  }
+  .mobileBottom .PointOffice i {
+    border: 2px solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/static/PinIcon.svg");
+  }
 }
 @media screen and (max-width: 640px) {
+  .headerMenu.show li a span {
+    color: #000;
+  }
+  .headerMenu.show li:hover > :first-child span {
+    color: #b8181c;
+  }
   .headerMenu li {
     width: 100%;
     padding: 0;
@@ -1657,6 +1683,8 @@ header {
   }
   .headerMenu li a span {
     color: #000;
+    font-size: 2rem;
+    line-height: 2.8rem;
   }
   .headerMenu li .submenu {
     position: relative;
@@ -1778,7 +1806,7 @@ header {
           transform: translateY(-50%);
   color: #939393;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.6rem;
 }
 .breadcrumbs ul li a,
@@ -1803,7 +1831,7 @@ header {
 .breadcrumbs a {
   color: #939393;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.6rem;
 }
 .breadcrumbs a:hover {
@@ -1857,7 +1885,7 @@ button.btn {
   -webkit-border-radius: 0.4rem;
           border-radius: 0.4rem;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.6rem;
   padding: 1.6rem 2.4rem;
   cursor: pointer;
@@ -1899,7 +1927,7 @@ input[type="button"].btn span,
 input[type="submit"].btn span,
 button.btn span {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 a.btn-default,
@@ -1986,7 +2014,7 @@ input[type="submit"].btn-printPage span,
 button.btn-printPage span {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 a.btn.pick-up_point,
@@ -2273,7 +2301,7 @@ a.red-link:hover {
 .content_list ul li a {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .content_list ul li a.active {
@@ -2311,7 +2339,7 @@ a.red-link:hover {
   position: relative;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .content.v2 .content__item:before {
@@ -2331,7 +2359,7 @@ a.red-link:hover {
   position: relative;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .content.v2 .content__item a:before {
@@ -2365,7 +2393,7 @@ a.red-link:hover {
 .content__item .title {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 2rem;
   pointer-events: none;
@@ -2418,7 +2446,7 @@ a.red-link:hover {
   position: relative;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .content__item ul li a:before {
@@ -2608,7 +2636,7 @@ a.red-link:hover {
 @media screen and (max-width: 640px) {
   .custom-select .options {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
     padding: 2rem;
     width: auto;
@@ -2638,14 +2666,14 @@ a.red-link:hover {
   margin-bottom: 1.2rem;
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .another__problem .description {
   margin-bottom: 3.2rem;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 @media screen and (max-width: 640px) {
@@ -2692,18 +2720,18 @@ a.red-link:hover {
 .page-title .title {
   color: #313131;
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 4.8rem;
 }
 .page-title a {
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 4.8rem;
   cursor: pointer;
 }
 .page-title a span {
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 4.8rem;
 }
 .page-title a:hover {
@@ -2724,7 +2752,7 @@ a.red-link:hover {
 }
 .page-title .options li {
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
   margin-bottom: 2.4rem;
 }
@@ -2735,24 +2763,24 @@ a.red-link:hover {
   .page-title .title {
     color: #313131;
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
   }
   .page-title .options li {
     margin-bottom: 1.6rem;
     color: #313131;
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
   }
   .page-title a {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
   }
   .page-title a span {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
   }
   .page-title a i {
@@ -2865,7 +2893,7 @@ a.red-link:hover {
 .formPage__content .title {
   color: #000;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
 }
 .formPage__content .wrapper > :first-child {
@@ -2892,14 +2920,14 @@ a.red-link:hover {
 .formPage .description p {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 1.2rem;
 }
 .formPage .description a {
   color: #b8181c;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .formPage .description a:hover {
@@ -2933,7 +2961,7 @@ a.red-link:hover {
   opacity: 0.4;
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   padding-bottom: 3.2rem;
 }
@@ -3001,7 +3029,7 @@ a.red-link:hover {
 .formPage .dropzone p {
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3038,7 +3066,7 @@ a.red-link:hover {
   margin-top: 2.4rem;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3085,7 +3113,7 @@ a.red-link:hover {
   padding: 1.6rem;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   padding: 1.6rem;
   -webkit-border-radius: 0.4rem;
@@ -3192,7 +3220,8 @@ a.red-link:hover {
           box-shadow: 0px 0px 0.5rem 0px #939393;
   border: 1px solid #b8181c;
 }
-.formPage .custom-checkbox input[type="checkbox"]:checked ~ .checked {
+.formPage .custom-checkbox input[type="checkbox"]:checked ~ .checked,
+.formPage .custom-checkbox input[checked="checked"] ~ .checked {
   background-color: #b8181c;
   border: 1px solid #b8181c;
   color: #fff;
@@ -3200,7 +3229,7 @@ a.red-link:hover {
 }
 .formPage .custom-checkbox p {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   color: #666;
 }
@@ -3208,7 +3237,7 @@ a.red-link:hover {
   text-decoration: underline;
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .formPage .custom-checkbox p a:hover {
@@ -3234,7 +3263,7 @@ a.red-link:hover {
 .formPage form label {
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-top: 3.2rem;
   margin-bottom: 0;
@@ -3257,7 +3286,7 @@ a.red-link:hover {
 .formPage form label .title {
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
   padding: 0;
@@ -3306,7 +3335,7 @@ a.red-link:hover {
 .formPage form label.date .hint {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   position: absolute;
   left: -webkit-calc(100% + 1.2rem);
@@ -3362,7 +3391,7 @@ a.red-link:hover {
   cursor: pointer;
   color: #313131;
   font-size: 1.62rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   padding: 1.6rem;
   -webkit-border-radius: 0.4rem;
@@ -3385,7 +3414,7 @@ a.red-link:hover {
 .formPage form .info {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   margin-top: 0.8rem;
 }
@@ -3433,7 +3462,7 @@ a.red-link:hover {
   bottom: 3.2rem;
   font-size: 1.4rem;
   line-height: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   left: -2rem;
 }
 .formPage .hint span:before {
@@ -3501,13 +3530,13 @@ a.red-link:hover {
 .formPage .custom-radio label p {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .formPage .custom-radio label span {
   color: #828282;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .formPage .selectOnMap {
@@ -3530,7 +3559,7 @@ a.red-link:hover {
 }
 .formPage .change {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .formPage__bottom {
@@ -3643,7 +3672,7 @@ a.red-link:hover {
   text-align: left;
   color: #000;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
 }
 .formPage .msg .btn {
@@ -3668,14 +3697,14 @@ a.red-link:hover {
   padding: 2.4rem 0 1.2rem;
   color: #313131;
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 4.8rem;
 }
 .formPage__finish p {
   position: relative;
   color: #313131;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   display: inline-block;
 }
@@ -3685,7 +3714,7 @@ a.red-link:hover {
 .formPage__finish p span,
 .formPage__finish p a {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .formPage__finish p span.number,
@@ -3823,7 +3852,7 @@ form.search > :last-child {
   }
   .formPage__content .title {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.8rem;
   }
   .formPage .hint {
@@ -3900,7 +3929,7 @@ form.search > :last-child {
     white-space: pre;
     color: #193c6d;
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2rem;
     position: absolute;
     top: -2.8rem;
@@ -3985,7 +4014,7 @@ form.search > :last-child {
     text-align: left;
     width: 100%;
     margin-bottom: 1.2rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.4rem;
   }
   .formPage__bottom .wrapper {
@@ -3994,17 +4023,17 @@ form.search > :last-child {
   .formPage__finish .title {
     padding: 1.8rem 0 1.6rem;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.8rem;
   }
   .formPage__finish p {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.4rem;
   }
   .formPage__finish p a {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.4rem;
   }
   .formPage__finish .btn {
@@ -4059,7 +4088,7 @@ form.search > :last-child {
     margin-bottom: 2.4rem;
     color: #313131;
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
   }
 }
@@ -4127,7 +4156,7 @@ form.search > :last-child {
   position: relative;
   cursor: pointer;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .accordion-menu li > :first-child:hover {
@@ -4150,7 +4179,7 @@ form.search > :last-child {
   height: 2.4rem;
   font-size: 2.4rem;
   line-height: normal;
-  font-weight: 400;
+  font-weight: normal;
   position: absolute;
   top: 0.2rem;
   right: -3.6rem;
@@ -4268,7 +4297,7 @@ form.search > :last-child {
   }
   .accordion-menu.v2 li > :first-child {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.4rem;
   }
   .accordion-menu.v2 li > :first-child i {
@@ -4285,7 +4314,7 @@ form.search > :last-child {
   }
   .accordion-menu li > :first-child {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.4rem;
   }
   .accordion-menu li > :first-child i {
@@ -4360,7 +4389,7 @@ form.search > :last-child {
 .application__item h6 {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 1.6rem;
   text-align: center;
@@ -4373,7 +4402,7 @@ form.search > :last-child {
       -ms-flex: 1;
           flex: 1;
   color: #575756;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-bottom: 2.4rem;
@@ -4526,14 +4555,14 @@ form.search > :last-child {
   margin-bottom: 1.6rem;
   color: #313131;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
 }
 .mapSection .list__item > :first-child span {
   margin-top: 0.2rem;
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   width: 100%;
   display: inline-block;
   line-height: 1;
@@ -4561,7 +4590,7 @@ form.search > :last-child {
 .mapSection .list .location h6 {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
@@ -4963,7 +4992,7 @@ form.search > :last-child {
 .sheduleBlock.Static h6 {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
@@ -5026,12 +5055,12 @@ form.search > :last-child {
   color: #666;
   white-space: pre;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.Static .openShedule a span {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
   padding-top: 0.2rem;
 }
@@ -5108,13 +5137,13 @@ form.search > :last-child {
   margin-right: 1.6rem;
   color: #38a648;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.Static .shedule__list li .times {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromLocation {
@@ -5125,7 +5154,7 @@ form.search > :last-child {
 .sheduleBlock.fromLocation h6 {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
@@ -5190,13 +5219,13 @@ form.search > :last-child {
   color: #666;
   white-space: pre;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromLocation .openShedule a span {
   margin-bottom: 0;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
 }
 .sheduleBlock.fromLocation .openShedule a > :last-child {
@@ -5273,13 +5302,13 @@ form.search > :last-child {
   margin-right: 1.6rem;
   color: #38a648;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromLocation .shedule__list li .times {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromMapBlock {
@@ -5290,7 +5319,7 @@ form.search > :last-child {
 .sheduleBlock.fromMapBlock h6 {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
@@ -5354,13 +5383,13 @@ form.search > :last-child {
   color: #666;
   white-space: pre;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromMapBlock .openShedule a span {
   padding-top: 0.2rem;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
 }
 .sheduleBlock.fromMapBlock .openShedule a > :last-child {
@@ -5429,13 +5458,13 @@ form.search > :last-child {
   margin-right: 1.6rem;
   color: #38a648;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromMapBlock .shedule__list li .times {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromPopUp {
@@ -5446,7 +5475,7 @@ form.search > :last-child {
 .sheduleBlock.fromPopUp h6 {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
@@ -5510,7 +5539,7 @@ form.search > :last-child {
   color: #666;
   white-space: pre;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromPopUp .openShedule a span {
@@ -5582,13 +5611,13 @@ form.search > :last-child {
   margin-right: 1.6rem;
   color: #38a648;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromPopUp .shedule__list li .times {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromForm {
@@ -5600,7 +5629,7 @@ form.search > :last-child {
 .sheduleBlock.fromForm h6 {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   padding-top: 0.2rem;
 }
@@ -5669,7 +5698,7 @@ form.search > :last-child {
   color: #666;
   white-space: pre;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .sheduleBlock.fromForm .openShedule a span {
@@ -5741,13 +5770,13 @@ form.search > :last-child {
   margin-right: 1.6rem;
   color: #38a648;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .sheduleBlock.fromForm .shedule__list li .times {
   font-size: 1.4rem;
   line-height: 2rem;
-  font-weight: 400;
+  font-weight: normal;
 }
 .phoneBlock.fromMapBlock {
   display: -webkit-box;
@@ -5764,7 +5793,7 @@ form.search > :last-child {
 .phoneBlock.fromMapBlock h6 {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
@@ -5794,12 +5823,12 @@ form.search > :last-child {
 .phoneBlock.fromMapBlock span {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
 }
 .phoneBlock.fromMapBlock a {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
@@ -5821,7 +5850,7 @@ form.search > :last-child {
 .phoneBlock.fromPopUp h6 {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
 }
@@ -5851,7 +5880,7 @@ form.search > :last-child {
 .phoneBlock.fromPopUp span {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .phoneBlock.fromPopUp a {
@@ -5881,7 +5910,7 @@ form.search > :last-child {
 .phoneBlock.fromForm h6 {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .phoneBlock.fromForm > :first-child {
@@ -5910,7 +5939,7 @@ form.search > :last-child {
 .phoneBlock.fromForm span {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .phoneBlock.fromForm a {
@@ -6009,7 +6038,7 @@ form.search > :last-child {
 .pointOfIssue > :first-child label h6 {
   color: #313131;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 @media screen and (max-width: 640px) {
@@ -6499,7 +6528,7 @@ form.search > :last-child {
 .content__item .title {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 2rem;
 }
@@ -6782,7 +6811,7 @@ form.search > :last-child {
 }
 .cards.instruction .accordion-menu > :first-child {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .cards.instruction .accordion-menu > li {
@@ -6821,7 +6850,7 @@ form.search > :last-child {
 .cards.docList .accordion-menu li > :first-child {
   padding-right: 3.6rem;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .cards.docList .accordion-menu li > :first-child i {
@@ -6841,7 +6870,7 @@ form.search > :last-child {
 .cards.docList .accordion-menu li .answer .title {
   margin-bottom: 1.4rem;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   padding-bottom: 0;
   border-bottom: none;
@@ -6954,7 +6983,7 @@ form.search > :last-child {
 .cards .card .page-title .title {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   padding-bottom: 0;
   border-bottom: 0;
@@ -6963,7 +6992,7 @@ form.search > :last-child {
 }
 .cards .card .page-title a {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -6977,7 +7006,7 @@ form.search > :last-child {
 }
 .cards .card .page-title a span {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .cards .card .page-title a:hover {
@@ -7007,7 +7036,7 @@ form.search > :last-child {
 }
 .cards .card .page-title .options li {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 1.2rem;
 }
@@ -7336,7 +7365,7 @@ form.search > :last-child {
 .pagination a {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   padding: 0 2.2rem;
   height: 4.8rem;
@@ -7388,7 +7417,7 @@ form.search > :last-child {
   padding: 1.6rem;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   padding: 1.6rem;
   -webkit-border-radius: 0.4rem;
@@ -7472,7 +7501,7 @@ form.search > :last-child {
 .note p.title {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7622,6 +7651,87 @@ form.search > :last-child {
 }
 .tabs-with-margin {
   margin: 10px 0 50px 0;
+}
+.popular-requests p {
+  color: #939393;
+  font-size: 14px;
+}
+.popular-requests ul li {
+  display: inline-block;
+  margin-right: 16px;
+}
+.popular-requests ul li:hover {
+  color: #b8181c;
+  cursor: pointer;
+}
+.sitemap {
+  padding: 16px 0 0;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 16px;
+}
+.sitemap .title {
+  margin-bottom: 24px !important;
+  position: relative;
+}
+.sitemap .title span {
+  font-size: 20px !important;
+}
+.sitemap .plusp {
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  cursor: pointer;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.sitemap.hidden .plusp {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+.sitemap .wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sitemap .column {
+  width: 50%;
+}
+.sitemap .column a.title {
+  font-size: 18px;
+  margin-bottom: 16px;
+  display: inline-block;
+  color: #b8181c;
+}
+.sitemap .column ul {
+  list-style: none;
+}
+.sitemap .column ul li {
+  list-style: none;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.sitemap.hidden .wrap {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .sitemap .wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sitemap .column {
+    width: 100%;
+  }
 }
 .more-button {
   font-size: 16px;
@@ -7948,7 +8058,7 @@ form.search > :last-child {
   .note p.title {
     margin-bottom: 1.6rem;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 28px;
   }
   .note.v2 {
@@ -8424,7 +8534,7 @@ form.search > :last-child {
 .stepsBlock__item .info > :first-child {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 2.4rem;
 }
@@ -8444,7 +8554,7 @@ form.search > :last-child {
 .stepsBlock__item .info p {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 @media screen and (max-width: 640px) {
@@ -8487,7 +8597,7 @@ form.search > :last-child {
 .consultBlock h6 {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 3.2rem;
   border: none;
@@ -8531,20 +8641,20 @@ form.search > :last-child {
 .consults__item > :first-child {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 1rem;
 }
 .consults__item .tel {
   color: #000;
   font-size: 2.8rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
 }
 .consults__item span {
   color: #939393;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-top: 0.6rem;
 }
@@ -8566,7 +8676,7 @@ form.search > :last-child {
   }
   .consultBlock a {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.6rem;
   }
 }
@@ -8601,7 +8711,7 @@ form.search > :last-child {
 .requestBlock h6 {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 3.2rem;
   -webkit-border-radius: none;
@@ -8650,7 +8760,7 @@ form.search > :last-child {
 .callBlock h6 {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 2.4rem;
   -webkit-border-radius: 0;
@@ -8662,7 +8772,7 @@ form.search > :last-child {
   margin: 0 auto 0 0;
   color: #313131;
   font-size: 2.8rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
 }
 .callBlock a:hover {
@@ -8671,7 +8781,7 @@ form.search > :last-child {
 .callBlock span {
   color: #828282;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
   margin: 0;
 }
@@ -8705,9 +8815,23 @@ form.search > :last-child {
   }
   .callBlock a {
     font-size: 3.2rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 4.8rem;
   }
+}
+#tabsroot {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tabwrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px;
 }
 .tabsContainer {
   margin-bottom: 3.2rem;
@@ -8753,8 +8877,9 @@ form.search > :last-child {
   margin-bottom: 3rem;
   list-style-type: none;
   position: relative;
-  margin-left: 1.6rem;
-  margin-right: 1.6rem;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .tabs:last-child {
   margin-right: 0;
@@ -8764,7 +8889,7 @@ form.search > :last-child {
   position: absolute;
   z-index: 0;
   bottom: 0;
-  width: 100%;
+  width: 1000%;
   height: 1px;
   display: block;
   background-color: #c4c4c4;
@@ -8779,6 +8904,7 @@ form.search > :last-child {
           flex: none;
   line-height: 1;
   font-size: 2rem;
+  margin-top: -2px;
 }
 .tabs-arrow:hover {
   color: #b8181c;
@@ -8788,7 +8914,7 @@ form.search > :last-child {
   height: 4.4rem;
   margin-right: 2.4rem;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   color: #666;
   padding-bottom: 2rem;
   cursor: pointer;
@@ -8939,7 +9065,7 @@ form.search > :last-child {
   width: 100%;
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .socialLinks__title br {
@@ -9028,7 +9154,7 @@ form.search > :last-child {
 @media screen and (max-width: 760px) {
   .socialLinks__title {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
     margin-bottom: 2.4rem;
   }
@@ -9069,7 +9195,7 @@ form.search > :last-child {
   width: 100%;
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .weeklyNewsletter input {
@@ -9089,7 +9215,7 @@ form.search > :last-child {
   height: 5.6rem;
   color: #fff;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   text-transform: none;
   -webkit-box-flex: 0;
@@ -9107,7 +9233,7 @@ form.search > :last-child {
 @media screen and (max-width: 760px) {
   .weeklyNewsletter__title {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
     margin-bottom: 2.4rem;
   }
@@ -9243,7 +9369,7 @@ footer .bottom__container p,
 footer .bottom__container a {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   margin-bottom: 0;
   line-height: 2rem;
 }
@@ -9460,7 +9586,7 @@ footer ul ul {
 .links__container .partition a {
   color: #3a3a3a;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .links__container .partition a:hover {
@@ -9513,7 +9639,7 @@ footer ul ul {
 .links__container .partition > :first-child a {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .links__container .partition > :first-child a:hover {
@@ -9634,13 +9760,13 @@ footer ul ul {
 .hot-numbers p {
   color: #939393;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .hot-numbers a {
   color: #3a3a3a;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
 }
 .hot-numbers a:hover {
@@ -9712,7 +9838,7 @@ footer ul ul {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  font-weight: 400;
+  font-weight: normal;
   -webkit-box-orient: vertical;
   text-shadow: 4px 4px 2px #f5f5f5;
 }
@@ -9949,7 +10075,7 @@ footer ul ul {
           justify-content: flex-start;
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
   position: relative;
 }
@@ -10086,7 +10212,7 @@ footer ul ul {
   height: 100%;
 }
 .dnk_slider .slider__container .slide {
-  padding: 3.8rem 8.4rem 3.8rem 7.6rem;
+  padding: 4.4rem 8.4rem 3.4rem 7.6rem;
   -webkit-border-radius: 1.6rem;
           border-radius: 1.6rem;
   background-color: #fff;
@@ -10098,7 +10224,7 @@ footer ul ul {
 }
 .dnk_slider .slider__container .slide .content__description {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 2.4rem;
 }
@@ -10140,7 +10266,7 @@ footer ul ul {
   position: relative;
   color: #3a3a3a;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .dnk_slider .slider__container .slick-list {
@@ -10222,7 +10348,7 @@ footer ul ul {
   }
   .dnk_slider .slider__container .slick-list {
     background: #f5f5f5;
-    border-bottom: 2px solid #f5f5f5;
+    border-bottom: 20px solid #f5f5f5;
     -webkit-border-radius: 1.6rem;
             border-radius: 1.6rem;
   }
@@ -10234,7 +10360,7 @@ footer ul ul {
 @media screen and (max-width: 420px) {
   .dnk_slider .slider__container .slick-list {
     padding-bottom: 47.81vw !important;
-    padding-bottom: 153px !important;
+    padding-bottom: 133px !important;
     position: relative;
     background-image: url("../img/static/dnk_h.png");
     background-position: bottom;
@@ -10360,7 +10486,7 @@ footer ul ul {
 .newsItem .content .post_resource {
   color: #000;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   text-align: right;
   line-height: 1.8rem;
   width: 50%;
@@ -10382,6 +10508,9 @@ footer ul ul {
   }
   .newsPreview > :nth-child(2) .row > :first-child .newsItem {
     display: block;
+  }
+  .newsPreview > :nth-child(2) .row .newsItem {
+    margin-bottom: 2.4rem;
   }
   .newsPreview > :nth-child(2) .row .newsItem .content {
     position: relative;
@@ -11716,7 +11845,7 @@ footer ul ul {
       -ms-flex-align: start;
           align-items: flex-start;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .materials .doc .content .see:hover {
@@ -11734,14 +11863,14 @@ footer ul ul {
 .materials .doc .content .title {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 0.8rem;
 }
 .materials .doc .content .desc {
   color: #3a3a3a;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -11752,7 +11881,7 @@ footer ul ul {
 .materials .doc .content .link {
   color: #939393;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .materials > :last-child {
@@ -12477,20 +12606,20 @@ footer ul ul {
 .review > :first-child span {
   color: #313131;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
 }
 .review .location {
   color: #939393;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-top: 0.4rem;
 }
 .review .text {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   overflow: hidden;
   display: -webkit-box;
@@ -12509,7 +12638,7 @@ footer ul ul {
   display: inline-block;
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .review .text:after {
@@ -12520,12 +12649,12 @@ footer ul ul {
   display: inline-block;
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .review a {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 2rem;
   display: inline-block;
@@ -12533,7 +12662,7 @@ footer ul ul {
 .review a p {
   color: #b8181c;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   display: inline-block;
   cursor: pointer;
@@ -12546,7 +12675,7 @@ footer ul ul {
 }
 .review .postDate {
   color: #939393;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
@@ -12613,7 +12742,7 @@ footer ul ul {
   margin-bottom: 2.4rem;
   color: #313131;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
 }
 .recommended_for_viewing .desc {
@@ -12621,12 +12750,12 @@ footer ul ul {
   margin-bottom: 2.4rem;
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .recommended_for_viewing .desc a {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .recommended_for_viewing > :last-child {
@@ -12670,7 +12799,7 @@ footer ul ul {
   margin-bottom: 2.4rem;
   color: #313131;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
 }
 .giveFeedback .desc {
@@ -12678,7 +12807,7 @@ footer ul ul {
   margin-bottom: 2.4rem;
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .giveFeedback > :last-child {
@@ -16186,14 +16315,14 @@ footer ul ul {
   margin-bottom: 1.2rem;
   padding-bottom: 0;
   border-bottom: 0;
-  font-weight: 400;
+  font-weight: normal;
 }
 .medicalExamination .container .desc {
   margin-bottom: 1.6rem;
 }
 .medicalExamination .container .desc p {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 1.2rem;
 }
@@ -16222,7 +16351,7 @@ footer ul ul {
 .medicalExamination .container .btn span {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
 }
 .medicalExamination .container .doublerowContainer label {
   margin-top: 1.6rem;
@@ -16233,7 +16362,7 @@ footer ul ul {
 .medicalExamination .container label {
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-top: 3.2rem;
   margin-bottom: 0;
@@ -16242,7 +16371,7 @@ footer ul ul {
 .medicalExamination .container label .title {
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
   padding: 0;
@@ -16291,7 +16420,7 @@ footer ul ul {
 .medicalExamination .container label.date span {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   position: absolute;
   left: -webkit-calc(100% + 1.2rem);
@@ -16343,7 +16472,7 @@ footer ul ul {
   cursor: pointer;
   color: #313131;
   font-size: 1.62rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   padding: 1.6rem;
   -webkit-border-radius: 0.4rem;
@@ -16387,7 +16516,7 @@ footer ul ul {
   padding: 1.6rem;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   padding: 1.6rem;
   -webkit-border-radius: 0.4rem;
@@ -16494,7 +16623,7 @@ footer ul ul {
 }
 .medicalExamination .custom-checkbox p {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   color: #666;
 }
@@ -16502,7 +16631,7 @@ footer ul ul {
   text-decoration: underline;
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .medicalExamination .custom-checkbox p a:hover {
@@ -16682,7 +16811,7 @@ footer ul ul {
 .citySelect__title {
   color: #000;
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1;
   margin-bottom: 4.2rem;
   margin-top: 3rem;
@@ -16730,6 +16859,15 @@ footer ul ul {
           flex-wrap: wrap;
   width: 100%;
 }
+.cities ul {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.cities ul li {
+  width: 100%;
+}
 .cities li {
   width: -webkit-calc(100% / 3);
   width: calc(100% / 3);
@@ -16750,11 +16888,11 @@ footer ul ul {
 .cities p {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.2rem;
 }
 .cities a.ex p {
-  font-weight: 700;
+  font-weight: bold;
 }
 .cities a.red p {
   color: #b8181c;
@@ -16790,7 +16928,7 @@ footer ul ul {
     color: #313131;
     font-size: 2.4rem;
     margin-top: 2rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
     margin-bottom: 2.4rem;
   }
@@ -16799,6 +16937,16 @@ footer ul ul {
     height: 2.4rem;
     top: 2rem;
     right: 2rem;
+  }
+  .cities ul {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    margin-bottom: 0;
+  }
+  .cities ul li {
+    width: 100%;
   }
   .cities li {
     width: -webkit-calc(100% / 2);
@@ -16833,7 +16981,7 @@ footer ul ul {
   }
   .hotPhones .sectionTitle {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
     margin-bottom: 3.6rem;
   }
@@ -16871,7 +17019,7 @@ footer ul ul {
   }
   .hotPhones .activity-wrap .phone {
     font-size: 2.8rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
   }
 }
@@ -16879,7 +17027,7 @@ footer ul ul {
   margin-top: 0;
   color: #000;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
   margin-bottom: 1.6rem;
 }
@@ -16918,13 +17066,13 @@ footer ul ul {
 }
 .statistics .statisticsContainer__item > :first-child {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 0.6rem;
 }
 .statistics .statisticsContainer__item .date {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   margin-bottom: 0.8rem;
   line-height: 2.4rem;
 }
@@ -16936,7 +17084,7 @@ footer ul ul {
 }
 .statistics .statisticsContainer__item .countBlock p {
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 @media screen and (max-width: 960px) {
@@ -17047,7 +17195,7 @@ footer ul ul {
   width: 100%;
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   padding-top: 0.2rem;
   margin-bottom: 0.4rem;
@@ -17089,7 +17237,7 @@ footer ul ul {
 .howToGet .sectionTitle {
   margin: 0;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
 }
 .howToGet .textBlock {
@@ -17098,7 +17246,7 @@ footer ul ul {
 @media screen and (max-width: 960px) {
   .howToGet .sectionTitle {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.8rem;
   }
   .howToGet .textBlock {
@@ -17137,7 +17285,7 @@ footer ul ul {
 .imageItem .content__text {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.8rem;
 }
 .persons {
@@ -17186,13 +17334,13 @@ footer ul ul {
 .persons__item .block p span {
   font-size: 1.4rem;
   line-height: 2rem;
-  font-weight: 400;
+  font-weight: normal;
 }
 .persons__item .block p.position {
   white-space: pre;
   text-align: left;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .persons__item .block p.fullName {
@@ -17204,34 +17352,34 @@ footer ul ul {
 }
 .persons__item .block p.days {
   font-size: 1.4rem;
-  font-weight: 400;
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: normal;
   line-height: 2rem;
   text-align: center;
 }
 .persons__item .block p.worktime {
   font-size: 1.4rem;
-  font-weight: 400;
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: normal;
   line-height: 2rem;
   text-align: center;
 }
 .persons__item .block p.address {
   font-size: 1.4rem;
-  font-weight: 400;
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: normal;
   line-height: 2rem;
 }
 .persons__item .block a p,
 .persons__item .block a span {
   font-size: 1.4rem;
   line-height: 2rem;
-  font-weight: 400;
+  font-weight: normal;
 }
 .persons__item .block a.tel {
   font-size: 1.4rem;
-  font-weight: 400;
-  font-weight: 400;
+  font-weight: normal;
+  font-weight: normal;
   line-height: 2rem;
 }
 .persons__item > :last-child {
@@ -17321,14 +17469,14 @@ footer ul ul {
 .officeAddresses h6 {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
   margin-bottom: 0.6rem;
 }
 .officeAddresses p {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .officeAddresses > :last-child {
@@ -17376,7 +17524,7 @@ footer ul ul {
   display: inline-block;
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .officeAddresses.mobile > :last-child {
@@ -17405,7 +17553,7 @@ footer ul ul {
   }
   .officeAddresses.mobile > :last-child {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.4rem;
   }
 }
@@ -17460,7 +17608,7 @@ footer ul ul {
   padding: 0 2.4rem;
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .postDatesFilter label {
@@ -17489,7 +17637,7 @@ footer ul ul {
           align-items: center;
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 0;
 }
@@ -17620,7 +17768,7 @@ footer ul ul {
 .mapOpenBlock .desc {
   color: #000;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .mapOpenBlock > :last-child {
@@ -17722,7 +17870,7 @@ footer ul ul {
 .messageBlock .textBlock {
   margin-bottom: 3.2rem;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.8rem;
 }
 .messageBlock .textBlock a {
@@ -17901,14 +18049,14 @@ footer ul ul {
 .representativeContacts .info__block__item .title {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .representativeContacts .info__block__item p,
 .representativeContacts .info__block__item a {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .representativeContacts .info__block__item a:hover {
@@ -18376,7 +18524,7 @@ footer ul ul {
 .videoItem .content__text {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.8rem;
 }
 @media screen and (max-width: 1012px) {
@@ -18608,7 +18756,7 @@ footer ul ul {
     display: flex;
   }
   .clientHistoryItem {
-    margin: 0 2rem 2.4rem;
+    margin: 2.4rem 2rem;
   }
   .clientHistoryItem .content {
     padding: 2.4rem 2.4rem 3.2rem;
@@ -18815,7 +18963,7 @@ footer ul ul {
     display: flex;
   }
   .literatePatientSchoolItem {
-    margin: 0 2rem 2.4rem;
+    margin: 2.4rem 2rem;
   }
   .literatePatientSchoolItem .content {
     padding: 3.2rem 2.4rem;
@@ -19124,7 +19272,7 @@ footer ul ul {
   color: #313131;
   font-size: 1.6rem;
   width: 100%;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 2.4rem;
   position: relative;
@@ -19132,7 +19280,7 @@ footer ul ul {
 .feedbackForm label .title {
   color: #3a3a3a;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
   padding: 0;
@@ -19227,7 +19375,7 @@ footer ul ul {
 .feedbackNumber .phone-title {
   color: #3a3a3a;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: normal;
   margin-bottom: 1.6rem;
   line-height: 2.8rem;
   text-align: left;
@@ -19306,13 +19454,13 @@ footer ul ul {
 .detailedReview > :first-child span {
   color: #313131;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 3.2rem;
 }
 .detailedReview .location {
   color: #939393;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-top: 0.4rem;
   margin-bottom: 1.6rem;
@@ -19320,7 +19468,7 @@ footer ul ul {
 .detailedReview .text {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   position: relative;
   margin-bottom: 3.2rem;
@@ -19328,7 +19476,7 @@ footer ul ul {
 }
 .detailedReview a {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   margin-bottom: 2rem;
   display: inline-block;
@@ -19336,7 +19484,7 @@ footer ul ul {
 .detailedReview a p {
   color: #b8181c;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   display: inline-block;
   cursor: pointer;
@@ -19349,7 +19497,7 @@ footer ul ul {
 }
 .detailedReview .postDate {
   color: #939393;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
@@ -19404,7 +19552,7 @@ footer ul ul {
   margin-bottom: 0;
 }
 .dropDownFilter .dropdown label > :first-child {
-  font-weight: 400;
+  font-weight: normal;
 }
 .dropDownFilter .dropdown input {
   padding-right: 5.4rem;
@@ -19427,7 +19575,7 @@ footer ul ul {
   padding: 1.6rem;
   color: #313131;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
   padding: 1.6rem;
   -webkit-border-radius: 0.4rem;
@@ -19486,7 +19634,7 @@ footer ul ul {
 .orgList .license {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
 }
 .orgList .license span {
@@ -19496,7 +19644,7 @@ footer ul ul {
 .orgList .minDesc {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   margin-bottom: 2.4rem;
 }
@@ -19534,7 +19682,7 @@ footer ul ul {
 .orgList__item .block p {
   color: #000;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2.4rem;
 }
 .orgList__item .block a:hover {
@@ -19563,7 +19711,7 @@ footer ul ul {
 .orgList__item .block .title {
   color: #666;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 2rem;
   margin-bottom: 0.4rem;
 }
@@ -19602,34 +19750,34 @@ footer ul ul {
 @media screen and (max-width: 960px) {
   .locationSection .sectionTitle {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
   }
 }
 .personalReception .sectionTitle {
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 4rem;
   margin-bottom: 1.4rem;
 }
 @media screen and (max-width: 960px) {
   .personalReception .sectionTitle {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.8rem;
     margin-bottom: 2.4rem;
   }
 }
 .learnMore .sectionTitle {
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 4rem;
   margin-bottom: 1.4rem;
 }
 @media screen and (max-width: 960px) {
   .learnMore .sectionTitle {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
     margin-bottom: 2.4rem;
   }
@@ -20144,7 +20292,7 @@ footer ul ul {
   }
   h3 {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 3.2rem;
   }
   h3.sectionTitle {
@@ -20163,7 +20311,7 @@ footer ul ul {
   }
   h6 {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 2.4rem;
   }
   p {
