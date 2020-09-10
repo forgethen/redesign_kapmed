@@ -18155,9 +18155,6 @@ footer ul ul {
     display: inline-flex;
   }
 }
-.companyNews_and_Events .seeMore {
-  margin-top: 2.4rem;
-}
 .companyNewsAndEventItem {
   background-color: #f5f5f5;
   border: 1px solid #f5f5f5;
@@ -18327,6 +18324,11 @@ footer ul ul {
 @media screen and (max-width: 680px) {
   .companyNews_and_Events {
     margin-bottom: 2.4rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .companyNews_and_Events .seeMore {
+    margin-top: 2.4rem;
   }
 }
 @media screen and (max-width: 639px) {
