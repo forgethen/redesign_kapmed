@@ -2290,7 +2290,7 @@ a.red-link:hover {
 .content_list ul {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 298px;
   padding: 0.4rem 0;
   margin: 0;
   list-style-type: none;
@@ -6345,6 +6345,7 @@ form.search > :last-child {
           flex-direction: row;
   height: auto;
   padding: 25px 16px;
+  cursor: pointer;
 }
 .activity-wrap .activity.resource img {
   width: 48px;
@@ -6355,6 +6356,9 @@ form.search > :last-child {
   width: calc(100% - 88px);
   font-size: 20px;
   line-height: 28px;
+}
+.activity-wrap .activity.resource:hover {
+  background-color: #f5f5f5;
 }
 .activity-wrap .activity.with-btn {
   height: 352px;
@@ -6706,7 +6710,7 @@ form.search > :last-child {
   padding-top: 20px;
 }
 .slider-root .slider-arrows-pos {
-  top: 10px;
+  top: -5px;
   left: 600px;
 }
 .slider-wrap {
@@ -8831,6 +8835,7 @@ form.search > :last-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 3rem;
 }
 .tabwrapper {
   width: 100%;
@@ -8896,7 +8901,6 @@ form.search > :last-child {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3rem;
   list-style-type: none;
   position: relative;
   -webkit-transition: 0.2s;
@@ -9023,25 +9027,8 @@ form.search > :last-child {
   border: 0.1rem solid #c4c4c4;
   -webkit-border-radius: 2rem;
           border-radius: 2rem;
-  padding: 0.6rem 1.6rem 0.4rem;
-  margin-right: 1.2rem;
-  margin-bottom: 1.6rem;
-  cursor: pointer;
-}
-.tags .tag span {
-  text-align: center;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-}
-.tags .tag:hover {
-  -webkit-box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
-          box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
-}
-.tags .tag.v2 {
-  border: 0.1rem solid #c1c1c1;
   padding: 0.2rem 1.6rem 0;
-  margin-right: 1.2rem;
-  height: 3.2rem;
+  height: 3.6rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9054,6 +9041,18 @@ form.search > :last-child {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 1.2rem;
+  margin-bottom: 1.6rem;
+  cursor: pointer;
+}
+.tags .tag span {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.tags .tag:hover {
+  -webkit-box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
+          box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
 }
 .tags .tag.active {
   background: #b8181c;
@@ -10108,6 +10107,12 @@ footer ul ul {
 .direction_of_activity-list__item > :first-child > :first-child img {
   height: 100%;
   width: auto;
+}
+.direction_of_activity-list__item > :first-child > :last-child {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .direction_of_activity-list__item > :first-child span {
   display: -webkit-box;
