@@ -45,9 +45,6 @@ body:before {
 body.fancybox-active {
   overflow-y: hidden;
 }
-body .allContent {
-  overflow-x: hidden;
-}
 body .allContent,
 body .formPage {
   height: auto;
@@ -9250,6 +9247,14 @@ form.search > :last-child {
   .weeklyNewsletter input[type="submit"] {
     width: 100%;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .weeklyNewsletter input[type="submit"] {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 footer {
@@ -20242,6 +20247,9 @@ footer ul ul {
   }
 }
 @media screen and (max-width: 680px) {
+  .sectionTitle__bottom {
+    margin-top: 2.4rem;
+  }
   .sectionTitle br {
     display: inline-block;
   }
