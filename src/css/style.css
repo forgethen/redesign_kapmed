@@ -675,6 +675,10 @@ select:hover {
 }
 .top-container > :first-child .row > :first-child a,
 .top-container > :first-child .row > :first-child #app_region {
+  max-width: -webkit-calc(100% / 3);
+  max-width: calc(100% / 3);
+}
+.top-container > :first-child .row > :first-child a {
   margin: 0 1.6rem;
   -webkit-box-align: baseline;
   -webkit-align-items: baseline;
@@ -682,8 +686,6 @@ select:hover {
           align-items: baseline;
   padding-left: 2.8rem;
   position: relative;
-  max-width: -webkit-calc(100% / 3);
-  max-width: calc(100% / 3);
 }
 .top-container > :first-child .row > :first-child #app_region a {
   width: 100%;
