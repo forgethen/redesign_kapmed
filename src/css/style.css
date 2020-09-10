@@ -7143,6 +7143,9 @@ form.search > :last-child {
 .press-wrap .press .meta .date {
   color: #939393;
 }
+.press-wrap .press .meta .smi {
+  color: #939393;
+}
 .press-wrap .press .metadata {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7636,6 +7639,18 @@ form.search > :last-child {
 }
 .more-button:hover {
   opacity: 0.8;
+}
+.pos {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.textinform {
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 24px;
 }
 .support-level {
   display: -webkit-box;
