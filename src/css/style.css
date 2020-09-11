@@ -341,13 +341,21 @@ select:hover {
 .sectionTitle a {
   font-size: inherit;
   line-height: inherit;
+  position: relative;
+  white-space: pre;
 }
 .sectionTitle a span {
   font-size: inherit;
   line-height: inherit;
 }
 .sectionTitle a i {
-  font-size: 2.8rem;
+  font-size: inherit;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 100%;
   line-height: inherit;
 }
 .sectionTitle a:hover span {
@@ -2720,6 +2728,7 @@ a.red-link:hover {
   font-weight: inherit;
   line-height: inherit;
   cursor: pointer;
+  white-space: pre;
   position: relative;
 }
 .page-title a span {
