@@ -2608,7 +2608,7 @@ a.red-link:hover {
 }
 .custom-select .options-block {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 100%;
   display: -webkit-box;
   display: -webkit-flex;
