@@ -10449,6 +10449,7 @@ footer ul ul {
           justify-content: flex-start;
   margin-bottom: 3.2rem;
   position: relative;
+  overflow: hidden;
 }
 .newsItem:hover {
   opacity: 1;
