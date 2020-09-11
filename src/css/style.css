@@ -2519,20 +2519,7 @@ a.red-link:hover {
     top: 1.6rem;
   }
 }
-.custom-select > :first-child {
-  position: relative;
-}
-.custom-select > :first-child a:hover span {
-  text-decoration: underline;
-}
-.custom-select .options-block.show {
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-  background-color: #fff;
-  -webkit-filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
-          filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
-}
-.custom-select.v2 {
+.custom-select {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2546,11 +2533,19 @@ a.red-link:hover {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.custom-select.v2 .options-block {
-  right: -2.4rem;
+.custom-select > :first-child {
+  position: relative;
 }
-.custom-select.v2 .options-block.show {
+.custom-select > :first-child a:hover span {
+  text-decoration: underline;
+}
+.custom-select .options-block.show {
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: #fff;
   padding: 3.2rem 2.4rem 3.2rem 2.4rem;
+  -webkit-filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+          filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
 }
 .custom-select .options {
   display: none;
@@ -2561,8 +2556,7 @@ a.red-link:hover {
 .custom-select .options-block {
   position: absolute;
   z-index: 1;
-  top: 2.4rem;
-  right: 0;
+  top: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2639,11 +2633,10 @@ a.red-link:hover {
   background-color: #b8181c;
 }
 @media screen and (max-width: 640px) {
+  .custom-select .options-block {
+    padding: 1.6rem 1.2rem;
+  }
   .custom-select .options {
-    font-size: 2.4rem;
-    font-weight: normal;
-    line-height: 3.2rem;
-    padding: 2rem;
     width: auto;
     z-index: 1;
   }
@@ -2724,20 +2717,18 @@ a.red-link:hover {
 }
 .page-title .title {
   color: #313131;
-  font-size: 3.2rem;
-  font-weight: normal;
-  line-height: 4.8rem;
 }
 .page-title a {
-  font-size: 3.2rem;
-  font-weight: normal;
-  line-height: 4.8rem;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
   cursor: pointer;
+  position: relative;
 }
 .page-title a span {
-  font-size: 3.2rem;
-  font-weight: normal;
-  line-height: 4.8rem;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 .page-title a:hover {
   opacity: 0.8;
@@ -2750,15 +2741,20 @@ a.red-link:hover {
 }
 .page-title a i {
   color: #b8181c;
-  font-size: 2rem;
-  line-height: 2.8rem;
+  font-size: inherit;
+  line-height: 1;
   margin-left: 0.8rem;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 100%;
 }
 .page-title .options li {
   font-size: 3.2rem;
   font-weight: normal;
-  line-height: 3.2rem;
+  line-height: 1;
   margin-bottom: 2.4rem;
 }
 @media screen and (max-width: 640px) {
@@ -2767,9 +2763,6 @@ a.red-link:hover {
   }
   .page-title .title {
     color: #313131;
-    font-size: 2.4rem;
-    font-weight: normal;
-    line-height: 3.2rem;
   }
   .page-title .options li {
     margin-bottom: 1.6rem;
@@ -2777,20 +2770,6 @@ a.red-link:hover {
     font-size: 2.4rem;
     font-weight: normal;
     line-height: 3.2rem;
-  }
-  .page-title a {
-    font-size: 2.4rem;
-    font-weight: normal;
-    line-height: 3.2rem;
-  }
-  .page-title a span {
-    font-size: 2.4rem;
-    font-weight: normal;
-    line-height: 3.2rem;
-  }
-  .page-title a i {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
   }
 }
 .formPage {
@@ -6991,65 +6970,8 @@ form.search > :last-child {
 }
 .cards .card .page-title .title {
   color: #000;
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 2.8rem;
-  padding-bottom: 0;
   border-bottom: 0;
-  margin-bottom: 0;
-  display: inline-block;
-}
-.cards .card .page-title a {
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 2.8rem;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.cards .card .page-title a span {
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 2.8rem;
-}
-.cards .card .page-title a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
-}
-.cards .card .page-title a i {
-  color: #b8181c;
-  width: 2.4rem;
-  height: 2.4rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2rem;
-  line-height: 2.8rem;
-  margin-left: 0.8rem;
-  position: relative;
-}
-.cards .card .page-title .options li {
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 2.8rem;
-  margin-bottom: 1.2rem;
-}
-.cards .card .page-title .options > :last-child {
+  padding-bottom: 0;
   margin-bottom: 0;
 }
 .standart-button {
@@ -11551,10 +11473,6 @@ footer ul ul {
   -webkit-border-radius: 8px;
           border-radius: 8px;
 }
-.pres-page .page-title h1 {
-  font-size: 36px;
-  line-height: 40px;
-}
 @media screen and (max-width: 980px) {
   .no-mob {
     display: none !important;
@@ -11950,6 +11868,12 @@ footer ul ul {
   margin-top: 3.6rem;
 }
 @media screen and (max-width: 640px) {
+  .materials .doc {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2.4rem;
+    padding: 2.4rem;
+  }
   .materials.v2 {
     padding: 1.6rem;
   }
