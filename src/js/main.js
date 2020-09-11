@@ -56,10 +56,34 @@ $(document).ready(function() {
     );
   });
 
-  $(".custom-select a").click(function() {
-    $(this).parents(".custom-select").find("i").addClass("active");
-    $(this).parents(".custom-select").find(".options").show();
-    $(this).parents(".custom-select").find(".options-block").addClass("show");
+  // $(".custom-select a").click(function() {
+  //   $(this).parents(".custom-select").find("i").addClass("active");
+  //   $(this).parents(".custom-select").find(".options").show();
+  //   $(this).parents(".custom-select").find(".options-block").addClass("show");
+  // });
+
+
+  function customSelectClose() {
+    $(".custom-select").each(function() {
+      $(this).parents(".custom-select").find("i").removeClass("active");
+      $(this).parents(".custom-select").find(".options").hide();
+      $(this).parents(".custom-select").find(".options-block").removeClass("show");
+    });
+  }
+
+  $(".custom-select a").click(function(e) {
+    if ($(this).parents(".custom-select").find(".options-block").hasClass("show")) {
+      $(this).parents(".custom-select").find("i").removeClass("active");
+      $(this).parents(".custom-select").find(".options").hide();
+      $(this).parents(".custom-select").find(".options-block").removeClass("show");
+      e.stopPropagation();
+    } else {
+      customSelectClose();
+      $(this).parents(".custom-select").find("i").addClass("active");
+      $(this).parents(".custom-select").find(".options").show();
+      $(this).parents(".custom-select").find(".options-block").addClass("show");
+      e.stopPropagation();
+    }
   });
 
   $(".custom-select .options li").click(function() {
