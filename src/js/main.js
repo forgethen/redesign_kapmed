@@ -68,10 +68,7 @@ $(document).ready(function() {
     $(this).parents(".custom-select").find(".options .red").removeClass("red");
     $(this).parents(".custom-select").find("a span").text(thisVal);
     $(this).parents(".custom-select").find("a i").removeClass("active");
-    $(this)
-      .parents(".custom-select")
-      .find(".options-block")
-      .removeClass("show");
+    $(this).parents(".custom-select").find(".options-block").removeClass("show");
     $(this).addClass("red");
   });
 
@@ -305,7 +302,7 @@ $(document).ready(function() {
       dropdownClose();
     }
 
-    if (!$(e.target).closest(".custom-select").length) {
+    if (!$(e.target).closest(".custom-select a").length) {
       $(".options-block").removeClass("show");
       $(".options").hide();
     }
