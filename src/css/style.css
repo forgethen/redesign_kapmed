@@ -4460,7 +4460,12 @@ form.search > :last-child {
 }
 .mapPopUp .mapSection .list__item.select {
   border: 1px solid #b8181c;
-  border-right: 0;
+}
+.mapPopUp .mapSection .list__item.select .btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .mapPopUp .mapSection .map {
   -webkit-border-radius: 0;
@@ -4667,7 +4672,6 @@ form.search > :last-child {
 }
 .mapBlock .mapSection .list__item.select {
   border: 1px solid #b8181c;
-  border-right: 0;
 }
 .mapBlock .mapSection .list__item:hover {
   -webkit-box-shadow: none;
@@ -4718,7 +4722,6 @@ form.search > :last-child {
 }
 .infoAboutMedicalOrganizations .mapSection .list__item.select {
   border: 1px solid #b8181c;
-  border-right: 0;
 }
 .mCS-MapListThm .mCSB_container {
   margin-right: 0;
