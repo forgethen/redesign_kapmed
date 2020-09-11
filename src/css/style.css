@@ -1346,7 +1346,7 @@ header {
   color: #000;
   font-size: 1.6rem;
   font-weight: normal;
-  line-height: 2.4rem;
+  line-height: 2rem;
 }
 .headerMenu li a:hover span {
   opacity: 1;
