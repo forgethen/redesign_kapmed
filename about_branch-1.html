@@ -395,11 +395,11 @@
                   </div>
                 </div>
                 <div class="tabsContainer container">
-                  <div id="tabsroot"><a class="tabs-arrow prev ri-arrow-left-line" href="javascript:;" @click="translate(100)"></a>
-                    <div class="tabwrapper">
+                  <div id="tabsroot"><a class="tabs-arrow prev ri-arrow-left-line" href="javascript:;" @click="translate(200)" v-if="offset&lt;0"></a>
+                    <div class="tabwrapper gradient">
                       <div class="tabs" id="TABS" :style="{'transform': `translateX(${offset}px)`}"><a class="tab active" href="javascript:;">Оформить полис</a><a class="tab" href="javascript:;">Профилактика</a><a class="tab" href="javascript:;">Школа пациента</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощьdasdas</a>
                       </div>
-                    </div><a class="tabs-arrow prev ri-arrow-right-line" href="javascript:;" @click="translate(-100)"></a>
+                    </div><a class="tabs-arrow prev ri-arrow-right-line" href="javascript:;" @click="translate(-200)"></a>
                     <script>
                       new Vue({
                         el: tabsroot,
@@ -424,7 +424,7 @@
                               return false
                             }
                             if (this.offset <= 0 && num < 0) {
-                              if (wrap_width + (-this.offset) > width + objs.length * 20) {
+                              if (wrap_width + (-this.offset) > width + objs.length * 48) {
                                 return false
                               }
                             }

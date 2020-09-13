@@ -477,44 +477,7 @@
                   </div>
                 </div>
               </div>
-              <div id="tabsroot"><a class="tabs-arrow prev ri-arrow-left-line" href="javascript:;" @click="translate(100)"></a>
-                <div class="tabwrapper">
-                  <div class="tabs" id="TABS" :style="{'transform': `translateX(${offset}px)`}"><a class="tab active" href="javascript:;">Оформить полис</a><a class="tab" href="javascript:;">Профилактика</a><a class="tab" href="javascript:;">Школа пациента</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощьdasdas</a>
-                  </div>
-                </div><a class="tabs-arrow prev ri-arrow-right-line" href="javascript:;" @click="translate(-100)"></a>
-                <script>
-                  new Vue({
-                    el: tabsroot,
-                    data() {
-                      return {
-                        offset: 0
-                      }
-                    },
-                    methods: {
-                      translate(num) {
-                        let objs = document.querySelectorAll('.tab')
-                        let width = 0
-                        let wrap_width = 0
-                        let wr = document.querySelector('.tabwrapper')
-                        wrap_width = wr.offsetWidth
-                        objs = Array.from(objs)
-                        objs.map(x => {
-                          width += x.offsetWidth
-                        })
-                        if (this.offset >= 0 && num > 0) {
-                          this.offset = 0
-                          return false
-                        }
-                        if (this.offset <= 0 && num < 0) {
-                          if (wrap_width + (-this.offset) > width + objs.length * 20) {
-                            return false
-                          }
-                        }
-                        this.offset = this.offset + num
-                      }
-                    }
-                  })
-                </script>
+              <div class="tabs mb" id="TABS"><a class="tab active" href="javascript:;">Оформить полис</a><a class="tab" href="javascript:;">Профилактика</a><a class="tab" href="javascript:;">Школа пациента</a><a class="tab" href="javascript:;">Помощь</a>
               </div>
               <div class="slider-root withmrg" id="vue-root">
                 <section class="page-title smallh2">
