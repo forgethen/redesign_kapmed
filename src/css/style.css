@@ -4182,7 +4182,7 @@ form.search > :last-child {
 .accordion-menu li {
   border-top: 1px solid #e6e6e6;
   margin: 0;
-  padding: 3.6rem 3.6rem 3.6rem 0;
+  padding: 2.4rem 3.6rem 2.4rem 0;
 }
 .accordion-menu li.show > :first-child i {
   -webkit-transform: rotate(45deg);
@@ -4237,10 +4237,6 @@ form.search > :last-child {
   -webkit-transition: 0.485s ease-in-out;
   -o-transition: 0.485s ease-in-out;
   transition: 0.485s ease-in-out;
-}
-.accordion-menu li .answer p {
-  font-size: inherit;
-  line-height: inherit;
 }
 @media screen and (max-width: 960px) {
   .accordion-menu.v2 .company-directors {
@@ -16314,32 +16310,6 @@ footer ul ul {
     top: 20px;
   }
 }
-#io1 .accordion-menu__item {
-  margin-bottom: 0;
-}
-.ri-add-fill:before {
-  font-size: 25px;
-}
-#io2 .sectionTitle {
-  font-size: 32px;
-  line-height: 40px;
-}
-#io2 .accordion-menu__item {
-  margin-bottom: 0;
-}
-#io3 .title {
-  font-size: 20px;
-  line-height: 28px;
-}
-@media screen and (max-width: 980px) {
-  .docsForReg {
-    max-width: 100% !important;
-    -webkit-box-flex: 0 !important;
-    -webkit-flex: 0 0 100% !important;
-        -ms-flex: 0 0 100% !important;
-            flex: 0 0 100% !important;
-  }
-}
 .medicalExamination {
   position: relative;
   padding: 2rem;
@@ -17073,9 +17043,7 @@ footer ul ul {
     position: relative;
   }
   .hotPhones .sectionTitle {
-    font-size: 2.4rem;
     font-weight: normal;
-    line-height: 3.2rem;
     margin-bottom: 3.6rem;
   }
   .hotPhones:before {
@@ -17117,11 +17085,8 @@ footer ul ul {
   }
 }
 .statistics .sectionTitle {
-  margin-top: 0;
   color: #000;
-  font-size: 2.4rem;
   font-weight: normal;
-  line-height: 3.2rem;
   margin-bottom: 1.6rem;
 }
 .statistics .statisticsContainer {
@@ -19851,30 +19816,22 @@ footer ul ul {
   }
 }
 .personalReception .sectionTitle {
-  font-size: 3.2rem;
   font-weight: normal;
-  line-height: 4rem;
   margin-bottom: 1.4rem;
 }
 @media screen and (max-width: 960px) {
   .personalReception .sectionTitle {
-    font-size: 2rem;
     font-weight: normal;
-    line-height: 2.8rem;
     margin-bottom: 2.4rem;
   }
 }
 .learnMore .sectionTitle {
-  font-size: 3.2rem;
   font-weight: normal;
-  line-height: 4rem;
   margin-bottom: 1.4rem;
 }
 @media screen and (max-width: 960px) {
   .learnMore .sectionTitle {
-    font-size: 2.4rem;
     font-weight: normal;
-    line-height: 3.2rem;
     margin-bottom: 2.4rem;
   }
 }

@@ -19,6 +19,10 @@ $(document).ready(function() {
         //   console.log(err);
         //   return false;
         // }
+        if (hash.indexOf('#') === -1) {
+          return false;
+        }
+        
         var target = $(hash);
         if (
           target.position().top <= $(document).scrollTop() &&
