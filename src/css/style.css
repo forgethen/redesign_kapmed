@@ -6405,6 +6405,20 @@ form.search > :last-child {
 }
 .activity-wrap .activity.with-btn {
   height: 352px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.activity-wrap .activity.with-btn .links {
+  margin-bottom: 0;
+  list-style: none;
+}
+.activity-wrap .activity.with-btn .links li {
+  lsit-style: none;
+}
+.activity-wrap .activity.with-btn .more-button {
+  margin-top: 0;
 }
 .activity-wrap .activity.cardtree {
   width: 100%;
@@ -6978,6 +6992,12 @@ form.search > :last-child {
           border-radius: 0.8rem;
   padding: 4rem;
   margin-bottom: 8rem;
+}
+.cards .card.with-right-margin {
+  margin-right: 40px;
+}
+.cards .card.with-right-margin .title {
+  padding-right: 120px;
 }
 .cards .card .title {
   font-size: 32px;
@@ -7913,6 +7933,7 @@ form.search > :last-child {
 .search-wrapper .search-input .button-search span.arr {
   font-size: 26px;
   margin-top: -5px;
+  margin-left: 10px;
 }
 .search-wrapper .search-input .button-search:hover {
   background: #910009;
