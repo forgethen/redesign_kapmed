@@ -86,6 +86,31 @@ $(document).ready(function() {
     }
   });
 
+  $(".custom-select .options-block").each(function() {
+    $(this).addClass("show");
+    $(".custom-select .options-block .options").show();
+    var th1 = $(".custom-select .options-block .options")
+      .find("li:eq(0)")
+      .height();
+    var posleft = $(this).parents(".custom-select").find("a").position().left;
+    console.log(posleft);
+
+    // var pos_el = $(this).parents(".custom-select").find("a").outerWidth();
+    // console.log(pos_el);
+    // var postop = $(".custom-select a.red span").position().top;
+
+    $(this).css("max-height", th1 * 7 + 10 * 7 + 64 + "px");
+    // $(this).css("top", postop + "px");
+    $(this).css("left", posleft  + "px")
+    $(this).removeClass("show");
+    $(".custom-select .options-block .options").hide();
+  });
+
+  $(".custom-select .options-block").mCustomScrollbar({
+    theme: "CustomSelectOptionsThm",
+  });
+
+
   $(".custom-select .options li").click(function() {
     var thisVal = $(this).text();
     $(this).parents(".custom-select").find(".options").hide();
@@ -227,30 +252,6 @@ $(document).ready(function() {
 
   $(window).resize(function() {
     fromResize();
-  });
-
-  $(".custom-select .options-block").each(function() {
-    $(this).addClass("show");
-    $(".custom-select .options-block .options").show();
-    var th1 = $(".custom-select .options-block .options")
-      .find("li:eq(0)")
-      .height();
-    var posleft = $(this).parents(".custom-select").find("a").position().left;
-    console.log(posleft);
-
-    // var pos_el = $(this).parents(".custom-select").find("a").outerWidth();
-    // console.log(pos_el);
-    // var postop = $(".custom-select a.red span").position().top;
-
-    $(this).css("max-height", th1 * 7 + 10 * 7 + 64 + "px");
-    // $(this).css("top", postop + "px");
-    $(this).css("left", posleft  + "px")
-    $(this).removeClass("show");
-    $(".custom-select .options-block .options").hide();
-  });
-
-  $(".custom-select .options-block").mCustomScrollbar({
-    theme: "CustomSelectOptionsThm",
   });
 
   $(".dropdown ul").each(function() {

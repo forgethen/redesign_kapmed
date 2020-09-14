@@ -6251,6 +6251,9 @@ form.search > :last-child {
   margin-bottom: 32px;
   padding: 0 20px;
 }
+.activity-wrap .activity .text > :first-child {
+  margin-top: 0;
+}
 .activity-wrap .activity .title {
   font-size: 20px;
 }
