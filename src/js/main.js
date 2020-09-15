@@ -17,6 +17,7 @@ $(document).ready(function() {
         $('.content_list ul a[href="#'+elHash+'"]').addClass('dontRemove');
       }
     })
+
     $(this).not(".dontRemove").remove();
   });
 
