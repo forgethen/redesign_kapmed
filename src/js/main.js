@@ -761,8 +761,8 @@ $(document).ready(function() {
   });
 
   $(".fixbtn .open").click(function() {
-    $(this).parents(".fixbtn").addClass("active");
-    $("body").addClass("widgetOpened");
+    $(this).parents(".fixbtn").toggleClass("active");
+    $("body").toggleClass("widgetOpened");
   });
 
   $(".fixbtn .close").click(function() {

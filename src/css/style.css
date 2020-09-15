@@ -19926,9 +19926,9 @@ footer ul ul {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   display: block;
-  -webkit-transition: 0.125s ease-in-out;
-  -o-transition: 0.125s ease-in-out;
-  transition: 0.125s ease-in-out;
+  -webkit-transition: 0.375s ease all;
+  -o-transition: 0.375s ease all;
+  transition: 0.375s ease all;
 }
 .fixbtn .open {
   padding: 4px 8px;
@@ -19981,6 +19981,7 @@ footer ul ul {
   margin: 0.8rem auto;
   opacity: 0;
   visibility: hidden;
+  display: none;
 }
 .fixbtn .close:hover {
   -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
@@ -19993,9 +19994,9 @@ footer ul ul {
   right: 1.6rem;
 }
 .fixbtn.active .links {
-  -webkit-transition: 0.125s ease-in-out;
-  -o-transition: 0.125s ease-in-out;
-  transition: 0.125s ease-in-out;
+  -webkit-transition: 0.375s ease all;
+  -o-transition: 0.375s ease all;
+  transition: 0.375s ease all;
   background-color: #fff;
   width: auto;
   height: auto;
@@ -20010,21 +20011,38 @@ footer ul ul {
   grid-row-gap: 2.4rem;
   overflow: visible;
 }
-.fixbtn.active .open {
-  opacity: 0;
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  padding: 0;
-  -webkit-border-radius: 4px 0px 0px 4px;
-          border-radius: 4px 0px 0px 4px;
-}
-.fixbtn.active .close {
+.fixbtn.active .links > :nth-child(1),
+.fixbtn.active .links > :nth-child(2),
+.fixbtn.active .links > :nth-child(3) {
   opacity: 1;
-  visibility: visible;
+}
+.fixbtn.active .links > :nth-child(1) span,
+.fixbtn.active .links > :nth-child(2) span,
+.fixbtn.active .links > :nth-child(3) span {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-top: 0.4rem;
+  opacity: 1;
+}
+.fixbtn.active .links > :nth-child(1):before,
+.fixbtn.active .links > :nth-child(2):before,
+.fixbtn.active .links > :nth-child(3):before {
+  width: 5.6rem;
+  height: 4.8rem;
+  -webkit-border-radius: 0.4rem;
+          border-radius: 0.4rem;
+  background-size: 3.2rem;
+}
+.fixbtn.active .open {
+  background-image: url("../img/static/close_button-2.svg");
+  background-repeat: no-repeat;
+  background-size: 1.6rem 1.6rem;
   width: 4.8rem;
   height: 4.8rem;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin: 0.8rem auto;
+  background-position: center;
 }
 .fixbtn .links {
   overflow: hidden;
@@ -20033,12 +20051,13 @@ footer ul ul {
 }
 .fixbtn span {
   text-align: center;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 0;
+  line-height: 0;
   color: #000;
-  margin-top: 0.4rem;
+  margin-top: 0;
   white-space: pre;
   display: inline-block;
+  opacity: 0;
 }
 .fixbtn .links > :nth-child(1) {
   position: relative;
@@ -20055,21 +20074,22 @@ footer ul ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
 }
 .fixbtn .links > :nth-child(1):before {
   content: '';
   position: relative;
   display: block;
-  width: 5.6rem;
-  height: 4.8rem;
+  width: 0;
+  height: 0;
   cursor: pointer;
   background-image: url("../img/static/fb1.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 3.2rem 3.2rem;
+  background-size: 0;
   background-color: #b8181c;
-  -webkit-border-radius: 0.4rem;
-          border-radius: 0.4rem;
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 .fixbtn .links > :nth-child(1):hover {
   opacity: 1;
@@ -20096,21 +20116,22 @@ footer ul ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
 }
 .fixbtn .links > :nth-child(2):before {
   content: '';
   position: relative;
   display: block;
-  width: 5.6rem;
-  height: 4.8rem;
+  width: 0;
+  height: 0;
   cursor: pointer;
   background-image: url("../img/static/fb2.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 3.2rem 3.2rem;
+  background-size: 0;
   background-color: #b8181c;
-  -webkit-border-radius: 0.4rem;
-          border-radius: 0.4rem;
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 .fixbtn .links > :nth-child(2):hover {
   opacity: 1;
@@ -20137,21 +20158,22 @@ footer ul ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
 }
 .fixbtn .links > :nth-child(3):before {
   content: '';
   position: relative;
   display: block;
-  width: 5.6rem;
-  height: 4.8rem;
+  width: 0;
+  height: 0;
   cursor: pointer;
   background-image: url("../img/static/fb3.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 3.2rem 3.2rem;
+  background-size: 0;
   background-color: #b8181c;
-  -webkit-border-radius: 0.4rem;
-          border-radius: 0.4rem;
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 .fixbtn .links > :nth-child(3):hover {
   opacity: 1;
@@ -20169,27 +20191,29 @@ footer ul ul {
     height: 32px;
     background-size: 2.4rem 2.4rem;
   }
-  .fixbtn span {
-    display: none;
+  .fixbtn.active .open {
+    height: 3.2rem;
+    width: 3.2rem;
   }
   .fixbtn.active .links {
     padding: 2.4rem 2.4rem;
     grid-row-gap: 1.6rem;
   }
-  .fixbtn .links > :nth-child(1):before {
+  .fixbtn.active .links {
+    padding: 1.6rem;
+  }
+  .fixbtn.active .links > :nth-child(1):before,
+  .fixbtn.active .links > :nth-child(2):before,
+  .fixbtn.active .links > :nth-child(3):before {
     width: 4rem;
     height: 3.2rem;
     background-size: 2.4rem 2.4rem;
   }
-  .fixbtn .links > :nth-child(2):before {
-    width: 4rem;
-    height: 3.2rem;
-    background-size: 2.4rem 2.4rem;
-  }
-  .fixbtn .links > :nth-child(3):before {
-    width: 4rem;
-    height: 3.2rem;
-    background-size: 2.4rem 2.4rem;
+  .fixbtn.active .links > :nth-child(1) span,
+  .fixbtn.active .links > :nth-child(2) span,
+  .fixbtn.active .links > :nth-child(3) span {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
 }
 .notificationPopUp {
