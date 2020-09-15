@@ -4,22 +4,30 @@
 
 $(document).ready(function() {
   var footer = $("#footer").outerHeight();
+  var anchor = false;
 
   $(".content_list ul:first-child").addClass("active");
 
   $(".content_list ul a").each(function() {
     var hash = $(this).attr("href");
-
-    $(hash).each(function(){
-      var elHash = $(this).attr('id');
-      if ($(this).length > 0) {
-        console.log('есть');
-        $('.content_list ul a[href="#'+elHash+'"]').addClass('dontRemove');
-      }
-    })
-
-    $(this).not(".dontRemove").remove();
+    if (hash.indexOf('#') !== -1)
+      anchor = true;
   });
+
+  if (anchor) {
+    $(".content_list ul a").each(function() {
+      var hash = $(this).attr("href");
+      $(hash).each(function() {
+        var elHash = $(this).attr('id');
+        if ($(this).length > 0) {
+          console.log('есть');
+          $('.content_list ul a[href="#' + elHash + '"]').addClass('dontRemove');
+        }
+      })
+
+      $(this).not(".dontRemove").remove();
+    });
+  }
 
   function onScroll() {
     if ($(".content_list ul a").length <= 1) {
@@ -27,16 +35,14 @@ $(document).ready(function() {
     } else {
       $(".content_list ul a").each(function() {
         var hash = $(this).attr("href");
+        if (hash.indexOf('#') === -1)
+          return false;
         // try {
         //   let prob = $(hash);
         // } catch(err) {
         //   console.log(err);
         //   return false;
         // }
-        if (hash.indexOf('#') === -1) {
-          return false;
-        }
-
         var target = $(hash);
         if (
           target.position().top <= $(document).scrollTop() &&
@@ -54,6 +60,7 @@ $(document).ready(function() {
       });
     }
   }
+
 
   $(document).on("scroll", onScroll);
 
