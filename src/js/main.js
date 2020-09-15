@@ -7,6 +7,19 @@ $(document).ready(function() {
 
   $(".content_list ul:first-child").addClass("active");
 
+  $(".content_list ul a").each(function() {
+    var hash = $(this).attr("href");
+
+    $(hash).each(function(){
+      var elHash = $(this).attr('id');
+      if ($(this).length > 0) {
+        console.log('есть');
+        $('.content_list ul a[href="#'+elHash+'"]').addClass('dontRemove');
+      }
+    })
+    $(this).not(".dontRemove").remove();
+  });
+
   function onScroll() {
     if ($(".content_list ul a").length <= 1) {
       return false;
@@ -22,7 +35,7 @@ $(document).ready(function() {
         if (hash.indexOf('#') === -1) {
           return false;
         }
-        
+
         var target = $(hash);
         if (
           target.position().top <= $(document).scrollTop() &&
@@ -97,7 +110,7 @@ $(document).ready(function() {
       .find("li:eq(0)")
       .height();
     var posleft = $(this).parents(".custom-select").find("a").position().left;
-    console.log(posleft);
+    // console.log(posleft);
 
     // var pos_el = $(this).parents(".custom-select").find("a").outerWidth();
     // console.log(pos_el);
@@ -105,7 +118,7 @@ $(document).ready(function() {
 
     $(this).css("max-height", th1 * 7 + 10 * 7 + 64 + "px");
     // $(this).css("top", postop + "px");
-    $(this).css("left", posleft  + "px")
+    $(this).css("left", posleft + "px")
     $(this).removeClass("show");
     $(".custom-select .options-block .options").hide();
   });
