@@ -209,6 +209,10 @@ $(document).ready(function() {
     $(this).parents("li").toggleClass("show");
   });
 
+  $(".content__item i").click(function() {
+    $(this).parents('li').toggleClass("show");
+  })
+
   $(".mapPopUp .list li").click(function() {
     var thisVal = $(this).html();
     $(".mapPopUp .list").find(".select").removeClass("select");
@@ -381,6 +385,12 @@ $(document).ready(function() {
     //   $(".mobileBottom").removeClass("show");
     //   $(".burger").removeClass("active");
     // }
+
+    if (!$(e.target).closest(".content__item i").length) {
+      $(this).removeClass('show')
+    }
+
+
 
     if (!$(e.target).closest(".fixbtn .open").length) {
       $(".fixbtn").removeClass("active");
