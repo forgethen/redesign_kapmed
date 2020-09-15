@@ -378,6 +378,10 @@ select:hover {
 .container.inwards {
   width: 74rem;
 }
+.content-container .formPage {
+  margin-bottom: 4.8rem;
+  padding-bottom: 0;
+}
 .title a:hover i {
   text-decoration: none;
 }
@@ -1932,7 +1936,8 @@ a,
 input[type="button"],
 input[type="submit"],
 button {
-  font-family: 'HelveticaNeueCyr', Arial, sans-serif;
+  font-family: 'HelveticaNeueCyr';
+  font: normal 'HelveticaNeueCyr' 1.6rem;
 }
 a[hidden],
 input[type="button"][hidden],
@@ -2506,11 +2511,9 @@ a.red-link:hover {
           justify-content: flex-start;
   position: relative;
   line-height: 2.4rem;
-}
-.content__item ul li > :first-child {
   position: relative;
 }
-.content__item ul li > :first-child:before {
+.content__item ul li:before {
   content: '';
   display: block;
   position: absolute;
@@ -2521,13 +2524,12 @@ a.red-link:hover {
   background-color: #b8181c;
   opacity: 0.3;
   left: -1.8rem;
-  top: 0.8rem;
+  top: 0.6rem;
 }
 .content__item ul li a {
   color: #313131;
   font-size: 1.6rem;
   font-weight: normal;
-  padding-top: 0.1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   line-height: 2.4rem;
@@ -2952,6 +2954,31 @@ a.red-link:hover {
 }
 .formPage__content .wrapper > :first-child {
   padding: 2.4rem 0;
+}
+.formPage .bottomContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.formPage .bottomContainer a,
+.formPage .bottomContainer button,
+.formPage .bottomContainer input {
+  margin: 0 0 0 0;
+  width: auto;
 }
 .formPage .description {
   -webkit-border-radius: 0.4rem;
@@ -7075,7 +7102,7 @@ form.search > :last-child {
           border-radius: 4px;
   display: inline-block;
   font-size: 16px;
-  padding: 12px 24px;
+  padding: 16px 24px;
 }
 .standart-button:hover {
   color: #fff;
@@ -20152,6 +20179,58 @@ footer ul ul {
     width: 4rem;
     height: 3.2rem;
     background-size: 2.4rem 2.4rem;
+  }
+}
+.notificationPopUp {
+  position: absolute;
+  max-width: 60rem;
+  width: 100%;
+  padding: 9.2rem 12rem;
+  background-color: #fff;
+  -webkit-border-radius: 0.8rem;
+          border-radius: 0.8rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
+  display: none;
+}
+.notificationPopUp__title {
+  margin-bottom: 1.2rem;
+}
+.notificationPopUp .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+}
+.notificationPopUp .container .text {
+  margin-bottom: 3.2rem;
+}
+.notificationPopUp .container a {
+  line-height: inherit;
+  font-size: inherit;
+}
+@media screen and (max-width: 640px) {
+  .notificationPopUp {
+    padding: 3.2rem 2rem;
   }
 }
 .sharePopUp {
