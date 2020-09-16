@@ -3102,16 +3102,16 @@ a.red-link:hover {
   color: #193c6d;
   opacity: 1;
 }
-.formPage .stepline li.check:before {
+.formPage .stepline li.check:after {
+  background-color: #193c6d;
+  opacity: 1;
+}
+.formPage .stepline li.active:before {
   background-color: #193c6d;
   opacity: 1;
 }
 .formPage .stepline li.active p {
   color: #193c6d;
-  opacity: 1;
-}
-.formPage .stepline li.active:after {
-  background-color: #193c6d;
   opacity: 1;
 }
 .formPage .Dropzone .title {
