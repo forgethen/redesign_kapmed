@@ -6837,6 +6837,14 @@ form.search > :last-child {
 .slider-slides.thanks .image.horiz {
   height: 159px;
 }
+.slider-slides.thanks .slide-slides {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.slider-slides.thanks .slide-slides:hover {
+  opacity: 0.8;
+}
 .slider-slides .slider-doctors .image {
   height: 104px;
 }
@@ -8202,6 +8210,9 @@ form.search > :last-child {
   visibility: visible;
 }
 @media screen and (max-width: 980px) {
+  .content .content__item.without-right-padding {
+    padding-left: 0;
+  }
   .slider-root.only-content {
     overflow-x: inherit;
   }
@@ -9032,6 +9043,9 @@ form.search > :last-child {
   display: flex;
   margin-bottom: 3rem;
 }
+.tabs-thanks .tabs .tab {
+  font-size: 20px;
+}
 .tabwrapper {
   width: 100%;
   position: relative;
@@ -9062,7 +9076,7 @@ form.search > :last-child {
 }
 .tabwrapper .tabs .tab {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 500;
   margin-right: 48px;
 }
 .tabwrapper .tabs .tab.active {
@@ -12867,6 +12881,7 @@ footer ul ul {
   -webkit-border-radius: 8px;
           border-radius: 8px;
   background-color: #fff;
+  border: 1px solid #eee;
 }
 .review.show .text {
   display: inline-block;
