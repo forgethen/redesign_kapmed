@@ -95,7 +95,7 @@ input,
 textarea {
   font-family: 'HelveticaNeueCyr' !important;
   -webkit-appearance: none;
-  font: 400 1.62rem 'HelveticaNeueCyr';
+  font: normal 1.62rem 'HelveticaNeueCyr';
 }
 input[hidden],
 button[hidden],
@@ -362,8 +362,8 @@ input[type='week']:hover,
 input:not([type]):hover,
 textarea:hover,
 select:hover {
-  -webkit-box-shadow: 0px 0px 0.5rem 0px #939393;
-          box-shadow: 0px 0px 0.5rem 0px #939393;
+  -webkit-filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+          filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
 }
 .mCSB_scrollTools .mCSB_draggerRail {
   background-color: transparent;
@@ -2334,6 +2334,18 @@ a.red-link:hover {
   }
 }
 @media screen and (max-width: 640px) {
+  a,
+  input[type="button"],
+  input[type="submit"],
+  button {
+    width: 100%;
+  }
+  a.btn,
+  input[type="button"].btn,
+  input[type="submit"].btn,
+  button.btn {
+    width: 100%;
+  }
   a.btn.mapOpen:after,
   input[type="button"].btn.mapOpen:after,
   input[type="submit"].btn.mapOpen:after,
@@ -3086,6 +3098,10 @@ a.red-link:hover {
   -o-transition: 0.25s linear;
   transition: 0.25s linear;
 }
+.formPage .stepline li.check p {
+  color: #193c6d;
+  opacity: 1;
+}
 .formPage .stepline li.check:before {
   background-color: #193c6d;
   opacity: 1;
@@ -3108,12 +3124,13 @@ a.red-link:hover {
   position: relative;
 }
 .formPage .dropzone {
-  padding: 2rem;
+  padding: 2.2rem 2rem 1.8rem;
   -webkit-border-radius: 0.4rem;
           border-radius: 0.4rem;
   border: 1px dashed rgba(147,147,147,0.6);
   cursor: pointer;
   margin-top: 0;
+  min-height: 6.4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3127,12 +3144,68 @@ a.red-link:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.formPage .dropzone input {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: none;
+  font-size: 1.6rem;
+  top: 0;
+  padding: 2.2rem 2rem 1.8rem;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+  text-align: center;
+}
+.formPage .dropzone input[type="file"] {
+  opacity: 0;
+  z-index: 2;
+}
+.formPage .dropzone input[name="fileName"] {
+  opacity: 0;
+  visibility: hidden;
+}
 .formPage .dropzone:hover {
-  -webkit-box-shadow: 0px 0px 0.5rem 0px #939393;
-          box-shadow: 0px 0px 0.5rem 0px #939393;
+  border: 1px dashed #b8181c;
+  -webkit-box-shadow: 0px 0px 16px rgba(0,0,0,0.12);
+          box-shadow: 0px 0px 16px rgba(0,0,0,0.12);
+}
+.formPage .dropzone.dragover {
+  -webkit-box-shadow: 0px 0px 16px rgba(0,0,0,0.12);
+          box-shadow: 0px 0px 16px rgba(0,0,0,0.12);
   border: 1px dashed #b8181c;
 }
-.formPage .dropzone p {
+.formPage .dropzone.dragover input[name="fileName"] {
+  opacity: 1;
+  visibility: visible;
+}
+.formPage .dropzone.dragover .placeholder,
+.formPage .dropzone.dragover .placeholder i {
+  color: #b8181c;
+}
+.formPage .dropzone.dragdrop input[name="fileName"] {
+  opacity: 1;
+  visibility: visible;
+}
+.formPage .dropzone.dragdrop .placeholder i,
+.formPage .dropzone.dragdrop .placeholder p {
+  display: none;
+}
+.formPage .dropzone.dragdrop.dragover .filename {
+  display: none;
+}
+.formPage .dropzone.dragdrop.dragover .placeholder i,
+.formPage .dropzone.dragdrop.dragover .placeholder p {
+  display: inline-block;
+}
+.formPage .dropzone.dragdrop:hover .filename {
+  display: none;
+}
+.formPage .dropzone.dragdrop:hover .placeholder i,
+.formPage .dropzone.dragdrop:hover .placeholder p {
+  display: inline-block;
+}
+.formPage .dropzone .placeholder {
   color: #313131;
   font-size: 1.6rem;
   font-weight: normal;
@@ -3145,10 +3218,10 @@ a.red-link:hover {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+.formPage .dropzone .placeholder span {
+  line-height: inherit;
+  font-size: inherit;
 }
 .formPage .dropzone i {
   width: 24px;
@@ -3168,7 +3241,7 @@ a.red-link:hover {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  top: -2px;
+  top: -1px;
 }
 .formPage .maybeSelectAddress {
   margin-top: 2.4rem;
@@ -3324,8 +3397,8 @@ a.red-link:hover {
   cursor: pointer;
 }
 .formPage .custom-checkbox .checked:hover {
-  -webkit-box-shadow: 0px 0px 0.5rem 0px #939393;
-          box-shadow: 0px 0px 0.5rem 0px #939393;
+  -webkit-filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+          filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
   border: 1px solid #b8181c;
 }
 .formPage .custom-checkbox input[type="checkbox"]:checked ~ .checked,

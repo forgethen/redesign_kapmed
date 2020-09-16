@@ -780,17 +780,17 @@ $(document).ready(function() {
     $("body").removeClass("widgetOpened");
   });
 
-  $(".custom-checkbox").click(function() {
-    $(this)
-      .find("input[type=checkbox]")
-      .each(function() {
-        if ($("input[type=checkbox]").is(":checked")) {
-          $(this).attr("checked", "checked");
-        } else {
-          $(this).removeAttr("checked");
-        }
-      });
-  });
+  // $(".custom-checkbox").click(function() {
+  //   $(this)
+  //     .find("input[type=checkbox]")
+  //     .each(function() {
+  //       if ($("input[type=checkbox]").is(":checked")) {
+  //         $(this).attr("checked", "checked");
+  //       } else {
+  //         $(this).removeAttr("checked");
+  //       }
+  //     });
+  // });
 
   // события по нажатию на .mark-block__icon на странице patient-school
   $(".cool").on("click", function() {
@@ -802,6 +802,38 @@ $(document).ready(function() {
     $(this).toggleClass("bad-click");
     $(".cool").removeClass("cool-click");
   });
+
+  $('input[type="file"]').change(function() {
+     var files = $('input[type="file"]').prop("files");
+     var names = $.map(files, function(val) { return val.name; });
+     $(".placeholder .filename").text(names);
+     $(".dropzone").addClass("dragdrop");
+  });
+
+  var onDragEnter = function(event) {
+      $(".dropzone").addClass("dragover");
+    },
+
+    onDragOver = function(event) {
+      event.preventDefault();
+      if (!$(".dropzone").hasClass("dragover")) {
+        $(".dropzone").addClass("dragover");
+      }
+    },
+
+    onDragLeave = function(event) {
+      event.preventDefault(); {
+        $(".dropzone").removeClass("dragover");
+      }
+    },
+
+    onDrop = function(event) {
+      $(".dropzone").removeClass("dragover");
+      $(".dropzone").addClass("dragdrop");
+    };
+
+  $('.dropzone').on("dragenter", onDragEnter).on("dragover", onDragOver).on("dragleave", onDragLeave).on("drop", onDrop);
+
 });
 
 //# sourceMappingURL=main.js.map

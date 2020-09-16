@@ -114,11 +114,13 @@
               <p class="title">Опишите ситуацию</p>
               <textarea placeholder="Введите текст"></textarea>
             </label>
-            <label class="Dropzone">
-              <input type="file" name="FILE" hidden="" multiple="">
+            <label class="Dropzone" for="file">
               <p class="title">Вы можете прикрепить сопутствующие документы&nbsp;<i class="hint ri-question-fill"><span>Можете прикрепить текст жалобы в письменном виде, сканы чеков, ответы медучреждений и т.п.</span></i></p>
-              <div class="dropzone"><i class="ri-add-fill"></i>
-                <p>&nbsp;Перетащите документ сюда или&nbsp;<span class="red">загрузите с компьютера</span></p>
+              <div class="dropzone">
+                <input id="file" name="file" required type="file" multiple="">
+                <div class="placeholder"><i class="ri-add-fill"></i>
+                  <p>&nbsp;Перетащите документ сюда или&nbsp;<span class="red">загрузите с компьютера</span></p><span class="filename"></span>
+                </div>
               </div>
               <p class="info">Формат файла — .jpg, .png, .tif, размер — не более 5 мб.</p>
             </label>
