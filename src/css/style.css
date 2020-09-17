@@ -3114,14 +3114,25 @@ a.red-link:hover {
   color: #193c6d;
   opacity: 1;
 }
+.formPage .Dropzone {
+  margin-top: 3.2rem;
+}
 .formPage .Dropzone .title {
   color: #313131;
+  font-size: 1.6rem;
   font-weight: normal;
+  line-height: 2.4rem;
   margin-bottom: 0.8rem;
   padding: 0;
   border-bottom: 0;
   display: inline-block;
   position: relative;
+}
+.formPage .Dropzone .plus {
+  font-size: 2.4rem;
+}
+.formPage .Dropzone label {
+  margin-top: 0;
 }
 .formPage .dropzone {
   padding: 2.2rem 2rem 1.8rem;
@@ -3346,7 +3357,7 @@ a.red-link:hover {
           justify-content: center;
   font-size: 2rem;
   color: #939393;
-  bottom: 0.1rem;
+  top: 0.1rem;
 }
 .formPage .dropdown i.active {
   -webkit-transform: rotate(180deg);
@@ -4226,6 +4237,9 @@ form.search > :last-child {
   .formPage__finish .btn {
     width: 100%;
     margin: 3.2rem 0 3.2rem;
+  }
+  .formPage .Dropzone {
+    margin-top: 2.4rem;
   }
   .formPage form {
     padding: 0;
@@ -9973,6 +9987,7 @@ footer ul ul {
     -webkit-flex: none;
         -ms-flex: none;
             flex: none;
+    width: auto;
   }
   .links__container > :first-child {
     padding-left: 0;
