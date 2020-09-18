@@ -1418,9 +1418,9 @@ header {
 }
 .headerMenu li a span {
   color: #000;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: normal;
-  line-height: 2rem;
+  line-height: 2.4rem;
 }
 .headerMenu li a:hover span {
   opacity: 1;
@@ -1552,9 +1552,9 @@ header {
 }
 .headerMenu li .submenu ul li a {
   color: #3a3a3a;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: normal;
-  line-height: 2rem;
+  line-height: 2.2rem;
 }
 .headerMenu li .submenu ul li a:hover {
   color: #b8181c;
