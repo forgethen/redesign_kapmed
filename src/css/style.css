@@ -21103,13 +21103,16 @@ footer ul ul {
     margin-bottom: 6.4rem;
   }
   .sectionTitle h1 a i {
-    bottom: -10px;
+    bottom: -7px;
   }
   .sectionTitle h2 a i {
-    bottom: -0.9rem;
+    bottom: -0.5rem;
   }
   .sectionTitle h3 a i {
     bottom: -0.5rem;
+  }
+  .sectionTitle h4 a i {
+    bottom: -0.4rem;
   }
   .sectionTitle h5 a i {
     bottom: -0.4rem;
