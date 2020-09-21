@@ -10432,6 +10432,7 @@ footer ul ul {
 }
 .topSlider .slide .btn {
   margin-top: 3.2rem;
+  width: auto;
 }
 .topSlider .slide img {
   z-index: -1;
