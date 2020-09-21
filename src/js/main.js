@@ -375,6 +375,16 @@ $(document).ready(function() {
       $("footer .partition").removeClass("autoHeight");
     }
 
+    if (!$(e.target).closest("a.city").length) {
+      if($('#citySelectPopUp').hasClass('active')){
+        $("#citySelectPopUp").removeClass("active");
+      } else {
+        return false;
+      }
+    }
+
+
+
     // if (!$(e.target).closest(".headerMenu li").length) {
     //   $('.headerMenu .submenu').fadeOut();
     //   $('.headerMenu li').removeClass('active');

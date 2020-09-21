@@ -45,6 +45,20 @@ const checkReady = () => {
   }, 100);
 }
 
+const staticHeader = () => {
+  const header = document.querySelector('header')
+  const topHeight = header.querySelector('.top-container').offsetHeight
+  const scrollTop = window.scrollY
+  if (scrollTop >= topHeight) {
+    header.classList.add('static')
+    header.style.top = `-${topHeight}px`
+  }
+  else {
+    header.classList.remove('static')
+    header.style.top = `0px`
+  }
+}
+
 const payload = () => {
 
   /* preloader */
@@ -60,6 +74,12 @@ const payload = () => {
 
   const action_buttons = document.querySelectorAll('.activity-action')
   if (action_buttons.length) openActivityHandler(action_buttons)
+
+  window.addEventListener('scroll', (e) => {
+    staticHeader()
+  })
+
+  staticHeader()
 }
 
 document.addEventListener("DOMContentLoaded", payload)

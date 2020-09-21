@@ -38,11 +38,26 @@
   <body>
     <div class="allContent">
       <header>
+        <div class="container">
+          <div class="row">
+            <div class="column">
+              <div id="citySelectPopUp">
+                <div class="content">
+                  <div class="content__top">
+                    <h6>Ваш город</h6>
+                  </div>
+                  <p><span class="selectCity">Санкт-Петербург</span> ?</p>
+                  <div class="content__bottom"><a class="This" href="#" onclick="$('#citySelectPopUp').removeClass('active')">Да, верно</a><a class="Other" data-fancybox="" data-src="#citySelect" href="javascript:;" data-touch="false">Выбрать другой</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="top-container">
           <div>
             <div class="container">
               <div class="row">
-                <div class="column column-66"><a data-fancybox="" data-src="#citySelect" href="javascript:;" data-touch="false">
+                <div class="column column-66"><a class="city" onclick="$('#citySelectPopUp').toggleClass('active')">
                     <div class="image"><img src="src/img/static/plane.svg" alt="plane"></div><span>Санкт-Петербург</span></a><a href="#">
                     <div class="image"><img src="src/img/static/zoom (1).svg" alt="zoom"></div><span>Версия для слабовидящих </span></a><a href="#">
                     <div class="image"><img src="src/img/static/print (1).svg" alt="print"></div><span>Распечатать страницу</span></a></div>
