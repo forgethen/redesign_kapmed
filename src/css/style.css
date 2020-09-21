@@ -3893,6 +3893,11 @@ a.red-link:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   padding: 0 1.6rem;
   max-width: 144rem;
 }
