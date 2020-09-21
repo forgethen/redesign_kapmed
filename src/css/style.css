@@ -2775,16 +2775,20 @@ a.red-link:hover {
   position: relative;
   line-height: inherit;
 }
+.sectionSelect .mCSB_container,
 .mCS-CustomSelectOptionsThm .mCSB_container {
   margin-right: 0;
 }
+.sectionSelect.mCSB_scrollTools_vertical,
 .mCS-CustomSelectOptionsThm.mCSB_scrollTools_vertical {
   right: 0;
   width: 0.8rem;
 }
+.sectionSelect .mCSB_draggerRail,
 .mCS-CustomSelectOptionsThm .mCSB_draggerRail {
   background-color: transparent;
 }
+.sectionSelect .mCSB_dragger .mCSB_dragger_bar,
 .mCS-CustomSelectOptionsThm .mCSB_dragger .mCSB_dragger_bar {
   background-color: #b8181c;
 }
@@ -2796,22 +2800,28 @@ a.red-link:hover {
   background-color: #b8181c;
 }
 @media screen and (max-width: 640px) {
-  .regionSelect h1 a i {
+  .regionSelect h1 a i,
+  .sectionSelect h1 a i {
     bottom: -1rem;
   }
-  .regionSelect h2 a i {
+  .regionSelect h2 a i,
+  .sectionSelect h2 a i {
     bottom: -0.9rem;
   }
-  .regionSelect h3 a i {
+  .regionSelect h3 a i,
+  .sectionSelect h3 a i {
     bottom: -0.5rem;
   }
-  .regionSelect h4 a i {
+  .regionSelect h4 a i,
+  .sectionSelect h4 a i {
     bottom: -0.4rem;
   }
-  .regionSelect h5 a i {
+  .regionSelect h5 a i,
+  .sectionSelect h5 a i {
     bottom: -0.4rem;
   }
-  .regionSelect h6 a i {
+  .regionSelect h6 a i,
+  .sectionSelect h6 a i {
     bottom: -0.3rem;
   }
   .custom-select {
