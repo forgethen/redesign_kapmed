@@ -3490,6 +3490,7 @@ a.red-link:hover {
   top: 0.1rem;
 }
 .formPage .dropdown i.active {
+  color: #b8181c;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -5350,7 +5351,7 @@ form.search > :last-child {
             border-radius: 0;
   }
   .mapBlock .mapSection .map:before {
-    padding-top: 64.38%;
+    padding-top: 100%;
   }
   .mapBlock .mapSection .list {
     border: none;
@@ -19397,10 +19398,7 @@ footer ul ul {
           filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.12));
   opacity: 1;
 }
-.videoItem:hover .content__text {
-  color: #b8181c;
-}
-.videoItem .videoPoster {
+.videoPoster {
   -webkit-border-radius: 0.8rem;
           border-radius: 0.8rem;
   position: relative;
@@ -19409,14 +19407,14 @@ footer ul ul {
   overflow: hidden;
   margin-bottom: 1.2rem;
 }
-.videoItem .videoPoster:before {
+.videoPoster:before {
   content: '';
   position: relative;
   width: 100%;
   padding-top: 56.25%;
   display: block;
 }
-.videoItem .videoPoster img {
+.videoPoster img {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -19426,7 +19424,7 @@ footer ul ul {
   min-height: 100%;
   position: absolute;
 }
-.videoItem .content {
+.content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19449,7 +19447,7 @@ footer ul ul {
           flex-wrap: wrap;
   width: 100%;
 }
-.videoItem .content__text {
+.content__text {
   color: #666;
   font-size: 1.4rem;
   font-weight: normal;
@@ -21514,6 +21512,100 @@ footer ul ul {
     background-position: center center;
     background-size: 2rem 2rem;
   }
+}
+#baloon {
+  width: 246px;
+  background: #b8181c 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.161);
+          box-shadow: 0px 3px 6px rgba(0,0,0,0.161);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  opacity: 1;
+  padding: 1rem;
+}
+#baloon .baloonContainer {
+  position: relative;
+}
+#baloon .Close {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/static/Close.svg");
+  cursor: pointer;
+  opacity: 0.4;
+}
+#baloon .Close:hover {
+  opacity: 1;
+}
+#baloon .baloonTitle {
+  text-align: left;
+  font: normal normal bold 14px/20px 'HelveticaNeueCyr';
+  letter-spacing: 0px;
+  color: #fff;
+  opacity: 1;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #fff;
+  padding-right: 0.8rem;
+}
+#baloon .baloonTitle span {
+  font-size: inherit;
+  line-height: normal;
+}
+#baloon ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+#baloon ul > :last-child {
+  margin-bottom: 0;
+}
+#baloon ul a {
+  line-height: normal;
+  cursor: pinter;
+}
+#baloon ul > :first-child {
+  margin-bottom: 0.8rem;
+}
+#baloon ul li {
+  padding-left: 2.4rem;
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+#baloon ul li.phone span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+#baloon ul li.phone span:hover {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 1;
+}
+#baloon ul .title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+#baloon ul .text {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+#baloon ul i {
+  font-size: 1.2rem;
+  width: 2.4rem;
+  text-align: center;
+  top: 0.2rem;
+  left: 0;
+  position: absolute;
+  color: #fff;
 }
 .page404 {
   margin-bottom: 9.8rem;
