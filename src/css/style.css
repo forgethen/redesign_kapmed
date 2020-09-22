@@ -7796,9 +7796,16 @@ form.search > :last-child {
   min-height: 100%;
   position: absolute;
 }
+.press-wrap .press.video a:hover {
+  opacity: 1;
+}
 .press-wrap .press.video .name {
   font-size: 14px;
   color: #666;
+}
+.press-wrap .press.video:hover {
+  opacity: 1;
+  background-color: #fff;
 }
 .press-wrap .press.column {
   -webkit-box-orient: vertical;
@@ -17979,13 +17986,15 @@ footer ul ul {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
 }
-.locationBlock .map {
+.locationBlock .map,
+.locationBlock #detail_map {
   position: relative;
   width: 100%;
   overflow: hidden;
   display: block;
 }
-.locationBlock .map:before {
+.locationBlock .map:before,
+.locationBlock #detail_map:before {
   background: url("../img/static/mapImg.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -17996,7 +18005,10 @@ footer ul ul {
   display: block;
   position: relative;
 }
-.locationBlock .map iframe {
+.locationBlock .map iframe,
+.locationBlock #detail_map iframe,
+.locationBlock .map > :first-child,
+.locationBlock #detail_map > :first-child {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -18008,6 +18020,16 @@ footer ul ul {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+.locationBlock .map > :first-child,
+.locationBlock #detail_map > :first-child {
+  width: 100% !important;
+  height: 100% !important;
+}
+.locationBlock .map > :first-child > :first-child,
+.locationBlock #detail_map > :first-child > :first-child {
+  width: 100% !important;
+  height: 100% !important;
 }
 .locationBlock .information {
   margin: 0;
@@ -18088,10 +18110,12 @@ footer ul ul {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .locationBlock .map {
+  .locationBlock .map,
+  .locationBlock #detail_map {
     margin-bottom: 3rem;
   }
-  .locationBlock .map:before {
+  .locationBlock .map:before,
+  .locationBlock #detail_map:before {
     background-size: contain;
     padding-top: 56.25%;
   }
@@ -18763,6 +18787,7 @@ footer ul ul {
             flex-wrap: wrap;
   }
   .clinicalExaminationBlock__bottom a {
+    margin-right: 0;
     margin-bottom: 2rem;
   }
   .clinicalExaminationBlock__bottom > :last-child {
@@ -18796,7 +18821,6 @@ footer ul ul {
 }
 .messageBlock .textBlock > :last-child {
   margin-bottom: 0;
-  line-height: 1.2;
 }
 .messageBlock__bottom {
   display: -webkit-box;
