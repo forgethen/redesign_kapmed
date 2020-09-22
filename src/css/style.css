@@ -3573,6 +3573,9 @@ a.red-link:hover {
   border: 1px solid #e6e6e6;
   background-color: #fff;
 }
+.formPage form.grayborder {
+  border: 1px solid #c4c4c4;
+}
 .formPage form > :last-child {
   margin-bottom: 0;
 }
@@ -8153,6 +8156,7 @@ form.search > :last-child {
 .popular-requests p {
   color: #939393;
   font-size: 14px;
+  margin-bottom: 16px;
 }
 .popular-requests ul li {
   display: inline-block;
@@ -8436,7 +8440,7 @@ form.search > :last-child {
 }
 .search-wrapper .search-input .button-search span.arr {
   font-size: 26px;
-  margin-top: -5px;
+  margin-top: -12px;
   margin-left: 10px;
 }
 .search-wrapper .search-input .button-search:hover {
@@ -8825,6 +8829,9 @@ form.search > :last-child {
   .cards .card {
     padding: 3rem 2rem;
   }
+  .cards .card.with-right-margin {
+    margin-right: 0;
+  }
   .cards .card .title {
     font-size: 24px;
     line-height: 32px;
@@ -8871,7 +8878,7 @@ form.search > :last-child {
     margin-bottom: 2rem;
   }
   .activity-wrap .activity.with-btn {
-    height: 530px;
+    height: 400px;
   }
   .activity-wrap.withborder {
     padding: 0 10px;
@@ -9404,7 +9411,7 @@ form.search > :last-child {
   width: 100%;
   position: relative;
   overflow: hidden;
-  margin: 0 20px;
+  padding: 0 20px;
   border-bottom: 1px solid #c4c4c4;
 }
 .tabwrapper.gradient:after {
@@ -9412,7 +9419,7 @@ form.search > :last-child {
   content: "";
   right: 0;
   top: 0;
-  width: 100px;
+  width: 60px;
   background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), to(#fff));
   background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 100%);
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fff 100%);
@@ -9424,7 +9431,7 @@ form.search > :last-child {
   content: "";
   left: 0;
   top: 0;
-  width: 100px;
+  width: 30px;
   background: -webkit-gradient(linear, right top, left top, from(rgba(255,255,255,0)), to(#fff));
   background: -o-linear-gradient(right, rgba(255,255,255,0) 0%, #fff 100%);
   background: linear-gradient(270deg, rgba(255,255,255,0) 0%, #fff 100%);
