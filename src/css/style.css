@@ -322,7 +322,8 @@ input[type='week']:focus,
 input:not([type]):focus,
 textarea:focus,
 select:focus {
-  border-color: #b8181c;
+  border: 1px solid #000;
+  border-color: #000;
 }
 input[type='color']:hover,
 input[type='date']:hover,
@@ -587,8 +588,8 @@ select:hover {
   margin-bottom: 0 !important;
 }
 .fancybox-container.fancybox-is-open {
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 [data-preloader] {
   overflow: hidden;
@@ -1431,9 +1432,6 @@ header.static {
 .headerMenu > :last-child {
   margin-right: 0;
 }
-.headerMenu:hover li a span {
-  color: #666;
-}
 .headerMenu li {
   margin-right: 3.6rem;
   margin-bottom: 0;
@@ -1559,11 +1557,11 @@ header.static {
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 0.8rem 1fr 0.8rem 1fr 0.8rem 1fr;
+  -ms-grid-columns: 1fr 1.6rem 1fr 1.6rem 1fr 1.6rem 1fr;
   grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 0.8rem;
+  grid-column-gap: 1.6rem;
   grid-row-gap: 2.4rem;
   width: 100%;
   font-size: 100%;
@@ -2707,6 +2705,7 @@ a.red-link:hover {
 }
 .custom-select > :first-child a {
   width: auto;
+  line-height: normal;
 }
 .custom-select > :first-child a:hover span {
   text-decoration: underline;
@@ -2740,6 +2739,8 @@ a.red-link:hover {
 }
 .custom-select .options li {
   cursor: pointer;
+}
+.custom-select .options li > :first-child {
   white-space: pre;
 }
 .custom-select .options li:hover {
@@ -2804,20 +2805,16 @@ a.red-link:hover {
   position: relative;
   line-height: inherit;
 }
-.sectionSelect .mCSB_container,
 .mCS-CustomSelectOptionsThm .mCSB_container {
   margin-right: 0;
 }
-.sectionSelect.mCSB_scrollTools_vertical,
 .mCS-CustomSelectOptionsThm.mCSB_scrollTools_vertical {
   right: 0;
   width: 0.8rem;
 }
-.sectionSelect .mCSB_draggerRail,
 .mCS-CustomSelectOptionsThm .mCSB_draggerRail {
   background-color: transparent;
 }
-.sectionSelect .mCSB_dragger .mCSB_dragger_bar,
 .mCS-CustomSelectOptionsThm .mCSB_dragger .mCSB_dragger_bar {
   background-color: #b8181c;
 }
@@ -2859,8 +2856,8 @@ a.red-link:hover {
   .custom-select .options-block {
     padding: 1.6rem 1.2rem;
     right: 0;
+    width: auto;
     max-width: 32rem;
-    width: 100%;
     left: auto !important;
   }
   .custom-select .options-block.show {
@@ -2870,17 +2867,7 @@ a.red-link:hover {
     width: auto;
     z-index: 1;
   }
-  .custom-select .options li {
-    margin-bottom: 1.2rem;
-    font-size: 1.6rem;
-    line-height: 1;
-    font-weight: normal;
-  }
-  .custom-select .options li a {
-    font-size: 1.6rem;
-    line-height: 1;
-  }
-  .custom-select .options > :last-child {
+  :last-child {
     margin-bottom: 0;
   }
 }
@@ -2995,12 +2982,6 @@ a.red-link:hover {
 .page-title a:hover i {
   text-decoration: none;
 }
-.page-title .options li {
-  font-size: 3.2rem;
-  font-weight: normal;
-  line-height: 1;
-  margin-bottom: 2.4rem;
-}
 @media screen and (max-width: 640px) {
   .page-title h1 a i {
     bottom: -7px;
@@ -3025,13 +3006,6 @@ a.red-link:hover {
   }
   .page-title .title {
     color: #313131;
-  }
-  .page-title .options li {
-    margin-bottom: 1.6rem;
-    color: #313131;
-    font-size: 2.4rem;
-    font-weight: normal;
-    line-height: 3.2rem;
   }
 }
 .formPage {
@@ -3428,29 +3402,29 @@ a.red-link:hover {
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 2.4rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  display: inline-block;
   width: 100%;
 }
 .formPage .maybeSelectAddress i {
   height: auto;
   width: auto;
   font-size: inherit;
+  display: inline-block;
+  vertical-align: middle;
   line-height: inherit;
+}
+.formPage .maybeSelectAddress i:before {
+  position: relative;
+  top: -1px;
+}
+.formPage .maybeSelectAddress a {
+  position: relative;
 }
 .formPage .maybeSelectAddress a,
 .formPage .maybeSelectAddress span {
   font-size: inherit;
   line-height: inherit;
+  display: inline-block;
 }
 .formPage .dropdown {
   position: relative;
@@ -3461,6 +3435,19 @@ a.red-link:hover {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
+}
+.formPage .dropdown input:focus,
+.formPage .dropdown input:active {
+  border: 1px solid #000;
+  border-color: #000;
+}
+.formPage .dropdown input:hover {
+  -webkit-filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+          filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+}
+.formPage .dropdown input.dev {
+  color: #939393;
 }
 .formPage .dropdown ul {
   position: absolute;
@@ -8876,26 +8863,11 @@ form.search > :last-child {
     height: auto;
     padding-top: 56.26%;
   }
-  h2 {
-    font-size: 24px !important;
-  }
-  .page-title h1 {
-    font-size: 32px !important;
-    line-height: 40px !important;
-  }
   .page-title.v2 {
     margin-bottom: 3rem;
   }
-  .page-title.v2 h1 {
-    font-size: 28px !important;
-    line-height: 38px !important;
-  }
   .page-title.v3 {
     margin-bottom: 2.4rem;
-  }
-  .page-title.v3 h1 {
-    font-size: 28px !important;
-    line-height: 38px !important;
   }
   .page-title.v4 {
     margin-bottom: 1.6rem;
@@ -9788,6 +9760,23 @@ form.search > :last-child {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  #tabsroot {
+    height: 35px;
+    overflow: hidden;
+  }
+  #tabsroot .tabs-arrow {
+    display: none;
+  }
+  .tabwrapper {
+    height: 45px;
+    overflow-x: scroll;
+  }
+  .tabwrapper:after {
+    display: none;
+  }
+  .tabwrapper:before {
+    display: none;
+  }
 }
 .socialLinks__title {
   margin-bottom: 1.6rem;
@@ -10192,7 +10181,6 @@ footer ul ul {
 }
 @media screen and (max-width: 760px) {
   footer {
-    background-color: #fff;
     padding-top: 2.4rem;
   }
   footer .container {
@@ -15366,6 +15354,9 @@ footer ul ul {
 .school-collections__list .fourth-heading {
   margin-bottom: 20px;
 }
+.school-collections__list .point-items a {
+  text-decoration: underline;
+}
 .school-collections__item {
   margin: 0;
   padding: 40px 32px;
@@ -17865,7 +17856,8 @@ footer ul ul {
     line-height: 3.2rem;
     margin-bottom: 2.4rem;
   }
-  .citySelect .CloseFancybox {
+  .citySelect .CloseFancybox,
+  .citySelect button[data-fancybox-close] {
     width: 2.4rem;
     height: 2.4rem;
     top: 2rem;
@@ -17876,10 +17868,13 @@ footer ul ul {
     -webkit-flex: none;
         -ms-flex: none;
             flex: none;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
   .cities ul li {
     width: 100%;
+  }
+  .cities > :last-child {
+    margin-bottom: 0;
   }
   .cities li {
     width: -webkit-calc(100% / 2);
@@ -17893,11 +17888,37 @@ footer ul ul {
     width: 100%;
     padding: 3.2rem 2rem 2rem;
   }
+  .citySelect form.search {
+    margin-top: 2rem;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 4rem;
+    grid-template-rows: 4rem;
+    grid-column-gap: 0;
+    grid-row-gap: 2rem;
+  }
+  .citySelect form.search > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .citySelect form.search input {
+    height: 4rem;
+  }
+  .citySelect .citiesBlock .mCustomScrollBox:before,
+  .citySelect .citiesBlock .mCustomScrollBox:after {
+    content: none;
+  }
   .cities {
-    padding-left: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 2rem;
+  }
+  .cities ul {
+    width: 100%;
   }
   .cities li {
     width: 100%;
+    padding-right: 0;
   }
 }
 .hotPhones .sectionTitle {
@@ -20658,6 +20679,15 @@ footer ul ul {
 .FilterSearch .searchArea {
   position: relative;
 }
+@media screen and (max-width: 640px) {
+  .FilterSearch {
+    -ms-grid-columns: 1fr 4.8rem;
+    grid-template-columns: 1fr 4.8rem;
+  }
+  .FilterSearch .btn-filter p {
+    display: none;
+  }
+}
 .infoAboutMedicalOrganizations .sectionTitle {
   margin-top: 0;
   margin-bottom: 3.6rem;
@@ -20667,6 +20697,10 @@ footer ul ul {
 }
 .infoAboutMedicalOrganizations .tabsContainer {
   margin-bottom: 3.6rem;
+}
+.infoAboutMedicalOrganizations .dropDownFilter .block:hover input {
+  -webkit-box-shadow: 0px 6px 16px rgba(0,0,0,0.12);
+          box-shadow: 0px 6px 16px rgba(0,0,0,0.12);
 }
 .dropDownFilter {
   display: -ms-grid;
@@ -20704,6 +20738,9 @@ footer ul ul {
 .dropDownFilter .dropdown {
   position: relative;
 }
+.dropDownFilter .dropdown.active i {
+  color: #b8181c;
+}
 .dropDownFilter .dropdown__el {
   margin-bottom: 0;
 }
@@ -20719,6 +20756,19 @@ footer ul ul {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
+}
+.dropDownFilter .dropdown input:focus,
+.dropDownFilter .dropdown input:active {
+  border: 1px solid #000;
+  border-color: #000;
+}
+.dropDownFilter .dropdown input:hover {
+  -webkit-filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+          filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+}
+.dropDownFilter .dropdown input.dev {
+  color: #939393;
 }
 .dropDownFilter .dropdown ul {
   position: absolute;
@@ -20802,6 +20852,10 @@ footer ul ul {
   .dropDownFilter > *:nth-child(3) {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
+  }
+  .dropDownFilter.v2.show {
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 }
 .orgListContainer {
@@ -21422,7 +21476,12 @@ footer ul ul {
     top: 0;
   }
   #citySelectPopUp .content {
+    min-width: 100%;
+    max-width: 100%;
     height: auto;
+  }
+  #citySelectPopUp .content p {
+    margin-bottom: 2rem;
   }
   #citySelectPopUp .content:before {
     content: none;

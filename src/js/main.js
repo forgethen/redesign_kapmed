@@ -112,35 +112,40 @@ $(document).ready(function() {
   });
 
   $(".custom-select .options-block").each(function() {
+    var th1 = $(this).find("li:eq(0)").height;
+    console.log('th-height ' + th1);
+    var posleft = $(this).parents(".custom-select").find("a.red").position().left;
+    var elength = $(this).find('.options li').length;
+    console.log('el ' + elength);
+    if (elength > 3) {
+      $(this).mCustomScrollbar({
+        theme: "CustomSelectOptionsThm",
+        callbacks: {
+          onCreate: function() {
+            if (elength >= 7) {
+              $(this).css("max-height", th1 * 7 + 10 * 7 + 64 + "px");
+            } else {
+              $(this).css("max-height", th1 * elength + 10 * elength + 64 + "px");
+            }
+          }
+        }
+      });
+    }
     $(this).addClass("show");
-    $(".custom-select .options-block .options").show();
-    var th1 = $(".custom-select .options-block .options")
-      .find("li:eq(0)")
-      .height();
-    var posleft = $(this).parents(".custom-select").find("a").position().left;
-    // console.log(posleft);
-
-    // var pos_el = $(this).parents(".custom-select").find("a").outerWidth();
-    // console.log(pos_el);
-    // var postop = $(".custom-select a.red span").position().top;
-
-    $(this).css("max-height", th1 * 7 + 10 * 7 + 64 + "px");
-    // $(this).css("top", postop + "px");
-    $(this).css("left", posleft + "px")
+    $(this).find(".options").show();
+    $(this).css("left", posleft + "px");
     $(this).removeClass("show");
-    $(".custom-select .options-block .options").hide();
+    $(this).find(".options").hide();
   });
 
-  $(".custom-select .options-block").mCustomScrollbar({
-    theme: "CustomSelectOptionsThm",
-  });
 
 
   $(".custom-select .options li").click(function() {
     var thisVal = $(this).text();
     $(this).parents(".custom-select").find(".options").hide();
     $(this).parents(".custom-select").find(".options .red").removeClass("red");
-    $(this).parents(".custom-select").find("a span").text(thisVal);
+    if (!$(this).data('readonly'))
+      $(this).parents(".custom-select").find("a span").text(thisVal);
     $(this).parents(".custom-select").find("a i").removeClass("active");
     $(this).parents(".custom-select").find(".options-block").removeClass("show");
     $(this).addClass("red");
@@ -275,6 +280,15 @@ $(document).ready(function() {
         $(this).mCustomScrollbar("destroy");
       }
     });
+    $(".headerMenu .submenu").each(function() {
+      if ($(window).width() >= 1079) {
+        $(this).mCustomScrollbar("destroy");
+      } else {
+        $(this).mCustomScrollbar({
+          theme: "SubmenuScrollThm",
+        });
+      }
+    })
   }
 
   fromResize();
@@ -322,10 +336,6 @@ $(document).ready(function() {
       $(this).find('a').attr("href", "#");
       $(this).find('a').text("Просмотреть все пункты выдачи");
     }
-  });
-
-  $(".headerMenu .submenu").mCustomScrollbar({
-    theme: "SubmenuScrollThm",
   });
 
   $(".openShedule a").click(function() {
