@@ -268,7 +268,7 @@ a:hover {
 }
 a:hover,
 a:focus {
-  color: #fff;
+  color: #b8181c;
 }
 a i {
   text-decoration: none;
@@ -4609,8 +4609,11 @@ form.search > :last-child {
   .formPage .Dropzone {
     margin-top: 2.4rem;
   }
-  .formPage form {
+  .formPage .wrapper form {
     padding: 0;
+  }
+  .formPage form {
+    padding: 2rem;
     -webkit-border-radius: 0;
             border-radius: 0;
     border: none;

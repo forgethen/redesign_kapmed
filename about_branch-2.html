@@ -415,63 +415,63 @@
                       <div class="tabs" id="TABS" :style="{'transform': `translateX(${offset}px)`}"><a class="tab active" href="javascript:;">Оформить полис</a><a class="tab" href="javascript:;">Профилактика</a><a class="tab" href="javascript:;">Школа пациента</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощь</a><a class="tab" href="javascript:;">Помощьdasdas</a>
                       </div>
                     </div><a class="tabs-arrow prev ri-arrow-right-line" href="javascript:;" @click="translate(-200)" v-if="show_right"></a>
-                    <script>
-                      new Vue({
-                        el: tabsroot,
-                        data() {
-                          return {
-                            offset: 0,
-                            show_right: true
+                  </div>
+                  <script>
+                    new Vue({
+                      el: tabsroot,
+                      data() {
+                        return {
+                          offset: 0,
+                          show_right: true
+                        }
+                      },
+                      methods: {
+                        translate(num) {
+                          let objs = document.querySelectorAll('.tab')
+                          let width = 0
+                          let wrap_width = 0
+                          let wr = document.querySelector('.tabwrapper')
+                          wrap_width = wr.offsetWidth
+                          objs = Array.from(objs)
+                          objs.map(x => {
+                            width += x.offsetWidth
+                          })
+                          if (wrap_width + (-this.offset) + 100 > width + objs.length * 48) {
+                            this.show_right = false
                           }
-                        },
-                        methods: {
-                          translate(num) {
-                            let objs = document.querySelectorAll('.tab')
-                            let width = 0
-                            let wrap_width = 0
-                            let wr = document.querySelector('.tabwrapper')
-                            wrap_width = wr.offsetWidth
-                            objs = Array.from(objs)
-                            objs.map(x => {
-                              width += x.offsetWidth
-                            })
-                            if (wrap_width + (-this.offset) + 100 > width + objs.length * 48) {
-                              this.show_right = false
-                            }
-                            if (num > 0) {
-                              this.show_right = true
-                            }
-                            if (this.offset >= 0 && num > 0) {
-                              this.offset = 0
+                          if (num > 0) {
+                            this.show_right = true
+                          }
+                          if (this.offset >= 0 && num > 0) {
+                            this.offset = 0
+                            return false
+                          }
+                          if (this.offset <= 0 && num < 0) {
+                            if (wrap_width + (-this.offset) > width + objs.length * 48) {
                               return false
                             }
-                            if (this.offset <= 0 && num < 0) {
-                              if (wrap_width + (-this.offset) > width + objs.length * 48) {
-                                return false
-                              }
-                            }
-                            this.offset = this.offset + num
                           }
-                        },
-                        //- computed: {
-                        //-   hide_right() {
-                        //-     let objs = document.querySelectorAll('.tab')
-                        //-     let width = 0
-                        //-     let wrap_width = 0
-                        //-     let wr = document.querySelector('.tabwrapper')
-                        //-     wrap_width = wr.offsetWidth
-                        //-     objs = Array.from(objs)
-                        //-     objs.map(x => {
-                        //-       width += x.offsetWidth
-                        //-     })
-                        //-     console.log(wrap_width + (-this.offset) > width + objs.length * 48)
-                        //-     console.log(wrap_width + (-this.offset), width + objs.length * 48)
-                        //-     return (wrap_width + (-this.offset) > width + objs.length * 48)
-                        //-   }
-                        //- }
-                      })
-                    </script>
-                  </div>
+                          this.offset = this.offset + num
+                        }
+                      },
+                      //- computed: {
+                      //-   hide_right() {
+                      //-     let objs = document.querySelectorAll('.tab')
+                      //-     let width = 0
+                      //-     let wrap_width = 0
+                      //-     let wr = document.querySelector('.tabwrapper')
+                      //-     wrap_width = wr.offsetWidth
+                      //-     objs = Array.from(objs)
+                      //-     objs.map(x => {
+                      //-       width += x.offsetWidth
+                      //-     })
+                      //-     console.log(wrap_width + (-this.offset) > width + objs.length * 48)
+                      //-     console.log(wrap_width + (-this.offset), width + objs.length * 48)
+                      //-     return (wrap_width + (-this.offset) > width + objs.length * 48)
+                      //-   }
+                      //- }
+                    })
+                  </script>
                 </div>
               </section>
               <section id="io3">

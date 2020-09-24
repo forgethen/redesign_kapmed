@@ -853,6 +853,9 @@ $(document).ready(function() {
   $('.copy').click(function(){
     $(this).attr('value','Ссылка скопирована')
   })
+
+  // $('#tabSet').scrollTabs();
+
 });
 
 //# sourceMappingURL=main.js.map
