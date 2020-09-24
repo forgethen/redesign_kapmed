@@ -7345,6 +7345,8 @@ form.search > :last-child {
 }
 .science-list .doc img {
   width: 100%;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
 }
 .science-list .doc .text {
   font-size: 16px;
@@ -7788,6 +7790,8 @@ form.search > :last-child {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: inherit;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
 }
 .press-wrap .press.fullwidth .title {
   margin-bottom: 12px;
@@ -15837,6 +15841,10 @@ footer ul ul {
   padding: 24px;
   margin-bottom: 20px;
 }
+.m-m-card:hover {
+  border: 1px solid #f5f5f5;
+  background: #f5f5f5;
+}
 .m-m-card:last-child {
   margin-bottom: 0;
 }
@@ -15851,6 +15859,8 @@ footer ul ul {
 }
 .m-m-img img {
   width: 100%;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
 }
 .m-m-par {
   margin-bottom: 12px;
@@ -16228,6 +16238,9 @@ footer ul ul {
 }
 .grat-bottom-wrap:last-child {
   margin-bottom: 0;
+}
+.grat-bottom-wrap:hover {
+  opacity: 0.8;
 }
 .grat-title-bot {
   padding-right: 92px;
