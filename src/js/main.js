@@ -777,9 +777,9 @@ $(document).ready(function() {
     $(".success-box .text-message").html("" + msg + "");
   }
 
-  $(".swipeTopDown").on("click", function() {
-    $(this).parents(".list").toggleClass("active");
-  });
+  // $(".swipeTopDown").on("click", function() {
+  //   $(this).parents(".list").toggleClass("active");
+  // });
 
   $(".FilterSearch .btn-filter").click(function() {
     $(this).toggleClass("active");
@@ -850,6 +850,9 @@ $(document).ready(function() {
 
   $('.dropzone').on("dragenter", onDragEnter).on("dragover", onDragOver).on("dragleave", onDragLeave).on("drop", onDrop);
 
+  $('.copy').click(function(){
+    $(this).attr('value','Ссылка скопирована')
+  })
 });
 
 //# sourceMappingURL=main.js.map
