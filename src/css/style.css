@@ -22112,6 +22112,39 @@ footer ul ul {
     margin-bottom: 0;
   }
 }
+.customScroll {
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: -2rem;
+}
+#mCSB_6_scrollbar_horizontal.mCS-scrollThm {
+  visibility: hidden;
+}
+.customTabs {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 2rem;
+}
+.customTabs:before {
+  content: none;
+}
+.customTabs .tab {
+  height: auto;
+}
 .fancybox-close-small {
   -webkit-border-radius: 50%;
           border-radius: 50%;

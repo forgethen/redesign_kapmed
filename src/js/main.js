@@ -386,7 +386,7 @@ $(document).ready(function() {
     }
 
     if (!$(e.target).closest("a.city").length) {
-      if($('#citySelectPopUp').hasClass('active')){
+      if ($('#citySelectPopUp').hasClass('active')) {
         $("#citySelectPopUp").removeClass("active");
       }
     }
@@ -820,10 +820,12 @@ $(document).ready(function() {
   });
 
   $('input[type="file"]').change(function() {
-     var files = $('input[type="file"]').prop("files");
-     var names = $.map(files, function(val) { return val.name; });
-     $(".placeholder .filename").text(names);
-     $(".dropzone").addClass("dragdrop");
+    var files = $('input[type="file"]').prop("files");
+    var names = $.map(files, function(val) {
+      return val.name;
+    });
+    $(".placeholder .filename").text(names);
+    $(".dropzone").addClass("dragdrop");
   });
 
   var onDragEnter = function(event) {
@@ -850,11 +852,33 @@ $(document).ready(function() {
 
   $('.dropzone').on("dragenter", onDragEnter).on("dragover", onDragOver).on("dragleave", onDragLeave).on("drop", onDrop);
 
-  $('.copy').click(function(){
-    $(this).attr('value','Ссылка скопирована')
+  $('.copy').click(function() {
+    $(this).attr('value', 'Ссылка скопирована')
   })
 
   // $('#tabSet').scrollTabs();
+
+  $('.customScroll').mCustomScrollbar({
+    theme: "scrollThm",
+    axis: "x",
+    mouseWheel: {
+      enable: true,
+      axis: "y"
+    },
+    scrollButtons: {
+      enable: true
+    },
+    advanced: {
+      autoScrollOnFocus: false,
+      updateOnContentResize: true
+    }
+  });
+  $('.customScroll .tab').click(function() {
+    var el = $(this);
+    $('.customScroll').mCustomScrollbar("scrollTo", this, {
+      scrollEasing: "easeOut"
+    });
+  });
 
 });
 
