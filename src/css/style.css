@@ -17,6 +17,8 @@ body {
   height: 100%;
   min-height: 100vh;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 body.widgetOpened:before {
   opacity: 1;
@@ -2808,7 +2810,6 @@ a.red-link:focus {
           filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
 }
 .custom-select .options {
-  display: none;
   list-style-type: none;
   margin: 0;
   padding-right: 2rem;
@@ -3282,6 +3283,9 @@ a.red-link:focus {
   background-color: #fffbef;
   padding: 1.6rem 2rem;
 }
+.formPage .description > :last-child {
+  margin-bottom: 0;
+}
 .formPage .description.v2 {
   border: none;
   background-color: transparent;
@@ -3654,7 +3658,6 @@ a.red-link:focus {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3.2rem;
   cursor: pointer;
 }
 .formPage .custom-checkbox.v2 p {
@@ -9771,19 +9774,21 @@ form.search > :last-child {
   display: block;
   background-color: #c4c4c4;
 }
+.tabs .tab:after {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: -webkit-calc(100% - 2.4rem);
+  width: calc(100% - 2.4rem);
+}
 .tabs .tab.active {
   color: #b8181c;
   cursor: default;
   position: relative;
 }
 .tabs .tab.active:after {
-  width: -webkit-calc(100% - 2.4rem);
-  width: calc(100% - 2.4rem);
-  z-index: 1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
   border-bottom: 2px solid #b8181c;
 }
 .tabs > :last-child {
@@ -17516,7 +17521,7 @@ footer ul ul {
   line-height: 0;
 }
 .medicalExamination .container .custom-checkbox {
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 .medicalExamination > :first-child > :last-child {
   margin-bottom: 0;
@@ -22112,38 +22117,205 @@ footer ul ul {
     margin-bottom: 0;
   }
 }
-.customScroll {
-  overflow: hidden;
-  width: 100vw;
-  position: relative;
-  left: -2rem;
-}
-#mCSB_6_scrollbar_horizontal.mCS-scrollThm {
-  visibility: hidden;
-}
-.customTabs {
+.customScrollTabs {
   width: 100%;
+  position: relative;
+  left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  list-style-type: none;
+}
+.customScrollTabs.hiddenArrow .customTabs:before,
+.customScrollTabs.hiddenArrow .customTabs:after {
+  content: none;
+}
+.customScrollTabs.hiddenArrow .prev,
+.customScrollTabs.hiddenArrow .next {
+  display: none !important;
+}
+.customScrollTabs.showShadow .customTabs:before,
+.customScrollTabs.showShadow .customTabs:after {
+  display: block;
+}
+.customScrollTabs.finish .customTabs:after {
+  width: 0;
+}
+.customScrollTabs.finish .customTabs:before {
+  width: 6rem;
+}
+.customScrollTabs.start .customTabs:before {
+  width: 0;
+}
+.customScrollTabs.start .customTabs:after {
+  width: 6rem;
+}
+.customScrollTabs .mCS-scrollTabsThm .mCSB_container {
+  margin-bottom: 0;
+}
+.customScrollTabs .mCS-scrollTabsThm .mCSB_scrollTools_horizontal {
+  visibility: hidden;
+}
+.customScrollTabs .prev {
+  margin-right: 1rem;
+}
+.customScrollTabs .next {
+  margin-left: 1rem;
+}
+.customScrollTabs .prev,
+.customScrollTabs .next {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  line-height: normal;
+  font-weight: normal;
+  flex: none;
+  position: relative;
+  top: -0.4rem;
+  -webkit-transition: 0.125s ease all;
+  -o-transition: 0.125s ease all;
+  transition: 0.125s ease all;
+  cursor: pointer;
+}
+.customScrollTabs .prev:hover,
+.customScrollTabs .next:hover {
+  color: #b8181c;
+}
+.customScrollTabs .prev.hide,
+.customScrollTabs .next.hide {
+  opacity: 0;
+  width: 0;
   margin: 0;
-  padding: 0 2rem;
+  overflow: hidden;
+  pointer-events: none;
+}
+.customScrollTabs .prev:before,
+.customScrollTabs .next:before {
+  position: relative;
+}
+.customScrollTabs .container {
+  margin: 0;
+  padding: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: auto;
+  display: block;
+  overflow: hidden;
+}
+.customTabs {
+  margin: 0;
+  position: relative;
+}
+.customTabs:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 3rem;
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), to(#fff));
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fff 100%);
+  height: 100%;
+  z-index: 2;
+  display: none;
+  -webkit-transition: 0.25s ease all;
+  -o-transition: 0.25s ease all;
+  transition: 0.25s ease all;
 }
 .customTabs:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 3rem;
+  background: -o-linear-gradient(right, rgba(255,255,255,0) 0%, #fff 100%);
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255,255,255,0)), to(#fff));
+  background: linear-gradient(270deg, rgba(255,255,255,0) 0%, #fff 100%);
+  height: 100%;
+  z-index: 2;
+  display: none;
+  -webkit-transition: 0.25s ease all;
+  -o-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+.customTabs .tabs {
+  margin-bottom: 0;
+}
+.customTabs .tabs:before {
   content: none;
+}
+.customTabs li {
+  margin-bottom: 0;
+  display: block;
 }
 .customTabs .tab {
   height: auto;
+  font-size: 1.6rem;
+  line-height: normal;
+  font-weight: normal;
+  margin-bottom: 0;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+  display: block;
+}
+.customTabs .tab span {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: 1;
+}
+.customTabs .tab:before {
+  left: 0;
+}
+.customTabs .tab:after {
+  left: 1.2rem;
+}
+.customTabs .tab.active:after {
+  border-bottom: 2px solid #b8181c;
+}
+.customTabs ul > :first-child .tab {
+  padding-left: 0;
+}
+.customTabs ul > :first-child .tab:after {
+  width: -webkit-calc(100% - 1.2rem);
+  width: calc(100% - 1.2rem);
+  left: 0;
+}
+.customTabs ul > :first-child .tab:before {
+  left: 0;
+  width: 100%;
+}
+.customTabs ul > :last-child .tab {
+  padding-right: 0;
+}
+.customTabs ul > :last-child .tab:before {
+  width: 100%;
+}
+.customTabs ul > :last-child .tab:after {
+  width: -webkit-calc(100% - 1.2rem);
+  width: calc(100% - 1.2rem);
+  left: 1.2rem;
+}
+.customTabs ul > :last-child .tab.active:after {
+  width: -webkit-calc(100% - 1.2rem);
+  width: calc(100% - 1.2rem);
 }
 .fancybox-close-small {
   -webkit-border-radius: 50%;
