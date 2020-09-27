@@ -356,6 +356,13 @@ select:hover {
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: #b8181c;
 }
+.button[disabled],
+button[disabled],
+input[type=button][disabled],
+input[type=reset][disabled],
+input[type=submit][disabled] {
+  pointer-events: none;
+}
 .container {
   max-width: 115.2rem;
   padding: 0;
@@ -6743,6 +6750,19 @@ form.search > :last-child {
 .selects > div {
   width: 30%;
 }
+.flex-btn a.withflex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: normal;
+  -webkit-align-items: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+}
+.flex-btn a.withflex img {
+  margin-right: 6px;
+}
 .otkaz {
   margin-bottom: 32px;
 }
@@ -6806,6 +6826,19 @@ form.search > :last-child {
 .activity-wrap.fromCardtree > *:nth-child(3) {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
+}
+.activity-wrap.fromCardtree.v3 .activity {
+  position: relative;
+}
+.activity-wrap.fromCardtree.v3 .activity a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.activity-wrap.fromCardtree.v3 .activity:hover {
+  background: #f5f5f5;
 }
 .activity-wrap .activity {
   width: -webkit-calc(50% - 16px);
@@ -13936,7 +13969,7 @@ footer ul ul {
           justify-content: center;
 }
 .advice .team-section {
-  padding-bottom: 48px;
+  padding-bottom: 68px;
 }
 .advice .team-section .activity-wrap .block {
   padding: 24px 0;
@@ -13990,6 +14023,18 @@ footer ul ul {
           flex: 0 0 48%;
   margin-bottom: 28px;
   padding: 32px;
+  position: relative;
+}
+.answer-item a.fullblock {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.answer-item:hover {
+  background: #f5f5f5;
 }
 .answer-item:nth-child(5n) {
   margin-bottom: 0;
@@ -14266,6 +14311,11 @@ footer ul ul {
             flex: 0 0 100%;
     max-width: 100%;
   }
+  .ans-text {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
   .activity-wrap .activity.fullwidth.docs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -14384,6 +14434,9 @@ footer ul ul {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
+  .answer-item:nth-child(5n) {
+    margin-bottom: 2.8rem;
+  }
   .advice-1 .team-section {
     padding-bottom: 0;
   }
@@ -14431,6 +14484,10 @@ footer ul ul {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   .advice-1 .ans-img-wrap {
     margin-bottom: 8px;
@@ -22457,6 +22514,12 @@ footer ul ul {
   }
   .seeMore a {
     width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .mobile-font-size-24px {
+    font-size: 24px !important;
+    line-height: 32px !important;
   }
 }
 @-webkit-keyframes pl-red {
