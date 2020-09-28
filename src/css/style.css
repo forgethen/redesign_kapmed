@@ -2766,6 +2766,12 @@ a.red-link:focus {
     margin-top: 1.6rem;
     height: auto;
   }
+  ul.content .content__item.show ul li {
+    padding-left: 2.4rem;
+  }
+  ul.content .content__item.show ul li:before {
+    left: 0;
+  }
   ul.content .content__item .title {
     margin-bottom: 0;
   }
@@ -4737,6 +4743,27 @@ form.search > :last-child {
   font-size: inherit;
   line-height: inherit;
 }
+.accordion-menu li h1 i.ri-add-fill {
+  top: 4.4rem;
+}
+.accordion-menu li h2 i.ri-add-fill {
+  top: 3.4rem;
+}
+.accordion-menu li h3 i.ri-add-fill {
+  top: 3rem;
+}
+.accordion-menu li h4 i.ri-add-fill {
+  top: 2.8rem;
+}
+.accordion-menu li h5 i.ri-add-fill {
+  top: 2.6rem;
+}
+.accordion-menu li h6 i.ri-add-fill {
+  top: 2.4rem;
+}
+.accordion-menu li p i.ri-add-fill {
+  top: 2.3rem;
+}
 .accordion-menu li > :first-child {
   position: relative;
   cursor: pointer;
@@ -4761,14 +4788,15 @@ form.search > :last-child {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
   -webkit-transition: 0.5s ease all;
   -o-transition: 0.5s ease all;
   transition: 0.5s ease all;
-  font-size: inherit;
+  font-size: 2.4rem;
   line-height: normal;
   font-weight: normal;
   position: absolute;
-  top: 2.6rem;
   right: 0;
 }
 .accordion-menu li .answer {
@@ -4783,6 +4811,27 @@ form.search > :last-child {
   transition: 0.485s ease all;
 }
 @media screen and (max-width: 960px) {
+  .accordion-menu li h1 i.ri-add-fill {
+    top: 3.2rem;
+  }
+  .accordion-menu li h2 i.ri-add-fill {
+    top: 3rem;
+  }
+  .accordion-menu li h3 i.ri-add-fill {
+    top: 2.8rem;
+  }
+  .accordion-menu li h4 i.ri-add-fill {
+    top: 2.6rem;
+  }
+  .accordion-menu li h5 i.ri-add-fill {
+    top: 2.4rem;
+  }
+  .accordion-menu li h6 i.ri-add-fill {
+    top: 2.2rem;
+  }
+  .accordion-menu li p i.ri-add-fill {
+    top: 2rem;
+  }
   .accordion-menu li > :first-child {
     padding: 2.4rem 3.6rem 2.4rem 0;
     font-weight: normal;
@@ -8858,6 +8907,13 @@ form.search > :last-child {
   }
   .activity-wrap .activity {
     width: 100%;
+  }
+  .activity-wrap .activity.phones {
+    height: 23rem;
+    padding: 2rem;
+  }
+  .activity-wrap .activity.phones .img-wrap {
+    top: 2rem;
   }
   .content__item {
     padding-left: 20px;
@@ -18220,7 +18276,7 @@ footer ul ul {
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 3rem;
-  grid-row-gap: 3rem;
+  grid-row-gap: 2rem;
 }
 .statistics .statisticsContainer > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -18291,8 +18347,13 @@ footer ul ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
-  .statistics .statisticsContainer > :first-child {
-    margin-bottom: 2rem;
+}
+@media screen and (max-width: 640px) {
+  .statistics {
+    margin-bottom: 6.4rem;
+  }
+  .statistics .sectionTitle {
+    font-size: 2.4rem;
   }
 }
 .locationBlock {
@@ -22502,7 +22563,6 @@ footer ul ul {
     line-height: normal;
   }
   p {
-    font-size: 1.4rem;
     line-height: normal;
   }
   .row {
