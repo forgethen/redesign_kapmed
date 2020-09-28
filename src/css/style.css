@@ -8471,6 +8471,9 @@ form.search > :last-child {
 .tabs-with-margin {
   margin: 10px 0 50px 0;
 }
+.popular-requests {
+  padding: 2.4rem 0;
+}
 .popular-requests p {
   color: #939393;
   font-size: 14px;
@@ -8708,6 +8711,33 @@ form.search > :last-child {
   font-size: 1.6rem;
   line-height: normal;
 }
+.searchZone {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.searchZone .button-search {
+  position: relative !important;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+.searchZone > :first-child {
+  -webkit-border-radius: 0.4rem 0 0 0.4rem;
+          border-radius: 0.4rem 0 0 0.4rem;
+  border-right: 0;
+  margin-bottom: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 .search-wrapper {
   position: fixed;
   width: 100vw;
@@ -8732,6 +8762,7 @@ form.search > :last-child {
   height: 64px;
   background: #b8181c;
   position: absolute;
+  z-index: 1;
   right: 0;
   color: #fff;
   cursor: pointer;
@@ -9346,6 +9377,9 @@ form.search > :last-child {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+  .activity-wrap .activity.cardtree:nth-child(1) .title a {
+    position: relative;
   }
   .activity-wrap .activity.cardtree:nth-child(2),
   .activity-wrap .activity.cardtree:nth-child(3) {
@@ -22246,6 +22280,7 @@ footer ul ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 3.2rem;
 }
 .customScrollTabs.hiddenArrow .customTabs:before,
 .customScrollTabs.hiddenArrow .customTabs:after {
@@ -22295,22 +22330,18 @@ footer ul ul {
 }
 .customScrollTabs.show .customTabs {
   width: 100%;
-  padding: 0;
-  position: relative;
-  left: 0;
-  margin-bottom: 0;
-  z-index: 1;
-  border-color: #fff;
-  border-bottom: 1px solid #939393;
-  opacity: 1;
-  -webkit-transition: 0.375s ease all;
-  -o-transition: 0.375s ease all;
-  transition: 0.375s ease all;
-}
-.customScrollTabs.show .customTabs.visible {
-  margin-bottom: 2.4rem;
-  height: auto;
   padding: 0.8rem 0;
+  height: auto;
+  position: absolute;
+  -webkit-border-radius: 0 0 0.4rem 0.4rem;
+          border-radius: 0 0 0.4rem 0.4rem;
+  top: -webkit-calc(100% - 2px);
+  top: calc(100% - 2px);
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
+  border: 1px solid #000;
+  opacity: 1;
 }
 .customScrollTabs.show .customTabs .tabs {
   padding: 0;
@@ -22343,6 +22374,24 @@ footer ul ul {
 }
 .customScrollTabs.show .tabs li {
   width: 100%;
+}
+.customScrollTabs.default .tabActive {
+  display: none;
+}
+.customScrollTabs.default .customTabs {
+  height: auto;
+  opacity: 1;
+}
+.customScrollTabs.v2 .tabActive {
+  display: none;
+}
+.customScrollTabs.v2 .customTabs {
+  height: auto;
+  opacity: 1;
+}
+.customScrollTabs.v2.show .customTabs {
+  height: auto;
+  opacity: 1;
 }
 .customScrollTabs .tabActive {
   display: none;
@@ -22515,14 +22564,74 @@ footer ul ul {
   width: calc(100% - 1.2rem);
 }
 @media screen and (max-width: 640px) {
+  .customScrollTabs {
+    margin-bottom: 2.4rem;
+  }
+  .customScrollTabs.v2 .tabActive {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .customScrollTabs.v2 .customTabs {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
   .customScrollTabs .prev,
   .customScrollTabs .next {
     display: none;
   }
   .customScrollTabs .customTabs {
-    height: 0%;
+    height: 0;
     opacity: 0;
     overflow: hidden;
+  }
+  .customScrollTabs .customTabs.mVersion {
+    position: relative;
+    top: 0;
+    padding: 0.8rem 0;
+    background-color: #fff;
+    height: auto;
+    opacity: 1;
+    z-index: auto;
+    display: none;
+    border: none;
+    border-bottom: 1px solid #939393;
+    -webkit-border-radius: 0 0 0 0;
+            border-radius: 0 0 0 0;
+  }
+  .customScrollTabs .customTabs.mVersion .tabs {
+    padding: 0;
+  }
+  .customScrollTabs .customTabs.mVersion .tabs a {
+    padding: 0.8rem 1.6rem;
+  }
+  .customScrollTabs .customTabs.mVersion .tab:before,
+  .customScrollTabs .customTabs.mVersion .tab:after {
+    content: none;
+  }
+  .customScrollTabs .customTabs.mVersion .tabs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .customScrollTabs .customTabs.mVersion .tabs li {
+    width: 100%;
   }
   .customScrollTabs .tabActive {
     display: -webkit-box;
@@ -22547,13 +22656,16 @@ footer ul ul {
     background-color: #fff;
     margin-bottom: 0;
   }
+  .customScrollTabs .tabActive:hover {
+    -webkit-filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+            filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
+  }
   .customScrollTabs .tabActive:hover i {
     font-size: 2rem;
     color: #b8181c;
   }
-  .customScrollTabs .tabActive:hover,
   .customScrollTabs .tabActive:focus,
-  .customScrollTabs .tabActive:active {
+  .customScrollTabs .tabActive.active {
     border: 1px solid #000;
   }
   .customScrollTabs .tabActive i {

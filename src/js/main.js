@@ -700,9 +700,9 @@ $(document).ready(function() {
     $('.customScrollTabs').each(function() {
 
       if ($(window).width() >= 640) {
-        $('.customScrollTabs').removeClass('show');
+        $('.customScrollTabs .customTabs').removeClass('show, mVersion, default');
         $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
-        setTimeout(function () {
+        setTimeout(function() {
           $('.customScrollTabs .customTabs').mCustomScrollbar({
             theme: "scrollTabsThm",
             axis: "x",
@@ -726,32 +726,32 @@ $(document).ready(function() {
 
             callbacks: {
               whileScrolling: function() {
-                $('.customScrollTabs .next, .customScrollTabs .prev').show();
-                $('.customScrollTabs').removeClass('start, finish');
+                $(this).parents('.customScrollTabs').find('.next, .prev').show();
+                $(this).parents('.customScrollTabs').removeClass('start, finish');
               },
               onTotalScroll: function() {
-                $('.customScrollTabs .next').hide();
-                $('.customScrollTabs').addClass('finish');
-                $('.customScrollTabs').removeClass('start')
+                $(this).parents('.customScrollTabs').find('.next').hide();
+                $(this).parents('.customScrollTabs').addClass('finish');
+                $(this).parents('.customScrollTabs').removeClass('start')
               },
               onTotalScrollBack: function() {
-                $('.customScrollTabs .prev').hide();
-                $('.customScrollTabs').removeClass('finish');
-                $('.customScrollTabs').addClass('start')
+                $(this).parents('.customScrollTabs').find('.prev').hide();
+                $(this).parents('.customScrollTabs').removeClass('finish');
+                $(this).parents('.customScrollTabs').addClass('start')
               },
               onOverflowX: function() {
-                $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '0%');
-                $('.customScrollTabs').removeClass('hideArrow');
-                $('.customScrollTabs').addClass('showShadow');
-                $('.customScrollTabs').addClass('showArrow');
-                $('.customScrollTabs .next').show();
+                $(this).mCustomScrollbar("scrollTo", '0%');
+                $(this).parents('.customScrollTabs').removeClass('hideArrow');
+                $(this).parents('.customScrollTabs').addClass('showShadow');
+                $(this).parents('.customScrollTabs').addClass('showArrow');
+                $(this).parents('.customScrollTabs').find('.next').show();
               },
               onOverflowXNone: function() {
-                $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '0%');
-                $('.customScrollTabs').addClass('hideArrow');
-                $('.customScrollTabs').removeClass('showShadow');
-                $('.customScrollTabs').removeClass('showArrow');
-                $('.customScrollTabs .next, .customScrollTabs .prev').hide();
+                $(this).mCustomScrollbar("scrollTo", '0%');
+                $(this).parents('.customScrollTabs').addClass('hideArrow');
+                $(this).parents('.customScrollTabs').removeClass('showShadow');
+                $(this).parents('.customScrollTabs').removeClass('showArrow');
+                $(this).parents('.customScrollTabs').find('.next, .prev').hide();
               },
             },
           });
@@ -759,34 +759,112 @@ $(document).ready(function() {
       } else {
         $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
         $('.customScrollTabs .next, .customScrollTabs .prev').hide();
-        // $('.customScrollTabs').addClass('show');
-        // var th1 = $(".customScrollTabs .customTabs .tabs").find("li:eq(0)").height();
-        // var th2 = $(".customScrollTabs .customTabs .tabs").find("li:eq(1)").height();
-        // var th3 = $(".customScrollTabs .customTabs .tabs").find("li:eq(2)").height();
-        // var elength = $('.customScrollTabs .customTabs li').length;
-        setTimeout(function () {
-          // if (elength > 3) {
-            $('.customScrollTabs .customTabs').mCustomScrollbar({
-              theme: ".customTabsThm",
-              // callbacks: {
-                // onCreate: function() {
-                  // $(this).css("max-height", th1 + th2 + th3 + 16 + "px");
-                // }
-              // }
-            });
-          // }
-        }, 100);
-        // $('.customScrollTabs').removeClass('show');
+
+        $('.customScrollTabs .customTabs').each(function() {
+          var elength = $(this).find('li').length;
+          if (elength > 3) {
+            $(this).addClass('mVersion');
+          } else if (elength < 3) {
+            $(this).addClass('default');
+
+          }
+
+        });
       }
+
+      $('.customScrollTabs.v2 .customTabs').each(function() {
+        // $(this).removeClass('default');
+        $(this).parents('.customScrollTabs').addClass('show');
+        $(this).find('.next, .prev').hide();
+        var th1 = $(this).find("li:eq(0)").height();
+        var th2 = $(this).find("li:eq(1)").height();
+        var elength = $(this).find('li').length;
+        setTimeout(function () {
+          $('.customScrollTabs.v2 .customTabs').mCustomScrollbar({
+            theme: "customTabsThm",
+            callbacks: {
+              onCreate: function() {
+                $(this).css("max-height", th1 + th2 + 16 + "px");
+              }
+            }
+          });
+        }, 100);
+
+        $(this).parents('.customScrollTabs').removeClass('show');
+
+      });
+
+      $('.customScrollTabs .customTabs.default').each(function() {
+        $(this).parents('.customScrollTabs').addClass('show, default');
+        // $('.customScrollTabs .next, .customScrollTabs .prev').hide();
+        // var th1 = $(this).find("li:eq(0)").height();
+        // var th2 = $(this).find("li:eq(1)").height();
+        // var elength = $(this).find('li').length;
+        setTimeout(function() {
+
+          $('.customScrollTabs .customTabs.default').mCustomScrollbar({
+            theme: "scrollTabsThm",
+            axis: "x",
+            contentTouchScroll: true,
+            scrollButtons: {
+              enable: true
+            },
+            mouseWheel: {
+              enable: true,
+              axis: "y"
+            },
+            scrollButtons: {
+              enable: true,
+              scrollType: "stepless"
+            },
+            advanced: {
+              autoScrollOnFocus: false,
+              updateOnContentResize: true,
+              updateOnBrowserResize: true,
+            },
+
+            callbacks: {
+              whileScrolling: function() {
+                $(this).parents('.customScrollTabs').find('.next, .prev').show();
+                $(this).parents('.customScrollTabs').removeClass('start, finish');
+              },
+              onTotalScroll: function() {
+                $(this).parents('.customScrollTabs').find('.next').hide();
+                $(this).parents('.customScrollTabs').addClass('finish');
+                $(this).parents('.customScrollTabs').removeClass('start')
+              },
+              onTotalScrollBack: function() {
+                $(this).parents('.customScrollTabs').find('.prev').hide();
+                $(this).parents('.customScrollTabs').removeClass('finish');
+                $(this).parents('.customScrollTabs').addClass('start')
+              },
+              onOverflowX: function() {
+                $(this).mCustomScrollbar("scrollTo", '0%');
+                $(this).parents('.customScrollTabs').removeClass('hideArrow');
+                $(this).parents('.customScrollTabs').addClass('showShadow');
+                $(this).parents('.customScrollTabs').addClass('showArrow');
+                $(this).parents('.customScrollTabs').find('.next').show();
+              },
+              onOverflowXNone: function() {
+                $(this).mCustomScrollbar("scrollTo", '0%');
+                $(this).parents('.customScrollTabs').addClass('hideArrow');
+                $(this).parents('.customScrollTabs').removeClass('showShadow');
+                $(this).parents('.customScrollTabs').removeClass('showArrow');
+                $(this).parents('.customScrollTabs').find('.next, .prev').hide();
+              },
+            },
+          });
+        }, 100);
+        $(this).parents('.customScrollTabs').removeClass('show');
+      })
     });
   }
 
 
   $('.customScrollTabs .tabActive').each(function() {
-    var elTitle = $('.customScrollTabs .customTabs .active').text();
-    $('.customScrollTabs .tabActive .title').html(elTitle);
+    var elTitle = $(this).parents('.customScrollTabs').find('.customTabs .active').text();
+    $(this).parents('.customScrollTabs').find('.tabActive .title').html(elTitle);
   });
-
 
   customTabsIn();
 
@@ -796,7 +874,7 @@ $(document).ready(function() {
       if ($('.customScrollTabs .tabActive').hasClass('active')) {
         $('.customScrollTabs .tabActive').removeClass('active');
         $('.customScrollTabs').removeClass('show');
-        $('.customScrollTabs .customTabs').removeClass('visible');
+        $('.customScrollTabs .customTabs.mVersion').slideUp('normal');
       }
     }
 
@@ -804,31 +882,40 @@ $(document).ready(function() {
   });
 
   $('.customScrollTabs .tabActive').click(function() {
-    $('.customScrollTabs').toggleClass('show');
+    $(this).parents('.customScrollTabs').toggleClass('show');
     $(this).toggleClass('active');
-    $('.customScrollTabs .customTabs').toggleClass('visible');
+    var tabs = $(this).parents('.customScrollTabs').find('.customTabs.mVersion');
+    if (!tabs.is(':visible')) {
+      tabs.slideDown('normal', function() {
+        // console.log('hide');
+      });
+    } else {
+      tabs.slideUp('normal', function() {
+        // console.log('show');
+      });
+    }
   });
 
   $('.customScrollTabs .tab').click(function() {
-    var el = $(this);
-    var elTitle = $('.customScrollTabs .customTabs .active').text();
-    $('.customScrollTabs .tabActive .title').html(elTitle);
-    $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", this, {
+    var elTitle = $(this).text();
+    // console.log(elTitle);
+    $(this).parents('.customScrollTabs').find('.tabActive .title').html(""+elTitle+"");
+    $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", this, {
       scrollEasing: "easeOut"
     });
   });
 
   $('.customScrollTabs .prev').click(function() {
-    $('.customScrollTabs .next').show();
+    $(this).parents('.customScrollTabs').find('.next').show();
     setTimeout(function() {
-      $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '+=100');
+      $(this).parents('.customScrollTabs').find('customTabs').mCustomScrollbar("scrollTo", '+=100');
     }, 50);
   });
 
   $('.customScrollTabs .next').click(function() {
-    $('.customScrollTabs .prev').show();
+    $(this).parents('.customScrollTabs').find('.prev').show();
     setTimeout(function() {
-      $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '-=100');
+      $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", '-=100');
     }, 50);
   });
 
