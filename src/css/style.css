@@ -7,8 +7,8 @@
 }
 body {
   background-color: #fff;
-  color: #000;
   font-family: 'HelveticaNeueCyr';
+  color: #000;
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
@@ -121,6 +121,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+  font-family: 'HelveticaNeueCyr';
 }
 label,
 legend {
@@ -220,6 +221,7 @@ p {
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: normal;
+  font-family: 'HelveticaNeueCyr';
   margin: 0;
 }
 p.title {
@@ -243,6 +245,7 @@ br.notHide {
 }
 span {
   font-size: 1.2rem;
+  font-family: 'HelveticaNeueCyr';
   margin: 0;
 }
 span.red {
@@ -22268,6 +22271,82 @@ footer ul ul {
 .customScrollTabs.start .customTabs:after {
   width: 6rem;
 }
+.customScrollTabs.show {
+  height: auto;
+  opacity: 1;
+  width: 100%;
+}
+.customScrollTabs.show .container {
+  position: relative;
+  overflow: visible;
+}
+.customScrollTabs.show .tabActive {
+  -webkit-border-radius: 0.4rem 0.4rem 0 0;
+          border-radius: 0.4rem 0.4rem 0 0;
+}
+.customScrollTabs.show .tabActive i {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  color: #b8181c;
+}
+.customScrollTabs.show .tabActive.active {
+  border: 1px solid #000;
+}
+.customScrollTabs.show .customTabs {
+  width: 100%;
+  padding: 0;
+  position: relative;
+  left: 0;
+  margin-bottom: 0;
+  z-index: 1;
+  border-color: #fff;
+  border-bottom: 1px solid #939393;
+  opacity: 1;
+  -webkit-transition: 0.375s ease all;
+  -o-transition: 0.375s ease all;
+  transition: 0.375s ease all;
+}
+.customScrollTabs.show .customTabs.visible {
+  margin-bottom: 2.4rem;
+  height: auto;
+  padding: 0.8rem 0;
+}
+.customScrollTabs.show .customTabs .tabs {
+  padding: 0;
+}
+.customScrollTabs.show .customTabs .tabs a {
+  padding: 0.8rem 1.6rem;
+}
+.customScrollTabs.show .customTabs .tab:before,
+.customScrollTabs.show .customTabs .tab:after {
+  content: none;
+}
+.customScrollTabs.show .tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.customScrollTabs.show .tabs li {
+  width: 100%;
+}
+.customScrollTabs .tabActive {
+  display: none;
+}
 .customScrollTabs .mCS-scrollTabsThm .mCSB_container {
   margin-bottom: 0;
 }
@@ -22434,6 +22513,73 @@ footer ul ul {
 .customTabs ul > :last-child .tab.active:after {
   width: -webkit-calc(100% - 1.2rem);
   width: calc(100% - 1.2rem);
+}
+@media screen and (max-width: 640px) {
+  .customScrollTabs .prev,
+  .customScrollTabs .next {
+    display: none;
+  }
+  .customScrollTabs .customTabs {
+    height: 0%;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .customScrollTabs .tabActive {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 6.4rem;
+    border: 1px solid;
+    cursor: pointer;
+    color: #313131;
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 2.4rem;
+    padding: 1.6rem;
+    -webkit-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+    border: 1px solid #939393;
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+  .customScrollTabs .tabActive:hover i {
+    font-size: 2rem;
+    color: #b8181c;
+  }
+  .customScrollTabs .tabActive:hover,
+  .customScrollTabs .tabActive:focus,
+  .customScrollTabs .tabActive:active {
+    border: 1px solid #000;
+  }
+  .customScrollTabs .tabActive i {
+    cursor: pointer;
+    position: absolute;
+    height: 6.2rem;
+    width: 6.2rem;
+    right: 0.1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #939393;
+    top: 0.1rem;
+    right: 0.1rem;
+  }
 }
 .fancybox-close-small {
   -webkit-border-radius: 50%;

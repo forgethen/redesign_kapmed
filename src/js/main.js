@@ -225,6 +225,7 @@ $(document).ready(function() {
         $(this).mCustomScrollbar("destroy");
       }
     });
+
     $(".headerMenu .submenu").each(function() {
       if ($(window).width() >= 1079) {
         $(this).mCustomScrollbar("destroy");
@@ -238,9 +239,7 @@ $(document).ready(function() {
 
   fromResize();
 
-  $(window).resize(function() {
-    fromResize();
-  });
+
 
   $(".citiesBlock").mCustomScrollbar({
     theme: "citiesBlockThm",
@@ -697,76 +696,146 @@ $(document).ready(function() {
     $(this).attr('value', 'Ссылка скопирована');
   });
 
+  function customTabsIn() {
+    $('.customScrollTabs').each(function() {
 
-  $('.customScrollTabs .customTabs').mCustomScrollbar({
-    theme: "scrollTabsThm",
-    axis: "x",
-    contentTouchScroll: true,
-    scrollButtons: {
-      enable: true
-    },
-    mouseWheel: {
-      enable: true,
-      axis: "y"
-    },
-    scrollButtons: {
-      enable: true,
-      scrollType: "stepless"
-    },
-    advanced: {
-      autoScrollOnFocus: false,
-      updateOnContentResize: true,
-      updateOnBrowserResize: true,
-    },
+      if ($(window).width() >= 640) {
+        $('.customScrollTabs').removeClass('show');
+        $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
+        setTimeout(function () {
+          $('.customScrollTabs .customTabs').mCustomScrollbar({
+            theme: "scrollTabsThm",
+            axis: "x",
+            contentTouchScroll: true,
+            scrollButtons: {
+              enable: true
+            },
+            mouseWheel: {
+              enable: true,
+              axis: "y"
+            },
+            scrollButtons: {
+              enable: true,
+              scrollType: "stepless"
+            },
+            advanced: {
+              autoScrollOnFocus: false,
+              updateOnContentResize: true,
+              updateOnBrowserResize: true,
+            },
 
-    callbacks: {
-      whileScrolling: function() {
-        $('.customScrollTabs .next, .customScrollTabs .prev').removeClass('hide');
-        $('.customScrollTabs').removeClass('start');
-        $('.customScrollTabs').removeClass('finish');
-      },
-      onTotalScroll: function() {
-        $('.customScrollTabs .next').addClass('hide');
-        $('.customScrollTabs').addClass('finish');
-        $('.customScrollTabs').removeClass('start')
-      },
-      onTotalScrollBack: function() {
-        $('.customScrollTabs').removeClass('finish');
-        $('.customScrollTabs').addClass('start')
-        $('.customScrollTabs .prev').addClass('hide');
-      },
-      onOverflowX: function() {
-        $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '0%');
-        $('.customScrollTabs').removeClass('hideArrow');
-        $('.customScrollTabs').addClass('showShadow');
-        $('.customScrollTabs').addClass('showArrow');
-        $('.customScrollTabs .next, .customScrollTabs .prev').show();
-      },
-      onOverflowXNone: function() {
-        $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '0%');
-        $('.customScrollTabs').addClass('hideArrow');
-        $('.customScrollTabs').removeClass('showShadow');
-        $('.customScrollTabs').removeClass('showArrow');
+            callbacks: {
+              whileScrolling: function() {
+                $('.customScrollTabs .next, .customScrollTabs .prev').show();
+                $('.customScrollTabs').removeClass('start, finish');
+              },
+              onTotalScroll: function() {
+                $('.customScrollTabs .next').hide();
+                $('.customScrollTabs').addClass('finish');
+                $('.customScrollTabs').removeClass('start')
+              },
+              onTotalScrollBack: function() {
+                $('.customScrollTabs .prev').hide();
+                $('.customScrollTabs').removeClass('finish');
+                $('.customScrollTabs').addClass('start')
+              },
+              onOverflowX: function() {
+                $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '0%');
+                $('.customScrollTabs').removeClass('hideArrow');
+                $('.customScrollTabs').addClass('showShadow');
+                $('.customScrollTabs').addClass('showArrow');
+                $('.customScrollTabs .next').show();
+              },
+              onOverflowXNone: function() {
+                $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '0%');
+                $('.customScrollTabs').addClass('hideArrow');
+                $('.customScrollTabs').removeClass('showShadow');
+                $('.customScrollTabs').removeClass('showArrow');
+                $('.customScrollTabs .next, .customScrollTabs .prev').hide();
+              },
+            },
+          });
+        }, 100);
+      } else {
+        $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
         $('.customScrollTabs .next, .customScrollTabs .prev').hide();
-      },
-    },
+        // $('.customScrollTabs').addClass('show');
+        // var th1 = $(".customScrollTabs .customTabs .tabs").find("li:eq(0)").height();
+        // var th2 = $(".customScrollTabs .customTabs .tabs").find("li:eq(1)").height();
+        // var th3 = $(".customScrollTabs .customTabs .tabs").find("li:eq(2)").height();
+        // var elength = $('.customScrollTabs .customTabs li').length;
+        setTimeout(function () {
+          // if (elength > 3) {
+            $('.customScrollTabs .customTabs').mCustomScrollbar({
+              theme: ".customTabsThm",
+              // callbacks: {
+                // onCreate: function() {
+                  // $(this).css("max-height", th1 + th2 + th3 + 16 + "px");
+                // }
+              // }
+            });
+          // }
+        }, 100);
+        // $('.customScrollTabs').removeClass('show');
+      }
+    });
+  }
+
+
+  $('.customScrollTabs .tabActive').each(function() {
+    var elTitle = $('.customScrollTabs .customTabs .active').text();
+    $('.customScrollTabs .tabActive .title').html(elTitle);
+  });
+
+
+  customTabsIn();
+
+  $(document).on("click", function(e) {
+
+    if (!$(e.target).closest(".customScrollTabs .tabActive").length) {
+      if ($('.customScrollTabs .tabActive').hasClass('active')) {
+        $('.customScrollTabs .tabActive').removeClass('active');
+        $('.customScrollTabs').removeClass('show');
+        $('.customScrollTabs .customTabs').removeClass('visible');
+      }
+    }
+
+    e.stopPropagation();
+  });
+
+  $('.customScrollTabs .tabActive').click(function() {
+    $('.customScrollTabs').toggleClass('show');
+    $(this).toggleClass('active');
+    $('.customScrollTabs .customTabs').toggleClass('visible');
   });
 
   $('.customScrollTabs .tab').click(function() {
     var el = $(this);
+    var elTitle = $('.customScrollTabs .customTabs .active').text();
+    $('.customScrollTabs .tabActive .title').html(elTitle);
     $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", this, {
       scrollEasing: "easeOut"
     });
   });
 
   $('.customScrollTabs .prev').click(function() {
-    $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '+=100');
-    $
-  })
+    $('.customScrollTabs .next').show();
+    setTimeout(function() {
+      $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '+=100');
+    }, 50);
+  });
+
   $('.customScrollTabs .next').click(function() {
-    $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '-=100');
-    $
-  })
+    $('.customScrollTabs .prev').show();
+    setTimeout(function() {
+      $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '-=100');
+    }, 50);
+  });
+
+  $(window).resize(function() {
+    fromResize();
+    customTabsIn();
+  });
 
 });
 
