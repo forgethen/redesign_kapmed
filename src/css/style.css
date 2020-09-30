@@ -754,6 +754,9 @@ input[type=submit][disabled] {
   margin-top: 3.2rem !important;
   margin-bottom: 0 !important;
 }
+.top-container {
+  background-color: #fff;
+}
 .top-container > :first-child {
   background-color: #193c6d;
   padding: 1.2rem 0;
@@ -941,10 +944,9 @@ input[type=submit][disabled] {
   max-height: 4.8rem;
 }
 .top-container .header .logo img {
-  max-height: 100%;
   max-width: inherit;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 .top-container .header nav {
   display: -webkit-box;
@@ -1279,6 +1281,10 @@ input[type=submit][disabled] {
   }
 }
 @media screen and (max-width: 1080px) {
+  .top-container {
+    position: fixed;
+    top: 0 !important;
+  }
   .top-container > :first-child .image {
     width: 1.6rem;
     height: 1.6rem;
@@ -1330,7 +1336,7 @@ input[type=submit][disabled] {
     height: 3.2rem;
   }
   .top-container .header .logo img {
-    height: 100%;
+    width: 100%;
   }
   .top-container > :first-child {
     padding: 0.8rem 0;
@@ -3718,6 +3724,15 @@ a.red-link:focus {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   cursor: pointer;
 }
 .formPage .custom-checkbox.v2 p {
@@ -3821,9 +3836,6 @@ a.red-link:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.formPage form label.error .title {
-  margin-bottom: 2.4rem;
-}
 .formPage form label.error input {
   border: 1px solid #b8181c;
   border-color: #b8181c;
@@ -3872,6 +3884,8 @@ a.red-link:focus {
 }
 .formPage form label.date i {
   position: absolute;
+  z-index: 1;
+  cursor: pointer;
   height: 5.4rem;
   width: 5.4rem;
   left: 0.1rem;
@@ -4057,6 +4071,7 @@ a.red-link:focus {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  flex-direction: row;
   padding: 0 0 0 3.6rem;
   cursor: pointer;
 }
@@ -4144,6 +4159,7 @@ a.red-link:focus {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
   background-color: #fff;
 }
 .formPage__bottom .close {
@@ -4308,10 +4324,11 @@ a.red-link:focus {
 }
 .error-message {
   font-size: 1rem;
+  line-height: 2.4rem;
+  font-weight: normal;
   width: 100%;
-  position: absolute;
-  height: 2.4rem;
-  top: 2.4rem;
+  position: relative;
+  top: 0;
   left: 0;
   width: auto;
   padding: 0 1.6rem;
@@ -4359,7 +4376,8 @@ form.search > *:nth-child(2) {
 form.search input {
   margin: 0;
 }
-form.search input[type="search"]:hover {
+form.search input[type="search"]:hover,
+form.search input[type="text"]:hover {
   border: 1px solid #b8181c;
   -webkit-box-shadow: 0px 0px 0.5rem 0px #b8181c;
           box-shadow: 0px 0px 0.5rem 0px #b8181c;
@@ -4376,6 +4394,7 @@ form.search > :last-child {
 }
 .mCS-DropdownThm.mCSB_scrollTools_vertical {
   right: 0;
+  position: absolute;
   width: 0.8rem;
 }
 .mCS-DropdownThm .mCSB_draggerRail {
@@ -8173,6 +8192,10 @@ form.search > :last-child {
 .press-wrap .press.video {
   padding: 0;
   border: none;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .press-wrap .press.video > :first-child:after {
   content: '';
@@ -8226,6 +8249,8 @@ form.search > :last-child {
           transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
+  max-width: 105%;
+  width: auto;
   position: absolute;
 }
 .press-wrap .press.video a:hover {
@@ -8233,6 +8258,7 @@ form.search > :last-child {
 }
 .press-wrap .press.video .name {
   font-size: 14px;
+  line-height: 1.8rem;
   color: #666;
 }
 .press-wrap .press.video:hover {
@@ -10122,6 +10148,10 @@ form.search > :last-child {
   font-size: 1.6rem;
   padding-top: 0.2rem;
   line-height: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .tags .tag:hover {
   -webkit-box-shadow: 0 0.6rem 2rem rgba(0,0,0,0.12);
@@ -17735,6 +17765,8 @@ footer ul ul {
   position: absolute;
   color: #939393;
   bottom: 0.1rem;
+  z-index: 1;
+  cursor: pointer;
 }
 .medicalExamination .container label.date span {
   color: #666;
@@ -18122,10 +18154,20 @@ footer ul ul {
           transform: translateX(-50%);
   max-width: 136rem;
 }
+.citySelect form {
+  display: block;
+}
+.citySelect form input {
+  height: 4.8rem;
+  width: 100%;
+}
+.citySelect form input[type="submit"] {
+  display: none;
+}
 .citySelect .CloseFancybox,
 .citySelect button[data-fancybox-close] {
-  top: 4rem;
-  right: 4rem;
+  top: 2rem;
+  right: 2rem;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   padding: 0;
@@ -18218,6 +18260,17 @@ footer ul ul {
   width: 100%;
   padding: 2rem 0;
 }
+.cities .no-results {
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #b8181c;
+}
+.cities > :nth-child(2) .no-results,
+.cities > :nth-child(3) .no-results {
+  margin-bottom: 0;
+  display: none !important;
+}
 .cities ul {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -18302,6 +18355,11 @@ footer ul ul {
     height: 2.4rem;
     top: 2rem;
     right: 2rem;
+  }
+  .cities > :nth-child(2) .no-results,
+  .cities > :nth-child(3) .no-results {
+    margin-bottom: 0;
+    display: none !important;
   }
   .cities ul {
     -webkit-box-flex: 0;
@@ -20039,6 +20097,8 @@ footer ul ul {
           transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
+  max-width: 105%;
+  width: auto;
   position: absolute;
 }
 .content {
@@ -21790,7 +21850,7 @@ footer ul ul {
 }
 #citySelectPopUp {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   left: 1.6rem;
   top: 7.2rem;
   -webkit-transition: 0.25s ease all;

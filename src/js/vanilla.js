@@ -47,6 +47,7 @@ const checkReady = () => {
 
 const staticHeader = () => {
   const header = document.querySelector('header')
+  if (!isNaN(header)) return false;
   const topHeight = header.querySelector('.top-container').offsetHeight
   const scrollTop = window.scrollY
   if (scrollTop >= topHeight) {
@@ -67,7 +68,7 @@ const payload = () => {
   if (body.hasAttribute('data-preloader')) {
     let node = document.createElement('div')
     node.classList.add('preloader')
-    node.innerHTML = '<div class="blue"><img src="src/img/static/blue.svg"></div><img class="red" src="src/img/static/red.svg"><div class="name"><img src="src/img/static/text.svg"></div>'
+    node.innerHTML = '<div class="blue"><img src="/local/templates/.default/img/static/blue.svg"></div><img class="red" src="/local/templates/.default/img/static/red.svg"><div class="name"><img src="/local/templates/.default/img/static/text.svg"></div>'
     body.appendChild(node)
     setTimeout(checkReady, 3200)
   }
@@ -75,7 +76,7 @@ const payload = () => {
   const action_buttons = document.querySelectorAll('.activity-action')
   if (action_buttons.length) openActivityHandler(action_buttons)
 
-  window.addEventListener('scroll', (e) => {
+  document.addEventListener('scroll', (e) => {
     staticHeader()
   })
 
@@ -83,5 +84,7 @@ const payload = () => {
 }
 
 document.addEventListener("DOMContentLoaded", payload)
+
+//# sourceMappingURL=vanilla.js.map
 
 //# sourceMappingURL=vanilla.js.map

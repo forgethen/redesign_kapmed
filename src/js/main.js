@@ -18,7 +18,6 @@ $(document).ready(function() {
       $(hash).each(function() {
         var elHash = $(this).attr('id');
         if ($(this).length > 0) {
-          console.log('есть');
           $('.content_list ul a[href="#' + elHash + '"]').addClass('dontRemove');
         }
       })
@@ -56,8 +55,18 @@ $(document).ready(function() {
     $(this).addClass("active");
     var hash = $(this).attr("href");
     var target = $(hash);
+
+    if ($(window).width() >= 1080) {
+      var hh = $('header .fromHeaderMenu').height();
+      var headerHeight = hh + 16;
+      console.log(headerHeight);
+    } else {
+      var hh = $('.top-container').height();
+      var headerHeight = hh + 12;
+    }
+
     $("html, body").animate({
-        scrollTop: target.offset().top,
+        scrollTop: target.offset().top - headerHeight,
       },
       250,
       function() {
@@ -150,7 +159,7 @@ $(document).ready(function() {
         theme: "DropdownThm",
         callbacks: {
           onCreate: function() {
-            $(this).css("max-height", th1 + th2 + "px");
+            $(this).css("max-height", th1 + th2 + 8 * 4 + 10 * 2 + "px");
           }
         }
       });
@@ -224,6 +233,18 @@ $(document).ready(function() {
       }
     });
 
+    $('.content_list ul').each(function() {
+      if ($(window).width() >= 1080) {
+        var hh = $('header .fromHeaderMenu').height();
+        console.log(hh);
+        $(this).css('top',hh + 12 + 'px');
+      } else {
+        var hh = $('.top-container').height();
+        console.log(hh);
+        $(this).css('top',hh + 12 + 'px');
+      }
+    });
+
     $(".headerMenu .submenu").each(function() {
       if ($(window).width() >= 1079) {
         $(this).mCustomScrollbar("destroy");
@@ -271,6 +292,17 @@ $(document).ready(function() {
         });
       }
     });
+
+    $('.top-container').each(function(){
+      var hh = $(this).height();
+      console.log(hh);
+      if ($(window).width() <= 1080) {
+        $('.allContent').css('padding-top', '' + hh + 'px');
+      } else (
+        $('.allContent').removeAttr('style')
+      )
+    });
+
   }
 
   fromResize();
@@ -279,7 +311,7 @@ $(document).ready(function() {
     theme: "citiesBlockThm",
   });
 
-  $('.search input[type="search"]').hideseek({
+  $('.search input[type="search"], .search input[type="text"]').hideseek({
     nodata: "Поиск не дал результатов",
     navigation: true,
   });
@@ -332,7 +364,7 @@ $(document).ready(function() {
       $(".toggled_block").hide();
     }
 
-    if (!$(e.target).closest(".dropdown").length) {
+    if (!$(e.target).closest(".dropdown input").length) {
       dropdownClose();
     }
 
