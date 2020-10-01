@@ -5416,7 +5416,7 @@ form.search > :last-child {
           border-radius: 0.8rem;
 }
 .mapSection .map:before {
-  background: url("../img/static/mapImg.png");
+  background: url("../img/static/map-background.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 60%;
