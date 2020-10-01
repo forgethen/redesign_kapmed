@@ -50,11 +50,14 @@ const staticHeader = () => {
   if (!isNaN(header)) return false;
   const topHeight = header.querySelector('.top-container').offsetHeight
   const scrollTop = window.scrollY
+  const cityPopup = document.querySelector('#citySelectPopUp')
   if (scrollTop >= topHeight) {
     header.classList.add('static')
     header.style.top = `-${topHeight}px`
+    cityPopup.style.top = header.offsetHeight + 'px';
   }
   else {
+    cityPopup.style.top = '';
     header.classList.remove('static')
     header.style.top = `0px`
   }
