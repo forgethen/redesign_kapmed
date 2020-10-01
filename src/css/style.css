@@ -8578,6 +8578,9 @@ form.search > :last-child {
 .m72 > :last-child {
   margin-bottom: 0;
 }
+.m36 {
+  margin-bottom: 36px !important;
+}
 .content.withmrg.v2 {
   padding: 0;
   margin-bottom: 3.2rem;
@@ -8940,6 +8943,7 @@ form.search > :last-child {
   font-size: 26px;
   margin-top: -12px;
   margin-left: 10px;
+  line-height: inherit;
 }
 .search-wrapper .search-input .button-search:hover {
   background: #910009;
