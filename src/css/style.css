@@ -591,6 +591,7 @@ input[type=submit][disabled] {
   content: none;
 }
 .play:hover {
+  background-image: url("../img/static/ActiveplayBTN.svg");
   color: #b8181c;
 }
 .play:active {
@@ -753,6 +754,11 @@ input[type=submit][disabled] {
   font-size: 2rem !important;
   margin-top: 3.2rem !important;
   margin-bottom: 0 !important;
+}
+header {
+  -webkit-transition: 0.25s ease all;
+  -o-transition: 0.25s ease all;
+  transition: 0.25s ease all;
 }
 .top-container {
   background-color: #fff;
@@ -1281,8 +1287,8 @@ input[type=submit][disabled] {
   }
 }
 @media screen and (max-width: 1080px) {
-  .top-container {
-    position: fixed;
+  header {
+    position: fixed !important;
     top: 0 !important;
   }
   .top-container > :first-child .image {
@@ -2067,6 +2073,7 @@ button.btn {
   -webkit-transition: 0.25s linear;
   -o-transition: 0.25s linear;
   transition: 0.25s linear;
+  margin-bottom: 0;
 }
 a.btn .mobile-hide-text,
 input[type="button"].btn .mobile-hide-text,
@@ -2867,7 +2874,11 @@ a.red-link:focus {
 .custom-select > :first-child a:hover span {
   text-decoration: underline;
 }
+.custom-select .options-block {
+  visibility: hidden;
+}
 .custom-select .options-block.show {
+  visibility: visible;
   -webkit-border-radius: 8px;
           border-radius: 8px;
   background-color: #fff;
@@ -3806,6 +3817,7 @@ a.red-link:focus {
 }
 .formPage form > :last-child {
   margin-bottom: 0;
+  margin-top: 3.2rem;
 }
 .formPage form .title {
   padding-bottom: 3.2rem;
@@ -3821,6 +3833,7 @@ a.red-link:focus {
   line-height: 2.4rem;
   margin-top: 3.2rem;
   margin-bottom: 0;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3835,6 +3848,8 @@ a.red-link:focus {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: -webkit-calc(100% - 3.2rem);
+  height: calc(100% - 3.2rem);
 }
 .formPage form label.error input {
   border: 1px solid #b8181c;
@@ -3986,7 +4001,8 @@ a.red-link:focus {
 }
 .formPage form label textarea {
   resize: none;
-  height: 10.8rem;
+  height: auto;
+  min-height: 10.8rem;
   padding: 0.8rem 1.6rem;
 }
 .formPage form label textarea.v2 {
@@ -4159,7 +4175,7 @@ a.red-link:focus {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   background-color: #fff;
 }
 .formPage__bottom .close {
@@ -4331,7 +4347,7 @@ a.red-link:focus {
   top: 0;
   left: 0;
   width: auto;
-  padding: 0 1.6rem;
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4773,6 +4789,9 @@ form.search > :last-child {
   }
   .formPage form .info {
     margin-top: 3.2rem;
+  }
+  .formPage form > :last-child {
+    margin-top: 2.4rem;
   }
   .formPage form label {
     width: 100%;
@@ -6773,6 +6792,13 @@ form.search > :last-child {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .doublerow.rev {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
   .doublerow label,
   .doublerow div {
     width: 100%;
@@ -8229,6 +8255,9 @@ form.search > :last-child {
 .press-wrap .press.video:hover > :first-child {
   -webkit-filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.12));
           filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.12));
+}
+.press-wrap .press.video:hover > :first-child:after {
+  background-image: url("../img/static/ActiveplayBTN.svg");
 }
 .press-wrap .press.video > :first-child {
   height: 198px;
@@ -13779,6 +13808,7 @@ footer ul ul {
   grid-row-gap: 0;
   grid-column-gap: 0;
   margin: 1.6rem 0 0;
+  width: auto;
 }
 .stars.check > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -21979,7 +22009,8 @@ footer ul ul {
   #citySelectPopUp {
     left: 0;
     width: 100%;
-    top: 7.2rem;
+    top: 100%;
+    position: absolute;
   }
   #citySelectPopUp.active {
     top: 0;
@@ -21991,9 +22022,6 @@ footer ul ul {
   }
   #citySelectPopUp .content p {
     margin-bottom: 2rem;
-  }
-  #citySelectPopUp .content:before {
-    content: none;
   }
   #citySelectPopUp .content__bottom a {
     padding: 0 1.6rem;

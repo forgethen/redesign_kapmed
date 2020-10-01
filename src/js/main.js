@@ -26,6 +26,7 @@ $(document).ready(function() {
   }
 
   function onScroll() {
+    // if ($(window).scrollTop() > 0) $('#citySelectPopUp').removeClass('active');
     if ($(".content_list ul a").length <= 1) {
       return false;
     } else {
@@ -159,7 +160,7 @@ $(document).ready(function() {
         theme: "DropdownThm",
         callbacks: {
           onCreate: function() {
-            $(this).css("max-height", th1 + th2 + 8 * 4 + 10 * 2 + "px");
+            $(this).css("max-height", th1 + th2 + "px");
           }
         }
       });
@@ -181,7 +182,7 @@ $(document).ready(function() {
     });
   };
 
-  $(".dropdown input").click(function(e) {
+  $(".dropdown input, .dropdown label i").click(function(e) {
     if ($(this).parents(".dropdown").hasClass("active")) {
       $(this).parents(".dropdown").removeClass("active");
       $(this).parents(".dropdown").find("i").toggleClass("active");
@@ -298,6 +299,7 @@ $(document).ready(function() {
       console.log(hh);
       if ($(window).width() <= 1080) {
         $('.allContent').css('padding-top', '' + hh + 'px');
+        $('#citySelectPopUp.active').css('top', '' + hh + 'px');
       } else (
         $('.allContent').removeAttr('style')
       )
@@ -364,7 +366,7 @@ $(document).ready(function() {
       $(".toggled_block").hide();
     }
 
-    if (!$(e.target).closest(".dropdown input").length) {
+    if (!$(e.target).closest(".dropdown label").length) {
       dropdownClose();
     }
 
