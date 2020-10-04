@@ -6,6 +6,14 @@ $(document).ready(function() {
 
   $(".content_list ul:first-child").addClass("active");
 
+  $("a.slow").click(function() {
+    var e = $(this).attr("href"),
+      k = $(e).offset().top;
+    return $("html,body").animate({
+      scrollTop: k
+    }, 750), !1
+  });
+
   $(".content_list ul a").each(function() {
     var hash = $(this).attr("href");
     if (hash.indexOf('#') !== -1)
@@ -1104,7 +1112,7 @@ $(document).ready(function() {
     $(this).removeClass('error');
   });
 
-  // 
+  //
   // //Табы
 	// $(document).on("click", ".tabs__header--left", function(){
 	// 	if($(window).outerWidth() > 500){
