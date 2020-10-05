@@ -1401,7 +1401,7 @@ header {
     display: flex;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   header {
     -webkit-box-flex: 0;
     -webkit-flex: none;
@@ -1966,7 +1966,7 @@ header.static {
     background-image: url("../img/static/PinIcon.svg");
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .headerMenu.show li a span {
     color: #000;
   }
@@ -2136,7 +2136,7 @@ header.static {
 .breadcrumbs a:hover {
   color: #b8181c;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .breadcrumbs {
     padding: 2rem 0 1.6rem;
   }
@@ -2685,7 +2685,7 @@ a.red-link:focus {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   input[type="button"],
   input[type="submit"],
   button {
@@ -2915,7 +2915,7 @@ a.red-link:focus {
 .content__item ul > :last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   ul.content.v2 .content__item {
     margin-bottom: 0;
     padding: 2rem 0 0 1.8rem;
@@ -3112,7 +3112,7 @@ a.red-link:focus {
 .mCS-CustomSelectOptionsThm.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
   background-color: #b8181c;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .regionSelect h1 a i,
   .sectionSelect h1 a i {
     bottom: -1rem;
@@ -3194,7 +3194,7 @@ a.red-link:focus {
   font-weight: normal;
   line-height: 2.4rem;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .another__problem {
     margin-bottom: 3.8rem;
   }
@@ -3272,7 +3272,7 @@ a.red-link:focus {
 .page-title a:hover i {
   text-decoration: none;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .page-title h1 {
     font-size: 3.2rem;
     line-height: normal;
@@ -4692,7 +4692,7 @@ form.search > :last-child {
             flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .formPage {
     height: auto;
     min-height: 100vh;
@@ -4954,7 +4954,7 @@ form.search > :last-child {
 .FAQ .title {
   margin-bottom: 4.8rem;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .FAQ {
     padding: 0;
     margin: 2rem auto;
@@ -5313,7 +5313,7 @@ form.search > :last-child {
   line-height: 2.4rem;
   margin-bottom: 2.4rem;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .application-method .row .column-xs-100 {
     margin-bottom: 2rem;
   }
@@ -5849,7 +5849,7 @@ form.search > :last-child {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 640px) and (orientation: portrait) {
+@media screen and (max-widyh: 639px) and (orientation: portrait) {
   .mapPopUp .mapSection .list {
     border-top: 0;
     border-left: 0;
@@ -7003,7 +7003,7 @@ form.search > :last-child {
   font-weight: normal;
   line-height: 2.8rem;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .pointOfIssue > :first-child {
     width: 100%;
     margin-bottom: 2.4rem;
@@ -7783,6 +7783,12 @@ form.search > :last-child {
 }
 .slider-wrap {
   overflow: hidden;
+}
+@media screen and (max-width: 639px) {
+  .slider-wrap {
+    width: -webkit-calc(100% + 2rem) !important;
+    width: calc(100% + 2rem) !important;
+  }
 }
 .with {
   -webkit-transition: 0.2s;
@@ -9798,7 +9804,7 @@ form.search > :last-child {
   font-weight: normal;
   line-height: 2.4rem;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .stepsBlock__item {
     padding: 2rem;
   }
@@ -9918,7 +9924,7 @@ form.search > :last-child {
     margin-bottom: 6.8rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .consultBlock {
     padding: 2rem;
     margin-bottom: 0;
@@ -9974,7 +9980,7 @@ form.search > :last-child {
 .requestBlock a {
   margin: 0 auto 0 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .requestBlock {
     padding: 2rem;
     margin-bottom: 2rem;
@@ -10057,7 +10063,7 @@ form.search > :last-child {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .callBlock {
     padding: 2rem;
     margin-bottom: 0;
@@ -10583,7 +10589,7 @@ form.search > :last-child {
     max-width: 100%;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .weeklyNewsletter input[type="submit"] {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -10822,7 +10828,7 @@ footer ul ul {
     display: inline-block;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   footer {
     padding-bottom: 5.6rem;
   }
@@ -11097,7 +11103,7 @@ footer ul ul {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .links__container > :last-child > :first-child {
     padding-left: 0;
     display: block;
@@ -11549,12 +11555,12 @@ footer ul ul {
             justify-content: space-between;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .direction_of_activity {
     margin-bottom: 2.4rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .direction_of_activity .tabsContainer,
   .direction_of_activity .tabwrapper {
     overflow-x: auto;
@@ -13374,7 +13380,7 @@ footer ul ul {
 .Docs {
   margin-top: 3.6rem;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .materials .doc {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -14123,7 +14129,7 @@ footer ul ul {
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .qc.v2 .stars {
     top: -0.6rem;
   }
@@ -15017,7 +15023,7 @@ footer ul ul {
     margin-bottom: 32px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .events-block .gray-text a {
     font-weight: normal !important;
   }
@@ -15255,7 +15261,7 @@ footer ul ul {
     margin-bottom: 32px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .events-block .gray-text a {
     font-weight: normal !important;
   }
@@ -16436,7 +16442,7 @@ footer ul ul {
     display: none;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .list-parts__item a {
     font-size: 16px;
     line-height: 24px;
@@ -17819,7 +17825,7 @@ footer ul ul {
     grid-template-columns: repeat(1, 100%);
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .thanks-02__title a {
     font-size: 24px;
     line-height: 32px;
@@ -18598,7 +18604,7 @@ footer ul ul {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .name_and_age {
     width: 100%;
     display: -webkit-box;
@@ -18862,7 +18868,7 @@ footer ul ul {
     width: calc(100% / 2);
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .citySelect {
     height: -webkit-calc(100vh - 4.8rem);
     height: calc(100vh - 4.8rem);
@@ -19063,7 +19069,7 @@ footer ul ul {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .statistics {
     margin-bottom: 6.4rem;
   }
@@ -20358,7 +20364,7 @@ footer ul ul {
     margin-bottom: 2.4rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .companyNews_and_Events .seeMore {
     margin-top: 2.4rem;
   }
@@ -21532,7 +21538,7 @@ footer ul ul {
           justify-content: flex-start;
   margin-top: 2rem;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .forService {
     padding: 2rem;
   }
@@ -21666,7 +21672,7 @@ footer ul ul {
 .FilterSearch .searchArea {
   position: relative;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .FilterSearch {
     -ms-grid-columns: 1fr 4.8rem;
     grid-template-columns: 1fr 4.8rem;
@@ -21989,7 +21995,7 @@ footer ul ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .orgList__item {
     padding: 2.4rem 0;
   }
@@ -22453,7 +22459,7 @@ footer ul ul {
   color: #fff;
   opacity: 1;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   #citySelectPopUp {
     left: 0;
     width: 100%;
@@ -22536,7 +22542,7 @@ footer ul ul {
   line-height: inherit;
   font-size: inherit;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .notificationPopUp {
     padding: 3.2rem 2rem;
   }
@@ -22693,7 +22699,7 @@ footer ul ul {
   margin-top: 2.4rem;
   margin-bottom: 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .sharePopUp {
     padding: 2.4rem;
   }
@@ -22814,7 +22820,7 @@ footer ul ul {
   position: absolute;
   color: #fff;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   #baloon .btn {
     display: -webkit-box;
     display: -webkit-flex;
@@ -22925,7 +22931,7 @@ footer ul ul {
     margin-bottom: 3.2rem;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .page404 .content {
     padding-top: 23.2rem;
     padding-right: 0;
@@ -23240,7 +23246,7 @@ footer ul ul {
   width: -webkit-calc(100% - 1.2rem);
   width: calc(100% - 1.2rem);
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .customScrollTabs {
     margin-bottom: 2.4rem;
   }
@@ -23424,7 +23430,7 @@ footer ul ul {
     padding-bottom: 0;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .message_send {
     padding: 1.6rem !important;
     -webkit-border-radius: 0.8rem !important;
@@ -23513,7 +23519,7 @@ footer ul ul {
   font-size: 32px !important;
   line-height: 40px !important;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
   .mobile-font-size-24px {
     font-size: 24px !important;
     line-height: 32px !important;
