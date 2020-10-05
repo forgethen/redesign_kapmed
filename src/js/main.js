@@ -68,7 +68,7 @@ $(document).ready(function() {
     if ($(window).width() >= 1080) {
       var hh = $('header .fromHeaderMenu').height();
       var headerHeight = hh + 16;
-      console.log(headerHeight);
+      // console.log(headerHeight);
     } else {
       var hh = $('.top-container').height();
       var headerHeight = hh + 12;
@@ -245,11 +245,11 @@ $(document).ready(function() {
     $('.content_list ul').each(function() {
       if ($(window).width() >= 1080) {
         var hh = $('header .fromHeaderMenu').height();
-        console.log(hh);
+        // console.log(hh);
         $(this).css('top',hh + 12 + 'px');
       } else {
         var hh = $('.top-container').height();
-        console.log(hh);
+        // console.log(hh);
         $(this).css('top',hh + 12 + 'px');
       }
     });
@@ -307,7 +307,7 @@ $(document).ready(function() {
 
     $('.top-container').each(function(){
       var hh = $(this).height();
-      console.log(hh);
+      // console.log(hh);
       if ($(window).width() <= 1080) {
         $('.allContent').css('padding-top', '' + hh + 'px');
         $('#citySelectPopUp.active').css('top', '' + hh + 'px');
@@ -824,16 +824,17 @@ $(document).ready(function() {
 
             callbacks: {
               whileScrolling: function() {
-                $(this).parents('.customScrollTabs').find('.next, .prev').show();
-                $(this).parents('.customScrollTabs').removeClass('start, finish');
+                $(this).parents('.customScrollTabs').find('.next, .prev').removeClass('hide');
+                $(this).parents('.customScrollTabs').removeClass('start');
+                $(this).parents('.customScrollTabs').removeClass('finish');
               },
               onTotalScroll: function() {
-                $(this).parents('.customScrollTabs').find('.next').hide();
+                $(this).parents('.customScrollTabs').find('.next').addClass('hide');
                 $(this).parents('.customScrollTabs').addClass('finish');
                 $(this).parents('.customScrollTabs').removeClass('start')
               },
               onTotalScrollBack: function() {
-                $(this).parents('.customScrollTabs').find('.prev').hide();
+                $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
                 $(this).parents('.customScrollTabs').removeClass('finish');
                 $(this).parents('.customScrollTabs').addClass('start')
               },
@@ -842,14 +843,14 @@ $(document).ready(function() {
                 $(this).parents('.customScrollTabs').removeClass('hideArrow');
                 $(this).parents('.customScrollTabs').addClass('showShadow');
                 $(this).parents('.customScrollTabs').addClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next').show();
+                $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
               },
               onOverflowXNone: function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
                 $(this).parents('.customScrollTabs').addClass('hideArrow');
                 $(this).parents('.customScrollTabs').removeClass('showShadow');
                 $(this).parents('.customScrollTabs').removeClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next, .prev').hide();
+                $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
               },
             },
           });
@@ -857,17 +858,18 @@ $(document).ready(function() {
 
       } else {
         $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
-        $('.customScrollTabs .next, .customScrollTabs .prev').hide();
+        $('.customScrollTabs .next, .customScrollTabs .prev').addClass('hide');
 
         $('.customScrollTabs .customTabs').each(function() {
           var elength = $(this).find('li').length;
 
           if (elength > 3) {
             $(this).addClass('mVersion');
-            console.log('mVersion');
+            // console.log('mVersion');
           } else if (elength < 3) {
             $(this).addClass('default');
-            console.log('default');
+            $(this).removeClass('start');
+            // console.log('default');
           }
         });
       }
@@ -877,7 +879,7 @@ $(document).ready(function() {
       $('.customScrollTabs.v2 .customTabs').each(function() {
         // $(this).removeClass('default');
         $(this).parents('.customScrollTabs').addClass('show');
-        $(this).find('.next, .prev').hide();
+        $(this).find('.next, .prev').addClass('hide');
         var th1 = $(this).find("li:eq(0)").height();
         var th2 = $(this).find("li:eq(1)").height();
         var elength = $(this).find('li').length;
@@ -903,7 +905,7 @@ $(document).ready(function() {
         }
 
         $(this).parents('.customScrollTabs').addClass('show default');
-
+        $(this).removeClass('start');
         // $('.customScrollTabs .next, .customScrollTabs .prev').hide();
         // var th1 = $(this).find("li:eq(0)").height();
         // var th2 = $(this).find("li:eq(1)").height();
@@ -933,16 +935,17 @@ $(document).ready(function() {
 
             callbacks: {
               whileScrolling: function() {
-                $(this).parents('.customScrollTabs').find('.next, .prev').show();
-                $(this).parents('.customScrollTabs').removeClass('start, finish');
+                $(this).parents('.customScrollTabs').find('.next, .prev').removeClass('hide');
+                $(this).parents('.customScrollTabs').removeClass('start');
+                $(this).parents('.customScrollTabs').removeClass('finish');
               },
               onTotalScroll: function() {
-                $(this).parents('.customScrollTabs').find('.next').hide();
+                $(this).parents('.customScrollTabs').find('.next').addClass('hide');
                 $(this).parents('.customScrollTabs').addClass('finish');
                 $(this).parents('.customScrollTabs').removeClass('start')
               },
               onTotalScrollBack: function() {
-                $(this).parents('.customScrollTabs').find('.prev').hide();
+                $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
                 $(this).parents('.customScrollTabs').removeClass('finish');
                 $(this).parents('.customScrollTabs').addClass('start')
               },
@@ -951,14 +954,14 @@ $(document).ready(function() {
                 $(this).parents('.customScrollTabs').removeClass('hideArrow');
                 $(this).parents('.customScrollTabs').addClass('showShadow');
                 $(this).parents('.customScrollTabs').addClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next').show();
+                $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
               },
               onOverflowXNone: function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
                 $(this).parents('.customScrollTabs').addClass('hideArrow');
                 $(this).parents('.customScrollTabs').removeClass('showShadow');
                 $(this).parents('.customScrollTabs').removeClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next, .prev').hide();
+                $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
               },
             },
           });
@@ -969,8 +972,8 @@ $(document).ready(function() {
       $('.customScrollTabs.Default .customTabs').each(function() {
         $(this).removeClass('mVersion');
         $(this).parents('.customScrollTabs').addClass('show default');
-
-        $(this).parents('.customScrollTabs').find('.next, .prev').remove();
+        $(this).addClass('start');
+        // $(this).parents('.customScrollTabs').find('.next, .prev').remove();
         // var th1 = $(this).find("li:eq(0)").height();
         // var th2 = $(this).find("li:eq(1)").height();
         // var elength = $(this).find('li').length;
@@ -999,16 +1002,17 @@ $(document).ready(function() {
 
             callbacks: {
               whileScrolling: function() {
-                $(this).parents('.customScrollTabs').find('.next, .prev').show();
-                $(this).parents('.customScrollTabs').removeClass('start, finish');
+                $(this).parents('.customScrollTabs').find('.next, .prev').removeClass('hide');
+                $(this).parents('.customScrollTabs').removeClass('start');
+                $(this).parents('.customScrollTabs').removeClass('finish');
               },
               onTotalScroll: function() {
-                $(this).parents('.customScrollTabs').find('.next').hide();
+                $(this).parents('.customScrollTabs').find('.next').addClass('hide');
                 $(this).parents('.customScrollTabs').addClass('finish');
                 $(this).parents('.customScrollTabs').removeClass('start')
               },
               onTotalScrollBack: function() {
-                $(this).parents('.customScrollTabs').find('.prev').hide();
+                $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
                 $(this).parents('.customScrollTabs').removeClass('finish');
                 $(this).parents('.customScrollTabs').addClass('start')
               },
@@ -1017,14 +1021,14 @@ $(document).ready(function() {
                 $(this).parents('.customScrollTabs').removeClass('hideArrow');
                 $(this).parents('.customScrollTabs').addClass('showShadow');
                 $(this).parents('.customScrollTabs').addClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next').show();
+                $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
               },
               onOverflowXNone: function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
                 $(this).parents('.customScrollTabs').addClass('hideArrow');
                 $(this).parents('.customScrollTabs').removeClass('showShadow');
                 $(this).parents('.customScrollTabs').removeClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next, .prev').hide();
+                $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
               },
             },
           });
@@ -1079,11 +1083,22 @@ $(document).ready(function() {
     });
   });
 
+  $('.customScrollTabs .tab.active').each(function() {
+    $(this).parents('li').next().addClass('thisNext');
+    $(this).parents('li').prev().addClass('thisPrev');
+    $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", this, {
+      scrollEasing: "easeOut"
+    });
+  });
+
   $('.customScrollTabs .prev').click(function() {
     $(this).parents('.customScrollTabs').find('.next').show();
+    var nextWidth = $('.customScrollTabs .thisNext').width;
+    var toLeft = '+=' + nextWidth;
     setTimeout(function() {
-      $(this).parents('.customScrollTabs').find('customTabs').mCustomScrollbar("scrollTo", '+=100');
+      $(this).parents('.customScrollTabs').find('customTabs').mCustomScrollbar("scrollTo", toLeft);
     }, 50);
+    $('.customScrollTabs .thisNext').removeClass('thisNext').next().addClass('thisNext');
   });
 
   $('.customScrollTabs .next').click(function() {

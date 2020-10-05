@@ -1503,7 +1503,7 @@ header {
   width: 100%;
   position: relative;
   background-color: #fff;
-  z-index: 2;
+  z-index: 4;
 }
 header.static {
   position: -webkit-sticky;
@@ -5849,7 +5849,7 @@ form.search > :last-child {
     margin-top: 0;
   }
 }
-@media screen and (max-widyh: 639px) and (orientation: portrait) {
+@media screen and (max-width: 639px) and (orientation: portrait) {
   .mapPopUp .mapSection .list {
     border-top: 0;
     border-left: 0;
@@ -5868,6 +5868,10 @@ form.search > :last-child {
   }
   .mapBlock .mapContent {
     height: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
   }
   .mapBlock .mapSection {
     display: -webkit-box;
@@ -8339,6 +8343,10 @@ form.search > :last-child {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -18064,6 +18072,9 @@ footer ul ul {
   }
 }
 @media screen and (max-width: 980px) {
+  .tabs-cvd3 {
+    overflow: auto;
+  }
   .basic-img-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -18081,6 +18092,9 @@ footer ul ul {
   .basic-img-img {
     display: block;
     width: 100%;
+  }
+  #cvd7 .slider-wrap {
+    overflow: auto;
   }
   #cvd7 .slider-slides {
     -webkit-box-pack: start;
@@ -22971,22 +22985,35 @@ footer ul ul {
 }
 .customScrollTabs.hiddenArrow .prev,
 .customScrollTabs.hiddenArrow .next {
-  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+}
+.customScrollTabs.showArrow .prev,
+.customScrollTabs.showArrow .next {
+  opacity: 1;
+  visibility: visible;
 }
 .customScrollTabs.showShadow .customTabs:before,
 .customScrollTabs.showShadow .customTabs:after {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .customScrollTabs.finish .customTabs:after {
-  width: 0;
+  opacity: 0;
+  visibility: hidden;
 }
 .customScrollTabs.finish .customTabs:before {
+  opacity: 1;
+  visibility: visible;
   width: 6rem;
 }
 .customScrollTabs.start .customTabs:before {
-  width: 0;
+  opacity: 0;
+  visibility: hidden;
 }
 .customScrollTabs.start .customTabs:after {
+  opacity: 1;
+  visibility: visible;
   width: 6rem;
 }
 .customScrollTabs.show {
@@ -23087,9 +23114,11 @@ footer ul ul {
 }
 .customScrollTabs .prev {
   margin-right: 1rem;
+  left: 0;
 }
 .customScrollTabs .next {
   margin-left: 1rem;
+  right: 0;
 }
 .customScrollTabs .prev,
 .customScrollTabs .next {
@@ -23098,15 +23127,15 @@ footer ul ul {
       -ms-flex: none;
           flex: none;
   width: 2rem;
-  height: 2rem;
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -23116,11 +23145,14 @@ footer ul ul {
   font-weight: normal;
   flex: none;
   position: relative;
-  top: -0.4rem;
-  -webkit-transition: 0.125s ease all;
-  -o-transition: 0.125s ease all;
-  transition: 0.125s ease all;
+  top: 0;
+  background-color: #fff;
+  -webkit-transition: 0.25s ease all;
+  -o-transition: 0.25s ease all;
+  transition: 0.25s ease all;
   cursor: pointer;
+  z-index: 3;
+  position: absolute;
 }
 .customScrollTabs .prev:hover,
 .customScrollTabs .next:hover {
@@ -23129,7 +23161,6 @@ footer ul ul {
 .customScrollTabs .prev.hide,
 .customScrollTabs .next.hide {
   opacity: 0;
-  width: 0;
   margin: 0;
   overflow: hidden;
   pointer-events: none;
@@ -23137,6 +23168,7 @@ footer ul ul {
 .customScrollTabs .prev:before,
 .customScrollTabs .next:before {
   position: relative;
+  top: -0.2rem;
 }
 .customScrollTabs .container {
   margin: 0;
@@ -23164,7 +23196,9 @@ footer ul ul {
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fff 100%);
   height: 100%;
   z-index: 2;
-  display: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
   -webkit-transition: 0.25s ease all;
   -o-transition: 0.25s ease all;
   transition: 0.25s ease all;
@@ -23180,7 +23214,9 @@ footer ul ul {
   background: linear-gradient(270deg, rgba(255,255,255,0) 0%, #fff 100%);
   height: 100%;
   z-index: 2;
-  display: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
   -webkit-transition: 0.25s ease all;
   -o-transition: 0.25s ease all;
   transition: 0.25s ease all;
@@ -23260,10 +23296,6 @@ footer ul ul {
     height: 0;
     opacity: 0;
     overflow: hidden;
-  }
-  .customScrollTabs .prev,
-  .customScrollTabs .next {
-    display: none;
   }
   .customScrollTabs .customTabs {
     height: 0;
