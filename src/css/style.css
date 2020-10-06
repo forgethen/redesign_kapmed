@@ -1535,7 +1535,6 @@ header.static .container.fromHeaderMenu > ul > li {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  overflow: hidden;
 }
 .headerMenu {
   -webkit-box-align: center;
