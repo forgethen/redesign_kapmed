@@ -1094,17 +1094,23 @@ $(document).ready(function() {
     $(this).parents('li').prev().addClass('thisPrev');
   });
 
-  $('.customScrollTabs .tab.active').each(function() {
-    $(this).parents('li').addClass('thisEl');
-    $(this).parents('li').next().addClass('thisNext');
-    $(this).parents('li').prev().addClass('thisPrev');
+  $('.customScrollTabs .tabs').each(function() {
+    $(this).find('li').eq(0).addClass('thisEl');
+    $(this).find('.thisEl').next().addClass('thisNext');
+    $(this).find('.thisEl').prev().addClass('thisPrev');
   });
 
-  $('.customScrollTabs .customTabs .thisEl').each(function() {
-    $(this).parents('.customTabs').mCustomScrollbar("scrollTo", this, {
-      scrollInteria: 250
-    });
-  });
+  // $('.customScrollTabs .tab.active').each(function() {
+  //   $(this).parents('li').addClass('thisEl');
+  //   $(this).parents('li').next().addClass('thisNext');
+  //   $(this).parents('li').prev().addClass('thisPrev');
+  // });
+
+  // $('.customScrollTabs .customTabs .thisEl').each(function() {
+  //   $(this).parents('.customTabs').mCustomScrollbar("scrollTo", this, {
+  //     scrollInteria: 250
+  //   });
+  // });
 
   $('.customScrollTabs .prev').click(function() {
     $(this).parents('.customScrollTabs').find('.next').show();
