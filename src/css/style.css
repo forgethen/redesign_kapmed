@@ -4914,8 +4914,6 @@ form.search > :last-child {
   }
   .formPage form {
     padding: 2rem;
-    -webkit-border-radius: 0;
-            border-radius: 0;
     border: none;
   }
   .formPage form .title {
@@ -18065,6 +18063,15 @@ footer ul ul {
 }
 .usefull-info--position {
   margin-bottom: 7rem;
+}
+.mark-text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #939393;
+  text-align: right;
+}
+.help-article-covid {
+  margin-bottom: 4.5rem;
 }
 @media screen and (max-width: 1365px) {
   .basic-img-wrapper {
