@@ -1100,7 +1100,7 @@ $(document).ready(function() {
     $('.customScrollTabs .customTabs .thisEl').each(function() {
       $(this).parents('.customTabs').mCustomScrollbar("scrollTo", this, {scrollInteria:500});
     });
-  }, 500);
+  }, 1000);
 
   $('.customScrollTabs .prev').click(function() {
     $(this).parents('.customScrollTabs').find('.next').show();
