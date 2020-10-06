@@ -1505,7 +1505,7 @@ header.static {
   position: sticky;
   width: 100%;
   top: 0;
-  z-index: 3;
+  z-index: 5;
 }
 header.static .container.fromHeaderMenu:after {
   width: 55px;
@@ -1535,6 +1535,7 @@ header.static .container.fromHeaderMenu > ul > li {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
 .headerMenu {
   -webkit-box-align: center;
@@ -23318,10 +23319,9 @@ footer ul ul {
 .customScrollTabs .next:after {
   position: absolute;
   content: "";
-  top: -0.2rem;
+  top: 0;
   width: 1rem;
-  height: -webkit-calc(100% + 0.2rem);
-  height: calc(100% + 0.2rem);
+  height: 100%;
   z-index: 2;
   display: block;
 }
