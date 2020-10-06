@@ -47,7 +47,7 @@ const checkReady = () => {
 
 const staticHeader = () => {
   const header = document.querySelector('header')
-  if (!isNaN(header)) return false;
+  if (!isNaN(header)) return false
   const topHeight = header.querySelector('.top-container').offsetHeight
   const scrollTop = window.scrollY
   const cityPopup = document.querySelector('#citySelectPopUp')
@@ -61,6 +61,15 @@ const staticHeader = () => {
     header.classList.remove('static')
     header.style.top = `0px`
   }
+}
+
+const menuHover = (elm) => {
+  elm.classList.add('hovered')
+}
+
+const menuUnHover = () => {
+  const elm = document.querySelector('.headerMenu .hovered')
+  elm.classList.remove('hovered')
 }
 
 const payload = () => {

@@ -201,105 +201,219 @@
         </div>
         <div class="container fromHeaderMenu">
           <ul class="headerMenu desktop">
-            <li><a href="javascript:;"><span>Полис ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+            <li onmouseover="menuHover(this)" onmouseout="menuUnHover()"><a href="javascript:;"><span>Полис ОМС</span></a>
               <div class="submenu">
                 <div class="container">
+                  <div class="close">
+                    <div class="close_button" onclick="menuUnHover()"> <span>Закрыть</span><img src="src/img/static/close_button2.svg"></div>
+                  </div>
                   <ul>
-                    <li><a href="#">Заявка на полис ОМС</a></li>
-                    <li><a href="#">Документы для оформления полиса</a></li>
-                    <li><a href="#">Пункты выдачи полисов</a></li>
-                    <li><a href="#">Доставка полиса ОМС</a></li>
-                    <li><a href="#">Виды полисов ОМС</a></li>
-                    <li><a href="#">Юридическим лицам</a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Как выбрать страховую компанию</p>
+                            <p class="desc">Выбор и условия замены СМО</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Пункты выдачи полиса ОМС</p>
+                            <p class="desc">Перечень ближайших отделений и карта</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Полис ОМС ребенку</p>
+                            <p class="desc">Порядок и необходимые документы</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Полис при смене фамилии</p>
+                            <p class="desc">Переоформление полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Заявка на оформление полиса ОМС</p>
+                            <p class="desc">Заявка на оформление полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Доставка полиса ОМС</p>
+                            <p class="desc">Маломобильным гражданам и в офис (от 5 полисов)</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Оформление полиса через представителя</p>
+                            <p class="desc">Если вы не можете оформить полис ОМС лично</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">При смене места жительства</p>
+                            <p class="desc">Переоформление полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Порядок оформления полиса ОМС</p>
+                            <p class="desc">Пошаговая инструкция</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Юридическим лицам</p>
+                            <p class="desc">Выездные семинары для сотрудников</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Повреждение или утеря полиса</p>
+                            <p class="desc">Выдача дубликата полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Памятка застрахованному лицу</p>
+                            <p class="desc"></p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Перечень документов</p>
+                            <p class="desc">Что нужно для оформления полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Электронный полис ОМС</p>
+                            <p class="desc">В виде пластиковой карты с чипом</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item file"><a href="#">
+                        <div class="data">
+                          <div class="img-wrap"><img src="src/img/static/icon-docs.svg"></div>
+                          <div class="info data-file">
+                            <p class="title">Форма заявления о выборе (замене) страховой медицинской организации</p>
+                            <p class="desc">PDF. 0,3 Мб</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item file"><a href="#">
+                        <div class="data">
+                          <div class="img-wrap"><img src="src/img/static/icon-docs.svg"></div>
+                          <div class="info data-file">
+                            <p class="title">Форма доверенности (передоверие полномочий от одного лица другому лицу)</p>
+                            <p class="desc">PDF. 0,3 Мб</p>
+                          </div>
+                        </div></a></li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li><a href="javascript:;"><span>Система ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+            <li onmouseover="menuHover(this)" onmouseout="menuUnHover()"><a href="#"><span>Диспансеризация</span></a>
               <div class="submenu">
                 <div class="container">
+                  <div class="close">
+                    <div class="close_button" onclick="menuUnHover()"> <span>Закрыть</span><img src="src/img/static/close_button2.svg"></div>
+                  </div>
                   <ul>
-                    <li><a href="#">Что такое Система ОМС</a></li>
-                    <li><a href="#">Дайджест новостей системы ОМС</a></li>
-                    <li><a href="#">Участие компании в развитии системы ОМС</a></li>
-                    <li><a href="#">Виды, качество и условия медицинской помощи</a></li>
-                    <li><a href="#">Что бесплатно по полису ОМС</a></li>
-                    <li><a href="#">Как выбрать страховую компанию ОМС</a></li>
-                    <li><a href="#">Как выбрать медицинскую организацию</a></li>
-                    <li><a href="#">Информация о медицинских организациях</a></li>
-                    <li><a href="#">Информация о Фонде ОМС</a></li>
-                    <li><a href="#">Нормативные документы</a></li>
+                    <li class="menu-item tablet"><a href="#">
+                        <div class="data"><img class="img-bg" src="src/img/static/block.png">
+                          <div class="info data-tablet">
+                            <p class="title">Профилактический осмотр и диспансеризация</p>
+                            <div class="wr">
+                              <p class="pa">Памякта:</p>
+                              <p class="desc">Узнайте больше о своем здоровье</p>
+                              <p class="more">Подробнее</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Диспансеризация взрослых</p>
+                            <div class="wr">
+                              <p class="desc">Здоровье под контролем!</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Профилактический осмотр </p>
+                            <div class="wr">
+                              <p class="desc">Можно проходить ежегодно</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Диспансеризация детей</p>
+                            <div class="wr">
+                              <p class="desc">Ранее выявление заболеваний</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item empty"><a>
+                        <div class="data">
+                          <div class="info data-empty">
+                            <p class="title"></p>
+                            <div class="wr">
+                              <p class="desc"></p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item file"><a href="#">
+                        <div class="data">
+                          <div class="img-wrap"><img src="src/img/static/icon-docs.svg"></div>
+                          <div class="info data-file">
+                            <p class="title">Порядок проведения диспансерного наблюдения за взрослыми</p>
+                            <div class="wr">
+                              <p class="desc">PDF. 0,3 Мб</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item file"><a href="#">
+                        <div class="data">
+                          <div class="img-wrap"><img src="src/img/static/icon-docs.svg"></div>
+                          <div class="info data-file">
+                            <p class="title">Порядок проведения профилактических медосмотров детей</p>
+                            <div class="wr">
+                              <p class="desc">PDF. 0,3 Мб</p>
+                            </div>
+                          </div>
+                        </div></a></li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li><a href="#"><span>Диспансеризация</span></a></li>
-            <li><a href="javascript:;"><span>Защита прав&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
-              <div class="submenu">
-                <div class="container">
-                  <ul>
-                    <li><a href="#">Ваш страховой представитель</a></li>
-                    <li><a href="#">Подать жалобу</a></li>
-                    <li><a href="#">Выявленные нарушения по обращениям застрахованных лиц</a></li>
-                    <li><a href="#">Контакт-центр</a></li>
-                    <li><a href="#">Полезные ресурсы</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li><a href="javascript:;"><span>О компании&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
-              <div class="submenu">
-                <div class="container">
-                  <ul>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Пресс центр</a></li>
-                    <li><a href="#">Научно практическая деятельность</a></li>
-                    <li><a href="#">Участие компании в развитии системы ОМС</a></li>
-                    <li><a href="#">Проекты компании</a></li>
-                    <li><a href="#">Наша команда</a></li>
-                    <li><a href="#">Раскрытие информации</a></li>
-                    <li><a href="#">Контакты</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
+            <li><a href="javascript:;"><span>Защита прав</span></a></li>
+            <li><a href="javascript:;"><span>Система ОМС</span></a></li>
+            <li><a href="javascript:;"><span>О компании</span></a></li>
             <li><a href="#"><span>Школа пациента</span></a></li>
           </ul>
           <ul class="headerMenu mobile">
-            <li><a href="javascript:;"><span>Полис ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
-              <div class="submenu">
-                <div class="container">
-                  <ul>
-                    <li><a href="#">Заявка на полис ОМС</a></li>
-                    <li><a href="#">Документы для оформления полиса</a></li>
-                    <li><a href="#">Пункты выдачи полисов</a></li>
-                    <li><a href="#">Доставка полиса ОМС</a></li>
-                    <li><a href="#">Виды полисов ОМС</a></li>
-                    <li><a href="#">Юридическим лицам</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li><a href="javascript:;"><span>Система ОМС&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
-              <div class="submenu">
-                <div class="container">
-                  <ul>
-                    <li><a href="#">Что такое Система ОМС</a></li>
-                    <li><a href="#">Дайджест новостей системы ОМС</a></li>
-                    <li><a href="#">Участие компании в развитии системы ОМС</a></li>
-                    <li><a href="#">Виды, качество и условия медицинской помощи</a></li>
-                    <li><a href="#">Что бесплатно по полису ОМС</a></li>
-                    <li><a href="#">Как выбрать страховую компанию ОМС</a></li>
-                    <li><a href="#">Как выбрать медицинскую организацию</a></li>
-                    <li><a href="#">Информация о медицинских организациях</a></li>
-                    <li><a href="#">Информация о Фонде ОМС</a></li>
-                    <li><a href="#">Нормативные документы</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
+            <li><a href="javascript:;"><span>Полис ОМС</span></a></li>
+            <li><a href="javascript:;"><span>Система ОМС</span></a></li>
             <li><a href="#"><span>Диспансеризация</span></a></li>
-            <li><a href="javascript:;"><span>Защита прав&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
+            <li><a href="javascript:;"><span>Защита прав</span></a>
               <div class="submenu">
                 <div class="container">
                   <ul>
@@ -312,22 +426,7 @@
                 </div>
               </div>
             </li>
-            <li><a href="javascript:;"><span>О компании&nbsp;</span><i class="ri-arrow-down-s-line"></i></a>
-              <div class="submenu">
-                <div class="container">
-                  <ul>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Пресс центр</a></li>
-                    <li><a href="#">Научно практическая деятельность</a></li>
-                    <li><a href="#">Участие компании в развитии системы ОМС</a></li>
-                    <li><a href="#">Проекты компании</a></li>
-                    <li><a href="#">Наша команда</a></li>
-                    <li><a href="#">Раскрытие информации</a></li>
-                    <li><a href="#">Контакты</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
+            <li><a href="javascript:;"><span>О компании</span></a></li>
             <li><a href="#"><span>Школа пациента</span></a></li>
           </ul>
           <ul class="mobileBottom">

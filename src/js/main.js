@@ -801,6 +801,7 @@ $(document).ready(function() {
         $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
 
         setTimeout(function() {
+
           $('.customScrollTabs .customTabs').mCustomScrollbar({
             theme: "scrollTabsThm",
             axis: "x",
@@ -841,14 +842,14 @@ $(document).ready(function() {
               onOverflowX: function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
                 $(this).parents('.customScrollTabs').removeClass('hideArrow');
-                $(this).parents('.customScrollTabs').addClass('showShadow');
+                // $(this).parents('.customScrollTabs').addClass('showShadow');
                 $(this).parents('.customScrollTabs').addClass('showArrow');
                 $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
               },
               onOverflowXNone: function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
                 $(this).parents('.customScrollTabs').addClass('hideArrow');
-                $(this).parents('.customScrollTabs').removeClass('showShadow');
+                // $(this).parents('.customScrollTabs').removeClass('showShadow');
                 $(this).parents('.customScrollTabs').removeClass('showArrow');
                 $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
               },
@@ -859,7 +860,7 @@ $(document).ready(function() {
       } else {
         $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
         $('.customScrollTabs .next, .customScrollTabs .prev').addClass('hide');
-
+        $(this).parents('.customScrollTabs').removeClass('start');
         $('.customScrollTabs .customTabs').each(function() {
           var elength = $(this).find('li').length;
 
@@ -868,7 +869,8 @@ $(document).ready(function() {
             // console.log('mVersion');
           } else if (elength < 3) {
             $(this).addClass('default');
-            $(this).removeClass('start');
+            $(this).parents('.customScrollTabs').removeClass('start');
+            $(this).parents('.customScrollTabs').removeClass('finish');
             // console.log('default');
           }
         });
@@ -877,7 +879,7 @@ $(document).ready(function() {
 
 
       $('.customScrollTabs.v2 .customTabs').each(function() {
-        // $(this).removeClass('default');
+        $(this).parents('.customScrollTabs').removeClass('start');
         $(this).parents('.customScrollTabs').addClass('show');
         $(this).find('.next, .prev').addClass('hide');
         var th1 = $(this).find("li:eq(0)").height();
@@ -905,7 +907,7 @@ $(document).ready(function() {
         }
 
         $(this).parents('.customScrollTabs').addClass('show default');
-        $(this).removeClass('start');
+        $(this).parents('.customScrollTabs').removeClass('start');
         // $('.customScrollTabs .next, .customScrollTabs .prev').hide();
         // var th1 = $(this).find("li:eq(0)").height();
         // var th2 = $(this).find("li:eq(1)").height();
@@ -952,14 +954,14 @@ $(document).ready(function() {
               onOverflowX: function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
                 $(this).parents('.customScrollTabs').removeClass('hideArrow');
-                $(this).parents('.customScrollTabs').addClass('showShadow');
+                // $(this).parents('.customScrollTabs').addClass('showShadow');
                 $(this).parents('.customScrollTabs').addClass('showArrow');
                 $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
               },
               onOverflowXNone: function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
                 $(this).parents('.customScrollTabs').addClass('hideArrow');
-                $(this).parents('.customScrollTabs').removeClass('showShadow');
+                // $(this).parents('.customScrollTabs').removeClass('showShadow');
                 $(this).parents('.customScrollTabs').removeClass('showArrow');
                 $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
               },
@@ -1078,35 +1080,64 @@ $(document).ready(function() {
     var elTitle = $(this).text();
     // console.log(elTitle);
     $(this).parents('.customScrollTabs').find('.tabActive .title').html("" + elTitle + "");
-    $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", this, {
-      scrollEasing: "easeOut"
-    });
+    $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", this, {scrollInteria:500});
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisEl');
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisNext');
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisPrev');
+    $(this).parents('li').addClass('thisEl');
+    $(this).parents('li').next().addClass('thisNext');
+    $(this).parents('li').prev().addClass('thisPrev');
   });
 
   $('.customScrollTabs .tab.active').each(function() {
+    $(this).parents('li').addClass('thisEl');
     $(this).parents('li').next().addClass('thisNext');
     $(this).parents('li').prev().addClass('thisPrev');
-    $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", this, {
-      scrollEasing: "easeOut"
-    });
+
   });
+
+  setTimeout(function () {
+    $('.customScrollTabs .customTabs .thisEl').each(function() {
+      $(this).parents('.customTabs').mCustomScrollbar("scrollTo", this, {scrollInteria:500});
+    });
+  }, 500);
 
   $('.customScrollTabs .prev').click(function() {
     $(this).parents('.customScrollTabs').find('.next').show();
-    var nextWidth = $('.customScrollTabs .thisNext').width;
-    var toLeft = '+=' + nextWidth;
-    setTimeout(function() {
-      $(this).parents('.customScrollTabs').find('customTabs').mCustomScrollbar("scrollTo", toLeft);
-    }, 50);
-    $('.customScrollTabs .thisNext').removeClass('thisNext').next().addClass('thisNext');
-  });
+    // var prevEl = $(this).parents('.customScrollTabs').find('.thisPrev');
+    $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", $(this).parents('.customScrollTabs').find('.thisPrev'), {scrollInteria:500});
 
+    $(this).parents('.customScrollTabs').find('.thisPrev').addClass('thisPos');
+
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisPrev');
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisEl');
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisNext');
+
+    $(this).parents('.customScrollTabs').find('.thisPos').next().addClass('thisNext')
+    $(this).parents('.customScrollTabs').find('.thisPos').prev().addClass('thisPrev')
+    $(this).parents('.customScrollTabs').find('.thisPos').addClass('thisEl')
+
+    $(this).parents('.customScrollTabs').find('.thisEl').removeClass('thisPos');
+  });
+  //
   $('.customScrollTabs .next').click(function() {
     $(this).parents('.customScrollTabs').find('.prev').show();
-    setTimeout(function() {
-      $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", '-=100');
-    }, 50);
+    // var nextEl = $(this).parents('.customScrollTabs').find('.thisNext');
+    $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", $(this).parents('.customScrollTabs').find('.thisNext'), {scrollInteria:500});
+    $(this).parents('.customScrollTabs').find('.thisNext').addClass('thisPos');
+
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisPrev');
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisEl');
+    $(this).parents('.customScrollTabs').find('li').removeClass('thisNext');
+
+    $(this).parents('.customScrollTabs').find('.thisPos').next().addClass('thisNext')
+    $(this).parents('.customScrollTabs').find('.thisPos').prev().addClass('thisPrev')
+    $(this).parents('.customScrollTabs').find('.thisPos').addClass('thisEl')
+
+    $(this).parents('.customScrollTabs').find('.thisEl').removeClass('thisPos');
   });
+
+
 
   function tabsDestroy() {
     $('.customScrollTabs').removeClass('show');
