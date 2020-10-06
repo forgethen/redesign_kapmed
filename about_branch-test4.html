@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Site title</title>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Site title">
+    <meta name="description" content="Site description">
+    <meta property="og:title" content="Site title">
+    <meta property="og:description" content="Site description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Site URL">
+    <meta property="og:image" content="LOGO/IMG">
+    <link rel="icon" type="image/png" href="src/img/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/HelveticaNeue/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="src/fonts/remixicon/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="src/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="src/css/milligram.responsive-grid.css">
+    <link rel="stylesheet" type="text/css" href="src/css/inputmask.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="src/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <script src="src/js/vanilla.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/slick.min.js"></script>
+    <script src="src/js/jquery.inputmask.bundle.js"></script>
+    <script src="src/js/jquery.mCustomScrollbar.js"></script>
+    <script src="src/js/jquery.fancybox.min.js"></script>
+    <script src="src/js/bodyScrollLock.min.js"></script>
+    <script src="src/js/jquery.hideseek.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="src/js/vue-launcher.js"></script>
+  </head>
+  <body data-preloader="">
+    <div class="allContent">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="column">
+              <div id="citySelectPopUp">
+                <div class="content">
+                  <div class="content__top">
+                    <h6>Ваш город</h6>
+                  </div>
+                  <p><span class="selectCity">Санкт-Петербург</span> ?</p>
+                  <div class="content__bottom"><a class="This" href="#" onclick="$('#citySelectPopUp').removeClass('active')">Да, верно</a><a class="Other" data-fancybox="" data-src="#citySelect" href="javascript:;" data-touch="false">Выбрать другой</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-container">
+          <div>
+            <div class="container">
+              <div class="row">
+                <div class="column column-66"><a class="city" onclick="$('#citySelectPopUp').toggleClass('active')">
+                    <div class="image"><img src="src/img/static/plane.svg" alt="plane"></div><span>Санкт-Петербург</span></a><a href="#">
+                    <div class="image"><img src="src/img/static/zoom (1).svg" alt="zoom"></div><span>Версия для слабовидящих </span></a><a href="#">
+                    <div class="image"><img src="src/img/static/print (1).svg" alt="print"></div><span>Распечатать страницу</span></a></div>
+                <div class="column column-33"><a href="tel:88005506774">
+                    <div class="image"><img src="src/img/static/phone (1).svg" alt="phone"></div>
+                    <p>8&nbsp;800&nbsp;550&nbsp;67&nbsp;74<span>&nbsp;(Круглосуточно)</span></p></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="header">
+            <div class="container">
+              <div class="row row-responsive">
+                <div class="column column-md-25 column-sm-25 column-xs-50"><a class="logo" href="/"><img src="src/img/static/LOGO.png" alt="logo"></a></div>
+                <div class="column column-md-70 column-sm-70 column-xs-50">
+                  <nav class="desktop">
+                    <ul>
+                      <li><a href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
+                      <li><a href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
+                      <li><a class="search" href="#" onclick="switchSearch()"><i class="ri-search-line"></i><span>Поиск</span></a></li>
+                    </ul>
+                  </nav>
+                  <nav class="mobile">
+                    <ul>
+                      <li><a class="search" href="#" onclick="switchSearch()"><i class="ri-search-line"></i></a></li>
+                      <li><a class="burger" href="#"><i class="ri-menu-line"></i><i class="ri-close-fill"></i></a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="column column-md-25 column-sm-25 column-xs-100"><a class="btn btn-red" href="#">Заявка на полис ОМС</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="search-wrapper">
+            <div class="cross" onclick="switchSearch()">&times;</div>
+            <div class="container">
+              <div class="row">
+                <div class="column column-25 no-mob">
+                  <div class="menu">
+                    <div class="item active">Все результаты</div>
+                    <div class="item">Страховые продукты</div>
+                    <div class="item">Новости и события</div>
+                  </div>
+                </div>
+                <div class="column column-md-75 column-sm-75 column-xs-100">
+                  <p class="title">Результаты поиска</p>
+                  <div class="input-wrap search-input">
+                    <div class="button-search"> <span>Поиск</span><span class="arr">&#8594;</span></div>
+                    <input id="search_inpuut" type="text" placeholder="Поиск">
+                  </div>
+                  <div class="popular-requests">
+                    <p>Популярные запросы:</p>
+                    <ul>
+                      <li>Запрос 1</li>
+                      <li>Запрос 2</li>
+                    </ul>
+                  </div>
+                  <div class="sitemap hidden">
+                    <p class="title"> <span class="plusp" onclick="openSitemap()">+</span><span>Карта сайта</span></p>
+                    <div class="wrap">
+                      <div class="column"><a class="title" href="#">Заголовок</a>
+                        <ul>
+                          <li><a href="#">Направление 1</a></li>
+                          <li><a href="#">Направление 1</a></li>
+                          <li><a href="#">Направление 1</a></li>
+                        </ul><a class="title" href="#">Заголовок</a>
+                        <ul>
+                          <li><a href="#">Направление 1</a></li>
+                          <li><a href="#">Направление 1</a></li>
+                          <li><a href="#">Направление 1</a></li>
+                        </ul>
+                      </div>
+                      <div class="column"><a class="title" href="#">Заголовок</a>
+                        <ul>
+                          <li><a href="#">Направление 1</a></li>
+                          <li><a href="#">Направление 1</a></li>
+                          <li><a href="#">Направление 1</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="total">
+                    <p>По запросу "Инвестиции" найдено 3678 ответов</p>
+                  </div>
+                  <div class="results">
+                    <div class="result">
+                      <div class="top">Test</div>
+                      <div class="name">Te<b>st</b></div>
+                      <div class="description">Test ba<b>ck</b>ground</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                    <div class="result">
+                      <div class="top">Документы</div>
+                      <div class="name">Инвестиционное страхование жизни</div>
+                      <div class="description">Описание ответа &lt;b&gt;опи&lt;/b&gt;сание ответа описание ответа описание ответа описание ответа описание ответа описание ответа...</div>
+                    </div>
+                  </div>
+                  <div class="pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container fromHeaderMenu">
+          <ul class="headerMenu desktop">
+            <li onmouseover="menuHover(this)" onmouseout="menuUnHover()"><a href="javascript:;"><span>Полис ОМС</span></a>
+              <div class="submenu">
+                <div class="container">
+                  <div class="close">
+                    <div class="close_button" onclick="menuUnHover()"> <span>Закрыть</span><img src="src/img/static/close_button2.svg"></div>
+                  </div>
+                  <ul>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Как выбрать страховую компанию</p>
+                            <p class="desc">Выбор и условия замены СМО</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Пункты выдачи полиса ОМС</p>
+                            <p class="desc">Перечень ближайших отделений и карта</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Полис ОМС ребенку</p>
+                            <p class="desc">Порядок и необходимые документы</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Полис при смене фамилии</p>
+                            <p class="desc">Переоформление полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Заявка на оформление полиса ОМС</p>
+                            <p class="desc">Заявка на оформление полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Доставка полиса ОМС</p>
+                            <p class="desc">Маломобильным гражданам и в офис (от 5 полисов)</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Оформление полиса через представителя</p>
+                            <p class="desc">Если вы не можете оформить полис ОМС лично</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">При смене места жительства</p>
+                            <p class="desc">Переоформление полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Порядок оформления полиса ОМС</p>
+                            <p class="desc">Пошаговая инструкция</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Юридическим лицам</p>
+                            <p class="desc">Выездные семинары для сотрудников</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Повреждение или утеря полиса</p>
+                            <p class="desc">Выдача дубликата полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Памятка застрахованному лицу</p>
+                            <p class="desc"></p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Перечень документов</p>
+                            <p class="desc">Что нужно для оформления полиса ОМС</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Электронный полис ОМС</p>
+                            <p class="desc">В виде пластиковой карты с чипом</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item file"><a href="#">
+                        <div class="data">
+                          <div class="img-wrap"><img src="src/img/static/icon-docs.svg"></div>
+                          <div class="info data-file">
+                            <p class="title">Форма заявления о выборе (замене) страховой медицинской организации</p>
+                            <p class="desc">PDF. 0,3 Мб</p>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item file"><a href="#">
+                        <div class="data">
+                          <div class="img-wrap"><img src="src/img/static/icon-docs.svg"></div>
+                          <div class="info data-file">
+                            <p class="title">Форма доверенности (передоверие полномочий от одного лица другому лицу)</p>
+                            <p class="desc">PDF. 0,3 Мб</p>
+                          </div>
+                        </div></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li onmouseover="menuHover(this)" onmouseout="menuUnHover()"><a href="#"><span>Диспансеризация</span></a>
+              <div class="submenu">
+                <div class="container">
+                  <div class="close">
+                    <div class="close_button" onclick="menuUnHover()"> <span>Закрыть</span><img src="src/img/static/close_button2.svg"></div>
+                  </div>
+                  <ul>
+                    <li class="menu-item tablet"><a href="#">
+                        <div class="data"><img class="img-bg" src="src/img/static/block.png">
+                          <div class="info data-tablet">
+                            <p class="title">Профилактический осмотр и диспансеризация</p>
+                            <div class="wr">
+                              <p class="pa">Памякта:</p>
+                              <p class="desc">Узнайте больше о своем здоровье</p>
+                              <p class="more">Подробнее</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Диспансеризация взрослых</p>
+                            <div class="wr">
+                              <p class="desc">Здоровье под контролем!</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Профилактический осмотр </p>
+                            <div class="wr">
+                              <p class="desc">Можно проходить ежегодно</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item standart"><a href="#">
+                        <div class="data">
+                          <div class="info data-standart">
+                            <p class="title">Диспансеризация детей</p>
+                            <div class="wr">
+                              <p class="desc">Ранее выявление заболеваний</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item empty"><a>
+                        <div class="data">
+                          <div class="info data-empty">
+                            <p class="title"></p>
+                            <div class="wr">
+                              <p class="desc"></p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item file"><a href="#">
+                        <div class="data">
+                          <div class="img-wrap"><img src="src/img/static/icon-docs.svg"></div>
+                          <div class="info data-file">
+                            <p class="title">Порядок проведения диспансерного наблюдения за взрослыми</p>
+                            <div class="wr">
+                              <p class="desc">PDF. 0,3 Мб</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                    <li class="menu-item file"><a href="#">
+                        <div class="data">
+                          <div class="img-wrap"><img src="src/img/static/icon-docs.svg"></div>
+                          <div class="info data-file">
+                            <p class="title">Порядок проведения профилактических медосмотров детей</p>
+                            <div class="wr">
+                              <p class="desc">PDF. 0,3 Мб</p>
+                            </div>
+                          </div>
+                        </div></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="javascript:;"><span>Защита прав</span></a></li>
+            <li><a href="javascript:;"><span>Система ОМС</span></a></li>
+            <li><a href="javascript:;"><span>О компании</span></a></li>
+            <li><a href="#"><span>Школа пациента</span></a></li>
+          </ul>
+          <ul class="headerMenu mobile">
+            <li><a href="javascript:;"><span>Полис ОМС</span></a></li>
+            <li><a href="javascript:;"><span>Система ОМС</span></a></li>
+            <li><a href="#"><span>Диспансеризация</span></a></li>
+            <li><a href="javascript:;"><span>Защита прав</span></a>
+              <div class="submenu">
+                <div class="container">
+                  <ul>
+                    <li><a href="#">Ваш страховой представитель</a></li>
+                    <li><a href="#">Подать жалобу</a></li>
+                    <li><a href="#">Выявленные нарушения по обращениям застрахованных лиц</a></li>
+                    <li><a href="#">Контакт-центр</a></li>
+                    <li><a href="#">Полезные ресурсы</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="javascript:;"><span>О компании</span></a></li>
+            <li><a href="#"><span>Школа пациента</span></a></li>
+          </ul>
+          <ul class="mobileBottom">
+            <li><a class="PointOffice" href="#"><i class="ri-map-pin-2-line"></i><span>Офисы и пункты выдачи</span></a></li>
+            <li><a class="YourFil" href="#"><i class="ri-user-line"></i><span>Ваш филиал</span></a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="citySelect" id="citySelect">
+        <div class="container">
+          <h3 class="citySelect__title">Выберете ваш регион</h3>
+          <div class="citiesBlock">
+            <div class="cities">
+              <ul>
+                <li><a class="ex red" href="#">
+                    <p>Город Москва</p></a></li>
+                <li><a class="ex" href="#">
+                    <p>Московская область</p></a></li>
+                <li><a class="ex" href="#">
+                    <p>Город Санкт-Петербург</p></a></li>
+                <li><a class="ex" href="#">
+                    <p>Ленинградская область</p></a></li>
+                <li><a href="#">
+                    <p>Алтайский край</p></a></li>
+                <li><a href="#">
+                    <p>Архангельская область</p></a></li>
+                <li><a href="#">
+                    <p>Владимирская область</p></a></li>
+                <li><a href="#">
+                    <p>Волгоградская область</p></a></li>
+                <li><a href="#">
+                    <p>Еврейская автономная область</p></a></li>
+                <li><a href="#">
+                    <p>Кабардино-Балкарская республика</p></a></li>
+                <li><a href="#">
+                    <p>Калининградская область</p></a></li>
+                <li><a href="#">
+                    <p>Кировская область</p></a></li>
+                <li><a href="#">
+                    <p>Костромская область</p></a></li>
+                <li><a href="#">
+                    <p>Краснодарский край</p></a></li>
+                <li><a href="#">
+                    <p>Курганская область</p></a></li>
+                <li><a href="#">
+                    <p>Липецкая область</p></a></li>
+              </ul>
+              <ul>
+                <li><a href="#">
+                    <p>Ненецкий автономный округ</p></a></li>
+                <li><a href="#">
+                    <p>Нижегородская область</p></a></li>
+                <li><a href="#">
+                    <p>Омская область</p></a></li>
+                <li><a href="#">
+                    <p>Оренбургская область</p></a></li>
+                <li><a href="#">
+                    <p>Пензенская область</p></a></li>
+                <li><a href="#">
+                    <p>Пермский край</p></a></li>
+                <li><a href="#">
+                    <p>Республика Алтай</p></a></li>
+                <li><a href="#">
+                    <p>Республика Башкортостан</p></a></li>
+                <li><a href="#">
+                    <p>Республика Бурятия</p></a></li>
+                <li><a href="#">
+                    <p>Республика Коми</p></a></li>
+                <li><a href="#">
+                    <p>Республика Мордовия</p></a></li>
+                <li><a href="#">
+                    <p>Республика Саха (Якутия)</p></a></li>
+                <li><a href="#">
+                    <p>Республика Северная Осетия - Алания</p></a></li>
+                <li><a href="#">
+                    <p>Республика Тыва</p></a></li>
+              </ul>
+              <ul>
+                <li><a href="#">
+                    <p>Ростовская область</p></a></li>
+                <li><a href="#">
+                    <p>Рязанская область</p></a></li>
+                <li><a href="#">
+                    <p>Саратовская область</p></a></li>
+                <li><a href="#">
+                    <p>Смоленская область</p></a></li>
+                <li><a href="#">
+                    <p>Тверская область</p></a></li>
+                <li><a href="#">
+                    <p>Тульская область</p></a></li>
+                <li><a href="#">
+                    <p>Тюменская область</p></a></li>
+                <li><a href="#">
+                    <p>Удмуртская республика</p></a></li>
+                <li><a href="#">
+                    <p>Ульяновская область</p></a></li>
+                <li><a href="#">
+                    <p>Ханты-Мансийский автономный округ - Югра</p></a></li>
+                <li><a href="#">
+                    <p>Ярославская область</p></a></li>
+              </ul>
+            </div>
+          </div>
+          <form class="search">
+            <input type="text" data-list=".citiesBlock ul" autocomplete="off" placeholder="Введите название региона">
+            <input class="btn btn-red" type="submit" value="Найти">
+          </form>
+        </div>
+      </div>
+      <div class="fixbtn">
+        <div class="links"><a href="#"><span>Подать жалобу</span></a><a href="#"><span>Заказать звонок</span></a><a href="#"><span>Задать вопрос</span></a></div><i class="close"></i>
+        <div class="open"></div>
+      </div>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="javascript:void(0);">Филиалы</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="container">
+          <div class="row row-responsive">
+            <div class="column column-md-25 column-sm-25 column-xs-100">
+              <nav class="content_list">
+                <ul>
+                  <li><a class="slow active" href="#io1">О филиале</a></li>
+                  <li><a class="slow" href="#io2">Контакты и график приема</a></li>
+                  <li><a class="slow" href="#io3">Пункты выдачи полисов</a></li>
+                  <li><a class="slow" href="#io4">Список медорганизаций в системе ОМС</a></li>
+                  <li><a class="slow" href="#io5">Перечень услуг предоставляемых по ОМС </a></li>
+                  <li><a class="slow" href="#io6">Региональные документы</a></li>
+                  <li><a class="slow" href="#io7">Руководство</a></li>
+                  <li><a class="slow" href="#io8">Оставить отзыв о филиале</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="column column-md-75 column-sm-75 column-xs-100">
+              <section id="io1">
+                <div class="page-title v2">
+                  <div class="container custom-select">
+                    <div>
+                      <h1 class="title">Филиал в&nbsp;<a class="red"><span>Санкт-Петербурге</span><i class="ri-arrow-down-s-line"></i></a></h1>
+                      <div class="options-block">
+                        <ul class="options">
+                          <li class="red">Санкт-Петербурге</li>
+                          <li>Москве</li>
+                          <li>Где-то еще</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="customScrollTabs start">
+                  <div class="prev ri-arrow-left-line"></div>
+                  <div class="container">
+                    <div class="tabActive">
+                      <p class="title">Текст</p><i class="ri-arrow-down-s-fill"></i>
+                    </div>
+                    <div class="customTabs">
+                      <ul class="tabs">
+                        <li><a class="tab active" href="javascript:;"><span>Оформить полис</span></a></li>
+                        <li><a class="tab" href="javascript:;"><span>Профилактика</span></a></li>
+                        <li><a class="tab" href="javascript:;"><span>Школа пациента</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="next ri-arrow-right-line"></div>
+                </div>
+              </section>
+              <section id="io3">
+                <div class="container">
+                  <h3 class="sectionTitle">Ваш страховой представитель</h3>
+                </div>
+                <div class="insuranceRepresentativeBlock">
+                  <div class="textBlock">
+                    <p>Страховой представитель — это сотрудник страховой медицинской организации, прошедший специальное обучение, представляющий интересы застрахованных лиц и обеспечивающий их активное индивидуальное сопровождение при оказании медицинской помощи.</p>
+                  </div>
+                  <div class="insuranceRepresentativeBlock__bottom"><a class="btn btn-red" href="#">Узнать подробнее</a></div>
+                </div>
+              </section>
+              <section id="io4">
+                <div class="container">
+                  <h3 class="sectionTitle">Региональные контакты организаций по защите прав пациента</h3>
+                </div>
+                <ul class="accordion-menu v3">
+                  <li>
+                    <h6 class="check">Территориальный фонд обязательного медицинского страхования Ленинградской области<i class="ri-add-fill"></i></h6>
+                    <div class="answer">
+                      <div class="representativeContacts">
+                        <div class="agent">
+                          <p>Директор:&nbsp;</p><b>Андрей Александрович Петрищев</b>
+                        </div>
+                        <div class="info">
+                          <div class="info__block">
+                            <div class="info__block__item"><i class="ri-map-pin-2-fill"></i><span class="title">Адрес</span>
+                              <p>г. Санкт-Петербург, Выборгский район,<br>м.&nbsp;Проспект&nbsp;Просвещения</p>
+                            </div>
+                            <div class="info__block__item"><i class="ri-earth-fill"></i><span class="title">Сайт</span><a href="http://www.tfoms33.ru/">http://www.tfoms33.ru/</a></div>
+                            <div class="info__block__item"><i class="ri-phone-fill"></i><span class="title">Контакт центр</span><a href="tel:78005506774">+7 (800) 550-67-74</a></div>
+                            <div class="info__block__item"><i class="ri-mail-line"></i><span class="title">Email</span><a href="mailto:general@vofoms.elcom.ru">general@vofoms.elcom.ru</a></div>
+                          </div>
+                          <div class="info__block">
+                            <div class="info__block__item"><i class="ri-map-pin-2-fill"></i><span class="title">Адрес</span>
+                              <p>г. Санкт-Петербург, Выборгский район,<br>м.&nbsp;Проспект&nbsp;Просвещения</p>
+                            </div>
+                            <div class="info__block__item"><i class="ri-earth-fill"></i><span class="title">Сайт</span><a href="http://www.tfoms33.ru/">http://www.tfoms33.ru/</a></div>
+                            <div class="info__block__item"><i class="ri-phone-fill"></i><span class="title">Контакт центр</span><a href="tel:78005506774">+7 (800) 550-67-74</a></div>
+                            <div class="info__block__item"><i class="ri-mail-line"></i><span class="title">Email</span><a href="mailto:general@vofoms.elcom.ru">general@vofoms.elcom.ru</a></div>
+                          </div>
+                          <div class="info__block">
+                            <div class="info__block__item"><i class="ri-map-pin-2-fill"></i><span class="title">Адрес</span>
+                              <p>г. Санкт-Петербург, Выборгский район,<br>м.&nbsp;Проспект&nbsp;Просвещения</p>
+                            </div>
+                            <div class="info__block__item"><i class="ri-earth-fill"></i><span class="title">Сайт</span><a href="http://www.tfoms33.ru/">http://www.tfoms33.ru/</a></div>
+                            <div class="info__block__item"><i class="ri-phone-fill"></i><span class="title">Контакт центр</span><a href="tel:78005506774">+7 (800) 550-67-74</a></div>
+                            <div class="info__block__item"><i class="ri-mail-line"></i><span class="title">Email</span><a href="mailto:general@vofoms.elcom.ru">general@vofoms.elcom.ru</a></div>
+                          </div>
+                        </div>
+                        <div class="last">
+                          <div>
+                            <p>Отдел организации ОМС:&nbsp;</p><a href="tel:84922404700"><b>8 (4922) 40-47-00</b></a>
+                          </div>
+                          <div>
+                            <p>Телефоны «горячей линии» ТФОМС Владимирской области:&nbsp;</p><a href="tel:88002001109"><b>8 (800) 200-11-09</b></a>
+                            <p>,&nbsp;</p><a href="tel:84922404713"><b>+7 (4922) 40-47-13</b></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h6 class="check">Контакты других СМО во Владимирской области<i class="ri-add-fill"></i></h6>
+                    <div class="answer">
+                      <div class="representativeContacts">
+                        <p>Филиал ООО «СК «Ингострах-М» в Санкт-Петербурге</p>
+                        <div class="info v2">
+                          <div class="info__block">
+                            <div class="info__block__item"><i class="ri-earth-fill"></i><span class="title">Сайт</span><a href="http://www.tfoms33.ru/">http://www.tfoms33.ru/</a></div>
+                            <div class="info__block__item"><i class="ri-phone-fill"></i><span class="title">Контакт центр</span><a href="tel:78005506774">+7 (800) 550-67-74</a></div>
+                            <div class="info__block__item"><i class="ri-mail-line"></i><span class="title">Email</span><a href="mailto:general@vofoms.elcom.ru">general@vofoms.elcom.ru</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="representativeContacts">
+                        <p>Филиал ООО «СК «Ингострах-М» в Санкт-Петербурге</p>
+                        <div class="info v2">
+                          <div class="info__block">
+                            <div class="info__block__item"><i class="ri-earth-fill"></i><span class="title">Сайт</span><a href="http://www.tfoms33.ru/">http://www.tfoms33.ru/</a></div>
+                            <div class="info__block__item"><i class="ri-phone-fill"></i><span class="title">Контакт центр</span><a href="tel:78005506774">+7 (800) 550-67-74</a></div>
+                            <div class="info__block__item"><i class="ri-mail-line"></i><span class="title">Email</span><a href="mailto:general@vofoms.elcom.ru">general@vofoms.elcom.ru</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="top__container">
+              <div class="column">
+                <div class="socialLinks">
+                  <h6 class="socialLinks__title">Следите за новостями <br>компании <br class="notHide">в социальных сетях</h6>
+                  <ul>
+                    <li><a href="#"><img src="src/img/static/instagram.svg" alt="instagram"></a></li>
+                    <li><a href="#"><img src="src/img/static/youtube.svg" alt="youtube"></a></li>
+                    <li><a href="#"><img src="src/img/static/facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="src/img/static/ok.svg" alt="ok"></a></li>
+                    <li><a href="#"><img src="src/img/static/vk.svg" alt="vk"></a></li>
+                    <li><a href="#"><img src="src/img/static/ya.svg" alt="ya"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="column">
+                <form class="weeklyNewsletter">
+                  <h6 class="weeklyNewsletter__title">Подпишитесь на нашу<br/>еженедельную рассылку</h6>
+                  <input type="email" placeholder="Введите ваш email" required>
+                  <input class="btn btn-red" type="submit" value="Подписаться">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="links__container">
+              <div class="column">
+                <ul class="hot-numbers">
+                  <li>
+                    <p>Федеральный номер</p><a href="tel:88001008102">8 800 100 81 02</a>
+                  </li>
+                  <li>
+                    <p>Региональный номер</p><a href="tel:88005506774">8-800-550-67-74</a>
+                  </li>
+                  <li>
+                    <p>Для междугородних звонков</p><a href="tel:88005506774">8-800-550-67-74</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="links__row__item">
+                  <li>
+                    <ul class="partition">
+                      <li><a href="javascript:void(0);">Система ОМС</a></li>
+                      <li><a href="#">Что такое Система ОМС</a></li>
+                      <li><a href="#">Дайджест новостей системы ОМС</a></li>
+                      <li><a href="#">Участие компании в развитии системы ОМС</a></li>
+                      <li><a href="#">Виды, качество и условия медицинской помощи</a></li>
+                      <li><a href="#">Что бесплатно по полису ОМС</a></li>
+                      <li><a href="#">Как выбрать страховую компанию ОМС</a></li>
+                      <li><a href="#">Как выбрать медицинскую организацию</a></li>
+                      <li><a href="#">Информация о медицинских организациях</a></li>
+                      <li><a href="#">Информация о Фонде ОМС</a></li>
+                      <li><a href="#">Нормативные документы</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <ul class="partition">
+                          <li><a href="javascript:void(0);">Полис ОМС</a></li>
+                          <li><a href="#">Заявка на полис ОМС</a></li>
+                          <li><a href="#">Документы для оформления полиса</a></li>
+                          <li><a href="#">Пункты выдачи полисов</a></li>
+                          <li><a href="#">Доставка полиса ОМС</a></li>
+                          <li><a href="#">Виды полисов ОМС</a></li>
+                          <li><a href="#">Юридическим лицам</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="partition">
+                          <li><a href="javascript:void(0);">О компании</a></li>
+                          <li><a href="#">Пресс-центр</a></li>
+                          <li><a href="#">Научно-пратическая деятельность</a></li>
+                          <li><a href="#">Участие компании в развитии системы ОМС</a></li>
+                          <li><a href="#">Проекты компании</a></li>
+                          <li><a href="#">Наша команда</a></li>
+                          <li><a href="#">Раскрытие иформации</a></li>
+                          <li><a href="#">Контакты</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="partition">
+                          <li><a href="javascript:void(0);">Защита прав</a></li>
+                          <li><a href="#">Ваш страховой представитель</a></li>
+                          <li><a href="#">Подать жалобу</a></li>
+                          <li><a href="#">Выявленные нарушения по обращениям застрахованных лиц</a></li>
+                          <li><a href="#">Контакт-центр</a></li>
+                          <li><a href="#">Полезные ресурсы</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="partition">
+                          <li><a href="#">Диспансеризация</a></li>
+                        </ul>
+                        <ul class="partition">
+                          <li><a href="#">Школа пациента</a></li>
+                        </ul>
+                        <ul class="partition">
+                          <li><a href="#">Ваш филиал</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="bottom__container">
+              <div class="bottom__container__item">
+                <ul>
+                  <li>
+                    <p>© 1992-2020 ООО «Капитал МС»</p>
+                  </li>
+                  <li><a href="#">Карта сайта</a></li>
+                  <li>
+                    <p>Лизенцзия № 000 000 0000</p>
+                  </li>
+                  <li><a href="#">Перейти на старую версию сайта</a></li>
+                  <li><a href="#">Пользовательское соглашение</a></li>
+                  <li><a class="lastUpdate" href="#">Последнее обновление сайта: <br>06.07.2020&nbsp;15:42</a></li>
+                </ul>
+              </div>
+              <div class="bottom__container__item"><a class="gplay" href="#"></a><a class="appstore" href="#"></a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="mapPopUp" id="mapPopUp">
+        <div class="container">
+          <section class="page-title">
+            <div class="container custom-select">
+              <h5 class="title">Укажите офис, в котором вы заберете свой полис&nbsp;<a class="red">в Санкт-Петербурге</a></h5>
+            </div>
+            <p class="desc">Выберите медицинскую организацию, в которой хотите пройти диспансеризацию.</p>
+          </section>
+          <div class="tags"><a class="tag v2 active" href="javascript:;"><span>Забрать полис ОМС</span></a><a class="tag v2" href="javascript:;"><span>Оформить полис ОМС</span></a><a class="tag v2" href="javascript:;"><span>Помощь</span></a>
+          </div>
+          <div class="mapSection">
+            <div class="list">
+              <div class="swipeTopDown"></div>
+              <div class="mapList">
+                <ul>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1<span>главный офис</span></h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status on">Открыто c 08:00 до 19:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                  <li class="list__item">
+                    <h6>ул. Кустодиева, д.6, к.1</h6>
+                    <div class="location"><i class="ri-map-pin-2-fill"></i>
+                      <h6>г.Санкт-Петербург, Выборгский район, м.Проспект Просвещения</h6>
+                    </div>
+                    <div class="sheduleBlock fromPopUp"><i class="ri-time-fill"></i>
+                      <h6 class="status off">Закрыто до 9:00</h6>
+                      <div class="openShedule"><a href="javascript:;"><span>Режим работы</span><i class="ri-arrow-down-s-line"></i></a></div>
+                      <ul class="shedule__list">
+                        <li>
+                          <p class="day">Пн</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Вт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Ср</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Чт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Пт</p>
+                          <p class="times">08:00 - 19:30</p>
+                        </li>
+                        <li>
+                          <p class="day">Сб</p>
+                          <p class="times">—</p>
+                        </li>
+                        <li>
+                          <p class="day">Вс</p>
+                          <p class="times">—</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="phoneBlock fromPopUp"><i class="ri-phone-fill"></i><a href="tel:+78005506774"><span>+7 (800) 550-67-74</span></a></div><a class="btn btn-red" href="#">Заберу отсюда</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afc115595a68e0606ed953d5c1df60429f07443dcd20c032897a862f2a5062278&amp;amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
