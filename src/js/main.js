@@ -1084,7 +1084,7 @@ $(document).ready(function() {
     // console.log(elTitle);
     $(this).parents('.customScrollTabs').find('.tabActive .title').html("" + elTitle + "");
     $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", this, {
-      scrollInteria: 500
+      scrollInteria: 250
     });
     $(this).parents('.customScrollTabs').find('li').removeClass('thisEl');
     $(this).parents('.customScrollTabs').find('li').removeClass('thisNext');
@@ -1116,7 +1116,7 @@ $(document).ready(function() {
     $(this).parents('.customScrollTabs').find('.next').show();
     // var prevEl = $(this).parents('.customScrollTabs').find('.thisPrev');
     $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", $(this).parents('.customScrollTabs').find('.thisPrev'), {
-      scrollInteria: 500
+      scrollInteria: 250
     });
 
     $(this).parents('.customScrollTabs').find('.thisPrev').addClass('thisPos');
@@ -1136,7 +1136,7 @@ $(document).ready(function() {
     $(this).parents('.customScrollTabs').find('.prev').show();
     // var nextEl = $(this).parents('.customScrollTabs').find('.thisNext');
     $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", $(this).parents('.customScrollTabs').find('.thisNext'), {
-      scrollInteria: 500
+      scrollInteria: 250
     });
     $(this).parents('.customScrollTabs').find('.thisNext').addClass('thisPos');
 
