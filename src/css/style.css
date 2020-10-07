@@ -7757,6 +7757,9 @@ form.search > :last-child {
 }
 .activity-wrap .block.opened .action-wrap-grat {
   padding: 2rem;
+}
+.activity-wrap .block.opened .action-wrap-grat .action-wrap-grat,
+.activity-wrap .block.opened .action-wrap-grat > :last-child {
   margin-bottom: 0;
 }
 .activity-wrap .block.opened .cross {

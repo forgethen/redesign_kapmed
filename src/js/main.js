@@ -217,8 +217,10 @@ $(document).ready(function() {
     $(this).parents("li").toggleClass("show");
   });
 
-  $(".content__item i").click(function() {
-    $(this).parents('li').toggleClass("show");
+  // $(".content__item i").click(function() {
+    // $(this).parents('li').toggleClass("show");
+    $(".content__item").click(function() {
+    $(this).toggleClass("show");
   });
 
   $(".mapPopUp .list li").click(function() {
@@ -1113,7 +1115,7 @@ $(document).ready(function() {
   // });
   $('.customScrollTabs .prev').remove();
   $('.customScrollTabs .next').remove();
-  
+
   $('.customScrollTabs .prev').click(function() {
     $(this).parents('.customScrollTabs').find('.next').show();
     // var prevEl = $(this).parents('.customScrollTabs').find('.thisPrev');
