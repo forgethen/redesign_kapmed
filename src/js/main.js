@@ -1111,7 +1111,9 @@ $(document).ready(function() {
   //     scrollInteria: 250
   //   });
   // });
-
+  $('.customScrollTabs .prev').remove();
+  $('.customScrollTabs .next').remove();
+  
   $('.customScrollTabs .prev').click(function() {
     $(this).parents('.customScrollTabs').find('.next').show();
     // var prevEl = $(this).parents('.customScrollTabs').find('.thisPrev');

@@ -85,7 +85,8 @@ const payload = () => {
     setTimeout(checkReady, 3200)
   }
 
-  const action_buttons = document.querySelectorAll('.activity-action')
+  // const action_buttons = document.querySelectorAll('.activity-action')
+  const action_buttons = document.querySelectorAll('.block .title-block')
   if (action_buttons.length) openActivityHandler(action_buttons)
 
   document.addEventListener('scroll', (e) => {

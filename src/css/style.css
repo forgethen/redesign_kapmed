@@ -4140,7 +4140,11 @@ a.red-link:focus {
   color: #fff;
   font-size: 2rem;
 }
+.formPage .custom-checkbox div {
+  width: auto;
+}
 .formPage .custom-checkbox p {
+  width: 100%;
   font-size: 1.4rem;
   font-weight: normal;
   line-height: 2rem;
@@ -7691,7 +7695,7 @@ form.search > :last-child {
   display: flex;
 }
 .activity-wrap .block {
-  padding: 32px 0;
+  padding: 16px 0;
   border-bottom: 1px solid #c4c4c4;
   width: 100%;
 }
@@ -7701,18 +7705,17 @@ form.search > :last-child {
 .activity-wrap .block.v2.opened {
   border-bottom: 1px solid #c4c4c4;
 }
-.activity-wrap .block.v2.opened .title-block {
-  margin-bottom: 1.6rem;
-}
 .activity-wrap .block:first-child {
   border-top: 1px solid #c4c4c4;
 }
 .activity-wrap .block .title-block {
   font-size: 20px;
   position: relative;
+  padding: 16px 0;
   padding-right: 50px;
   line-height: 2.8rem;
   color: 0;
+  cursor: pointer;
 }
 .activity-wrap .block .desc {
   color: #3a3a3a;
@@ -7734,7 +7737,7 @@ form.search > :last-child {
 .activity-wrap .block .cross {
   position: absolute;
   right: 13px;
-  top: 0;
+  top: 16px;
   cursor: pointer;
 }
 .activity-wrap .block .action-wrap {
@@ -7742,13 +7745,19 @@ form.search > :last-child {
   overflow: hidden;
 }
 .activity-wrap .block.opened .title-block {
-  margin-bottom: 32px;
+  padding-bottom: 32px;
+}
+.activity-wrap .block.opened > :last-child {
+  margin-bottom: 0;
 }
 .activity-wrap .block.opened .action-wrap {
+  margin-bottom: 16px;
   height: auto;
+  overflow: visible;
 }
 .activity-wrap .block.opened .action-wrap-grat {
   padding: 2rem;
+  margin-bottom: 0;
 }
 .activity-wrap .block.opened .cross {
   -webkit-transform: rotate(45deg);
@@ -16981,6 +16990,10 @@ footer ul ul {
 .text-grat:last-child {
   margin-bottom: 0;
 }
+.text-grat-wrap:last-child,
+.action-wrap-grat:last-child {
+  margin-bottom: 0;
+}
 .att-wrap {
   margin-top: 24px;
   padding: 24px;
@@ -17330,9 +17343,6 @@ footer ul ul {
 .clinic-phone {
   color: #b8181c;
   text-decoration: underline;
-}
-.title-block-clinic {
-  margin-bottom: 16px !important;
 }
 .block-clinic:last-child {
   padding-bottom: 0;
@@ -23348,8 +23358,9 @@ footer ul ul {
   right: -1.5rem;
 }
 .customScrollTabs .next:after {
-  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 100%);
+  background: -o-linear-gradient(left, rgb2rema(255, 255, 255, 0) 0%, #fff 100%);
   background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), to(#fff));
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 100%);
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fff 100%);
   right: 100%;
 }
@@ -23386,6 +23397,7 @@ footer ul ul {
   cursor: pointer;
   z-index: 3;
   position: absolute;
+  display: none;
 }
 .customScrollTabs .prev:after,
 .customScrollTabs .next:after {
@@ -23446,6 +23458,7 @@ footer ul ul {
   -webkit-transition: 0.25s ease all;
   -o-transition: 0.25s ease all;
   transition: 0.25s ease all;
+  display: none;
 }
 .customTabs:before {
   position: absolute;
@@ -23464,6 +23477,7 @@ footer ul ul {
   -webkit-transition: 0.25s ease all;
   -o-transition: 0.25s ease all;
   transition: 0.25s ease all;
+  display: none;
 }
 .customTabs .tabs {
   margin-bottom: 0;
@@ -23477,7 +23491,7 @@ footer ul ul {
 }
 .customTabs .tab {
   height: auto;
-  font-size: 2rem;
+  font-size: 1.95rem;
   line-height: normal;
   font-weight: normal;
   margin-bottom: 0;
@@ -23525,6 +23539,12 @@ footer ul ul {
 .customTabs ul > :last-child .tab.active:after {
   width: -webkit-calc(100% - 1.2rem);
   width: calc(100% - 1.2rem);
+}
+@media screen and (max-width: 1023px) {
+  .customTabs:before,
+  .customTabs:after {
+    display: block;
+  }
 }
 @media screen and (max-width: 639px) {
   .customScrollTabs {
