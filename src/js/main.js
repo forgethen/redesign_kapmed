@@ -420,12 +420,25 @@ $(document).ready(function() {
     }
   })
 
-  $(".burger").on("click", function(e) {
-    $('body').toggleClass('menuOpened');
+  $(".burger").on("click", function() {
+    if($(this).hasClass('active')) {
+      var scrollPos = localStorage.getItem('scrollPos');
+      $('body').removeClass('menuOpened');
+      setTimeout(function () {
+        $(window).scrollTop(scrollPos);
+      }, 10);
+    } else {
+      let scrollPos = $(window).scrollTop();
+      localStorage.setItem('scrollPos',scrollPos);
+      $('body').addClass('menuOpened');
+      setTimeout(function () {
+        $(window).scrollTop(scrollPos);
+      }, 10);
+    }
     $(this).toggleClass("active");
     $(".headerMenu.mobile").toggleClass("show");
     $(".mobileBottom").toggleClass("show");
-    e.stopPropagation();
+    // e.stopPropagation();
   });
 
   $(".topSlider .slider").slick({

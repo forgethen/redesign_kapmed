@@ -68,7 +68,7 @@ const menuHover = (elm) => {
 }
 
 const menuUnHover = () => {
-  const elm = document.querySelector('.headerMenu .hovered')
+  const elm = document.querySelector('.headerMenu.desktop .hovered')
   elm.classList.remove('hovered')
 }
 

@@ -14,8 +14,7 @@ body {
   position: relative;
   font-style: normal;
   font-weight: normal;
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
@@ -28,7 +27,9 @@ body.widgetOpened:before {
   transition: all 0.4s ease-out;
 }
 body.menuOpened {
+  -webkit-overflow-scrolling: touch;
   overflow-y: hidden;
+  position: fixed;
 }
 body:before {
   content: '';
@@ -52,6 +53,7 @@ body .allContent,
 body .formPage {
   height: auto;
   width: 100%;
+  background-color: #fff;
 }
 ::-webkit-input-placeholder {
   color: #939393;
@@ -1794,6 +1796,23 @@ header.static .container.fromHeaderMenu > ul > li {
   header {
     margin-bottom: 0;
   }
+  header.static .container.fromHeaderMenu:before {
+    border-bottom: 1px solid #c4c4c4;
+    content: '';
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100vw;
+    background-color: #fff;
+    top: 0;
+  }
+  header.static .container.fromHeaderMenu:after {
+    content: none;
+  }
   .container.fromHeaderMenu:before {
     border-bottom: 1px solid #c4c4c4;
     content: '';
@@ -1809,16 +1828,7 @@ header.static .container.fromHeaderMenu > ul > li {
     top: 0;
   }
   .container.fromHeaderMenu:after {
-    content: '';
-    position: absolute;
-    border-bottom: 1px solid #c4c4c4;
-    z-index: -1;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    width: 100vw;
-    top: 100%;
+    content: none;
   }
   .headerMenu {
     padding: 3.2rem;
@@ -2108,7 +2118,7 @@ header.static .container.fromHeaderMenu > ul > li {
 .mCS-SubmenuScrollThm.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
   background-color: #b8181c;
 }
-.headerMenu .menu-item a {
+.headerMenu.desktop .menu-item a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2119,15 +2129,15 @@ header.static .container.fromHeaderMenu > ul > li {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.headerMenu .menu-item a .title {
+.headerMenu.desktop .menu-item a .title {
   font-size: 20px;
   margin-bottom: 4px;
 }
-.headerMenu .menu-item a .desc {
+.headerMenu.desktop .menu-item a .desc {
   font-size: 14px;
   color: #939393;
 }
-.headerMenu .menu-item a .data {
+.headerMenu.desktop .menu-item a .data {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2137,17 +2147,17 @@ header.static .container.fromHeaderMenu > ul > li {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.headerMenu .menu-item a .img-wrap {
+.headerMenu.desktop .menu-item a .img-wrap {
   width: 36px;
 }
-.headerMenu .menu-item a .data-file {
+.headerMenu.desktop .menu-item a .data-file {
   width: -webkit-calc(100% - 56px);
   width: calc(100% - 56px);
 }
-.headerMenu .menu-item a .data-file .title {
+.headerMenu.desktop .menu-item a .data-file .title {
   font-size: 16px;
 }
-.headerMenu .menu-item.tablet {
+.headerMenu.desktop .menu-item.tablet {
   -ms-grid-row: 1;
       grid-row-start: 1;
   -ms-grid-column: 3;
@@ -2162,7 +2172,7 @@ header.static .container.fromHeaderMenu > ul > li {
   position: relative;
   padding: 32px 30px;
 }
-.headerMenu .menu-item.tablet a {
+.headerMenu.desktop .menu-item.tablet a {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2170,18 +2180,18 @@ header.static .container.fromHeaderMenu > ul > li {
   left: 0;
   padding: 32px 30px;
 }
-.headerMenu .menu-item.tablet .data {
+.headerMenu.desktop .menu-item.tablet .data {
   height: 100%;
 }
-.headerMenu .menu-item.tablet .title {
+.headerMenu.desktop .menu-item.tablet .title {
   font-size: 20px;
 }
-.headerMenu .menu-item.tablet .img-bg {
+.headerMenu.desktop .menu-item.tablet .img-bg {
   position: absolute;
   right: 0;
   top: 50px;
 }
-.headerMenu .menu-item.tablet .info {
+.headerMenu.desktop .menu-item.tablet .info {
   width: 60%;
   z-index: 2;
   position: relative;
@@ -2200,20 +2210,20 @@ header.static .container.fromHeaderMenu > ul > li {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.headerMenu .menu-item.tablet .info .desc,
-.headerMenu .menu-item.tablet .info .pa {
+.headerMenu.desktop .menu-item.tablet .info .desc,
+.headerMenu.desktop .menu-item.tablet .info .pa {
   font-size: 16px;
   color: #000;
   line-height: 24px;
 }
-.headerMenu .menu-item.tablet .info .desc {
+.headerMenu.desktop .menu-item.tablet .info .desc {
   margin-bottom: 8px;
 }
-.headerMenu .menu-item.tablet .info .more {
+.headerMenu.desktop .menu-item.tablet .info .more {
   color: #b8181c;
   font-size: 14px;
 }
-.headerMenu .menu-item.tablet2 {
+.headerMenu.desktop .menu-item.tablet2 {
   -ms-grid-row: 1;
       grid-row-start: 1;
   -ms-grid-column: 3;
@@ -2228,7 +2238,7 @@ header.static .container.fromHeaderMenu > ul > li {
   position: relative;
   padding: 32px 30px;
 }
-.headerMenu .menu-item.tablet2 a {
+.headerMenu.desktop .menu-item.tablet2 a {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2236,18 +2246,18 @@ header.static .container.fromHeaderMenu > ul > li {
   left: 0;
   padding: 32px 30px;
 }
-.headerMenu .menu-item.tablet2 .data {
+.headerMenu.desktop .menu-item.tablet2 .data {
   height: 100%;
 }
-.headerMenu .menu-item.tablet2 .title {
+.headerMenu.desktop .menu-item.tablet2 .title {
   font-size: 20px;
 }
-.headerMenu .menu-item.tablet2 .img-bg {
+.headerMenu.desktop .menu-item.tablet2 .img-bg {
   position: absolute;
   right: 0;
   top: 50px;
 }
-.headerMenu .menu-item.tablet2 .info {
+.headerMenu.desktop .menu-item.tablet2 .info {
   width: 60%;
   z-index: 2;
   position: relative;
@@ -2266,24 +2276,24 @@ header.static .container.fromHeaderMenu > ul > li {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.headerMenu .menu-item.tablet2 .info .desc,
-.headerMenu .menu-item.tablet2 .info .pa {
+.headerMenu.desktop .menu-item.tablet2 .info .desc,
+.headerMenu.desktop .menu-item.tablet2 .info .pa {
   font-size: 16px;
   color: #000;
   line-height: 24px;
 }
-.headerMenu .menu-item.tablet2 .info .desc {
+.headerMenu.desktop .menu-item.tablet2 .info .desc {
   margin-bottom: 8px;
 }
-.headerMenu .menu-item.tablet2 .info .more {
+.headerMenu.desktop .menu-item.tablet2 .info .more {
   color: #b8181c;
   font-size: 14px;
 }
-.headerMenu .menu-item .t {
+.headerMenu.desktop .menu-item .t {
   font-size: 16px;
   margin-bottom: 8px;
 }
-.headerMenu .menu-item .d {
+.headerMenu.desktop .menu-item .d {
   font-size: 18px;
   color: #b8181c;
   margin-bottom: 12px;
