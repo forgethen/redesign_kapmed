@@ -259,6 +259,7 @@ $(document).ready(function() {
     $(".headerMenu .submenu").each(function() {
       if ($(window).width() >= 1081) {
         $('.fromHeaderMenu').mCustomScrollbar("destroy");
+        $('.fromHeaderMenu .submenu').mCustomScrollbar("destroy");
         setTimeout(function() {
           var elWidth = $('.headerMenu').outerWidth();
           $('.headerMenu .submenu .container').css('max-width', elWidth + 'px');
@@ -268,8 +269,13 @@ $(document).ready(function() {
         var tph = $('header .top-container').height();
         var wh = $(window).height();
         $('.fromHeaderMenu').css('max-height', wh - tph + 'px');
-        $('.fromHeaderMenu').mCustomScrollbar({
+        $('.fromHeaderMenu, .fromHeaderMenu .submenu').mCustomScrollbar({
           theme: "SubmenuScrollThm",
+        });
+        $('.fromHeaderMenu .submenu').each(function () {
+          if ($(window).width() <= 639) {
+            $(this).mCustomScrollbar("destroy");
+          }
         });
       }
     });
@@ -919,6 +925,7 @@ $(document).ready(function() {
 
         if ($(this).parents('.customScrollTabs').hasClass('Default')) {
           $(this).parents('.customScrollTabs').addClass('default');
+          $(this).parents('.customScrollTabs').addClass('start');
         }
 
         $(this).parents('.customScrollTabs').addClass('show default');

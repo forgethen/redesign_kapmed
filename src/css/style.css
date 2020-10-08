@@ -1857,8 +1857,8 @@ header.static .container.fromHeaderMenu > ul > li {
   }
   .headerMenu li.active .submenu {
     opacity: 1;
-    height: -webkit-calc(100% - 9.2rem);
-    height: calc(100% - 9.2rem);
+    height: -webkit-calc(100% - 6.4rem);
+    height: calc(100% - 6.4rem);
     padding: 5px 0;
     visibility: visible;
   }
@@ -1872,10 +1872,11 @@ header.static .container.fromHeaderMenu > ul > li {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
-    top: 4.2rem;
+    top: 3.2rem;
     border-bottom: none;
     -webkit-box-shadow: none;
             box-shadow: none;
+    overflow: hidden;
   }
   .headerMenu li .submenu ul {
     -ms-grid-columns: 1fr 1.6rem 1fr;
@@ -5604,13 +5605,13 @@ form.search > :last-child {
 }
 .mapPopUp .CloseFancybox,
 .mapPopUp button[data-fancybox-close] {
-  top: 2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  top: 1.6rem;
+  right: 1.2rem;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  right: 2rem;
   padding: 0;
-  width: 2.4rem;
-  height: 2.4rem;
 }
 .mapPopUp .CloseFancybox:hover,
 .mapPopUp button[data-fancybox-close]:hover {
@@ -5988,10 +5989,10 @@ form.search > :last-child {
     height: 100%;
   }
   .mapPopUp .CloseFancybox {
-    width: 2.4rem;
-    height: 2.4rem;
-    top: 2rem;
-    right: 2rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    top: 1.6rem;
+    right: 1.2rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7608,6 +7609,7 @@ form.search > :last-child {
   cursor: pointer;
 }
 .activity-wrap .activity.docs:hover {
+  color: inherit;
   -webkit-filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
           filter: drop-shadow(0px 6px 16px rgba(0,0,0,0.12));
 }
@@ -11440,7 +11442,7 @@ footer ul ul {
 .topSlider .slider:before {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   height: 100%;
   width: -webkit-calc(100% - 4.8rem);
   width: calc(100% - 4.8rem);
@@ -19120,10 +19122,10 @@ footer ul ul {
   }
   .citySelect .CloseFancybox,
   .citySelect button[data-fancybox-close] {
-    width: 2.4rem;
-    height: 2.4rem;
-    top: 2rem;
-    right: 2rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    top: 1.6rem;
+    right: 1.2rem;
   }
   .cities > :nth-child(2) .no-results,
   .cities > :nth-child(3) .no-results {
@@ -19150,8 +19152,9 @@ footer ul ul {
 }
 @media screen and (max-width: 639px) {
   .citySelect {
-    height: -webkit-calc(100vh - 4.8rem);
-    height: calc(100vh - 4.8rem);
+    height: 100%;
+    -webkit-border-radius: 0;
+            border-radius: 0;
     width: 100%;
     padding: 3.2rem 2rem 2rem;
   }
@@ -21646,6 +21649,9 @@ footer ul ul {
   line-height: 2.4rem;
   margin-bottom: 2.4rem;
   position: relative;
+}
+.feedbackForm label.error input {
+  border: 0.1rem solid #b8181c;
 }
 .feedbackForm label .title {
   color: #3a3a3a;
