@@ -101,7 +101,9 @@ body .formPage {
   z-index: 3;
   right: 2rem;
   cursor: pointer;
-  display: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
 }
 .to-top i {
   display: -webkit-box;
@@ -128,6 +130,10 @@ body .formPage {
 }
 .to-top:active {
   opacity: 0.75;
+}
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (min-width: 80rem) {
   .row.row-responsive .column.column-sm-75 {
@@ -16080,7 +16086,7 @@ footer ul ul {
 }
 .help-article {
   padding: 40px;
-  margin-bottom: 31px;
+  margin: 30px 0;
   border: 1px solid #e6e6e6;
   -webkit-border-radius: 1rem;
           border-radius: 1rem;

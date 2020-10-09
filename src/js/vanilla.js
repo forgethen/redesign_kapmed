@@ -47,6 +47,7 @@ const checkReady = () => {
 
 const staticHeader = () => {
   const header = document.querySelector('header')
+  const toTop = document.querySelector('a.to-top')
   if (!isNaN(header)) return false
   const topHeight = header.querySelector('.top-container').offsetHeight
   const scrollTop = window.scrollY
@@ -55,11 +56,13 @@ const staticHeader = () => {
     header.classList.add('static')
     header.style.top = `-${topHeight}px`
     cityPopup.style.top = header.offsetHeight + 'px';
+    toTop.classList.add('show')
   }
   else {
     cityPopup.style.top = '';
     header.classList.remove('static')
     header.style.top = `0px`
+    toTop.classList.remove('show')
   }
 }
 
