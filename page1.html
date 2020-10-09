@@ -758,7 +758,7 @@
                 </div>
               </div>
             </li>
-            <li class="hovered"><a href="javascript:;"><span>О компании</span></a>
+            <li onmouseover="menuHover(this)" onmouseout="menuUnHover()"><a href="javascript:;"><span>О компании</span></a>
               <div class="submenu">
                 <div class="container">
                   <div class="close">
@@ -1266,4 +1266,9 @@
       </footer>
     </div>
   </body>
+  <script>
+    var ww = $(window).width();
+    alert(ww);
+      
+  </script>
 </html>
