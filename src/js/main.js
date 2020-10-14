@@ -174,9 +174,13 @@ $(document).ready(function() {
     $(".dropdown ul").removeClass("show");
   });
 
-  $(".doc .see").click(function() {
+  $(".doc .see").click(function(e) {
     $(this).toggleClass("active");
     $(this).parents(".doc").find(".answer").toggleClass("show");
+    e.preventDefault();
+    e.stopPropagation(); //На всякий случай
+    e.stopImmediatePropagation(); //Тоже на всякий случай
+    return false; // И чтоб точно не сработало :)
   });
 
   function dropdownClose() {
@@ -260,8 +264,13 @@ $(document).ready(function() {
       contenListUl()
     }
 
-
   });
+
+  function hhh() {
+    var tph = $('header .top-container').outerHeight();
+    var wh = $(window).height();
+    $('.fromHeaderMenu').css('max-height', wh - tph + 'px');
+  }
 
   function fromResize() {
     $(".mapBlock .mapSection .mapList").each(function() {
@@ -292,18 +301,22 @@ $(document).ready(function() {
       if ($(window).width() >= 1081) {
         $('.fromHeaderMenu').mCustomScrollbar("destroy");
         $('.fromHeaderMenu .submenu').mCustomScrollbar("destroy");
+        hhh();
         setTimeout(function() {
           var elWidth = $('.headerMenu').outerWidth();
           $('.headerMenu .submenu .container').css('max-width', elWidth + 'px');
         }, 200);
       } else {
         $(this).find('.container').css('max-width', '100%');
-        var tph = $('header .top-container').height();
-        var wh = $(window).height();
-        $('.fromHeaderMenu').css('max-height', wh - tph + 'px');
+        $('.burger').click();
         $('.fromHeaderMenu, .fromHeaderMenu .submenu').mCustomScrollbar({
           theme: "SubmenuScrollThm",
+          mouseWheel: {
+            scrollAmount: 60,
+            normalizeDelta: true
+          }
         });
+        $('.burger').click();
         $('.fromHeaderMenu .submenu').each(function() {
           if ($(window).width() <= 639) {
             $(this).mCustomScrollbar("destroy");
@@ -459,13 +472,16 @@ $(document).ready(function() {
   })
 
   $(".burger").on("click", function() {
+
     if ($(this).hasClass('active')) {
+      $('header .top-container div:eq(0)').removeClass('hide')
       var scrollPos = localStorage.getItem('scrollPos');
       $('body').removeClass('menuOpened');
       setTimeout(function() {
         $(window).scrollTop(scrollPos);
       }, 10);
     } else {
+      $('header .top-container div:eq(0)').addClass('hide')
       let scrollPos = $(window).scrollTop();
       localStorage.setItem('scrollPos', scrollPos);
       $('body').addClass('menuOpened');
@@ -473,10 +489,10 @@ $(document).ready(function() {
         $(window).scrollTop(scrollPos);
       }, 10);
     }
+    hhh();
     $(this).toggleClass("active");
     $(".headerMenu.mobile").toggleClass("show");
     $(".mobileBottom").toggleClass("show");
-    // e.stopPropagation();
   });
 
   $(".topSlider .slider").slick({
@@ -485,8 +501,8 @@ $(document).ready(function() {
     centerPadding: "0",
     cssEase: "ease-in-out",
     draggable: true,
-    autoplay: false,
-    autoplayspeed: 2500,
+    autoplay: true,
+    autoplayspeed: 5000,
     slidesToShow: 1,
     slideToScroll: 1,
     speed: 875,
@@ -508,8 +524,8 @@ $(document).ready(function() {
     centerPadding: "0",
     cssEase: "ease-in-out",
     draggable: true,
-    autoplay: false,
-    autoplayspeed: 2500,
+    autoplay: true,
+    autoplayspeed: 5000,
     slidesToShow: 1,
     slideToScroll: 1,
     speed: 250,
@@ -864,7 +880,9 @@ $(document).ready(function() {
             },
             mouseWheel: {
               enable: true,
-              axis: "y"
+              axis: "y",
+              scrollAmount: 60,
+              normalizeDelta: true
             },
             scrollButtons: {
               enable: true,
@@ -978,7 +996,9 @@ $(document).ready(function() {
             },
             mouseWheel: {
               enable: true,
-              axis: "y"
+              axis: "y",
+              scrollAmount: 60,
+              normalizeDelta: true
             },
             scrollButtons: {
               enable: true,
@@ -1047,7 +1067,9 @@ $(document).ready(function() {
             },
             mouseWheel: {
               enable: true,
-              axis: "y"
+              axis: "y",
+              scrollAmount: 60,
+              normalizeDelta: true
             },
             scrollButtons: {
               enable: true,
@@ -1139,7 +1161,7 @@ $(document).ready(function() {
     // console.log(elTitle);
     $(this).parents('.customScrollTabs').find('.tabActive .title').html("" + elTitle + "");
     $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", this, {
-      scrollInteria: 250
+      scrollInteria: 120
     });
     $(this).parents('.customScrollTabs').find('li').removeClass('thisEl');
     $(this).parents('.customScrollTabs').find('li').removeClass('thisNext');
@@ -1173,7 +1195,7 @@ $(document).ready(function() {
     $(this).parents('.customScrollTabs').find('.next').show();
     // var prevEl = $(this).parents('.customScrollTabs').find('.thisPrev');
     $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", $(this).parents('.customScrollTabs').find('.thisPrev'), {
-      scrollInteria: 250
+      scrollInteria: 120
     });
 
     $(this).parents('.customScrollTabs').find('.thisPrev').addClass('thisPos');
@@ -1193,7 +1215,7 @@ $(document).ready(function() {
     $(this).parents('.customScrollTabs').find('.prev').show();
     // var nextEl = $(this).parents('.customScrollTabs').find('.thisNext');
     $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", $(this).parents('.customScrollTabs').find('.thisNext'), {
-      scrollInteria: 250
+      scrollInteria: 120
     });
     $(this).parents('.customScrollTabs').find('.thisNext').addClass('thisPos');
 
