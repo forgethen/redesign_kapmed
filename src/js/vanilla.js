@@ -49,30 +49,34 @@ const staticHeader = () => {
   const header = document.querySelector('header')
   const toTop = document.querySelector('a.to-top')
   if (!isNaN(header)) return false
-  const topHeight = header.querySelector('.top-container').offsetHeight
+  const topHeight = header.offsetHeight
+  const indent = header.querySelector('.top-container').offsetHeight
   const scrollTop = window.scrollY
   const cityPopup = document.querySelector('#citySelectPopUp')
-  if (scrollTop >= topHeight) {
-    header.classList.add('static')
-    header.style.top = `-${topHeight}px`
+  if (scrollTop >= indent) {
+    header.classList.add('static');
+    // header.style.top = `-${topHeight}px`;
+    // header.style.transition = '.5s ease-in-out';
+    header.style.top = `-${indent}px`;
     cityPopup.style.top = header.offsetHeight + 'px';
     toTop.classList.add('show')
   }
   else {
     cityPopup.style.top = '';
-    header.classList.remove('static')
-    header.style.top = `0px`
+    header.classList.remove('static');
+    // header.style.transition = 'none';
+    header.style.top = `0`;
     toTop.classList.remove('show')
   }
 }
 
 const menuHover = (elm) => {
-  elm.classList.add('hovered')
+    elm.classList.add('hovered')
 }
 
 const menuUnHover = () => {
   const elm = document.querySelector('.headerMenu.desktop .hovered')
-  elm.classList.remove('hovered')
+    elm.classList.remove('hovered')
 }
 
 const payload = () => {

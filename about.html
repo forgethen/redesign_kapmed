@@ -1148,6 +1148,34 @@
                   </div>
                 </div>
                 <div class="activity fullwidth">
+                  <div class="img-wrap"><img src="src/img/static/activity-01.svg"></div>
+                  <div class="text">
+                    <div class="title">Работаем с 1994 года</div>
+                    <div class="desc">ООО «Капитал МС» накоплен большой опыт успешной работы в сфере ОМС. Мы осуществляем свою деятельность начиная с 1994 года — тогда еще в структуре СК РОСГОССТРАХ, с 2002 года уже как отдельная компания. Обратите внимание: мы переименовались.</div>
+                  </div>
+                </div>
+                <div class="activity fullwidth">
+                  <div class="img-wrap"><img src="src/img/static/activity-02.svg"></div>
+                  <div class="text">
+                    <div class="title">Более 22 млн. застрахованных</div>
+                    <div class="desc">Каждый 7-й гражданин России доверяет нам защиту своих законных прав и интересов в сфере ОМС. На 01.01.2019 общая численность застрахованных граждан составила – 22 153 240 человек. На 01.05.2020 общая численность застрахованных граждан по ОМС составляет – 22 134 323 человек.</div>
+                  </div>
+                </div>
+                <div class="activity fullwidth">
+                  <div class="img-wrap"><img src="src/img/static/activity-03.svg"></div>
+                  <div class="text">
+                    <div class="title">Более 1000 представительств</div>
+                    <div class="desc">Круглосуточный федеральный и региональные Контакт-центры в каждом регионе нашего присутствия позволят оперативно получить консультативную помощь для решения вопросов получения медицинской помощи любой сложности, а в случае нарушения Ваших прав – зафиксировать жалобу и принять соответствующие меры.</div>
+                  </div>
+                </div>
+                <div class="activity fullwidth">
+                  <div class="img-wrap"><img src="src/img/static/activity-04.svg"></div>
+                  <div class="text">
+                    <div class="title">Работаем в 42 регионах</div>
+                    <div class="desc">Мы работаем с застрахованными лицами на территории 42 субъектов Российской Федерации от Калининграда до Хабаровска. Открыто более 1000 страховых представительств нашей Компании.</div>
+                  </div>
+                </div>
+                <div class="activity fullwidth">
                   <div class="img-wrap"><img src="src/img/static/activity-05.svg"></div>
                   <div class="text">
                     <div class="title">Более 1750 врачей-экспертов</div>
@@ -1277,6 +1305,36 @@
                       name: 'Название. Рыбный текст. Небходимо заменить.',
                       href: '#',
                       image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
+                    },
+                    {
+                      date: 'г. Санкт-Петербург, 2018',
+                      name: 'Название. Рыбный текст. Небходимо заменить.',
+                      href: '#',
+                      image: 'https://bnetcmsus-a.akamaihd.net/cms/template_resource/GWVKTO8D3V0F1579050179253.jpg'
                     }
                   ]
                   let root1 = '#vue-root1'
@@ -1298,17 +1356,19 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider-wrap" :style="{width: `${content_container}px`}">
-                    <div class="slider-slides thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
-                      <div class="slide-slides reviewContainer" v-for="item, idx in slides" :style="{width: `${width}px`}">
-                        <div class="review">
-                          <h5> <span class="name">{{item.name}}</span>,&nbsp;<span class="yars">{{item.year}}</span>&nbsp;лет</h5>
-                          <p class="location">{{item.location}}</p>
-                          <div class="stars static" :class="item.class"></div>
-                          <p class="text">{{item.text}}</p><a class="red" href="javascript:;">
-                            <p>Показать отзыв полностью</p>
-                            <p>Свернуть</p></a>
-                          <p class="postDate">{{item.date}}</p>
+                  <div style="position:relative;left:-1.5rem;">
+                    <div class="slider-wrap" :style="{width: `${content_container}px`}">
+                      <div class="slider-slides thanks" :style="{width: `${getSize()}px`, transform: `translateX(${getTranslate()}px)`}">
+                        <div class="slide-slides reviewContainer" v-for="item, idx in slides" :style="{width: `${width}px`}">
+                          <div class="review">
+                            <h5> <span class="name">{{item.name}}</span>,&nbsp;<span class="yars">{{item.year}}</span>&nbsp;лет</h5>
+                            <p class="location">{{item.location}}</p>
+                            <div class="stars static" :class="item.class"></div>
+                            <p class="text">{{item.text}}</p><a class="red" href="javascript:;">
+                              <p>Показать отзыв полностью</p>
+                              <p>Свернуть</p></a>
+                            <p class="postDate">{{item.date}}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1511,7 +1571,7 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer><a class="to-top"><i class="ri-arrow-up-s-line"></i></a>
       <div class="mapPopUp" id="mapPopUp">
         <div class="container">
           <section class="page-title">

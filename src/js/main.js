@@ -307,6 +307,7 @@ $(document).ready(function() {
 
     $(".headerMenu .submenu").each(function() {
       if ($(window).width() >= 1081) {
+        $(this).find('.container').removeAttr('style')
         $('.fromHeaderMenu').mCustomScrollbar("destroy");
         $('.fromHeaderMenu .submenu').mCustomScrollbar("destroy");
         hhh();
