@@ -55,6 +55,9 @@ body .formPage {
   width: 100%;
   background-color: #fff;
 }
+body .allContent {
+  position: relative;
+}
 ::-webkit-input-placeholder {
   color: #939393;
   font-size: 1.62rem;
@@ -1810,12 +1813,12 @@ header.static .container.fromHeaderMenu > ul > li {
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3.2rem 1fr 3.2rem 1fr 3.2rem 1fr;
+  -ms-grid-columns: 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
   grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 3.2rem;
-  grid-row-gap: 3.2rem;
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
   width: 100%;
   font-size: 100%;
   margin: 0;
@@ -11041,6 +11044,7 @@ footer {
   background-color: #f5f5f5;
   padding: 7.2rem 0;
   position: relative;
+  z-index: 1;
   margin-top: 3.2rem;
 }
 footer .top__container {
@@ -12517,8 +12521,8 @@ footer ul ul {
 .wrapper-directors-items.v2 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3rem 1fr;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: minmax(28rem, 1fr) 3rem minmax(28rem, 1fr);
+  grid-template-columns: minmax(28rem, 1fr) minmax(28rem, 1fr);
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
   grid-row-gap: 0;
@@ -14593,16 +14597,22 @@ footer ul ul {
   }
 }
 .reviewContainer {
-  padding: 0.4rem 1rem 1rem 1rem;
-}
-.reviewContainer:hover {
-  -webkit-filter: drop-shadow(0px 3px 9px rgba(0,0,0,0.12));
-          filter: drop-shadow(0px 3px 9px rgba(0,0,0,0.12));
+  padding: 1.5rem;
 }
 .reviewsSection__sliderBottom,
 .thanks__sliderBottom {
   display: none;
   padding: 3.2rem 0;
+}
+.reviewsSection .reviewContainer {
+  cursor: pointer;
+}
+.reviewsSection .sectionTitle {
+  margin-bottom: 1.6rem;
+}
+.reviewsSection .slider-wrap {
+  left: -1.5rem;
+  position: relative;
 }
 .videos__sliderBottom {
   display: none;
@@ -24182,6 +24192,19 @@ footer ul ul {
     font-size: 32px !important;
     line-height: 40px !important;
   }
+}
+.linear:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), to(#fff));
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 100%);
+  z-index: 1;
 }
 #app_region_mobile a:before {
   content: '';
