@@ -246,7 +246,7 @@ $(document).ready(function() {
           var elMath = Math.round(elh)
         } else {
           var elN = (((h1 - h2 - h3) / 2) / 10);
-          var elh = ((((h1 - h2 - h3) + h2 - elN ) / 2) / 10);
+          var elh = ((((h1 - h2 - h3) + h2 - elN) / 2) / 10);
           var elMath = Math.round(elh)
         }
       } else {
@@ -274,9 +274,15 @@ $(document).ready(function() {
   // });
 
   function hhh() {
-    var tph = $('header .top-container').outerHeight();
-    var wh = $(window).height();
-    $('.fromHeaderMenu').css('max-height', wh - tph + 'px');
+    if ($(window).width() <= 639) {
+      var tph = $('header .top-container').outerHeight();
+      var wh = $(window).height();
+      $('.fromHeaderMenu').css('min-height', wh - tph + 'px');
+      $('.fromHeaderMenu').css('height', wh - tph + 'px');
+      $('.fromHeaderMenu').css('max-height', wh - tph + 'px');
+    } else (
+      $('.fromHeaderMenu').removeAttr('style')
+    )
   }
 
   function fromResize() {
@@ -305,12 +311,61 @@ $(document).ready(function() {
 
     contenListUl();
 
+    // $(".headerMenu .submenu").each(function() {
+    //   if ($(window).width() >= 1081) {
+    //     $(this).find('.container').removeAttr('style')
+    //     $('.fromHeaderMenu').mCustomScrollbar("destroy");
+    //     $('.fromHeaderMenu .headerMenu.mobile').mCustomScrollbar("destroy");
+    //     $('.fromHeaderMenu .submenu').mCustomScrollbar("destroy");
+    //     // setTimeout(function() {
+    //     //   var elWidth = $('.headerMenu').outerWidth();
+    //     //   $('.headerMenu .submenu .container').css('max-width', elWidth + 'px');
+    //     // }, 200);
+    //   } else if ($(window).width() <= 639) {
+    //
+    //     $('.fromHeaderMenu').each(function() {
+    //       $(this).mCustomScrollbar("destroy");
+    //     });
+    //
+    //     $('.burger').click();
+    //
+    //     $('.fromHeaderMenu .submenu, .fromHeaderMenu .headerMenu.mobile').mCustomScrollbar({
+    //       theme: "SubmenuScrollThm",
+    //       mouseWheel: {
+    //         scrollAmount: 60,
+    //         normalizeDelta: true
+    //       }
+    //     });
+    //
+    //     $('.burger').click();
+    //
+    //   } else {
+    //
+    //     $(this).find('.container').css('max-width', '100%');
+    //     $('.fromHeaderMenu .headerMenu.mobile').mCustomScrollbar("destroy");
+    //
+    //     $('.burger').click();
+    //
+    //     $('.fromHeaderMenu, .fromHeaderMenu .submenu').mCustomScrollbar({
+    //       theme: "SubmenuScrollThm",
+    //       mouseWheel: {
+    //         scrollAmount: 60,
+    //         normalizeDelta: true
+    //       }
+    //     });
+    //
+    //     $('.burger').click();
+    //
+    //   }
+    //
+    // });
+
     $(".headerMenu .submenu").each(function() {
+
       if ($(window).width() >= 1081) {
         $(this).find('.container').removeAttr('style')
         $('.fromHeaderMenu').mCustomScrollbar("destroy");
         $('.fromHeaderMenu .submenu').mCustomScrollbar("destroy");
-        hhh();
         // setTimeout(function() {
         //   var elWidth = $('.headerMenu').outerWidth();
         //   $('.headerMenu .submenu .container').css('max-width', elWidth + 'px');
@@ -332,6 +387,7 @@ $(document).ready(function() {
           }
         });
       }
+      // hhh();
     });
 
     $(".headerMenu.v2").each(function() {
@@ -470,7 +526,7 @@ $(document).ready(function() {
     e.stopPropagation();
   });
 
-  $('.headerMenu.mobile > li').click(function(e) {
+  $('.headerMenu.mobile li').click(function(e) {
     if ($(this).hasClass('active')) {
       $(this).removeClass('active');
       e.stopPropagation();
@@ -478,10 +534,10 @@ $(document).ready(function() {
       $('.headerMenu.mobile li').removeClass('active')
       $(this).addClass('active');
     }
+    hhh();
   })
 
   $(".burger").on("click", function() {
-
     if ($(this).hasClass('active')) {
       $('header .top-container div:eq(0)').removeClass('hide');
       var scrollPos = localStorage.getItem('scrollPos');
@@ -489,6 +545,7 @@ $(document).ready(function() {
       setTimeout(function() {
         $(window).scrollTop(scrollPos);
       }, 10);
+      $('.fromHeaderMenu').removeAttr('style');
     } else {
       $('header .top-container div:eq(0)').addClass('hide');
       let scrollPos = $(window).scrollTop();
@@ -869,206 +926,88 @@ $(document).ready(function() {
     $(this).find('span').text('Ссылка скопирована')
   })
 
+  $('.customScrollTabs .customTabs').each(function() {
+    if ($(this).parents('.customScrollTabs').hasClass('standart')) {
+      $(this).parents('.customScrollTabs').addClass('default')
+    } else {
+      $(this).parents('.customScrollTabs').addClass('custom')
+    }
+  });
+
+  $('.customScrollTabs.standart .customTabs').mCustomScrollbar({
+    theme: "scrollTabsThm",
+    axis: "x",
+    contentTouchScroll: true,
+    scrollButtons: {
+      enable: true
+    },
+    mouseWheel: {
+      enable: true,
+      axis: "y",
+      scrollAmount: 60,
+      normalizeDelta: true
+    },
+    scrollButtons: {
+      enable: true,
+      scrollType: "stepless"
+    },
+    advanced: {
+      autoScrollOnFocus: false,
+      updateOnContentResize: true,
+      updateOnBrowserResize: true,
+    },
+
+    callbacks: {
+      whileScrolling: function() {
+        $(this).parents('.customScrollTabs').find('.next, .prev').removeClass('hide');
+        $(this).parents('.customScrollTabs').removeClass('start');
+        $(this).parents('.customScrollTabs').removeClass('finish');
+      },
+      onTotalScroll: function() {
+        $(this).parents('.customScrollTabs').find('.next').addClass('hide');
+        $(this).parents('.customScrollTabs').addClass('finish');
+        $(this).parents('.customScrollTabs').removeClass('start')
+      },
+      onTotalScrollBack: function() {
+        $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
+        $(this).parents('.customScrollTabs').removeClass('finish');
+        $(this).parents('.customScrollTabs').addClass('start')
+      },
+      onOverflowX: function() {
+        $(this).mCustomScrollbar("scrollTo", '0%');
+        $(this).parents('.customScrollTabs').removeClass('hideArrow');
+        $(this).parents('.customScrollTabs').addClass('showShadow');
+        $(this).parents('.customScrollTabs').addClass('start')
+        $(this).parents('.customScrollTabs').addClass('showArrow');
+        $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
+        $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
+      },
+      onOverflowXNone: function() {
+        $(this).mCustomScrollbar("scrollTo", '0%');
+        $(this).parents('.customScrollTabs').removeClass('finish');
+        $(this).parents('.customScrollTabs').addClass('start');
+        $(this).parents('.customScrollTabs').addClass('hideArrow');
+        $(this).parents('.customScrollTabs').removeClass('showShadow');
+        $(this).parents('.customScrollTabs').removeClass('showArrow');
+        $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
+      },
+    },
+  });
+
   function customTabsIn() {
 
-    tabsDestroy();
+    $('.customScrollTabs.custom .customTabs').each(function() {
+      var elength = $(this).find('li').length;
 
-    $('.customScrollTabs').each(function() {
-
-      if ($(window).width() >= 640) {
-
-        $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
-
-        setTimeout(function() {
-
-          $('.customScrollTabs .customTabs').mCustomScrollbar({
-            theme: "scrollTabsThm",
-            axis: "x",
-            contentTouchScroll: true,
-            scrollButtons: {
-              enable: true
-            },
-            mouseWheel: {
-              enable: true,
-              axis: "y",
-              scrollAmount: 60,
-              normalizeDelta: true
-            },
-            scrollButtons: {
-              enable: true,
-              scrollType: "stepless"
-            },
-            advanced: {
-              autoScrollOnFocus: false,
-              updateOnContentResize: true,
-              updateOnBrowserResize: true,
-            },
-
-            callbacks: {
-              whileScrolling: function() {
-                $(this).parents('.customScrollTabs').find('.next, .prev').removeClass('hide');
-                $(this).parents('.customScrollTabs').removeClass('start');
-                $(this).parents('.customScrollTabs').removeClass('finish');
-              },
-              onTotalScroll: function() {
-                $(this).parents('.customScrollTabs').find('.next').addClass('hide');
-                $(this).parents('.customScrollTabs').addClass('finish');
-                $(this).parents('.customScrollTabs').removeClass('start')
-              },
-              onTotalScrollBack: function() {
-                $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
-                $(this).parents('.customScrollTabs').removeClass('finish');
-                $(this).parents('.customScrollTabs').addClass('start')
-              },
-              onOverflowX: function() {
-                $(this).mCustomScrollbar("scrollTo", '0%');
-                $(this).parents('.customScrollTabs').removeClass('hideArrow');
-                // $(this).parents('.customScrollTabs').addClass('showShadow');
-                $(this).parents('.customScrollTabs').addClass('start')
-                $(this).parents('.customScrollTabs').addClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
-                $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
-              },
-              onOverflowXNone: function() {
-                $(this).mCustomScrollbar("scrollTo", '0%');
-                $(this).parents('.customScrollTabs').addClass('hideArrow');
-                // $(this).parents('.customScrollTabs').removeClass('showShadow');
-                $(this).parents('.customScrollTabs').removeClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
-              },
-            },
-          });
-        }, 100);
-
+      if (elength > 2 && $(window).width() <= 640) {
+        $(this).parents('.customScrollTabs.custom').addClass('mVersion');
+        $(this).parents('.customScrollTabs.custom').removeClass('default');
+        $(this).mCustomScrollbar("destroy");
       } else {
-        $('.customScrollTabs .customTabs').mCustomScrollbar("destroy");
-        $('.customScrollTabs .next, .customScrollTabs .prev').addClass('hide');
-        $(this).parents('.customScrollTabs').removeClass('start');
-        $('.customScrollTabs .customTabs').each(function() {
-          var elength = $(this).find('li').length;
-
-          // if (elength > 3) {
-          // $(this).addClass('mVersion');
-          // console.log('mVersion');
-          // } else
-          if (elength < 3) {
-            $(this).addClass('default');
-            $(this).parents('.customScrollTabs').removeClass('start');
-            $(this).parents('.customScrollTabs').removeClass('finish');
-            // console.log('default');
-          }
-        });
-      }
-
-      $('.customScrollTabs.v2 .customTabs').each(function() {
-        $(this).parents('.customScrollTabs').removeClass('start');
-        $(this).parents('.customScrollTabs').addClass('show');
-        $(this).find('.next, .prev').addClass('hide');
-        var th1 = $(this).find("li:eq(0)").height();
-        var th2 = $(this).find("li:eq(1)").height();
-        var elength = $(this).find('li').length;
+        $(this).parents('.customScrollTabs.custom').removeClass('mVersion');
+        $(this).parents('.customScrollTabs.custom').addClass('default');
         setTimeout(function() {
-          $('.customScrollTabs.v2 .customTabs').mCustomScrollbar({
-            theme: "customTabsThm",
-            callbacks: {
-              onCreate: function() {
-                $(this).css("max-height", th1 + th2 + 16 + "px");
-              }
-            }
-          });
-        }, 100);
-
-        $(this).parents('.customScrollTabs').removeClass('show');
-
-      });
-
-      $('.customScrollTabs .customTabs.default').each(function() {
-
-        if ($(this).parents('.customScrollTabs').hasClass('Default')) {
-          $(this).parents('.customScrollTabs').addClass('default');
-          $(this).parents('.customScrollTabs').addClass('start');
-        }
-
-        $(this).parents('.customScrollTabs').addClass('show default');
-        $(this).parents('.customScrollTabs').removeClass('start');
-        // $('.customScrollTabs .next, .customScrollTabs .prev').hide();
-        // var th1 = $(this).find("li:eq(0)").height();
-        // var th2 = $(this).find("li:eq(1)").height();
-        // var elength = $(this).find('li').length;
-        setTimeout(function() {
-
-          $('.customScrollTabs .customTabs.default').mCustomScrollbar({
-            theme: "scrollTabsThm",
-            axis: "x",
-            contentTouchScroll: true,
-            scrollButtons: {
-              enable: true
-            },
-            mouseWheel: {
-              enable: true,
-              axis: "y",
-              scrollAmount: 60,
-              normalizeDelta: true
-            },
-            scrollButtons: {
-              enable: true,
-              scrollType: "stepless"
-            },
-            advanced: {
-              autoScrollOnFocus: false,
-              updateOnContentResize: true,
-              updateOnBrowserResize: true,
-            },
-
-            callbacks: {
-              whileScrolling: function() {
-                $(this).parents('.customScrollTabs').find('.next, .prev').removeClass('hide');
-                $(this).parents('.customScrollTabs').removeClass('start');
-                $(this).parents('.customScrollTabs').removeClass('finish');
-              },
-              onTotalScroll: function() {
-                $(this).parents('.customScrollTabs').find('.next').addClass('hide');
-                $(this).parents('.customScrollTabs').addClass('finish');
-                $(this).parents('.customScrollTabs').removeClass('start')
-              },
-              onTotalScrollBack: function() {
-                $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
-                $(this).parents('.customScrollTabs').removeClass('finish');
-                $(this).parents('.customScrollTabs').addClass('start')
-              },
-              onOverflowX: function() {
-                $(this).mCustomScrollbar("scrollTo", '0%');
-                $(this).parents('.customScrollTabs').removeClass('hideArrow');
-                // $(this).parents('.customScrollTabs').addClass('showShadow');
-                $(this).parents('.customScrollTabs').addClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
-              },
-              onOverflowXNone: function() {
-                $(this).mCustomScrollbar("scrollTo", '0%');
-                $(this).parents('.customScrollTabs').addClass('hideArrow');
-                $(this).parents('.customScrollTabs').removeClass('start');
-                $(this).parents('.customScrollTabs').removeClass('finish')
-                // $(this).parents('.customScrollTabs').removeClass('showShadow');
-                $(this).parents('.customScrollTabs').removeClass('showArrow');
-                $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
-              },
-            },
-          });
-        }, 100);
-        $(this).parents('.customScrollTabs').removeClass('show');
-      })
-
-      $('.customScrollTabs.Default .customTabs').each(function() {
-        $(this).removeClass('mVersion');
-        $(this).parents('.customScrollTabs').addClass('show default');
-        $(this).addClass('start');
-        // $(this).parents('.customScrollTabs').find('.next, .prev').remove();
-        // var th1 = $(this).find("li:eq(0)").height();
-        // var th2 = $(this).find("li:eq(1)").height();
-        // var elength = $(this).find('li').length;
-        setTimeout(function() {
-
-          $('.customScrollTabs.Default .customTabs').mCustomScrollbar({
+          $('.custom.default .customTabs').mCustomScrollbar({
             theme: "scrollTabsThm",
             axis: "x",
             contentTouchScroll: true,
@@ -1111,26 +1050,27 @@ $(document).ready(function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
                 $(this).parents('.customScrollTabs').removeClass('hideArrow');
                 $(this).parents('.customScrollTabs').addClass('showShadow');
+                $(this).parents('.customScrollTabs').addClass('start')
                 $(this).parents('.customScrollTabs').addClass('showArrow');
+                $(this).parents('.customScrollTabs').find('.prev').addClass('hide');
                 $(this).parents('.customScrollTabs').find('.next').removeClass('hide');
               },
               onOverflowXNone: function() {
                 $(this).mCustomScrollbar("scrollTo", '0%');
+                $(this).parents('.customScrollTabs').removeClass('finish');
+                $(this).parents('.customScrollTabs').addClass('start');
                 $(this).parents('.customScrollTabs').addClass('hideArrow');
                 $(this).parents('.customScrollTabs').removeClass('showShadow');
                 $(this).parents('.customScrollTabs').removeClass('showArrow');
-                $(this).parents('.customScrollTabs').removeClass('start');
-                $(this).parents('.customScrollTabs').removeClass('finish');
                 $(this).parents('.customScrollTabs').find('.next, .prev').addClass('hide');
               },
             },
           });
         }, 100);
-        $(this).parents('.customScrollTabs').removeClass('show');
-      })
+      }
     });
+    $('.customScrollTabs .customTabs').mCustomScrollbar("scrollTo", '0%');
   }
-
 
   $('.customScrollTabs .tabActive').each(function() {
     var elTitle = $(this).parents('.customScrollTabs').find('.customTabs .active').text();
@@ -1156,19 +1096,14 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     var tabs = $(this).parents('.customScrollTabs').find('.customTabs.mVersion');
     if (!tabs.is(':visible')) {
-      tabs.slideDown('normal', function() {
-        // console.log('hide');
-      });
+      tabs.slideDown('normal', function() {});
     } else {
-      tabs.slideUp('normal', function() {
-        // console.log('show');
-      });
+      tabs.slideUp('normal', function() {});
     }
   });
 
   $('.customScrollTabs .tab').click(function() {
     var elTitle = $(this).text();
-    // console.log(elTitle);
     $(this).parents('.customScrollTabs').find('.tabActive .title').html("" + elTitle + "");
     $(this).parents('.customScrollTabs').find('.customTabs').mCustomScrollbar("scrollTo", this, {
       scrollInteria: 120
@@ -1198,6 +1133,7 @@ $(document).ready(function() {
   //     scrollInteria: 250
   //   });
   // });
+
   $('.customScrollTabs .prev').remove();
   $('.customScrollTabs .next').remove();
 
@@ -1242,9 +1178,7 @@ $(document).ready(function() {
 
   function tabsDestroy() {
     $('.customScrollTabs').removeClass('show');
-    $('.customScrollTabs').removeClass('default');
     $('.customScrollTabs .customTabs').removeAttr('style');
-    $('.customScrollTabs .customTabs').removeClass('mVersion');
     $('.customScrollTabs .tabActive').removeClass('active');
   }
 
