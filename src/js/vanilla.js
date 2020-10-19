@@ -69,14 +69,13 @@ const staticHeader = () => {
     toTop.classList.remove('show')
   }
 }
-
 const menuHover = (elm) => {
-    elm.classList.add('hovered')
+  elm.classList.add('hovered')
 }
 
 const menuUnHover = () => {
-  const elm = document.querySelector('.headerMenu.desktop .hovered')
-    elm.classList.remove('hovered')
+  const elm = document.querySelector('.hovered')
+  elm.classList.remove('hovered')
 }
 
 const payload = () => {

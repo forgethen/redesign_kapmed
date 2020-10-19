@@ -276,16 +276,21 @@ $(document).ready(function() {
   function hhh() {
     if ($(window).width() <= 639) {
       var tph = $('header .top-container').outerHeight();
-      var wh = $(window).height();
-      $('.fromHeaderMenu').css('min-height', wh - tph + 'px');
-      $('.fromHeaderMenu').css('height', wh - tph + 'px');
-      $('.fromHeaderMenu').css('max-height', wh - tph + 'px');
-    } else (
+      // var wh = Math.max(
+      //     document.body.scrollHeight, document.documentElement.scrollHeight,
+      //     document.body.offsetHeight, document.documentElement.offsetHeight,
+      //     document.body.clientHeight, document.documentElement.clientHeight
+      // );
+      // var wh = $(window).height()
+      // $('.fromHeaderMenu').css('min-height', wh - tph + 'px');
+      $('.fromHeaderMenu').css('height', 'calc(100vh - ' + '' + tph + 'px)');
+      // $('.fromHeaderMenu').css('max-height', wh - tph + 'px');
+    } else(
       $('.fromHeaderMenu').removeAttr('style')
     )
   }
 
-  function fromResize() {
+  // function fromResize() {
 
     $(".mapBlock .mapSection .mapList").each(function() {
       if ($(window).width() >= 640) {
@@ -311,54 +316,54 @@ $(document).ready(function() {
 
     contenListUl();
 
-    // $(".headerMenu .submenu").each(function() {
-    //   if ($(window).width() >= 1081) {
-    //     $(this).find('.container').removeAttr('style')
-    //     $('.fromHeaderMenu').mCustomScrollbar("destroy");
-    //     $('.fromHeaderMenu .headerMenu.mobile').mCustomScrollbar("destroy");
-    //     $('.fromHeaderMenu .submenu').mCustomScrollbar("destroy");
-    //     // setTimeout(function() {
-    //     //   var elWidth = $('.headerMenu').outerWidth();
-    //     //   $('.headerMenu .submenu .container').css('max-width', elWidth + 'px');
-    //     // }, 200);
-    //   } else if ($(window).width() <= 639) {
-    //
-    //     $('.fromHeaderMenu').each(function() {
-    //       $(this).mCustomScrollbar("destroy");
-    //     });
-    //
-    //     $('.burger').click();
-    //
-    //     $('.fromHeaderMenu .submenu, .fromHeaderMenu .headerMenu.mobile').mCustomScrollbar({
-    //       theme: "SubmenuScrollThm",
-    //       mouseWheel: {
-    //         scrollAmount: 60,
-    //         normalizeDelta: true
-    //       }
-    //     });
-    //
-    //     $('.burger').click();
-    //
-    //   } else {
-    //
-    //     $(this).find('.container').css('max-width', '100%');
-    //     $('.fromHeaderMenu .headerMenu.mobile').mCustomScrollbar("destroy");
-    //
-    //     $('.burger').click();
-    //
-    //     $('.fromHeaderMenu, .fromHeaderMenu .submenu').mCustomScrollbar({
-    //       theme: "SubmenuScrollThm",
-    //       mouseWheel: {
-    //         scrollAmount: 60,
-    //         normalizeDelta: true
-    //       }
-    //     });
-    //
-    //     $('.burger').click();
-    //
-    //   }
-    //
-    // });
+    $(".headerMenu .submenu").each(function() {
+      if ($(window).width() >= 1081) {
+        $(this).find('.container').removeAttr('style')
+        $('.fromHeaderMenu').mCustomScrollbar("destroy");
+        $('.fromHeaderMenu .headerMenu.mobile').mCustomScrollbar("destroy");
+        $('.fromHeaderMenu .submenu').mCustomScrollbar("destroy");
+        // setTimeout(function() {
+        //   var elWidth = $('.headerMenu').outerWidth();
+        //   $('.headerMenu .submenu .container').css('max-width', elWidth + 'px');
+        // }, 200);
+      } else if ($(window).width() <= 639) {
+
+        $('.fromHeaderMenu').each(function() {
+          $(this).mCustomScrollbar("destroy");
+        });
+
+        $('.burger').click();
+
+        $('.fromHeaderMenu .submenu, .fromHeaderMenu .headerMenu.mobile').mCustomScrollbar({
+          theme: "SubmenuScrollThm",
+          mouseWheel: {
+            scrollAmount: 60,
+            normalizeDelta: true
+          }
+        });
+
+        $('.burger').click();
+
+      } else {
+
+        $(this).find('.container').css('max-width', '100%');
+        $('.fromHeaderMenu .headerMenu.mobile').mCustomScrollbar("destroy");
+
+        $('.burger').click();
+
+        $('.fromHeaderMenu, .fromHeaderMenu .submenu').mCustomScrollbar({
+          theme: "SubmenuScrollThm",
+          mouseWheel: {
+            scrollAmount: 60,
+            normalizeDelta: true
+          }
+        });
+
+        $('.burger').click();
+
+      }
+
+    });
 
     $(".headerMenu .submenu").each(function() {
 
@@ -434,9 +439,9 @@ $(document).ready(function() {
       )
     });
 
-  }
-
-  fromResize();
+  // }
+  //
+  // fromResize();
 
   $(".citiesBlock").mCustomScrollbar({
     theme: "citiesBlockThm",
@@ -554,8 +559,8 @@ $(document).ready(function() {
       setTimeout(function() {
         $(window).scrollTop(scrollPos);
       }, 10);
+      hhh();
     }
-    hhh();
     $(this).toggleClass("active");
     $(".headerMenu.mobile").toggleClass("show");
     $(".mobileBottom").toggleClass("show");
@@ -1183,10 +1188,11 @@ $(document).ready(function() {
   }
 
   $(window).resize(function() {
-    fromResize();
+    // fromResize();
     tabsDestroy();
     customTabsIn();
     contenListUl();
+    // previewNews();
   });
 
   $('label.error').click(function() {
@@ -1200,6 +1206,41 @@ $(document).ready(function() {
     }, 400);
     return false;
   });
+
+    $('.newsPreview').each(function() {
+      if ($(window).width() < 1081) {
+        $('.newsPreview .row-responsive').slick({
+          infinite: true,
+          centerMode: true,
+          centerPadding: "0",
+          cssEase: "ease-in-out",
+          draggable: true,
+          autoplay: false,
+          autoplayspeed: 2500,
+          slidesToShow: 3,
+          slideToScroll: 1,
+          speed: 250,
+          arrows: false,
+          prevArrow: '<div class="prev"><i class="ri-arrow-left-s-line"></i></div>',
+          nextArrow: '<div class="next"><i class="ri-arrow-right-s-line"></i></div>',
+          dots: false,
+          responsive: [
+            {
+              breakpoint: 981,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 681,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      }
+    })
 
 });
 
