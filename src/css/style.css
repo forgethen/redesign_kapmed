@@ -1698,6 +1698,12 @@ header.static .container.fromHeaderMenu > ul > :last-child {
   display: -ms-flexbox;
   display: flex;
 }
+.headerMenu.desktop li:hover a {
+  opacity: 1;
+}
+.headerMenu.desktop li:hover a span {
+  color: #b8181c;
+}
 .headerMenu.desktop li.hovered {
   z-index: 2;
 }
@@ -12364,7 +12370,7 @@ footer ul ul {
           border-radius: 50%;
   background-color: #356bb7;
   left: 0;
-  top: 0.6rem;
+  top: 0.8rem;
 }
 .dnk_slider .slider__container .slide .content ul li span {
   position: relative;

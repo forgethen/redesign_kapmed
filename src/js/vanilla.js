@@ -60,8 +60,7 @@ const staticHeader = () => {
     header.style.top = `-${indent}px`;
     cityPopup.style.top = header.offsetHeight + 'px';
     toTop.classList.add('show')
-  }
-  else {
+  } else {
     cityPopup.style.top = '';
     header.classList.remove('static');
     // header.style.transition = 'none';
@@ -69,12 +68,13 @@ const staticHeader = () => {
     toTop.classList.remove('show')
   }
 }
+
 const menuHover = (elm) => {
   elm.classList.add('hovered')
 }
 
 const menuUnHover = () => {
-  const elm = document.querySelector('.hovered')
+  const elm = document.querySelector('.headerMenu.desktop .hovered')
   elm.classList.remove('hovered')
 }
 
@@ -103,7 +103,5 @@ const payload = () => {
 }
 
 document.addEventListener("DOMContentLoaded", payload)
-
-//# sourceMappingURL=vanilla.js.map
 
 //# sourceMappingURL=vanilla.js.map
