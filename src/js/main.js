@@ -74,6 +74,9 @@ $(document).ready(function() {
           target = $(this);
         }
       })
+    } else if (hash.indexOf('/') === 0) {
+      document.location.href = hash;
+      return true;
     } else {
       target = $(hash);
     }
