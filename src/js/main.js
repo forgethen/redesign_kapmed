@@ -1276,15 +1276,19 @@ $(document).ready(function() {
   });
 
   $('.custom-select').each(function() {
-      $(this).append('<div class="hint"></div>')
-      setInterval(function () {
-        setTimeout(function () {
-          $('.custom-select .hint').addClass('show')
-        }, 2000);
-        setTimeout(function () {
-          $('.custom-select .hint').removeClass('show')
-        }, 8000);
-      }, 16000);
+      if ($(window).width() > 640) {
+        $(this).append('<div class="hint"></div>')
+        setInterval(function () {
+          setTimeout(function () {
+            $('.custom-select .hint').addClass('show')
+          }, 2000);
+          setTimeout(function () {
+            $('.custom-select .hint').removeClass('show')
+          }, 8000);
+        }, 16000);
+      } else {
+        return false;
+      }
   });
 
 });
