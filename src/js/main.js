@@ -20,7 +20,7 @@ $(document).ready(function() {
   $(".content_list ul a").each(function() {
     var hash = $(this).attr("href");
     if (hash.indexOf('#') !== -1) {
-      $(hash).each(function () {
+      $(hash).each(function() {
         var elHash = $(this).attr('id');
         if ($(this).length > 0) {
           $('.content_list ul a[href="#' + elHash + '"]').addClass('dontRemove');
@@ -68,7 +68,7 @@ $(document).ready(function() {
     if (hash.indexOf('.') === 0) {
       e.preventDefault();
       var text = hash.slice(1);
-      $(':header').each(function(){
+      $(':header').each(function() {
         let textH = $(this).text();
         if (textH === text) {
           target = $(this);
@@ -93,7 +93,7 @@ $(document).ready(function() {
     $("html, body").animate({
         scrollTop: target.offset().top - hh,
       },
-        750,
+      750,
     );
 
   });
@@ -1269,26 +1269,52 @@ $(document).ready(function() {
     var el = $(this);
     var timeout = setTimeout(function() {
       el.addClass("hovered");
-    }, 1500);
+    }, 1000);
     el.data("timeout", timeout);
   }, function() {
     clearTimeout($(this).removeClass("hovered").data("timeout"));
   });
 
-  $('.custom-select').each(function() {
-      if ($(window).width() > 640) {
-        $(this).append('<div class="hint"></div>')
-        setInterval(function () {
-          setTimeout(function () {
-            $('.custom-select .hint').addClass('show')
-          }, 2000);
-          setTimeout(function () {
-            $('.custom-select .hint').removeClass('show')
-          }, 8000);
-        }, 16000);
-      } else {
+  // $('.custom-select').each(function() {
+  //   if ($(window).width() > 640) {
+  //     $(this).append('<div class="hint"></div>')
+  //     setInterval(function() {
+  //       setTimeout(function() {
+  //         $('.custom-select .hint').addClass('show')
+  //       }, 2000);
+  //       setTimeout(function() {
+  //         $('.custom-select .hint').removeClass('show')
+  //       }, 8000);
+  //     }, 16000);
+  //   } else {
+  //     return false;
+  //   }
+  // });
+
+  $('body .slider-root').swipe({
+    //Generic swipe handler for all directions
+    swipeRight: function(event, direction, distance, duration, fingerCount) {
+      var right = $(this).find('.sectionTitle .prev')
+      if ($(right).hasClass('locked')) {
+        // console.log('false swipe left');
         return false;
+      } else {
+        $(right).click()
       }
+      // console.log("You swiped " + direction);
+    },
+    swipeLeft: function(event, direction, distance, duration, fingerCount) {
+      var left = $(this).find('.sectionTitle .next')
+      if ($(left).hasClass('locked')) {
+        // console.log('false swipe right');
+        return false;
+      } else {
+        $(left).click()
+      }
+      // console.log("You swiped " + direction);
+    },
+    //Default is 75px, set to 0 for demo so any distance triggers swipe
+    threshold: 20
   });
 
 });

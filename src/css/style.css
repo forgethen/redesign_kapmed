@@ -3774,6 +3774,16 @@ a.red-link:focus {
   position: relative;
   line-height: 0;
 }
+.page-title a.red {
+  color: #193c6d;
+}
+.page-title a.red span {
+  text-decoration: underline;
+}
+.page-title a.red:hover {
+  opacity: 1;
+  color: #b8181c;
+}
 .page-title a span {
   font-size: inherit;
   line-height: inherit;
@@ -19754,7 +19764,8 @@ footer ul ul {
 }
 @media screen and (max-width: 680px) {
   .hotPhones {
-    padding-top: 6.8rem;
+    margin-top: 3.6rem;
+    padding-top: 3.2rem;
     position: relative;
   }
   .hotPhones .sectionTitle {
@@ -20698,6 +20709,9 @@ footer ul ul {
   margin-right: 0;
 }
 @media screen and (max-width: 980px) {
+  .clinicalExaminationSection {
+    margin-top: 3.2rem;
+  }
   .clinicalExaminationBlock {
     padding: 2.4rem;
   }
