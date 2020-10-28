@@ -1275,6 +1275,18 @@ $(document).ready(function() {
     clearTimeout($(this).removeClass("hovered").data("timeout"));
   });
 
+  $('.custom-select').each(function() {
+      $(this).append('<div class="hint"></div>')
+      setInterval(function () {
+        setTimeout(function () {
+          $('.custom-select .hint').addClass('show')
+        }, 2000);
+        setTimeout(function () {
+          $('.custom-select .hint').removeClass('show')
+        }, 8000);
+      }, 16000);
+  });
+
 });
 
 //# sourceMappingURL=main.js.map
