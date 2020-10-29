@@ -3774,15 +3774,12 @@ a.red-link:focus {
   position: relative;
   line-height: 0;
 }
-.page-title a.red {
-  color: #193c6d;
-}
 .page-title a.red span {
   text-decoration: underline;
 }
 .page-title a.red:hover {
+  color: #193c6d;
   opacity: 1;
-  color: #b8181c;
 }
 .page-title a span {
   font-size: inherit;
